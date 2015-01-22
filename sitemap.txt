@@ -1,0 +1,15 @@
+
+http://troykyo.github.io/about/
+http://troykyo.github.io/archive.html
+http://troykyo.github.io/atom.xml
+http://troykyo.github.io/categories.html
+http://troykyo.github.io/feed.xml
+http://troykyo.github.io/index.html
+http://troykyo.github.io/index.html
+http://troykyo.github.io/css/main.css
+http://troykyo.github.io/pages.html
+http://troykyo.github.io/rss.xml
+http://troykyo.github.io/sitemap.txt
+http://troykyo.github.io/tags.html
+
+http://troykyo.github.io/class/update/2015/01/19/welcome-to-jekyll

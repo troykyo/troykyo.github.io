@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ 
+ <title>Troykyo Fab Academy 2015</title>
+ <link href="http://troykyo.github.io/" rel="self"/>
+ <link href="http://troykyo.github.io"/>
+ <updated>2015-01-22T10:06:54+01:00</updated>
+ <id>http://troykyo.github.io</id>
+ <author>
+   <name></name>
+   <email></email>
+ </author>
+
+ 
+ <entry>
+   <title>Welcome to Fab Academy</title>
+   <link href="http://troykyo.github.io/class/update/2015/01/19/welcome-to-jekyll"/>
+   <updated>2015-01-19T21:04:06+01:00</updated>
+   <id>http://troykyo.github.io/class/update/2015/01/19/welcome-to-jekyll</id>
+   <content type="html">&lt;p&gt;In our first and second prep classes for Fab Academy 2015 the Fablab Cascina team spent two evenings this week learning to use GIT/HG ad hosting a static website on GitHub.
+If you are reading this our mission was accomplished.  &lt;/p&gt;
+
+</content>
+ </entry>
+ 
+ 
+</feed>
