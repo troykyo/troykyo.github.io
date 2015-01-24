@@ -12,4 +12,4 @@ http://troykyo.github.io/rss.xml
 http://troykyo.github.io/sitemap.txt
 http://troykyo.github.io/tags.html
 
-http://troykyo.github.io/class/update/2015/01/19/welcome-to-FabAcademy
+http://troykyo.github.io/class/update/2015/01/19/welcome-to-Fabacademy
