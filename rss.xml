@@ -5,14 +5,16 @@
         <description>Troykyo Fab Academy 2015 - </description>
         <link>http://troykyo.github.io</link>
         <link>http://troykyo.github.io</link>
-        <lastBuildDate>2015-01-24T19:12:02+01:00</lastBuildDate>
-        <pubDate>2015-01-24T19:12:02+01:00</pubDate>
+        <lastBuildDate>2015-01-24T19:21:24+01:00</lastBuildDate>
+        <pubDate>2015-01-24T19:21:24+01:00</pubDate>
         <ttl>1800</ttl>
 
 
         <item>
-                <title>Pre Class 2 Site</title>
+                <title>Pre Class 2: Website</title>
                 <description>
+&lt;p&gt;In the second pre-class of the Fab Academy at the FabLab Cascina we concentrated on creating static websites via Jekyll and GitHub. 
+If you are reading this, I accomplished my homework. &lt;/p&gt;
 </description>
                 <link>http://troykyo.github.io/2015/01/24/pre-class-2-site</link>
                 <guid>http://troykyo.github.io/2015/01/24/pre-class-2-site</guid>

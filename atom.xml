@@ -4,7 +4,7 @@
  <title>Troykyo Fab Academy 2015</title>
  <link href="http://troykyo.github.io/" rel="self"/>
  <link href="http://troykyo.github.io"/>
- <updated>2015-01-24T19:12:02+01:00</updated>
+ <updated>2015-01-24T19:21:24+01:00</updated>
  <id>http://troykyo.github.io</id>
  <author>
    <name></name>
@@ -13,11 +13,13 @@
 
  
  <entry>
-   <title>Pre Class 2 Site</title>
+   <title>Pre Class 2: Website</title>
    <link href="http://troykyo.github.io/2015/01/24/pre-class-2-site"/>
    <updated>2015-01-24T00:00:00+01:00</updated>
    <id>http://troykyo.github.io/2015/01/24/pre-class-2-site</id>
    <content type="html">
+&lt;p&gt;In the second pre-class of the Fab Academy at the FabLab Cascina we concentrated on creating static websites via Jekyll and GitHub. 
+If you are reading this, I accomplished my homework. &lt;/p&gt;
 </content>
  </entry>
  
