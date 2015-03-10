@@ -46,24 +46,67 @@
 
 <h3>Eagle</h3>
 
-<p>We started with a schematic of Neil's <a href="#" class="image avatar"><img src= src="http://academy.cba.mit.edu/classes/embedded_programming/hello.ftdi.44.png" alt="hello.ftdi.44" /></a>
+<p>We started with a basic attiny board created by Niel Gershenfeld called Hello FTDI. 
 Fiore made a great <a href="https://vimeo.com/120501993">&#8220;How to use Eagle tutorial&#8221;</a> in Italian, which made the process fairly easy. I did get stuck for about an hour in the board view trying to discover a way to understand which pads correspond to the nets on the schematic. Info Properties is the solution.
 My first try was actually wrong. I went with pull-down instead of pull-up (note the button going to VCC). </p>
-
+<div class="box alt">
+								<div class="row 50% uniform">
+									<div class="4u"><span class="image fit"><img src="images/ED/ED01.png" alt="Fab Modules" /></span></div>
+									<div class="4u"><span class="image fit"><img src="images/ED/ED02.png" alt="Adding the image" /></span></div>
+									<div class="4u$"><span class="image fit"><img src="images/ED/ED03.png" alt="Calculating the path" /></span></div>
+								</div>
+							</div>
 <p>This was a great chance to remake the circuit and learn Eagle better. I re-made the circuit and was about to add the LED and Button, when I realized they were stuck. I don&#8217;t know if it is a problem with locked layers, grouped objects or something else. I sought help from the internet, my Guru instructor and my friends who are electronic engineers. No solution found I gave up and tried 123D Circuits which is documented bellow. I came back a day later and redesigned from the beginning. It finally worked, with no problems. I did notice problems in aliasing in the curves I designed, so I returned to the board layout and chamfered the corners is a 45* bevel. </p>
-
+<div class="box alt">
+								<div class="row 50% uniform">
+									<div class="4u"><span class="image fit"><img src="images/ED/ED04.png" alt="Fab Modules" /></span></div>
+									<div class="4u"><span class="image fit"><img src="images/ED/ED05.png" alt="Adding the image" /></span></div>
+									<div class="4u$"><span class="image fit"><img src="images/ED/ED06.png" alt="Calculating the path" /></span></div>
+								</div>
+							</div>
+							<div class="box alt">
+								<div class="row 50% uniform">
+									<div class="4u"><span class="image fit"><img src="images/ED/ED07.png" alt="Fab Modules" /></span></div>
+									<div class="4u"><span class="image fit"><img src="images/ED/ED08.png" alt="Adding the image" /></span></div>
+									<div class="4u$"><span class="image fit"><img src="images/ED/ED09.png" alt="Calculating the path" /></span></div>
+								</div>
+							</div>
 <p>Three times I tried to load my design as a png into <a href="http://fabmodules.org/">Fab Modules</a> and three times I was unable to create a design that has appropriate clearance using a 1/64th milling bit. I have an appointment with my Instructor for help and will update as soon as I figure out what it was.<br>
  Neil Gershenfeld is right; this has a high learning curve, but it becomes easier with use. </p>
-
+<div class="box alt">
+								<div class="row 50% uniform">
+									<div class="4u"><span class="image fit"><img src="images/ED/ED10.png" alt="Fab Modules" /></span></div>
+									<div class="4u"><span class="image fit"><img src="images/ED/ED11.png" alt="Adding the image" /></span></div>
+									<div class="4u$"><span class="image fit"><img src="images/ED/ED12.png" alt="Calculating the path" /></span></div>
+								</div>
+							</div>
 <h2>123D Circuits</h2>
 
-<p><iframe width="725" height="448" src="http://123d.circuits.io/circuits/634128-hello-circuit/embed#pcb" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+<p><iframe width="725" height="448" src="http://123d.circuits.io/circuits/634128-hello-circuit/embed#pcb" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe></br>
 I also wanted to try <a href="http://123d.circuits.io/">123D Circuits</a> due to it&#8217;s simulation capabilities. The libraries were hard to understand, but the layout was fairly simple. Strangely using GND and VCC as defined symbols didn&#8217;t seem to work so I had to route them all manually. This caused a big mess. I forked my project went back and carefully detailed VCC and GND. </p>
-
+<div class="box alt">
+								<div class="row 50% uniform">
+									<div class="4u"><span class="image fit"><img src="images/ED/ED13.png" alt="Fab Modules" /></span></div>
+									<div class="4u"><span class="image fit"><img src="images/ED/ED14.png" alt="Adding the image" /></span></div>
+									<div class="4u$"><span class="image fit"><img src="images/ED/ED15.png" alt="Calculating the path" /></span></div>
+								</div>
+							</div>
 <p>Everything worked this time around. Once I finally had resolved a few spacing problems and had a feel for how the rats nest is created / untangled all went well. </p>
-
+<div class="box alt">
+								<div class="row 50% uniform">
+									<div class="4u"><span class="image fit"><img src="images/ED/ED16.png" alt="Fab Modules" /></span></div>
+									<div class="4u"><span class="image fit"><img src="images/ED/ED17.png" alt="Adding the image" /></span></div>
+									<div class="4u$"><span class="image fit"><img src="images/ED/ED18.png" alt="Calculating the path" /></span></div>
+								</div>
+							</div>
 <p>I was disappointed to discover that <a href="http://123d.circuits.io/">123D Circuits</a> does not simulate circuits made in Schematic mode. I attempted to remake the circuit on a virtual breadboard. The Attiny 45 is not available and the Attiny 44 didn&#8217;t work. I couldn&#8217;t find any similar examples that functioned. </p>
-
+<div class="box alt">
+								<div class="row 50% uniform">
+									<div class="4u"><span class="image fit"><img src="images/ED/ED19.png" alt="Fab Modules" /></span></div>
+									<div class="4u"><span class="image fit"><img src="images/ED/ED20.png" alt="Adding the image" /></span></div>
+									<div class="4u$"><span class="image fit"><img src="images/ED/ED21.png" alt="Calculating the path" /></span></div>
+								</div>
+							</div>
 <p>123d Circuits only exports as Gerber files which should work with our Roland mills, but I was unable to load it. It was interesting that <a href="http://123d.circuits.io/">123D Circuits</a> can auto-generate a 3D printable case in <a href="http://openjscad.org/#">OpenJSCAD</a> . Again, I will sit down with Guru master <a href="https://github.com/fibasile">Fiore Basile</a> and work this out. </p>
 
 <h2>Conclusions</h2>
@@ -264,27 +307,27 @@ I also wanted to try <a href="http://123d.circuits.io/">123D Circuits</a> due to
 								<section> <h4>Image</h4> <h5>Fit</h5> <div
 							class="box alt"> <div class="row 50% uniform"> <div
 							class="12u$"><span class="image fit"><img
-							src="images/fulls/05.jpg" alt="" /></span></div> <div
+							src="images/fulls/05.png" alt="" /></span></div> <div
 							class="4u"><span class="image fit"><img
-							src="images/thumbs/01.jpg" alt="" /></span></div> <div
+							src="images/thumbs/01.png" alt="" /></span></div> <div
 							class="4u"><span class="image fit"><img
-							src="images/thumbs/02.jpg" alt="" /></span></div> <div
+							src="images/thumbs/02.png" alt="" /></span></div> <div
 							class="4u$"><span class="image fit"><img
-							src="images/thumbs/03.jpg" alt="" /></span></div> <div
+							src="images/thumbs/03.png" alt="" /></span></div> <div
 							class="4u"><span class="image fit"><img
-							src="images/thumbs/04.jpg" alt="" /></span></div> <div
+							src="images/thumbs/04.png" alt="" /></span></div> <div
 							class="4u"><span class="image fit"><img
-							src="images/thumbs/05.jpg" alt="" /></span></div> <div
+							src="images/thumbs/05.png" alt="" /></span></div> <div
 							class="4u$"><span class="image fit"><img
-							src="images/thumbs/06.jpg" alt="" /></span></div> <div
+							src="images/thumbs/06.png" alt="" /></span></div> <div
 							class="4u"><span class="image fit"><img
-							src="images/thumbs/03.jpg" alt="" /></span></div> <div
+							src="images/thumbs/03.png" alt="" /></span></div> <div
 							class="4u"><span class="image fit"><img
-							src="images/thumbs/02.jpg" alt="" /></span></div> <div
+							src="images/thumbs/02.png" alt="" /></span></div> <div
 							class="4u$"><span class="image fit"><img
-							src="images/thumbs/01.jpg" alt="" /></span></div>
+							src="images/thumbs/01.png" alt="" /></span></div>
 							</div> </div> <h5>Left &amp; Right</h5> <p><span
-							class="image left"><img src="images/avatar.jpg" alt=""
+							class="image left"><img src="images/avatar.png" alt=""
 						/>    </span>Fringilla nisl. Donec accumsan interdum nisi,
 							quis tincidunt felis sagittis eget. tempus euismod.
 						Vestibulum ante ipsum primis in faucibus vestibulum.
@@ -303,7 +346,7 @@ I also wanted to try <a href="http://123d.circuits.io/">123D Circuits</a> due to
 						faucibus vestibulum. Blandit adipiscing eu felis iaculis
 						volutpat ac adipiscing accumsan eu faucibus. Integer ac
 						pellentesque praesent.</p> <p><span class="image
-						right"><img src="images/avatar.jpg" alt=""
+						right"><img src="images/avatar.png" alt=""
 						/>    </span>Fringilla nisl. Donec accumsan interdum nisi,
 							quis tincidunt felis sagittis eget. tempus euismod.
 						Vestibulum ante ipsum primis in faucibus vestibulum.
