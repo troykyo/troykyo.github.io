@@ -1,6 +1,6 @@
 		<!DOCTYPE HTML>
 
-		<html> <head> <title>Computer Aided Design</title> <meta
+		<html> <head> <title>Electronics Design</title> <meta
 	http-equiv="content-type" content="text/html; charset=utf-8" /> <meta
 	name="description" content="" /> <meta name="keywords" content="" /> <!--[if
 	lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]--> <script
@@ -26,63 +26,51 @@
 				<!-- Main --> <div id="main">
 
 						<!-- One --> <section id="one"> <header class="major">
-		<h2>Computer Aided Design</h2>
+		<h2>Electronics Design</h2>
 
-<p><a href="http://academy.cba.mit.edu/classes/computer_design/index.html">‎Today&#8217;s class</a> of Fab Academy 2015 was about Computer Aided Design. I am designing my final project in several different Design programs to determine which one is the most effective from the types of design I will be executing in Fab Academy.
-To quote Prof Neil Gershenfeld as he was talking about <a href="http://www.mattkeeter.com/projects/antimony/">Antimony</a>:</p>
+<p><a href="http://academy.cba.mit.edu/classes/electronics_design/index.html">This weeks class</a> of Fab Academy 2015 was about the Design of PCB&#8217;s using different design software. This week is a design oriented and demonstrates design skills and attitudes. </p>
+
+<p>To quote Prof Niel Gershenfeld</p>
 
 <blockquote>
-<p>&#8220;It&#8217;s <strong>constructive</strong>; you can do logic on shapes.<br>
-It&#8217;s <strong>hierarchical</strong>; you can make shapes out of shapes,<br>
-It&#8217;s <strong>parametric</strong>; you can define parameters that propagate through the design.<br>
-It&#8217;s <strong>procedural</strong> ; you can mix logic in the nodes with shapes in the nodes.<br>
-and it deals with a <strong>functional</strong> representation, that exports in a nice format in a workflow to talk to machines.&#8221;<br>
+<p>&#8220;These have been evolving, they started from essentially toys and they&#8217;re becoming quite substantial.&#8221; </p>
 </blockquote>
-<p>
-I think this describes the Gurus that Fab Academy is creating as well as the software Antimony. (I am rolling with the British pronunciation.
-<a href="http://dictionary.cambridge.org/pronunciation/british/antimony">antimony - pronunciation of antimony by Cambridge Dictionaries Online</a>).</p>
 
+<p>My plan:</p>
 
-<p>My plan: </p>
+<ul>
+<li>Day 1 - Eagle</li>
+<li>Day 2 - Other design software</li>
+<li>Day 3 - Simulation</li>
+</ul>
 
-<p>Day 1 - 2D: <a href="http://www.fiftythree.com/paper">Paper</a>, <a href="https://www.adobe.com/products/line.html">Illustrator Line</a>, <a href="https://inkscape.org/en/">Inkscape</a><a href="http://www.adobe.com/products/illustrator.html">Illustrator 2014 CC</a></p></li>
-<p>Day 2 - 2.5D: <a href="http://www.adobe.com/products/illustrator.html">Illustrator 2014 CC</a></p></li>
-<p>Day 3&amp;4 - 3D :<a href="http://www.mattkeeter.com/projects/antimony/">Antimony</a>, <a href="http://www.rhino3d.com/">Rhinoceros</a>, <a href="http://www.maxon.net/">Cinema 4D</a>, Expresso Parametric Functionality, If Time permits 4D animations</p>
+<h3>Eagle</h3>
 
-<p>I spent today in 2D. I made a few hand sketches and photographed them to use in program. I then redid the hand sketches using <a href="http://www.fiftythree.com/paper">Paper</a>. I like the style that it creates, good for illustrating an idea, but not very precise overall. (Given it&#8217;s finger based interface it&#8217;s hard to align starting and finishing points.)
-Next I tried the new and free Adobe Illustrator Line, It crashed the first three times I opened it (Fairly typical, Photoshop on the ipad did the same.) I gave up on it as all the support documents require reinstalling the iPad.</p>
-<div class="8u$"><span class="image fit"><img src="images/CAD/PaperIllustration.jpg" alt="paper" /></span></div>
-<p>I haven’t opened Inkscape in years so getting xQuartz installed was the usual mess, it’s running now. I had to open it using &#8216;open /Applications/Inkscape.app&#8217; remembering the first time that x11 lives in the utilities folder, not the Applications folder. <strong>The other important thing to remember is Inkscape on OS X 10.10 Yosemite may take 90 seconds to load. That Caused me a lot of trouble.</strong> Dusting off my Inkscape skills was interesting but I am back in the swing of it. It&#8217;s clunky in terms of designing objects, for example Fill and Stroke are hidden under <strong>Shift + CTRL + F</strong>. But the scripts are very interesting and it can do some interesting things to paths. I think the .svg format from Illustrator is going to give some interesting results. This is as far as I can get with it </p>
-<div class="8u$"><span class="image fit"><img src="images/CAD/MachineDesignInkscape.png" alt="Inkscape Illustration" /></span></div>
-<p>I imported the Inkscape .svg and kept going. I am used to Illustrator and it&#8217;s going 10 times faster. </p>
-<div class="8u$"><span class="image fit"><img src="images/CAD/Machine-design.png" alt="Inkscape Illustration" /></span></div>
-<p>Next I tried 2.5D in Illustrator. After doing quite a bit of searching online there is not a lot support for 2.5D design outside of video animation software. But Isometric Illustration has a following. I crashed Illustrator the first time trying to revolve into perspective space. </p>
-<div class="8u$"><span class="image fit"><img src="images/CAD/Isometric.png" alt="Inkscape Illustration" /></span></div>
+<p>We started with a schematic of Neil's <a href="#" class="image avatar"><img src= src="http://academy.cba.mit.edu/classes/embedded_programming/hello.ftdi.44.png" alt="hello.ftdi.44" /></a>
+Fiore made a great <a href="https://vimeo.com/120501993">&#8220;How to use Eagle tutorial&#8221;</a> in Italian, which made the process fairly easy. I did get stuck for about an hour in the board view trying to discover a way to understand which pads correspond to the nets on the schematic. Info Properties is the solution.
+My first try was actually wrong. I went with pull-down instead of pull-up (note the button going to VCC). </p>
 
-<p>Installing Antimony was an adventure, but it’s all working now. I installed it last week but somehow got an earlier version. If you are miss objects like the Torus, or everything in the CSG menu reinstall. </p>
-<div class="8u$"><span class="image fit"><img src="images/CAD/AttractorAntimony.jpg" alt="Inkscape Illustration" /></span></div>
-<p>I’ve already made won chainmail to use in the fiber length sorting stage of my project. Can’t wait to ding into that on Saturday. It is really powerful, but definitely needs some documentation. I am re-watching the video with Neil to see if I can glean a few more tips about references and scripting. For example, when referencing a cell the format is &#8216;i1.dx (module.parameter)&#8217;. I hope the wiki they are chatting about comes to pass. </p>
-<div class="8u$"><span class="image fit"><img src="images/CAD/ChainMailFull.png" alt="Inkscape Illustration" /></span></div>
-<div class="8u$"><span class="image fit"><img src="images/CAD/ChainMailHow.png" alt="Inkscape Illustration" /></span></div>
+<p>This was a great chance to remake the circuit and learn Eagle better. I re-made the circuit and was about to add the LED and Button, when I realized they were stuck. I don&#8217;t know if it is a problem with locked layers, grouped objects or something else. I sought help from the internet, my Guru instructor and my friends who are electronic engineers. No solution found I gave up and tried 123D Circuits which is documented bellow. I came back a day later and redesigned from the beginning. It finally worked, with no problems. I did notice problems in aliasing in the curves I designed, so I returned to the board layout and chamfered the corners is a 45* bevel. </p>
 
-<p>Antimony is awesome. I made the Combing part of the machine next It reminiscent of Expresso for Cinema 4D. <a href="http://www.maxon.net/">Cinema 4D</a> was intended for Animation and Film, but when paired with <a href="http://www.meshmixer.com/">MeshMixer</a> (Formerly Autodesk 3D Print utility) Cinema 4D becomes a formidable modeling program.</p>
-<div class="8u$"><span class="image fit"><img src="images/CAD/Comb.png" alt="Inkscape Illustration" /></span></div>
+<p>Three times I tried to load my design as a png into <a href="http://fabmodules.org/">Fab Modules</a> and three times I was unable to create a design that has appropriate clearance using a 1/64th milling bit. I have an appointment with my Instructor for help and will update as soon as I figure out what it was.<br>
+ Neil Gershenfeld is right; this has a high learning curve, but it becomes easier with use. </p>
 
-<p>You can find all my source files here <a href="./Source/CAD">troykyo/FabAccademy</a>.</p>
+<h2>123D Circuits</h2>
 
-<p>I have Rhino and Cinema 4D installed for creating, but since I know those I ma going to see if I can tackle Inventor. I downloaded Windows 10 and am just trying to find an 8gb USB key to install it on Boot Camp. I&#8217;ve tried 5 ways to install windows on my MacBook (Bootcamp,
-<a href="http://twocanoes.com/boot-runner/">Boot Runner</a>, <a href="http://twocanoes.com/winclone/">Winclone</a>, <a href="http://www.rodsbooks.com/refind/getting.html">The rEFInd Boot Manager</a>, and <a href="https://www.virtualbox.org/">Oracle VM VirtualBox</a>
-) so I can run Grasshopper on Rhino, but no love so far. It seems the specific model of Mac I am running (2.4 GHz Intel Core 2 Duo) has BootCamp install issues. I borrowed a 1.4 GHz Intel Core i5 Mac book to create an external boot disk. I also signed up for the student trial of Inventor and downloaded the installer. I skimmed a few books on Inventor and can&#8217;t wait to install it, but my bootcamp issues are slowing that process down. As spiral development goes, I am going to fall back on an old reliable. </p>
+<p><iframe width="725" height="448" src="http://123d.circuits.io/circuits/634128-hello-circuit/embed#pcb" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+I also wanted to try <a href="http://123d.circuits.io/">123D Circuits</a> due to it&#8217;s simulation capabilities. The libraries were hard to understand, but the layout was fairly simple. Strangely using GND and VCC as defined symbols didn&#8217;t seem to work so I had to route them all manually. This caused a big mess. I forked my project went back and carefully detailed VCC and GND. </p>
 
-<p>Cinema 4D was used to create the basic 3D design. I ran out of time to do an Espresso version but I hope to get back to it because it is parametric with the possibility to import scripting. I used the chainmail and carding cone to create a final version of the machine. I attempted cloner arrays but had no love. This is definitely something antimony does better. In the end I used instances. </p>
-<div class="8u$"><span class="image fit"><img src="images/CAD/WinderLeft.png" alt="Inkscape Illustration" /></span></div>
-<div class="8u$"><span class="image fit"><img src="images/CAD/Winder.png" alt="Inkscape Illustration" /></span></div>
-<div class="8u$"><span class="image fit"><img src="images/CAD/MachineRight.png" alt="Inkscape Illustration" /></span></div>
-<div class="8u$"><span class="image fit"><img src="images/CAD/C4DMachine.png" alt="Inkscape Illustration" /></span></div>
+<p>Everything worked this time around. Once I finally had resolved a few spacing problems and had a feel for how the rats nest is created / untangled all went well. </p>
 
-<p>Monday Feb 9 I took the opportunity to traveling to Birmingham for a two day training in <a href="http://www.delcam-crispin.com/">CAD CAM - Delcam CRISPIN </a>. In the morning we learned a specialized program for 3D CAD to CAM. The workflow is interesting in that it&#8217;s similar to what Fab Academy is to achieve at a major corporation. I hope that it will help me develop methods in antimony. </p>
-<div class="8u$"><span class="image fit"><img src="images/CAD/Crispin.jpg" alt="Crispin training" /></span></div>
+<p>I was disappointed to discover that <a href="http://123d.circuits.io/">123D Circuits</a> does not simulate circuits made in Schematic mode. I attempted to remake the circuit on a virtual breadboard. The Attiny 45 is not available and the Attiny 44 didn&#8217;t work. I couldn&#8217;t find any similar examples that functioned. </p>
 
+<p>123d Circuits only exports as Gerber files which should work with our Roland mills, but I was unable to load it. It was interesting that <a href="http://123d.circuits.io/">123D Circuits</a> can auto-generate a 3D printable case in <a href="http://openjscad.org/#">OpenJSCAD</a> . Again, I will sit down with Guru master <a href="https://github.com/fibasile">Fiore Basile</a> and work this out. </p>
+
+<h2>Conclusions</h2>
+
+<p>This week was interesting and frustrating. Eagle is definitely the most full featured and production friendly program that I tried. I did like 123D Circuits in that it gave me gerber files, but simulation was disappointing. </p>
+
+<p>Neither was produceable, but I will update after working with Fiore.</p>
 </section>
 
 						<!-- Five --> <!-- <section id="four"> <h2>Elements</h2>

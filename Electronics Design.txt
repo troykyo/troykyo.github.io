@@ -30,7 +30,13 @@ Everything worked this time around.  Once I finally had resolved a few spacing p
 
 I was disappointed to discover that [123D Circuits](http://123d.circuits.io/)  does not simulate circuits made in Schematic mode.  I attempted to remake the circuit on a virtual breadboard.  The Attiny 45 is not available and the Attiny 44 didn't work.  I couldn't find any similar examples that functioned.  
 
-123d Circuits only exports as Gerber files which should work with our Roland mills, but I was unable to load it.  Again, I will sit down with Guru master [Fiore Basile](https://github.com/fibasile) and work this out.  
+123d Circuits only exports as Gerber files which should work with our Roland mills, but I was unable to load it.  It was interesting that [123D Circuits](http://123d.circuits.io/) can auto-generate  a 3D printable case in [OpenJSCAD](http://openjscad.org/#) . Again, I will sit down with Guru master [Fiore Basile](https://github.com/fibasile) and work this out.  
+
+##Conclusions
+
+This week was interesting and frustrating.  Eagle is definitely the most full featured and production friendly program that I tried.  I did like 123D Circuits in that it gave me gerber files, but simulation was disappointing.  
+
+Neither was produceable, but I will update after working with Fiore.
 
 
 
