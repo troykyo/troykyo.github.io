@@ -27,76 +27,59 @@
 
 						<!-- One --> <section id="one"> <header class="major">
 		
-<h2>Electronics Production</h2>
+<h2>Embedded Programming</h2>
 
-<p><a href="http://academy.cba.mit.edu/classes/electronics_production/index.html">This weeks class </a>of Fab Academy 2015 was about the creation of PCB&#8217;s and their direct cousins (any form of circuit medium). This week is a skill oriented and made to ensure our capabilites for future lessons. </p>
+<p><a href="http://academy.cba.mit.edu/classes/embedded_programming/index.html">This weeks class</a>of Fab Academy 2015 was about programing microcontrollers. It is a skill longstanding in my mind, and the
+opportunity is present. I am not a programmer, but have programmed and taught Arduino courses for more than 10 years. This week is a journey into the mystery behind the magic. </p>
 
-<p>To quote Prof Neil Gershenfeld:</p>
+<p>To quote Prof Niel Gershenfeld</p>
 
 <blockquote>
-<p>The last thing you need to do is wash it. Finger prints will etch the board not in a day or two, but in a month or two.<br>
+<p>This is a huge subject . It&#8217;s weeks, months and really years to come to master it. </p>
 </blockquote>
-
-<p>I hope my board still works in a month or two. </p>
-
 
 <p>My plan:</p>
 
 <ul>
-<li>Day 1 - Millliing</li>
-<li>Day 2 - Soldering</li>
-<li>Day 3 - Firmware</li>
+<li>Day 1 - AVR</li>
+<li>Day 2 - Blink</li>
+<li>Day 3 - Alt Blink</li>
 </ul>
 
-<p>You can find all my source files here: <a href="./Source/EP">Electronics Production</a>.
-<p>We chose to follow the Andy&#8217;s <a href="http://fab.cba.mit.edu/content/projects/fabispkey/index.html">‎Fab ISP Key</a> to make a simple usb connection that only requires a small amount of material to be added to the back (in hind site I would add the backing before milling next time since it is an additional sacrificial layer.)</p>
+<p>My <a href="http://www.fabacademy.org/">Fab Academy</a> instructor <a href="http://fabacademy.org/archives/2014/students/basile.fiore/index.html">Fiore Basile </a> warned me about this lesson months before <a href="http://www.fabacademy.org/">Fab Academy</a> started. I&#8217;ve been reading <a href="http://shop.oreilly.com/product/0636920028161.do">Make: AVR Programming</a> and I have to say that this is definitely a personal challenge. As of now I don&#8217;t have a working attiny44. What is on hand is the ATtiny datasheet. </p>
 
-<h3>Millling</h3>
+<h2>Programs</h2>
 
-<p>We have three mills at <a href="http://fablabcascina.org/">Fab Lab Cascina</a>, a Modella, an iModela and a SRM&#8211;20. I went with the iModela as it was available. My first attempt failed as I was using my own MacBook OSX 10.10 and although Fab Modules installed the Serial module is not connecting. I only have Windows virtualized at this point so I switched over to the Lab Milling Unix laptop. The web based Fab Modules worked while we were aligning and preparing, but we had to reload the design files and it caused a problem in the web server. Instead of rebooting we loaded the older desktop version of Fab Modules. I added my own logo to the Andy version of the FabISP. Unfortunately my logo was so small that the Mill could not mill it and I ended up with three holes. It was a good lesson in what size detail is needed for fab modules to interpret something correctly. It seems to be about 1mm square.</p>
-							<div class="box alt">
-								<div class="row 50% uniform">
-									<div class="4u"><span class="image fit"><img src="images/EP/EP01.jpg" alt="Fab Modules" /></span></div>
-									<div class="4u"><span class="image fit"><img src="images/EP/EP02.jpg" alt="Adding the image" /></span></div>
-									<div class="4u$"><span class="image fit"><img src="images/EP/EP03.jpg" alt="Calculating the path" /></span></div>
-								</div>
-							</div>
-<p>The 1/64 milling went well once things were set up. It took me a few tries to get the bit in correctly, but once there was easy to understand. Fiore walked me thru it. After that the 1/32 milling was a cake walk. It was interesting to see the left over shards and scraps that needed to be blown away to avoid a short circuit. </p>
-							<div class="box alt">
-								<div class="row 50% uniform">
-									<div class="4u"><span class="image fit"><img src="images/EP/EP04.jpg" alt="Milling" /></span></div>
-									<div class="4u"><span class="image fit"><img src="images/EP/EP05.jpg" alt="Cleaning" /></span></div>
-									<div class="4u$"><span class="image fit"><img src="images/EP/EP06.jpg" alt="Result" /></span></div>
-								</div>
-							</div>
-<h3>Stuffing via SMD Soldering</h3>
+<p>Since 1999 the CLI has been my drug of choice, so the <a href="http://www.obdev.at/products/crosspack/index.html">CrossPack Development Environment for Atmel’s AVR Microcontrollers</a> was for me.
+There is a basic blink tutorial on the Crosspack page but it goes like this:
+1. Create a new project: &#8216;avr-project helloWorld&#8217;
+2. Edit the main.c file: &#8216;vim helloWorld/firmware/main.c&#8217;
+3. I used the sample code </p>
 
-<p>While I&#8217;ve sewn countless circuits and soldered quite a few thru hole boards, this is my first adventure into SMD soldering. I was sorting all of the components in the circuit diagram found on <a href="http://fab.cba.mit.edu/content/projects/fabispkey/index.html">‎Andy&#8217;s Fab ISP key page</a>. Fiore came by and gave me some good advice by pointing me to his [Bill of Materials] (http://fabacademy.org/archives/2014/students/basile.fiore/images/week04/fabisp_bom.jpg) from when he did Fab Accademy. Fiore also taught Betty and I how to mount the attiny, first placing it with the tweezers and then gently tapping it into place. Next, apply pressure with the tweezers and solder the bottom left, then upper right. Then move clockwise being sure to count to three and apply the right amount of solder. It takes practice, but a good solder is not bulbous and remains shinny. Work out from the attiny to make sure that pads are not accidentally skipped. </p>
-							<div class="box alt">
-								<div class="row 50% uniform">
-									<div class="4u"><span class="image fit"><img src="images/EP/EP07.jpg" alt="Preping" /></span></div>
-									<div class="4u"><span class="image fit"><img src="images/EP/EP08.jpg" alt="Soldering" /></span></div>
-									<div class="4u$"><span class="image fit"><img src="images/EP/EP09.jpg" alt="Complete" /></span></div>
-								</div>
-							</div>
-<h3>Firmware</h3>
+<p>&#8216;#include &lt;avr/io.h&gt;
+&#8217;#include &lt;util/delay.h&gt;</p>
 
-<p>It was exciting to stuff the board, so I stayed at the <a href="http://fablabcascina.org/">Fab Lab Cascina</a> late to upload the firmware. I downloaded <a href="http://www.obdev.at/products/crosspack/index.html">CrossPack - A Development Environment for Atmel’s AVR Microcontrollers</a> and set to loading the firmware. If you scroll down on <a href="http://fabacademy.org/archives/2014/students/basile.fiore/classes/04_electronics_production.html">Fiore Basile @ FabAcademy 2014</a> you&#8217;ll find a great fix to the makefile that has been set for avrisp&#8217;s, not the usbtiny. Although everything was right and Fiore confirmed it, my firmware would not load. But this was not the end of the world, no one elses would either, I gave up and went to bed. </p>
-							<div class="box alt">
-								<div class="row 50% uniform">
-									<div class="4u"><span class="image fit"><img src="images/EP/EP13.jpg" alt="Attaching" /></span></div>
-									<div class="4u"><span class="image fit"><img src="images/EP/EP14.jpg" alt="uploading" /></span></div>
-									<div class="4u$"><span class="image fit"><img src="images/EP/EP15.jpg" alt="testing" /></span></div>
-								</div>
-							</div>
-<p>Thankfully the next day (Sunday) friend of the Fablab and Master Electronic Engineer Stefano Panichi came by and helped me trouble shoot. Usually it&#8217;s impossible to test a circuit once soldered because the values are compounded by the micro chip, but if you set your tester to diode mode magic happens. I documented the explanation in Italian <a href="https://plus.google.com/113411858853895350869/posts/ZypkDPMeN24">here</a>. With the tester in diode mode you can test to see if information is passing thru the microchip. We touched one lead of the sensor to ground and then tested all my pins. We found a short circuit to ground on the third pin we tried. Stefano pointed out that I soldered the wrong jumper as well. He also showed me which solders were done well and which were not (most were in the NOT category). It was really amazing to have a Master walk me thru the solders. (It turns out that everyone in the lab had at least one problem that was causing the board not to program.) With the soldering remade and the correct jumpers set uploaded the firmware no problem. What would have been a complete fail was saved by the help of <a href="https://twitter.com/StefanoPanichi">Stefano Panichi (@StefanoPanichi) | Twitter</a>.</p>
-							<div class="box alt">
-								<div class="row 50% uniform">
-									<div class="4u"><span class="image fit"><img src="images/EP/EP10.jpg" alt="Testing" /></span></div>
-									<div class="4u"><span class="image fit"><img src="images/EP/EP11.jpg" alt="Problems" /></span></div>
-									<div class="4u$"><span class="image fit"><img src="images/EP/EP12.jpg" alt="Fixing" /></span></div>
-								</div>
-							</div>
+<p>&#8217;int main(void)
+{
+ DDRD = 1 &lt;&lt; 4; /* make the LED pin an output <em>/
+ for(;;){
+ char i;
+ for(i = 0; i &lt; 10; i++){
+ _delay_ms(30); /</em> max is 262.14 ms / F_CPU in MHz <em>/
+ }
+ PORTD ^= 1 &lt;&lt; 4; /</em> toggle the LED <em>/
+ }
+ return 0; /</em> never reached */
+}
+4. Move to the firmware folder &#8216;cd helloWorld/firmware/&#8217;
+5. Make the make file &#8216;cd helloWorld/firmware/&#8217;
+6. Make the make flash &#8216;make flash&#8217;
+7. and send it &#8216;make fuse&#8217;</p>
+
+<p>I misspelled one function and forgot the ; in another, but the error lines are identical to Arduino and I recovered quickly. The hard part was defining which ISP I was using. With my FabISP sitting in the <a href="http://fablabcascina.org/">Fab Lab Cascina </a> I flashed with an Arduino on hand. </p>
+
+<p>I really wanted to understand the flash and fuse process </p>
+
 </section>
 
 						
