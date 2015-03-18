@@ -1,0 +1,364 @@
+<!DOCTYPE HTML>
+
+		<html> <head> <title>Electronics Production</title> <meta
+	http-equiv="content-type" content="text/html; charset=utf-8" /> <meta
+	name="description" content="" /> <meta name="keywords" content="" /> <!--[if
+	lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]--> <script
+	src="js/jquery.min.js"></script> <script
+	src="js/jquery.poptrox.min.js"></script> <script
+	src="js/skel.min.js"></script> <script src="js/init.js"></script> <noscript>
+	<link rel="stylesheet" href="css/skel.css" /> <link rel="stylesheet"
+	href="css/style.css" /> <link rel="stylesheet" href="css/style-xlarge.css" />
+	</noscript> <!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css"
+/>    <![endif]--> </head> <body id="top">
+/>
+		<!-- Header -->
+
+					<header id="header"> <a href="#" class="image avatar"><img
+				src="images/avatar.jpg" alt="" /></a> <h1><strong>I am
+				Troy</strong>, a designer<br /> completing <a
+				href="http://www.fabacademy.org">Fab&nbsp;Academy</a> at <a
+				href="http://fablabcascina.org">FabLab&nbsp;Cascina</a>. </h1>
+				<h1> <strong><a href="./index.html#About">About</a> | <a
+				href="./Project.html">Project</a> | <a
+				href="./index.html#Classes">Classes</a></strong> </h1> </header>
+
+				<!-- Main --> <div id="main">
+
+						<!-- One --> <section id="one"> <header class="major">
+		
+<h2>Electronics Production</h2>
+
+<p><a href="http://academy.cba.mit.edu/classes/electronics_production/index.html">This weeks class </a>of Fab Academy 2015 was about the creation of PCB&#8217;s and their direct cousins (any form of circuit medium). This week is a skill oriented and made to ensure our capabilites for future lessons. </p>
+
+<p>To quote Prof Neil Gershenfeld:</p>
+
+<blockquote>
+<p>The last thing you need to do is wash it. Finger prints will etch the board not in a day or two, but in a month or two.<br>
+</blockquote>
+
+<p>I hope my board still works in a month or two. </p>
+
+
+<p>My plan:</p>
+
+<ul>
+<li>Day 1 - Millliing</li>
+<li>Day 2 - Soldering</li>
+<li>Day 3 - Firmware</li>
+</ul>
+
+<p>You can find all my source files here: <a href="./Source/EP">Electronics Production</a>.
+<p>We chose to follow the Andy&#8217;s <a href="http://fab.cba.mit.edu/content/projects/fabispkey/index.html">‎Fab ISP Key</a> to make a simple usb connection that only requires a small amount of material to be added to the back (in hind site I would add the backing before milling next time since it is an additional sacrificial layer.)</p>
+
+<h3>Millling</h3>
+
+<p>We have three mills at <a href="http://fablabcascina.org/">Fab Lab Cascina</a>, a Modella, an iModela and a SRM&#8211;20. I went with the iModela as it was available. My first attempt failed as I was using my own MacBook OSX 10.10 and although Fab Modules installed the Serial module is not connecting. I only have Windows virtualized at this point so I switched over to the Lab Milling Unix laptop. The web based Fab Modules worked while we were aligning and preparing, but we had to reload the design files and it caused a problem in the web server. Instead of rebooting we loaded the older desktop version of Fab Modules. I added my own logo to the Andy version of the FabISP. Unfortunately my logo was so small that the Mill could not mill it and I ended up with three holes. It was a good lesson in what size detail is needed for fab modules to interpret something correctly. It seems to be about 1mm square.</p>
+							<div class="box alt">
+								<div class="row 50% uniform">
+									<div class="4u"><span class="image fit"><img src="images/EP/EP01.jpg" alt="Fab Modules" /></span></div>
+									<div class="4u"><span class="image fit"><img src="images/EP/EP02.jpg" alt="Adding the image" /></span></div>
+									<div class="4u$"><span class="image fit"><img src="images/EP/EP03.jpg" alt="Calculating the path" /></span></div>
+								</div>
+							</div>
+<p>The 1/64 milling went well once things were set up. It took me a few tries to get the bit in correctly, but once there was easy to understand. Fiore walked me thru it. After that the 1/32 milling was a cake walk. It was interesting to see the left over shards and scraps that needed to be blown away to avoid a short circuit. </p>
+							<div class="box alt">
+								<div class="row 50% uniform">
+									<div class="4u"><span class="image fit"><img src="images/EP/EP04.jpg" alt="Milling" /></span></div>
+									<div class="4u"><span class="image fit"><img src="images/EP/EP05.jpg" alt="Cleaning" /></span></div>
+									<div class="4u$"><span class="image fit"><img src="images/EP/EP06.jpg" alt="Result" /></span></div>
+								</div>
+							</div>
+<h3>Stuffing via SMD Soldering</h3>
+
+<p>While I&#8217;ve sewn countless circuits and soldered quite a few thru hole boards, this is my first adventure into SMD soldering. I was sorting all of the components in the circuit diagram found on <a href="http://fab.cba.mit.edu/content/projects/fabispkey/index.html">‎Andy&#8217;s Fab ISP key page</a>. Fiore came by and gave me some good advice by pointing me to his [Bill of Materials] (http://fabacademy.org/archives/2014/students/basile.fiore/images/week04/fabisp_bom.jpg) from when he did Fab Accademy. Fiore also taught Betty and I how to mount the attiny, first placing it with the tweezers and then gently tapping it into place. Next, apply pressure with the tweezers and solder the bottom left, then upper right. Then move clockwise being sure to count to three and apply the right amount of solder. It takes practice, but a good solder is not bulbous and remains shinny. Work out from the attiny to make sure that pads are not accidentally skipped. </p>
+							<div class="box alt">
+								<div class="row 50% uniform">
+									<div class="4u"><span class="image fit"><img src="images/EP/EP07.jpg" alt="Preping" /></span></div>
+									<div class="4u"><span class="image fit"><img src="images/EP/EP08.jpg" alt="Soldering" /></span></div>
+									<div class="4u$"><span class="image fit"><img src="images/EP/EP09.jpg" alt="Complete" /></span></div>
+								</div>
+							</div>
+<h3>Firmware</h3>
+
+<p>It was exciting to stuff the board, so I stayed at the <a href="http://fablabcascina.org/">Fab Lab Cascina</a> late to upload the firmware. I downloaded <a href="http://www.obdev.at/products/crosspack/index.html">CrossPack - A Development Environment for Atmel’s AVR Microcontrollers</a> and set to loading the firmware. If you scroll down on <a href="http://fabacademy.org/archives/2014/students/basile.fiore/classes/04_electronics_production.html">Fiore Basile @ FabAcademy 2014</a> you&#8217;ll find a great fix to the makefile that has been set for avrisp&#8217;s, not the usbtiny. Although everything was right and Fiore confirmed it, my firmware would not load. But this was not the end of the world, no one elses would either, I gave up and went to bed. </p>
+							<div class="box alt">
+								<div class="row 50% uniform">
+									<div class="4u"><span class="image fit"><img src="images/EP/EP13.jpg" alt="Attaching" /></span></div>
+									<div class="4u"><span class="image fit"><img src="images/EP/EP14.jpg" alt="uploading" /></span></div>
+									<div class="4u$"><span class="image fit"><img src="images/EP/EP15.jpg" alt="testing" /></span></div>
+								</div>
+							</div>
+<p>Thankfully the next day (Sunday) friend of the Fablab and Master Electronic Engineer Stefano Panichi came by and helped me trouble shoot. Usually it&#8217;s impossible to test a circuit once soldered because the values are compounded by the micro chip, but if you set your tester to diode mode magic happens. I documented the explanation in Italian <a href="https://plus.google.com/113411858853895350869/posts/ZypkDPMeN24">here</a>. With the tester in diode mode you can test to see if information is passing thru the microchip. We touched one lead of the sensor to ground and then tested all my pins. We found a short circuit to ground on the third pin we tried. Stefano pointed out that I soldered the wrong jumper as well. He also showed me which solders were done well and which were not (most were in the NOT category). It was really amazing to have a Master walk me thru the solders. (It turns out that everyone in the lab had at least one problem that was causing the board not to program.) With the soldering remade and the correct jumpers set uploaded the firmware no problem. What would have been a complete fail was saved by the help of <a href="https://twitter.com/StefanoPanichi">Stefano Panichi (@StefanoPanichi) | Twitter</a>.</p>
+							<div class="box alt">
+								<div class="row 50% uniform">
+									<div class="4u"><span class="image fit"><img src="images/EP/EP10.jpg" alt="Testing" /></span></div>
+									<div class="4u"><span class="image fit"><img src="images/EP/EP11.jpg" alt="Problems" /></span></div>
+									<div class="4u$"><span class="image fit"><img src="images/EP/EP12.jpg" alt="Fixing" /></span></div>
+								</div>
+							</div>
+</section>
+
+						<!-- Five --> <!-- <section id="four"> <h2>Elements</h2>
+								<section> <h4>Text</h4> <p>This is <b>bold</b> and
+							this is <strong>strong</strong>. This is <i>italic</i>
+							and this is <em>emphasized</em>. This is
+							<sup>superscript</sup> text and this is
+							<sub>subscript</sub> text. This is <u>underlined</u>
+							and this is code: <code>for (;;) { ... }</code>.
+							Finally, <a href="#">this is a link</a>.</p> <hr />
+							<header> <h4>Heading with a Subtitle</h4> <p>Lorem
+							ipsum dolor sit amet nullam id egestas urna
+							aliquam</p> </header> <p>Nunc lacinia ante nunc ac
+							lobortis. Interdum adipiscing gravida odio porttitor
+							sem non mi integer non faucibus ornare mi ut ante amet
+							placerat aliquet. Volutpat eu sed ante lacinia sapien
+							lorem accumsan varius montes viverra nibh in
+							adipiscing blandit tempus accumsan.</p> <header>
+							<h5>Heading with a Subtitle</h5> <p>Lorem ipsum dolor
+							sit amet nullam id egestas urna aliquam</p> </header>
+							<p>Nunc lacinia ante nunc ac lobortis. Interdum
+							adipiscing gravida odio porttitor sem non mi integer
+							non faucibus ornare mi ut ante amet placerat aliquet.
+							Volutpat eu sed ante lacinia sapien lorem accumsan
+							varius montes viverra nibh in adipiscing blandit
+							tempus accumsan.</p> <hr /> <h2>Heading Level 2</h2>
+							<h3>Heading Level 3</h3> <h4>Heading Level 4</h4>
+							<h5>Heading Level 5</h5> <h6>Heading Level 6</h6> <hr
+							/> <h5>Blockquote</h5> <blockquote>Fringilla nisl.
+							Donec accumsan interdum nisi, quis tincidunt felis
+							sagittis eget tempus euismod. Vestibulum ante ipsum
+							primis in faucibus vestibulum. Blandit adipiscing eu
+							felis iaculis volutpat ac adipiscing accumsan
+							faucibus. Vestibulum ante ipsum primis in faucibus
+							lorem ipsum dolor sit amet nullam adipiscing eu
+							felis.</blockquote> <h5>Preformatted</h5> <pre><code>i
+							= 0;
+		while (!deck.isInOrder()) { print 'Iteration ' + i; deck.shuffle(); i++;
+}
+}}
+		print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
+	</section>
+								<section> <h4>Lists</h4> <div class="row"> <div
+							class="6u 12u$(xsmall)"> <h5>Unordered</h5> <ul>
+							<li>Dolor pulvinar etiam magna etiam.</li>
+							<li>Sagittis adipiscing lorem eleifend.</li> <li>Felis
+							enim feugiat dolore viverra.</li> </ul>
+							<h5>Alternate</h5> <ul class="alt"> <li>Dolor pulvinar
+							etiam magna etiam.</li> <li>Sagittis adipiscing lorem
+							eleifend.</li> <li>Felis enim feugiat dolore
+							viverra.</li> </ul> </div> <div class="6u$
+							12u$(xsmall)"> <h5>Ordered</h5> <ol> <li>Dolor
+							pulvinar etiam magna etiam.</li> <li>Etiam vel felis
+							at lorem sed viverra.</li> <li>Felis enim feugiat
+							dolore viverra.</li> <li>Dolor pulvinar etiam magna
+							etiam.</li> <li>Etiam vel felis at lorem sed
+							viverra.</li> <li>Felis enim feugiat dolore
+							viverra.</li> </ol> <h5>Icons</h5> <ul class="icons">
+							<li><a href="#" class="icon fa-twitter"><span
+							class="label">Twitter</span></a></li> <li><a href="#"
+							class="icon fa-facebook"><span
+							class="label">Facebook</span></a></li> <li><a href="#"
+							class="icon fa-instagram"><span
+							class="label">Instagram</span></a></li> <li><a
+							href="#" class="icon fa-github"><span
+							class="label">Github</span></a></li> <li><a href="#"
+							class="icon fa-dribbble"><span
+							class="label">Dribbble</span></a></li> <li><a href="#"
+							class="icon fa-tumblr"><span
+							class="label">Tumblr</span></a></li> </ul> </div>
+							</div> <h5>Actions</h5> <ul class="actions"> <li><a
+							href="#" class="button special">Default</a></li>
+							<li><a href="#" class="button">Default</a></li> </ul>
+							<ul class="actions small"> <li><a href="#"
+							class="button special small">Small</a></li> <li><a
+							href="#" class="button small">Small</a></li> </ul>
+							<div class="row"> <div class="6u 12u$(small)"> <ul
+							class="actions vertical"> <li><a href="#"
+							class="button special">Default</a></li> <li><a
+							href="#" class="button">Default</a></li> </ul> </div>
+							<div class="6u$ 12u$(small)"> <ul class="actions
+							vertical small"> <li><a href="#" class="button special
+							small">Small</a></li> <li><a href="#" class="button
+							small">Small</a></li> </ul> </div> <div class="6u
+							12u$(small)"> <ul class="actions vertical"> <li><a
+							href="#" class="button special fit">Default</a></li>
+							<li><a href="#" class="button fit">Default</a></li>
+							</ul> </div> <div class="6u$ 12u$(small)"> <ul
+							class="actions vertical small"> <li><a href="#"
+							class="button special small fit">Small</a></li> <li><a
+							href="#" class="button small fit">Small</a></li> </ul>
+							</div> </div> </section>
+								<section> <h4>Table</h4> <h5>Default</h5> <div
+							class="table-wrapper"> <table> <thead> <tr>
+							<th>Name</th> <th>Description</th> <th>Price</th>
+							</tr> </thead> <tbody> <tr> <td>Item One</td> <td>Ante
+							turpis integer aliquet porttitor.</td> <td>29.99</td>
+							</tr> <tr> <td>Item Two</td> <td>Vis ac commodo
+							adipiscing arcu aliquet.</td> <td>19.99</td> </tr>
+							<tr> <td>Item Three</td> <td> Morbi faucibus arcu
+							accumsan lorem.</td> <td>29.99</td> </tr> <tr>
+							<td>Item Four</td> <td>Vitae integer tempus
+							condimentum.</td> <td>19.99</td> </tr> <tr> <td>Item
+							Five</td> <td>Ante turpis integer aliquet
+							porttitor.</td> <td>29.99</td> </tr> </tbody> <tfoot>
+							<tr> <td colspan="2"></td> <td>100.00</td> </tr>
+							</tfoot> </table> </div>
+									<h5>Alternate</h5> <div class="table-wrapper">
+								<table class="alt"> <thead> <tr> <th>Name</th>
+								<th>Description</th> <th>Price</th> </tr> </thead>
+								<tbody> <tr> <td>Item One</td> <td>Ante turpis
+								integer aliquet porttitor.</td> <td>29.99</td>
+								</tr> <tr> <td>Item Two</td> <td>Vis ac commodo
+								adipiscing arcu aliquet.</td> <td>19.99</td> </tr>
+								<tr> <td>Item Three</td> <td> Morbi faucibus arcu
+								accumsan lorem.</td> <td>29.99</td> </tr> <tr>
+								<td>Item Four</td> <td>Vitae integer tempus
+								condimentum.</td> <td>19.99</td> </tr> <tr>
+								<td>Item Five</td> <td>Ante turpis integer aliquet
+								porttitor.</td> <td>29.99</td> </tr> </tbody>
+								<tfoot> <tr> <td colspan="2"></td> <td>100.00</td>
+								</tr> </tfoot> </table> </div> </section>
+								<section> <h4>Buttons</h4> <ul class="actions">
+							<li><a href="#" class="button
+							special">Special</a></li> <li><a href="#"
+							class="button">Default</a></li> </ul> <ul
+							class="actions"> <li><a href="#" class="button
+							big">Big</a></li> <li><a href="#"
+							class="button">Default</a></li> <li><a href="#"
+							class="button small">Small</a></li> </ul> <ul
+							class="actions fit"> <li><a href="#" class="button
+							special fit">Fit</a></li> <li><a href="#"
+							class="button fit">Fit</a></li> </ul> <ul
+							class="actions fit small"> <li><a href="#"
+							class="button special fit small">Fit + Small</a></li>
+							<li><a href="#" class="button fit small">Fit +
+							Small</a></li> </ul> <ul class="actions"> <li><a
+							href="#" class="button special icon
+							fa-download">Icon</a></li> <li><a href="#"
+							class="button icon fa-download">Icon</a></li> </ul>
+							<ul class="actions"> <li><span class="button special
+							disabled">Special</span></li> <li><span class="button
+							disabled">Default</span></li> </ul> </section>
+								<section> <h4>Form</h4> <form method="post"
+							action="#"> <div class="row uniform 50%"> <div
+							class="6u 12u$(xsmall)"> <input type="text"
+							name="demo-name" id="demo-name" value=""
+							placeholder="Name" /> </div> <div class="6u$
+							12u$(xsmall)"> <input type="email" name="demo-email"
+							id="demo-email" value="" placeholder="Email" /> </div>
+							<div class="12u$"> <div class="select-wrapper">
+							<select name="demo-category" id="demo-category">
+							<option value="">- Category -</option> <option
+							value="1">Manufacturing</option> <option
+							value="1">Shipping</option> <option
+							value="1">Administration</option> <option
+							value="1">Human Resources</option> </select> </div>
+							</div> <div class="4u 12u$(small)"> <input
+							type="radio" id="demo-priority-low"
+							name="demo-priority" checked> <label
+							for="demo-priority-low">Low Priority</label> </div>
+							<div class="4u 12u$(small)"> <input type="radio"
+							id="demo-priority-normal" name="demo-priority"> <label
+							for="demo-priority-normal">Normal Priority</label>
+							</div> <div class="4u$ 12u(small)"> <input
+							type="radio" id="demo-priority-high"
+							name="demo-priority"> <label
+							for="demo-priority-high">High Priority</label> </div>
+							<div class="6u 12u$(small)"> <input type="checkbox"
+							id="demo-copy" name="demo-copy"> <label
+							for="demo-copy">Email me a copy of this
+							message</label> </div> <div class="6u$ 12u$(small)">
+							<input type="checkbox" id="demo-human"
+							name="demo-human" checked> <label for="demo-human">I
+							am a human and not a robot</label> </div> <div
+							class="12u$"> <textarea name="demo-message"
+							id="demo-message" placeholder="Enter your message"
+							rows="6"></textarea> </div> <div class="12u$"> <ul
+							class="actions"> <li><input type="submit" value="Send
+							Message" class="special" /></li> <li><input
+							type="reset" value="Reset" /></li> </ul> </div> </div>
+							</form> </section>
+								<section> <h4>Image</h4> <h5>Fit</h5> <div
+							class="box alt"> <div class="row 50% uniform"> <div
+							class="12u$"><span class="image fit"><img
+							src="images/fulls/05.jpg" alt="" /></span></div> <div
+							class="4u"><span class="image fit"><img
+							src="images/thumbs/01.jpg" alt="" /></span></div> <div
+							class="4u"><span class="image fit"><img
+							src="images/thumbs/02.jpg" alt="" /></span></div> <div
+							class="4u$"><span class="image fit"><img
+							src="images/thumbs/03.jpg" alt="" /></span></div> <div
+							class="4u"><span class="image fit"><img
+							src="images/thumbs/04.jpg" alt="" /></span></div> <div
+							class="4u"><span class="image fit"><img
+							src="images/thumbs/05.jpg" alt="" /></span></div> <div
+							class="4u$"><span class="image fit"><img
+							src="images/thumbs/06.jpg" alt="" /></span></div> <div
+							class="4u"><span class="image fit"><img
+							src="images/thumbs/03.jpg" alt="" /></span></div> <div
+							class="4u"><span class="image fit"><img
+							src="images/thumbs/02.jpg" alt="" /></span></div> <div
+							class="4u$"><span class="image fit"><img
+							src="images/thumbs/01.jpg" alt="" /></span></div>
+							</div> </div> <h5>Left &amp; Right</h5> <p><span
+							class="image left"><img src="images/avatar.jpg" alt=""
+						/>    </span>Fringilla nisl. Donec accumsan interdum nisi,
+							quis tincidunt felis sagittis eget. tempus euismod.
+						Vestibulum ante ipsum primis in faucibus vestibulum.
+						Blandit adipiscing eu felis iaculis volutpat ac adipiscing
+						accumsan eu faucibus. Integer ac pellentesque praesent
+						tincidunt felis sagittis eget. tempus euismod. Vestibulum
+						ante ipsum primis in faucibus vestibulum. Blandit
+						adipiscing eu felis iaculis volutpat ac adipiscing
+						accumsan eu faucibus. Integer ac pellentesque praesent.
+						Donec accumsan interdum nisi, quis tincidunt felis
+						sagittis eget. tempus euismod. Vestibulum ante ipsum
+						primis in faucibus vestibulum. Blandit adipiscing eu felis
+						iaculis volutpat ac adipiscing accumsan eu faucibus.
+						Integer ac pellentesque praesent tincidunt felis sagittis
+						eget. tempus euismod. Vestibulum ante ipsum primis in
+						faucibus vestibulum. Blandit adipiscing eu felis iaculis
+						volutpat ac adipiscing accumsan eu faucibus. Integer ac
+						pellentesque praesent.</p> <p><span class="image
+						right"><img src="images/avatar.jpg" alt=""
+						/>    </span>Fringilla nisl. Donec accumsan interdum nisi,
+							quis tincidunt felis sagittis eget. tempus euismod.
+						Vestibulum ante ipsum primis in faucibus vestibulum.
+						Blandit adipiscing eu felis iaculis volutpat ac adipiscing
+						accumsan eu faucibus. Integer ac pellentesque praesent
+						tincidunt felis sagittis eget. tempus euismod. Vestibulum
+						ante ipsum primis in faucibus vestibulum. Blandit
+						adipiscing eu felis iaculis volutpat ac adipiscing
+						accumsan eu faucibus. Integer ac pellentesque praesent.
+						Donec accumsan interdum nisi, quis tincidunt felis
+						sagittis eget. tempus euismod. Vestibulum ante ipsum
+						primis in faucibus vestibulum. Blandit adipiscing eu felis
+						iaculis volutpat ac adipiscing accumsan eu faucibus.
+						Integer ac pellentesque praesent tincidunt felis sagittis
+						eget. tempus euismod. Vestibulum ante ipsum primis in
+						faucibus vestibulum. Blandit adipiscing eu felis iaculis
+						volutpat ac adipiscing accumsan eu faucibus. Integer ac
+						pellentesque praesent.</p> </section>
+							</section> -->
+
+					</div>
+
+				<!-- Footer --> <footer id="footer">
+
+						<!--<div class="image right"><img
+					src="http://178.62.237.252/wp-content/uploads/2014/10/
+					logo_fablab_s1.png" alt="" /></div> -->
+
+						<ul class="icons"> <li><a
+					href="https://twitter.com/troykyo" class="icon
+					fa-twitter"><span class="label">Twitter</span></a></li> <li><a
+					href="https://github.com/troykyo" class="icon fa-github"><span
+					class="label">Github</span></a></li> <li><a
+					href="https://www.facebook.com/troykyo" class="icon
+					fa-facebook"><span class="label">Facebook</span></a></li>
+					<li><a href="#Contact" class="icon fa-envelope-o"><span
+					class="label">Email</span></a></li> </ul> <ul
+					class="copyright"> <li>CC Troy Nachtigall</li><li>Design: <a
+					href="http://html5up.net">HTML5 UP</a></li> </ul> </footer>
+            </body> </html>
