@@ -38,6 +38,52 @@
 
 <p>I&#8217;ve done quite a bit of scanning and printing in Industrial Design including teaching a course on 3D for Fashion Design at the University of Venice and 3D for Industrial Design at the University of Rome. My primary tools are generally <a href="http://www.david-3d.com/en/">DAVID - 3D Scanner</a>, <a href="http://skanect.occipital.com/download/">Skanect</a>, <a href="http://meshlab.sourceforge.net/">MeshLab</a>, and <a href="http://www.rhino3d.com/">Rhinoceros</a>. For this project I will be pushing my limits by not using these Applications. </p>
 
+<h4>Designing a Non Subtractive SHOE Model</h4>
+<iframe width="640" height="480" src="https://sketchfab.com/models/08839b8d5b854a4882ae6987c0916a8c/embed" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel=""></iframe>
+
+
+<p>I had a great opportunity to travel to Alicante and the <a href="http://recreus.com/en/">Recreus</a> HQ facility where they create a flexible TPE filament called Fila Flex. Our homework was to create a model that cannot be created in subtractive processes. I choose to make a shoe. Ignazio has created shoes in flexible materials before, but I wanted to create a shoe with a multiple variable infill sole. </p>
+								<div class="row 50% uniform">
+									<div class="4u"><span class="image fit"><img src="images/3D/3D91.jpg" alt="Testing" /></span></div>
+									<div class="4u"><span class="image fit"><img src="images/3D/3D92.jpg" alt="Problems" /></span></div>
+									<div class="4u$"><span class="image fit"><img src="images/3D/3D93.jpg" alt="Fixing" /></span></div>
+								</div>
+<p>I used a specialized piece of software called <a href="http://www.delcam-crispin.com/">Delcam CRISPIN </a> as it is uniquely created and for making shoes. They were recently acquired by Autodesk and I am hoping that I can convince Autodesk to create a shoe program in the 123D series of programs. I teach innovation for footwear at <a href="http://www.slem.nl/en/home">SLEM</a> and had access to the program there. I started with a 3-D scan of my foot and it used to their last maker software to create a last based upon my foot this required taking an existing last and adapting it to my foot. The Crispin software is uniquely capable of adjusting a nurb based shoe model to a 3D scan. With this basic model for a shoe created I imported the STL it to Cinema 4D to use some of the techniques that I learned while doing the scan and print project. </p>
+								<div class="row 50% uniform">
+									<div class="4u"><span class="image fit"><img src="images/3D/3D101.jpg" alt="Testing" /></span></div>
+									<div class="4u"><span class="image fit"><img src="images/3D/3D102.jpg" alt="Problems" /></span></div>
+									<div class="4u$"><span class="image fit"><img src="images/3D/3D103.jpg" alt="Fixing" /></span></div>
+								</div>
+<p>First I extruded the walls to create volume. The amount of space and volume directly affects the stretching this and the softness of the final print which I will discuss in a minute when I show you infill. Next, I extruded and enlarged the bottom to create a shoe sole. The bottom edge needs curved under. Usually I would use a Loft Extrusion in this circumstance, but in keeping with the idea of using Mesh sculpting tools I took the edge off with the softening brush.<br>
+I wanted to add some ridges to make the shoe look dinosaur like, when Shoe Forecaster guru <a href="http://www.slem.nl/en/faculty/slem-professors">Nicolene van Enter</a> gave me some great direction. A single exaggerated ridge created with a Pull brush with a needle falloff. </p>
+								<div class="row 50% uniform">
+									<div class="4u"><span class="image fit"><img src="images/3D/EP11.jpg" alt="Testing" /></span></div>
+									<div class="4u"><span class="image fit"><img src="images/3D/EP12.jpg" alt="Problems" /></span></div>
+									<div class="4u$"><span class="image fit"><img src="images/3D/EP13.jpg" alt="Fixing" /></span></div>
+								</div>
+								
+<h4>Slicing</h4>
+<p>The biggest difficulty in printing with Fila Flex is finding the right infill. TPE filaments are flexible and the secret to making something amazing is in the infill. The infill determines flexibilty of the lateral and dorsal sides and the rigidity of the sole (ventral) side of the shoe. Ignazio of <a href="http://recreus.com/en/">Recreus</a> was really awesome and let me design a series of different insole using different infills. <a href="http://www.craftunique.com/craftware">CraftWare</a> makes a super soft spiral infill. <a href="http://wiki.ultimaker.com/Cura">Cura</a> does rectilinear fairly well and <a href="http://slic3r.org/">Slic3r</a> has a plethora of options. Ignazio also pointed me to the<a href="http://www.gyrobot.co.uk/blog/my-adventures-with-3d-printed-insoles-part-1-4"> Gyrobot </a>tutorial for creating a multiple infill models with Slicer. I designed four different styles of infills and we tried them on multiple printers. Each one took a lot of calibration of the first layer via the multiple slicing programs used even though all printers had auto Z calibration. We also had to adjust the filament size to be 1.78mm instead of 1.75mm in order to make sure enough filament was being extruded. Once we got going it went ok, but take a look at my printer calibration files for more input. </p>
+								<div class="row 50% uniform">
+									<div class="4u"><span class="image fit"><img src="images/3D/3D111.jpg" alt="Testing" /></span></div>
+									<div class="4u"><span class="image fit"><img src="images/3D/3D112.jpg" alt="Problems" /></span></div>
+									<div class="4u$"><span class="image fit"><img src="images/3D/3D113.jpg" alt="Fixing" /></span></div>
+								</div>
+								
+<h4>Printing</h4>
+<p>I was at <a href="http://recreus.com/en/">Recreus</a> to learn how to print TPE Fila Flex and Ignazio had all kinds of printers to print on. We ran samples on a <a href="http://www.lewihe.com/">Lewihe Sneaker</a>, a heavily modified<a href="http://www.bq.com/gb/products/witbox.html"> Witbox </a>, a <a href="http://reprap.org/wiki/Prusa_i3">Prusa i3</a>, a <a href="http://reprap.org/wiki/MendelMax">MendelMax</a> and a <a href="http://www.deltamaker.com/">DeltaMaker</a>. We had three successes and fifteen failures. TPE is not easy, but with a little practice adjusting the tension on the Direct drive mechanism you&#8217;ll be printing reliably. </p>
+								<div class="row 50% uniform">
+									<div class="4u"><span class="image fit"><img src="images/3D/3D121.jpg" alt="Testing" /></span></div>
+									<div class="4u"><span class="image fit"><img src="images/3D/3D122.jpg" alt="Problems" /></span></div>
+									<div class="4u$"><span class="image fit"><img src="images/3D/3D123.jpg" alt="Fixing" /></span></div>
+								</div>
+<h4>The Shoe</h4>
+<p>With the test prints run we moved on to printing the final shoe. I couldn&#8217;t use the multiple infill sole I designed because the infill required for the lateral and dorsal walls is created with Craftware and the sole with Slic3r. This is going into the the failure category, but it has revealed that a new slicer software is needed to make truly 3D printable shoes. Thankfully the Creative Director of SLEM is already seeking funds to make this happen. Craftware is great at creating easily removable support structure for the under sole toe spring, heel spring and arch lift, and the internal toe support. It took all night (17 hours) to print, but the final product is visually great, although this iteration of the shoe is a failure due to the problems in the Engineering aspects of the shoe. </p>
+								<div class="row 50% uniform">
+									<div class="4u"><span class="image fit"><img src="images/3D/3D131.jpg" alt="Testing" /></span></div>
+									<div class="4u"><span class="image fit"><img src="images/3D/3D132.jpg" alt="Problems" /></span></div>
+									<div class="4u$"><span class="image fit"><img src="images/3D/3D133.jpg" alt="Fixing" /></span></div>
+								</div>
 <h4>3D Scanning and Printing</h4>
 
 <p>I&#8217;ve done a fair share of scanning and am well versed in <a href="http://www.david-3d.com/en/">DAVID - 3D Scanner</a>, <a href="http://skanect.occipital.com/download/">Skanect</a>, <a href="http://reconstructme.net/">ReconstructMe</a>via Line Laser, Structured Light, Kinect and Asus scanning. All of these give High to Medium control over the scan. For a bit of challenge I picked up a <a href="http://cubify.com/Products/Sense">Sense </a> and used it&#8217;s native software as it is popular but known for it&#8217;s lack of control. </p>
@@ -94,55 +140,7 @@
 <p>It took a lot of work the end result was quite unique. Carl and his family were very excited to have a complete series of their family. I learned a lot about consistency in printing and scanning. Is not as simple as It seems and can be very difficult at times.</p>
 								
 									<div class="8u$"><span class="image fit"><img src="images/3D/3D222.jpg" alt="Problems" /></span></div>
-									
-
-<h4>Designing a Non Subtractive SHOE Model</h4>
-<iframe width="640" height="480" src="https://sketchfab.com/models/08839b8d5b854a4882ae6987c0916a8c/embed" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel=""></iframe>
-
-
-<p>I had a great opportunity to travel to Alicante and the <a href="http://recreus.com/en/">Recreus</a> HQ facility where they create a flexible TPE filament called Fila Flex. Our homework was to create a model that cannot be created in subtractive processes. I choose to make a shoe. Ignazio has created shoes in flexible materials before, but I wanted to create a shoe with a multiple variable infill sole. </p>
-								<div class="row 50% uniform">
-									<div class="4u"><span class="image fit"><img src="images/3D/3D91.jpg" alt="Testing" /></span></div>
-									<div class="4u"><span class="image fit"><img src="images/3D/3D92.jpg" alt="Problems" /></span></div>
-									<div class="4u$"><span class="image fit"><img src="images/3D/3D93.jpg" alt="Fixing" /></span></div>
-								</div>
-<p>I used a specialized piece of software called <a href="http://www.delcam-crispin.com/">Delcam CRISPIN </a> as it is uniquely created and for making shoes. They were recently acquired by Autodesk and I am hoping that I can convince Autodesk to create a shoe program in the 123D series of programs. I teach innovation for footwear at <a href="http://www.slem.nl/en/home">SLEM</a> and had access to the program there. I started with a 3-D scan of my foot and it used to their last maker software to create a last based upon my foot this required taking an existing last and adapting it to my foot. The Crispin software is uniquely capable of adjusting a nurb based shoe model to a 3D scan. With this basic model for a shoe created I imported the STL it to Cinema 4D to use some of the techniques that I learned while doing the scan and print project. </p>
-								<div class="row 50% uniform">
-									<div class="4u"><span class="image fit"><img src="images/3D/3D101.jpg" alt="Testing" /></span></div>
-									<div class="4u"><span class="image fit"><img src="images/3D/3D102.jpg" alt="Problems" /></span></div>
-									<div class="4u$"><span class="image fit"><img src="images/3D/3D103.jpg" alt="Fixing" /></span></div>
-								</div>
-<p>First I extruded the walls to create volume. The amount of space and volume directly affects the stretching this and the softness of the final print which I will discuss in a minute when I show you infill. Next, I extruded and enlarged the bottom to create a shoe sole. The bottom edge needs curved under. Usually I would use a Loft Extrusion in this circumstance, but in keeping with the idea of using Mesh sculpting tools I took the edge off with the softening brush.<br>
-I wanted to add some ridges to make the shoe look dinosaur like, when Shoe Forecaster guru <a href="http://www.slem.nl/en/faculty/slem-professors">Nicolene van Enter</a> gave me some great direction. A single exaggerated ridge created with a Pull brush with a needle falloff. </p>
-								<div class="row 50% uniform">
-									<div class="4u"><span class="image fit"><img src="images/3D/EP11.jpg" alt="Testing" /></span></div>
-									<div class="4u"><span class="image fit"><img src="images/3D/EP12.jpg" alt="Problems" /></span></div>
-									<div class="4u$"><span class="image fit"><img src="images/3D/EP13.jpg" alt="Fixing" /></span></div>
-								</div>
-								
-<h4>Slicing</h4>
-<p>The biggest difficulty in printing with Fila Flex is finding the right infill. TPE filaments are flexible and the secret to making something amazing is in the infill. The infill determines flexibilty of the lateral and dorsal sides and the rigidity of the sole (ventral) side of the shoe. Ignazio of <a href="http://recreus.com/en/">Recreus</a> was really awesome and let me design a series of different insole using different infills. <a href="http://www.craftunique.com/craftware">CraftWare</a> makes a super soft spiral infill. <a href="http://wiki.ultimaker.com/Cura">Cura</a> does rectilinear fairly well and <a href="http://slic3r.org/">Slic3r</a> has a plethora of options. Ignazio also pointed me to the<a href="http://www.gyrobot.co.uk/blog/my-adventures-with-3d-printed-insoles-part-1-4"> Gyrobot </a>tutorial for creating a multiple infill models with Slicer. I designed four different styles of infills and we tried them on multiple printers. Each one took a lot of calibration of the first layer via the multiple slicing programs used even though all printers had auto Z calibration. We also had to adjust the filament size to be 1.78mm instead of 1.75mm in order to make sure enough filament was being extruded. Once we got going it went ok, but take a look at my printer calibration files for more input. </p>
-								<div class="row 50% uniform">
-									<div class="4u"><span class="image fit"><img src="images/3D/3D111.jpg" alt="Testing" /></span></div>
-									<div class="4u"><span class="image fit"><img src="images/3D/3D112.jpg" alt="Problems" /></span></div>
-									<div class="4u$"><span class="image fit"><img src="images/3D/3D113.jpg" alt="Fixing" /></span></div>
-								</div>
-								
-<h4>Printing</h4>
-<p>I was at <a href="http://recreus.com/en/">Recreus</a> to learn how to print TPE Fila Flex and Ignazio had all kinds of printers to print on. We ran samples on a <a href="http://www.lewihe.com/">Lewihe Sneaker</a>, a heavily modified<a href="http://www.bq.com/gb/products/witbox.html"> Witbox </a>, a <a href="http://reprap.org/wiki/Prusa_i3">Prusa i3</a>, a <a href="http://reprap.org/wiki/MendelMax">MendelMax</a> and a <a href="http://www.deltamaker.com/">DeltaMaker</a>. We had three successes and fifteen failures. TPE is not easy, but with a little practice adjusting the tension on the Direct drive mechanism you&#8217;ll be printing reliably. </p>
-								<div class="row 50% uniform">
-									<div class="4u"><span class="image fit"><img src="images/3D/3D121.jpg" alt="Testing" /></span></div>
-									<div class="4u"><span class="image fit"><img src="images/3D/3D122.jpg" alt="Problems" /></span></div>
-									<div class="4u$"><span class="image fit"><img src="images/3D/3D123.jpg" alt="Fixing" /></span></div>
-								</div>
-<h4>The Shoe</h4>
-<p>With the test prints run we moved on to printing the final shoe. I couldn&#8217;t use the multiple infill sole I designed because the infill required for the lateral and dorsal walls is created with Craftware and the sole with Slic3r. This is going into the the failure category, but it has revealed that a new slicer software is needed to make truly 3D printable shoes. Thankfully the Creative Director of SLEM is already seeking funds to make this happen. Craftware is great at creating easily removable support structure for the under sole toe spring, heel spring and arch lift, and the internal toe support. It took all night (17 hours) to print, but the final product is visually great, although this iteration of the shoe is a failure due to the problems in the Engineering aspects of the shoe. </p>
-								<div class="row 50% uniform">
-									<div class="4u"><span class="image fit"><img src="images/3D/3D131.jpg" alt="Testing" /></span></div>
-									<div class="4u"><span class="image fit"><img src="images/3D/3D132.jpg" alt="Problems" /></span></div>
-									<div class="4u$"><span class="image fit"><img src="images/3D/3D133.jpg" alt="Fixing" /></span></div>
-								</div>
-
+            
 <h2>Conclusions</h2>
 
 <p>Both projects were failures. The Sense Scanner is decent when producing single objects but for a range of objects it&#8217;s difficult to ensure a similar quality over each scan. Skanect or ReconstructMe is definitely preferable in terms of reliability. The new mesh sculpting features in Cinema 4D are great, they are definitely a great tool. I usually prefer nurb or T-Spline modeling, but for scanning and mesh manipulation this is great. TPE Fila Flex has changed the rules for FDM printing and that has me very interested in FDM again for the first time in long time. (I&#8217;ve been into SLS printing with Shapeways for the last 5 years. <a href="https://www.shapeways.com/designer/troykyo">troykyo on Shapeways</a>.) The Shoes are aesthetically pleasing but need help on an engineering front. That makes them a failure for now but as soon as I finish Fab Academy I will write my own shoe slicer. </p>						<div class="box alt">
