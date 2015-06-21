@@ -29,7 +29,7 @@
 		
 <h2>Embedded Programming</h2>
 
-<p><a href="http://academy.cba.mit.edu/classes/embedded_programming/index.html">This weeks class</a>of Fab Academy 2015 was about programing microcontrollers. It is a skill longstanding in my mind, and the
+<p><a href="http://academy.cba.mit.edu/classes/embedded_programming/index.html">This weeks class</a> of Fab Academy 2015 was about programing microcontrollers. It is a skill longstanding in my mind, and the
 opportunity is present. I am not a programmer, but have programmed and taught Arduino courses for more than 10 years. This week is a journey into the mystery behind the magic. </p>
 
 <p>To quote Prof Niel Gershenfeld</p>
@@ -51,13 +51,16 @@ opportunity is present. I am not a programmer, but have programmed and taught Ar
 <h2>Programs</h2>
 
 <p>Since 1999 the CLI has been my drug of choice, so the <a href="http://www.obdev.at/products/crosspack/index.html">CrossPack Development Environment for Atmel’s AVR Microcontrollers</a> was for me.
-There is a basic blink tutorial on the Crosspack page but it goes like this:
-1. Create a new project: &#8216;avr-project helloWorld&#8217;
-2. Edit the main.c file: &#8216;vim helloWorld/firmware/main.c&#8217;
-3. I used the sample code </p>
+There is a basic blink tutorial on the Crosspack page but it goes like this:</p>
 
-<p>&#8216;#include &lt;avr/io.h&gt;
-&#8217;#include &lt;util/delay.h&gt;</p>
+<ol>
+<li>Create a new project: &#8216;avr-project helloWorld&#8217;</li>
+<li>Edit the main.c file: &#8216;vim helloWorld/firmware/main.c&#8217;</li>
+<li>I used the sample code
+ <pre><code>
+&#8216;#include &lt;avr/io.h&gt;
+&#8217;#include &lt;util/delay.h&gt;</li>
+</ol>
 
 <p>&#8217;int main(void)
 {
@@ -71,15 +74,13 @@ There is a basic blink tutorial on the Crosspack page but it goes like this:
  }
  return 0; /</em> never reached */
 }
+</code></pre>
 4. Move to the firmware folder &#8216;cd helloWorld/firmware/&#8217;
 5. Make the make file &#8216;cd helloWorld/firmware/&#8217;
 6. Make the make flash &#8216;make flash&#8217;
 7. and send it &#8216;make fuse&#8217;</p>
 
 <p>I misspelled one function and forgot the ; in another, but the error lines are identical to Arduino and I recovered quickly. The hard part was defining which ISP I was using. With my FabISP sitting in the <a href="http://fablabcascina.org/">Fab Lab Cascina </a> I flashed with an Arduino on hand. </p>
-
-<p>I really wanted to understand the flash and fuse process </p>
-
 </section>
 
 						
