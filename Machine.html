@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+
+		<html> <head> <title>Electronics Production</title> <meta
+	http-equiv="content-type" content="text/html; charset=utf-8" /> <meta
+	name="description" content="" /> <meta name="keywords" content="" /> <!--[if
+	lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]--> <script
+	src="js/jquery.min.js"></script> <script
+	src="js/jquery.poptrox.min.js"></script> <script
+	src="js/skel.min.js"></script> <script src="js/init.js"></script> <noscript>
+	<link rel="stylesheet" href="css/skel.css" /> <link rel="stylesheet"
+	href="css/style.css" /> <link rel="stylesheet" href="css/style-xlarge.css" />
+	</noscript> <!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css"
+/>    <![endif]--> </head> <body id="top">
+/>
+		<!-- Header -->
+
+					<header id="header"> <a href="#" class="image avatar"><img
+				src="images/avatar.jpg" alt="" /></a> <h1><strong>I am
+				Troy</strong>, a designer<br /> completing <a
+				href="http://www.fabacademy.org">Fab&nbsp;Academy</a> at <a
+				href="http://fablabcascina.org">FabLab&nbsp;Cascina</a>. </h1>
+				<h1> <strong><a href="./index.html#About">About</a> | <a
+				href="./Project.html">Project</a> | <a
+				href="./index.html#Classes">Classes</a></strong> </h1> </header>
+
+				<!-- Main --> <div id="main">
+
+						<!-- One --> <section id="one"> <header class="major">
+		
+<h2>Machine Building</h2>
+
+<p><a href="http://academy.cba.mit.edu/classes/embedded_programming/index.html">This weeks class</a> of Fab Academy 2015 was about machine building. This is the team building week and requires all of the members of the lab to come together to make something great. </p>
+
+<p>To quote Neil Gershenfeld and Nadya Peek
+Stress is press, Strain is Pain. &#8230; Given this machine that you guys are going to be building we already made some assumptions.</p>
+
+<h2>The Machine</h2>
+
+<p><a href="http://fablabcascina.org/">Fab Lab Cascina</a> is famous for people getting married, so we decided to make or very own amazing ring milling machine.<br>
+ <div class="box alt">
+ <div class="row 50% uniform">
+ <div class="4u"><span class="image fit"><img src="images/MB/MAC1.jpg" alt="Picture" /></span></div>
+ <div class="4u"><span class="image fit"><img src="images/MB/MAC2.jpg" alt="Design" /></span></div>
+ <div class="4u$"><span class="image fit"><img src="images/MB/MAC3.jpg" alt="Milling Program" /></span></div>
+ </div>
+ </div>
+My job is the electronics for controlling the stepper motors. All of my files can be found in the project repository <a href="https://github.com/ifala/m2m_ring/tree/master/Electronics">m2m_ring/Electronics.</a></p>
+
+<h2>The Electronics</h2>
+
+<p>I am located in the Netherlands which is a long way from Pisa so my fob was the electronics design. After a brain storming meeting with Fiore we decided to use the <a href="https://www.pololu.com/product/1182">Pololu - A4988 Stepper Motor Driver Carrier</a> breakout because it has adjustable current limiting, over-current and over-temperature protection, and different step resolutions. These use the <a href="https://www.pololu.com/file/download/A4988.pdf?file_id=0J450">A4988 and here is it&#8217;s datasheet</a>. This was not a chance choice. I recently finished creating a stepper control board from scratch and they are very delicate. I fried one of the A4988 drivers the third time I turned it on. (Blue smoke of death style.) There is a new, profound, appreciation for the Electronic Engineers in my life. I started with the motor stepper board I created for my final project and modified it for the machine that we are all building together. </p>
+ <div class="box alt">
+ <div class="row 50% uniform">
+ <div class="4u"><span class="image fit"><img src="images/MB/M2MTraces.png" alt="Traces" /></span></div>
+ <div class="4u"><span class="image fit"><img src="images/MB/M2MBoard.png" alt="Board" /></span></div>
+ <div class="4u$"><span class="image fit"><img src="images/MB/M2MEagle.png.jpg" alt="Eagle" /></span></div>
+ </div>
+ </div>
+
+<p> Like so many components the Pololu - A4988 does not exist in any library so I had to fake it real.  8 pin headers were the key and I'll have to manually check the spacing in illustrator later.  I had to spin it a few ways buy I found a really nice position for it on the layout.  Everything else was a cakewalk except  the regulator.  The REG Ldo 5V 1A SOT223 [LM2940IMP-5.0CT-ND](http://www.digikey.com/product-detail/en/LM2940IMP-5.0/LM2940IMP-5.0CT-ND/3701581) that we used is a very tricky little component.  As you'll see in the datasheet [LM2940(-N, C)](http://media.digikey.com/pdf/Data%20Sheets/Texas%20Instruments%20PDFs/LM2940(-N,C)_Sept-23-2013.pdf) the input and output are exactly opposite of the regulator that is in the eagle library.  No fear,  I've seen this before.  Never trust a regulator, go read the datasheet. If you download the eagle file the component may seem backwards, but there is a reason for that.  In the upper right hand corner I left the circuit for the ESP8266, If we want to make the M2M wireless one day the circuit is all ready to go.  I uploaded all the files and emailed my group mates.  I hope our M2M machine is amazing.  
+</p>
+</section>
+
+						
+
+					</div>
+
+				<!-- Footer --> <footer id="footer">
+
+						<!--<div class="image right"><img
+					src="http://178.62.237.252/wp-content/uploads/2014/10/
+					logo_fablab_s1.png" alt="" /></div> -->
+
+						<ul class="icons"> <li><a
+					href="https://twitter.com/troykyo" class="icon
+					fa-twitter"><span class="label">Twitter</span></a></li> <li><a
+					href="https://github.com/troykyo" class="icon fa-github"><span
+					class="label">Github</span></a></li> <li><a
+					href="https://www.facebook.com/troykyo" class="icon
+					fa-facebook"><span class="label">Facebook</span></a></li>
+					<li><a href="#Contact" class="icon fa-envelope-o"><span
+					class="label">Email</span></a></li> </ul> <ul
+					class="copyright"> <li>CC Troy Nachtigall</li><li>Design: <a
+					href="http://html5up.net">HTML5 UP</a></li> </ul> </footer>
+
+			</body> </html>
