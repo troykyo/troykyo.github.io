@@ -32,7 +32,7 @@
 <p><a href="http://academy.cba.mit.edu/classes/embedded_programming/index.html">This weeks class </a>of Fab Academy 2015 was about working with composite materials. We learned about plastics and the creation of larger structures.</p>
 
 <p>To quote Prof Niel Gershenfeld:</p>
-
+"I'll come back to safety but stay away from glass and carbon fiber"
             <blockquote></blockquote>
             
 
@@ -45,17 +45,17 @@
 									<div class="4u$"><span class="image fit"><img src="images/Composites/MILL03.png" alt="Calculating the path" /></span></div>
 								</div>
 							</div>
-<p>What I hope to achieve is a <strong>Low Poly Bathtub</strong> created from a solid polygon that is extruded and then separated into separate panels. These panels will be Milled into wooden panels that can be used in the molding and casting week to make a low poly bathtub. </p>
+<p>What I hope to achieve is a <strong>Low Poly Bathtub</strong> created from a solid polygon that is extruded and then separated into distinct panels. These panels will be Milled into wooden panels that can be used in the molding and casting week to make a low poly bathtub. </p>
 
-<p>I tried to do this project in Antimony, but the project depends on Decimation which doesn&#8217;t exists yet and I don&#8217;t posses the skill to script it myself.
+<p>I tried to do this project in Antimony, but the project depends on Decimation which doesn&#8217;t exists yet and I don&#8217;t possess the skill to script it myself.
 So I fell back on an old reliable, Cinema 4D because I want to experiment with using the animation functions to drop all my pieces to the ground plane for the milling Process. </p>
 
 <h3>Step 1</h3>
 
 <p>After evaluating several data sheets for bathtub dimensions and measuring the few I have access to I came to the dimensions. 66cm x 180cm x 40cm.
-I tried designing pollens for a Loft Nurb in Illustrator, but I didn&#8217;t like the curves. I retired them in iDraw, still not perfect. I finally bit the bullet and learned how to create polylines in Cinema 4D. This was fail #1.</p>
+I tried designing pollens for a Loft Nurb in Illustrator, but I didn&#8217;t like the curves. I retried them in iDraw, still not perfect. I finally bit the bullet and learned how to create polylines in Cinema 4D. This was fail #1.</p>
 
-<p>While this rendered the overall shape I wanted when I applied the polygon reduction (decimation) the shapes generated were not what I needed. I scraped version one and went back to the drawing board and remade the polylines with anima curves, repeated the process of creating a loft nurb followed with 93% decimation and it still looked wrong. </p>
+<p>While this rendered the overall shape I wanted when I applied the polygon reduction (decimation) the shapes generated were not what I needed. I scrapped version one and went back to the drawing board and remade the polylines with anima curves, repeated the process of creating a loft nurb followed with 93% decimation and it still looked wrong. </p>
 
 <p>The next attempt involved a Hemisphere and use a FFM deformation to achieve the object. This finally resulted in the desired shape. It&#8217;s ironic how often the FFM deformation is the solution and how rarely it is used in the first attempt.</p>
             	<div class="box alt">
@@ -67,7 +67,7 @@ I tried designing pollens for a Loft Nurb in Illustrator, but I didn&#8217;t lik
 							</div>
 <h3>Step 2</h3>
 
-<p>Once the low poly decimation looked great the next step was to mirror it over the median plane to provide an aesthetic quality that is relational to the human anatomy it will enclose. The FFM Deformed hemisphere provided a model that would function well with this line of symmetry in mind and only three points needed to be moved to make this work. The two halved welded together create the new shell.</p>
+<p>Once the low poly decimation looked great the next step was to mirror it over the median plane to provide an aesthetic quality that is relational to the human anatomy it will enclose. The FFM Deformed hemisphere provided a model that would function well with this line of symmetry in mind and only three points needed to be moved to make this work. The two halves welded together create the new shell.</p>
                     	<div class="box alt">
 								<div class="row 50% uniform">
 									<div class="4u"><span class="image fit"><img src="images/Composites/MILL08.png" alt="Fab Modules" /></span></div>
@@ -89,7 +89,7 @@ I tried designing pollens for a Loft Nurb in Illustrator, but I didn&#8217;t lik
 
 <h3>Step 4,5,6</h3>
 
-<p>In order to simplify construction I passed a whole day designing an interlocking support structure and subtracting 5mm troughs from the panels in order that they slide in to place. After three separate attempts with multiple errors that required hand correction the realization struck that without a 5.2 axes milling head this was going to be impossible. I abandoned these explorations substituting the idea of planar <a href="http://www.tensegriteit.nl/">Tensegrity</a> (Like the sticks, but with planes.) While a lot of time was spent failing, the realization the limits of the mill we are using was worth while. It&#8217;s easy to see why a 5.2 axis mill costs 100,000$.</p>
+<p>In order to simplify construction I passed a whole day designing an interlocking support structure and subtracting 5mm troughs from the panels in order that they slide in to place. After three separate attempts with multiple errors that required hand correction the realization struck that without a 5.2 axes milling head this was going to be impossible. I abandoned these explorations substituting the idea of planar <a href="http://www.tensegriteit.nl/">Tensegrity</a> (Like the sticks, but with planes.) While a lot of time was spent failing, the realization of the limits of the mill we are using was worth while. It&#8217;s easy to see why a 5.2 axis mill costs 100,000$.</p>
             	<div class="box alt">
 								<div class="row 50% uniform">
 									<div class="4u"><span class="image fit"><img src="images/Composites/MILL16.png" alt="Fab Modules" /></span></div>
@@ -99,7 +99,7 @@ I tried designing pollens for a Loft Nurb in Illustrator, but I didn&#8217;t lik
 							</div>
 <h3>Step 7</h3>
 
-<p>All of the pieces needed to be separated into individual pieces. Three tries to make the <a href="http://xplode.valkaari.com/en/xplode.php">Xplode</a> slice the model via a voronoi slicing tied to the nodes resulted in no success. To hand slice the model six copies were used to ensure that no nodes or vertices were shared between models. It was time intensive to do it by hand but the result was ok as all the panels were in separate groups.</p>
+<p>All of the pieces needed to be separated into individual items. Three tries to make the <a href="http://xplode.valkaari.com/en/xplode.php">Xplode</a> slice the model via a voronoi slicing tied to the nodes resulted in no success. To hand slice the model six copies were used to ensure that no nodes or vertices were shared between models. It was time intensive to do it by hand but the result was ok as all the panels were in separate groups.</p>
             	<div class="box alt">
 								<div class="row 50% uniform">
 									<div class="4u"><span class="image fit"><img src="images/Composites/MILL15.png" alt="Fab Modules" /></span></div>
@@ -140,7 +140,7 @@ I tried designing pollens for a Loft Nurb in Illustrator, but I didn&#8217;t lik
 									<div class="4u"><span class="image fit"><img src="images/Composites/comp7.jpg" alt="Adding the image" /></span></div>
 								</div>
 				</div>
-    <p>Twelve hours later I had to leave, but it seemed solid.  Unfortunately it was not completely cured and was crushed in my bag.  Lesson learned, let it cure. While this was a failure due to not letting it cure long enough I learned which amount of burlap I would need to make it strutrally sound, visibly closed (a sinlgle layer of burlap transmis a cheakerboard of light) and the amount of color change that the final material will present. (Tt's always wet.)</p>
+    <p>Twelve hours later I had to leave, but it seemed solid.  Unfortunately it was not completely cured and was crushed in my bag.  Lesson learned, let it cure. While this was a failure due to not letting it cure long enough I learned which amount of burlap I would need to make it structurally sound, visibly closed (a sinlgle layer of burlap transmits a cheakerboard of light) and the amount of color change that the final material will present. (Tt's always wet.)</p>
         <div class="box alt">
 								<div class="row 50% uniform">
 									<div class="4u"><span class="image fit"><img src="images/Composites/comp8.jpg" alt="Fab Modules" /></span></div>
@@ -148,7 +148,7 @@ I tried designing pollens for a Loft Nurb in Illustrator, but I didn&#8217;t lik
 								
 								</div>
 				</div>
-    <p>After a few attempts at milling foam on the Linux CNC and seeing the struggles of my Lab mates with the CNC mill in 3D as well I realized that it was going to take more than a week to mill all the pieces.  I've redesigned everything to recut on the Laser cutter but I remain without enought time to complete the project. </p>
+    <p>After a few attempts at milling foam on the Linux CNC and seeing the struggles of my Lab mates with the CNC mill in 3D as well I realized that it was going to take more than a week to mill all the pieces.  I've redesigned everything to recut on the Laser cutter but I remain without enough time to complete the project. </p>
         <div class="box alt">
 								<div class="row 50% uniform">
 									<div class="4u"><span class="image fit"><img src="images/Composites/comp1.jpg" alt="Fab Modules" /></span></div>
@@ -156,7 +156,7 @@ I tried designing pollens for a Loft Nurb in Illustrator, but I didn&#8217;t lik
 								
 								</div>
 				</div>       
-            <p>So three weeks later I am using a new approach.  This is 1/6 scale pf the bathtub I want to make.  I used the flattned pieces from Cinema 4D to create a flat layout with Illustrator  (Update: I just looked at the new 123D Make and there is the new ability to slice a flat exterior.  This is a much better way.) I laser cut the exterior and created a support structure with 123D make for the interior.  Half an hour later the tape has held and the structure is ready.</p>            
+            <p>So three weeks later I am using a new approach.  This is 1/6 scale of the bathtub I want to make.  I used the flattned pieces from Cinema 4D to create a flat layout with Illustrator  (Update: I just looked at the new 123D Make and there is the new ability to slice a flat exterior.  This is a much better way.) I laser cut the exterior and created a support structure with 123D make for the interior.  Half an hour later the tape has held and the structure is ready.</p>            
                 <div class="box alt">
 								<div class="row 50% uniform">
 									<div class="4u"><span class="image fit"><img src="images/Composites/COMP-01.jpg" alt="Fab Modules" /></span></div>
@@ -181,7 +181,7 @@ I tried designing pollens for a Loft Nurb in Illustrator, but I didn&#8217;t lik
 									<div class="4u$"><span class="image fit"><img src="images/Composites/COMP-09.jpg" alt="Calculating the path" /></span></div>
 								</div>
 				</div> 
-                        <p>After reading the MSDS and watching the instrutional video I mixed the resin and layed each layer up.  The burlap was particularly difficult, but I survived only having to make more resin once.  I didn't add enough creased darts to the bag, but fiore helped me get it ready.</p>
+                        <p>After reading the MSDS and watching the instructional video I mixed the resin and layed each layer up.  The burlap was particularly difficult, but I survived and only had to make more resin once.  I didn't add enough creased darts to the bag, but fiore helped me get it ready.</p>
                 <div class="box alt">
 								<div class="row 50% uniform">
 									<div class="4u"><span class="image fit"><img src="images/Composites/COMP-10.jpg" alt="Fab Modules" /></span></div>
@@ -209,7 +209,7 @@ I tried designing pollens for a Loft Nurb in Illustrator, but I didn&#8217;t lik
                
 <h2>Conclusions</h2>
 
-<p>The two burlap layer seems the best for strength to transparency balance.  I will execute another round of the base and try again.  The second try was a failure.  The process was a lot clearer the second time trhu, but the support structure was not strong enough and the release does not work even when coated three times. Compsites are tricy and complicated.  This weekes assignment took six weeks and was still a failure, but I have the feeling that with a few more tries I will be making something profound.  I will do another piece in my Final Project.</p>			</div>
+<p>The two burlap layer seems the best for strength to transparency balance.  I will execute another round of the base and try again.  The second try was a failure.  The process was a lot clearer the second time trhu, but the support structure was not strong enough and the release does not work even when coated three times. Composites are tricky and complicated.  This week's assignment took six weeks and was still a failure, but I have the feeling that with a few more tries I will be making something profound.  I will do another piece in my Final Project.</p>			</div>
 
 
 							<p>You can find all my source files here: <a href="./Source/MILL/Archive.zip">Milling</a>.</p>
