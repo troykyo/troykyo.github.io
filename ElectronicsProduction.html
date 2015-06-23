@@ -29,7 +29,7 @@
 		
 <h2>Electronics Production</h2>
 
-<p><a href="http://academy.cba.mit.edu/classes/electronics_production/index.html">This weeks class </a>of Fab Academy 2015 was about the creation of PCB&#8217;s and their direct cousins (any form of circuit medium). This week is a skill oriented and made to ensure our capabilites for future lessons. </p>
+<p><a href="http://academy.cba.mit.edu/classes/electronics_production/index.html">This weeks class </a>of Fab Academy 2015 was about the creation of PCB&#8217;s and their direct cousins (any form of circuit medium). This week is a skill oriented one and made to verify our capabilites for future lessons. </p>
 
 <p>To quote Prof Neil Gershenfeld:</p>
 
@@ -61,7 +61,7 @@
 									<div class="4u$"><span class="image fit"><img src="images/EP/EP03.jpg" alt="Calculating the path" /></span></div>
 								</div>
 							</div>
-<p>The 1/64 milling went well once things were set up. It took me a few tries to get the bit in correctly, but once there was easy to understand. Fiore walked me thru it. After that the 1/32 milling was a cake walk. It was interesting to see the left over shards and scraps that needed to be blown away to avoid a short circuit. </p>
+<p>The 1/64 milling went well once things were set up. It took me a few tries to get the bit in correctly, but once there it was easy to understand. Fiore walked me thru it. After that the 1/32 milling was a cake walk. It was interesting to see the left over shards and scraps that needed to be blown away to avoid a short circuit. </p>
 							<div class="box alt">
 								<div class="row 50% uniform">
 									<div class="4u"><span class="image fit"><img src="images/EP/EP04.jpg" alt="Milling" /></span></div>
@@ -71,7 +71,7 @@
 							</div>
 <h3>Stuffing via SMD Soldering</h3>
 
-<p>While I&#8217;ve sewn countless circuits and soldered quite a few thru hole boards, this is my first adventure into SMD soldering. I was sorting all of the components in the circuit diagram found on <a href="http://fab.cba.mit.edu/content/projects/fabispkey/index.html">‎Andy&#8217;s Fab ISP key page</a>. Fiore came by and gave me some good advice by pointing me to his [Bill of Materials] (http://fabacademy.org/archives/2014/students/basile.fiore/images/week04/fabisp_bom.jpg) from when he did Fab Accademy. Fiore also taught Betty and I how to mount the attiny, first placing it with the tweezers and then gently tapping it into place. Next, apply pressure with the tweezers and solder the bottom left, then upper right. Then move clockwise being sure to count to three and apply the right amount of solder. It takes practice, but a good solder is not bulbous and remains shinny. Work out from the attiny to make sure that pads are not accidentally skipped. </p>
+<p>While I&#8217;ve sewn countless circuits and soldered quite a few thru hole boards, this is my first adventure into SMD soldering. I was sorting all of the components in the circuit diagram found on <a href="http://fab.cba.mit.edu/content/projects/fabispkey/index.html">‎Andy&#8217;s Fab ISP key page</a>. Fiore came by and gave me some good advice by pointing me to his [Bill of Materials] (http://fabacademy.org/archives/2014/students/basile.fiore/images/week04/fabisp_bom.jpg) from when he did Fab Academy. Fiore also taught Betty and I how to mount the attiny: first place it with the tweezers and then gently tap it into place. Next, apply pressure with the tweezers and solder the bottom left, then upper right. Then move clockwise being sure to count to three and apply the right amount of solder. It takes practice, but a good solder is not bulbous and remains shinny. Work out from the attiny to make sure that pads are not accidentally skipped. </p>
 							<div class="box alt">
 								<div class="row 50% uniform">
 									<div class="4u"><span class="image fit"><img src="images/EP/EP07.jpg" alt="Preping" /></span></div>
@@ -81,7 +81,7 @@
 							</div>
 <h3>Firmware</h3>
 
-<p>It was exciting to stuff the board, so I stayed at the <a href="http://fablabcascina.org/">Fab Lab Cascina</a> late to upload the firmware. I downloaded <a href="http://www.obdev.at/products/crosspack/index.html">CrossPack - A Development Environment for Atmel’s AVR Microcontrollers</a> and set to loading the firmware. If you scroll down on <a href="http://fabacademy.org/archives/2014/students/basile.fiore/classes/04_electronics_production.html">Fiore Basile @ FabAcademy 2014</a> you&#8217;ll find a great fix to the makefile that has been set for avrisp&#8217;s, not the usbtiny. Although everything was right and Fiore confirmed it, my firmware would not load. But this was not the end of the world, no one elses would either, I gave up and went to bed. </p>
+<p>It was exciting to stuff the board, so I stayed at the <a href="http://fablabcascina.org/">Fab Lab Cascina</a> late to upload the firmware. I downloaded <a href="http://www.obdev.at/products/crosspack/index.html">CrossPack - A Development Environment for Atmel’s AVR Microcontrollers</a> and set to loading the firmware. If you scroll down on <a href="http://fabacademy.org/archives/2014/students/basile.fiore/classes/04_electronics_production.html">Fiore Basile @ FabAcademy 2014</a> you&#8217;ll find a great fix to the makefile that has been set for avrisp&#8217;s, not the usbtiny. Although everything was right and Fiore confirmed it, my firmware would not load. But this was not the end of the world, no one elses' would either, so I gave up and went to sleep for the night. </p>
 							<div class="box alt">
 								<div class="row 50% uniform">
 									<div class="4u"><span class="image fit"><img src="images/EP/EP13.jpg" alt="Attaching" /></span></div>
@@ -89,7 +89,7 @@
 									<div class="4u$"><span class="image fit"><img src="images/EP/EP15.jpg" alt="testing" /></span></div>
 								</div>
 							</div>
-<p>Thankfully the next day (Sunday) friend of the Fablab and Master Electronic Engineer Stefano Panichi came by and helped me trouble shoot. Usually it&#8217;s impossible to test a circuit once soldered because the values are compounded by the micro chip, but if you set your tester to diode mode magic happens. I documented the explanation in Italian <a href="https://plus.google.com/113411858853895350869/posts/ZypkDPMeN24">here</a>. With the tester in diode mode you can test to see if information is passing thru the microchip. We touched one lead of the sensor to ground and then tested all my pins. We found a short circuit to ground on the third pin we tried. Stefano pointed out that I soldered the wrong jumper as well. He also showed me which solders were done well and which were not (most were in the NOT category). It was really amazing to have a Master walk me thru the solders. (It turns out that everyone in the lab had at least one problem that was causing the board not to program.) With the soldering remade and the correct jumpers set uploaded the firmware no problem. What would have been a complete fail was saved by the help of <a href="https://twitter.com/StefanoPanichi">Stefano Panichi (@StefanoPanichi) | Twitter</a>.</p>
+<p>Thankfully the next day (Sunday) friend of the Fablab and Master Electronic Engineer Stefano Panichi came by and helped me trouble shoot. Usually it&#8217;s impossible to test a circuit once soldered because the values are compounded by the micro chip, but if you set your tester to diode mode magic happens. I documented the explanation in Italian <a href="https://plus.google.com/113411858853895350869/posts/ZypkDPMeN24">here</a>. With the tester in diode mode you can test to see if information is passing thru the microchip. We touched one lead of the sensor to ground and then tested all my pins. We found a short circuit to ground on the third pin we tried. Stefano pointed out that I soldered the wrong jumper as well. He also showed me which solders were done well and which were not (most were in the NOT category). It was really amazing to have a Master walk me thru the solders. (It turns out that everyone in the lab had at least one problem that was causing the board not to program.) With the soldering remade and the correct jumpers set the firmware uploaded with no problems. What would have been a complete fail was saved by the help of <a href="https://twitter.com/StefanoPanichi">Stefano Panichi (@StefanoPanichi) | Twitter</a>.</p>
 							<div class="box alt">
 								<div class="row 50% uniform">
 									<div class="4u"><span class="image fit"><img src="images/EP/EP10.jpg" alt="Testing" /></span></div>
