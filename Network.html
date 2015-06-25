@@ -27,78 +27,43 @@
 
 						<!-- One --> <section id="one"> <header class="major">
 		
-<h2>Molding and Casting</h2>
+<h2>Network and Communications</h2>
 
-<p><a href="http://academy.cba.mit.edu/classes/molding_casting/index.html">This weeks class</a> of Fab Academy 2015 was about the creation of molds and the casting of materials to make multiples of an object. </p>
+<p><a href="http://academy.cba.mit.edu/classes/networking_communications/index.html">This weeks class</a> of Fab Academy 2015 was about networking and communication. I may not be a programmer, but this is a fascinating subject. I want to tackle it but I&#8217;ve heard tale that this is a tough week. </p>
 
 <p>To quote Prof Niel Gershenfeld</p>
 
 <blockquote>
-<p>3D printing is over represented in popular press, molding and casting is under represented. In the same time it takes to make a 3D print you can make tooling and compared to 3D printing you can make parts with better mechanical properties and surface effect.</p>
+<p>This is a huge subject . It&#8217;s weeks, months and really years to come to master it. </p>
 </blockquote>
 
-<h3>Plan</h3>
+<h2><a href="http://www.esp8266.com/viewforum.php?f=25">ESP8266</a></h2>
 
-<p>Day 1 - Design, Day 2 - Milling, Day 3 - Mold, Day 4 - Casting</p>
+<p>I want to create a wireless serial communication for my final project. I&#8217;ve worked my way thru a dozen but nothing is working. I am going to have to triage this later and do something simple. </p>
 
-<h3>Design</h3>
-            <div class="box alt">
-				<div class="row 50% uniform">
-				    <div class="4u"><span class="image fit"><img src="images/MC/mill1-1.jpg" alt="Picture" /></span></div>
-				    <div class="4u"><span class="image fit"><img src="images/MC/mill1-2.jpg" alt="Design" /></span></div>
-				    <div class="4u$"><span class="image fit"><img src="images/MC/mill1-3.jpg" alt="Milling Program" /></span></div>
-				</div>
-            </div>
-<p>My father turns 70 years old this summer and for his birthday I wanted to make a food safe chocolate mold. Lynn Nachtigall is well known as a Numismatics scholar. I wanted to make an American 50 Cent Piece with his face on the coin. <a href="http://fablabcascina.org/">Fab Lab Cascina</a> has a <a href="http://support.rolanddga.com/_layouts/RolandDGA/productdetail.aspx?pm=RX-50">Roland RX&#8211;50 Spiral Axis Desktop Rotary Engraver</a> that no one uses because the software is no longer supported. So after reading the manual and the legacy support site, I created a VM Windows XP and installed Medal Editor Software. The Software is fairly straight forward with a grayscale bump map representing cut depth. It took four attempts and five hours using Dodge and Burn in Pixelmator. Text was also challenging as pixelmatr has no text warp and was done manually.<br>
-Tips: White is High, Black is low. Glasses need to pure white to stand up on top. Dodge the nose to raise it to the proper height. Be careful around the mouth as well. </p>
+<h2>Board</h2>
 
-<h3>Milling</h3>
-            <div class="box alt">
-				<div class="row 50% uniform">
-				    <div class="4u"><span class="image fit"><img src="images/MC/mill2-1.jpg" alt="Picture" /></span></div>
-				    <div class="4u"><span class="image fit"><img src="images/MC/mill2-2.jpg" alt="Design" /></span></div>
-				    <div class="4u$"><span class="image fit"><img src="images/MC/mill2-3.jpg" alt="Milling Program" /></span></div>
-				</div>
-            </div>
-<p>Our <a href="http://support.rolanddga.com/_layouts/RolandDGA/productdetail.aspx?pm=RX-50">Roland RX&#8211;50 Spiral Axis Desktop Rotary Engraver</a> hasn&#8217;t worked in over a year. The driver is only compatible with Windows XP. After prepping a VM image and saving it to our milling machine I got started on the milling. The driver is an old school print driver so there is no status update. The first three tries were failures, Try number one was extremely high res and was going to take to long. Try number two was not mounted properly and I ended up milling the machine (There is no space for a sacrificial layer on this machine.). The third try failed due to a depth setting issue and I ended umpiring into the bed again (complete fail). </p>
+<p>So I am out of time and I am falling back to something that will work better, a simple hard coded Serial interface. I used Eagle to design a serial attiny 44 board. The board was milled on a Roland mill with a 1/64 End mill.
+<div class="box alt">
+<div class="row 50% uniform">
+<div class="4u"><span class="image fit"><img src="images/NET/NET1.png" alt="Fab Modules" /></span></div>
+<div class="4u"><span class="image fit"><img src="Source/OD/netTraces.png" alt="Adding the image" /></span></div>
+<div class="4u$"><span class="image fit"><img src="Source/OD/netBoard.png" alt="Calculating the path" /></span></div>
+</div>
+</div>
+The boards are stuffed and fuses are set. For the first time everything seems to work.
+<div class="box alt">
+<div class="row 50% uniform">
+<div class="4u"><span class="image fit"><img src="images/NET/IMG_7907.jpg" alt="Fab Modules" /></span></div>
+<div class="4u"><span class="image fit"><img src="Source/OD/IMG_8847.jpg" alt="Adding the image" /></span></div>
+<div class="4u$"><span class="image fit"><img src="Source/OD/IMG_8829.jpg" alt="Calculating the path" /></span></div>
+</div>
+</div>
+I modified the code and tested the button press on one that change the light on the other. I am out of time now but will return to the project as time permits. </p>
 
-<p>The fourth try came out great. All looks good except for the mouth which I will need to correct next time. The acrylic works great for this but does take a lot more time than my friends that were making wax molds. I want </p>
+<h2>Conclusions</h2>
 
-<h3>Molding</h3>
-            <div class="box alt">
-				<div class="row 50% uniform">
-				    <div class="4u"><span class="image fit"><img src="images/MC/mill3-1.jpg" alt="Picture" /></span></div>
-				    <div class="4u"><span class="image fit"><img src="images/MC/mill3-2.jpg" alt="Design" /></span></div>
-				    <div class="4u$"><span class="image fit"><img src="images/MC/mill3-3.jpg" alt="Milling Program" /></span></div>
-				</div>
-            </div>
-<p>I created a press fit MDF box with an etched area for the coin. I mixed then mixed what I thought was the right amount of <a href="http://www.smooth-on.com/a25/Smooth-Sil%3D-940-Suitable-For-Food-Related-Applications/article_info.html">Smooth-Sil 940 Food-Related Application Silicon</a> but my calculations using the <a href="http://www.smooth-on.com/Silicone-Rubber-an/c2_1115_1131/index.html">Smooth-On Calculator</a> was about double what I actually needed. Next time I will calculate better. I measured the 1:10 mix and mix sideways while avoiding adding air and scraping the walls. We lack a vacuum chamber, but I was working a small amount so an improvised chamber work with a dremel box and the shop vac. Once the consistency was pasty I kept the silicon in the best vacuum possible for 10 minutes. My pour went well, I worked it in at an angle and went slow as can be. Smooth-Sil 940 has 30 minutes of time to set. I had a timer running an made it to 28 minutes during the pour. The goal was no bubbles and that was achieved. </p>
-            <div class="box alt">
-				<div class="row 50% uniform">
-				    <div class="4u"><span class="image fit"><img src="images/MC/mill4-1.jpg" alt="Picture" /></span></div>
-				    <div class="4u"><span class="image fit"><img src="images/MC/mill4-2.jpg" alt="Design" /></span></div>
-				    <div class="4u$"><span class="image fit"><img src="images/MC/mill4-3.jpg" alt="Milling Program" /></span></div>
-				</div>
-            </div>
-<p>To cure faster things faster because I had a flight the next morning I baked the mold at 70*C for 45 minutes.<br>
-Tips: MDF is not a good box choice for press fit. RTFM for <a href="http://www.smooth-on.com/tb/files/Food_Grade_SS940.pdf">the Silicone</a>. Read <a href="http://www.smooth-on.com/tb/files/Food_Grade_SS940.pdf">it</a> again. Your hands are going to be very occupied. Memorize the manual. Be sure to read the <a href="http://www.smooth-on.com/msds/files/SMOOTH-SIL_930__935__940.pdf">MSDS</a>, you will have your hands full when something goes wrong. </p>
-
-<h3>Casting</h3>
-            <div class="box alt">
-				<div class="row 50% uniform">
-				    <div class="4u"><span class="image fit"><img src="images/MC/mill5-1.jpg" alt="Picture" /></span></div>
-				    <div class="4u"><span class="image fit"><img src="images/MC/mill5-2.jpg" alt="Design" /></span></div>
-				    <div class="4u$"><span class="image fit"><img src="images/MC/mill5-3.jpg" alt="Milling Program" /></span></div>
-				</div>
-            </div>
-<p>The moment of truth was an awesome feeling as the mold came out looking great! It was chocolate time. I nuked 1oz of chocolate for 1 minute at 50% power in an microwave. I used the same pour technique to liberate the air bubbles but it didn&#8217;t go so well this time. All the bubble raised to the back side but were still present at the time the solid chocolate was removed. </p>
-
-<p>Tips: Go Slow, chocolate remains liquid for longer than I thought, 10 minutes. </p>
-
-<h3>Conclusions</h3>
-
-<p>Molding and casting are a brave new world. I am redesigning many things to work in it. The bas relief of the image of my father is too high as is the writing. The design program leads to over exaggeration. An acrylic milling base takes FOREVER, but the quality of the final product is stellar. I can&#8217;t wait to do this again. </p>
-
+<p>Networking is harder than I thought. I didn&#8217;t make it very far into where I wanted to this week, but I am happy with how far I did arrive. </p>
 </section>
 
 						
