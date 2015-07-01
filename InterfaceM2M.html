@@ -4,7 +4,7 @@
     <title>M2M Control</title>
     <style>
       body { margin: 0px; padding: 20px; }
-      #received { width: 500px; height: 400px; border: 1px solid #dedede; overflow-y:scroll;}
+      #received { width: 500px; height: 100px; border: 1px solid #dedede; overflow-y:scroll;}
       #sent { width: 500px; } 
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -16,14 +16,19 @@
  
 
   <p>Manual Control</p>
- 
-      <h2>X <button cmd_value="X-" id="cmd_send">UP</button> <button cmd_value="X+" id="cmd_send">DOWN</button></h2>
-      <h2>Y <button cmd_value="Y-" id="cmd_send">LEFT</button> <button cmd_value="Y+" id="cmd_send">RIGHT</button></h2>
-      <h2>Tilt <button cmd_value="T-" id="cmd_send">LEFT</button> <button cmd_value="T+" id="cmd_send">RIGHT</button></h2>
-      <h2>Rotate <button cmd_value="R-" id="cmd_send">Backward</button> <button cmd_value="R+" id="cmd_send">Forward</button></h2>
 
+   
 
- 
+     
+
+   <h2>X  <input type="button" value="UP" id="cmd_XUP"  >
+       <input type="button" value="DOWN" id="cmd_XDOWN"> </h2>
+    <h2>Y  <input type="button" value="LEFT" id="cmd_YL"  >
+       <input type="button" value="RIGHT" id="cmd_YR"> </h2>
+    <h2>Tilt  <input type="button" value="LEFT" id="cmd_TL"  >
+       <input type="button" value="RIGHT" id="cmd_TR"> </h2>
+    <h2>Rotate  <input type="button" value="FORWARD" id="cmd_RF"  >
+       <input type="button" value="BACKWARD" id="cmd_RB"> </h2>
       
  <p>Data received from serial port</p>
   <div id="received">

@@ -59,6 +59,28 @@ My job is the electronics for controlling the stepper motors. All of my files ca
 
 <p> Like so many components the Pololu - A4988 does not exist in any library so I had to fake it real.  8 pin headers were the key and I'll have to manually check the spacing in illustrator later.  I had to spin it a few ways buy I found a really nice position for it on the layout.  Everything else was a cakewalk except  the regulator.  The REG Ldo 5V 1A SOT223 [LM2940IMP-5.0CT-ND](http://www.digikey.com/product-detail/en/LM2940IMP-5.0/LM2940IMP-5.0CT-ND/3701581) that we used is a very tricky little component.  As you'll see in the datasheet [LM2940(-N, C)](http://media.digikey.com/pdf/Data%20Sheets/Texas%20Instruments%20PDFs/LM2940(-N,C)_Sept-23-2013.pdf) the input and output are exactly opposite of the regulator that is in the eagle library.  No fear,  I've seen this before.  Never trust a regulator, go read the datasheet. If you download the eagle file the component may seem backwards, but there is a reason for that.  In the upper right hand corner I left the circuit for the ESP8266, If we want to make the M2M wireless one day the circuit is all ready to go.  I uploaded all the files and emailed my group mates.  I hope our M2M machine is amazing.  
 </p>
+##Interface
+
+            <p>As I still needed to complete my Interface I made the interface for this as well. I am following the tutorial [Python Web-based Serial Console using WebSockets](http://fabacademy.org/archives/2015/doc/WebSocketConsole.html) written by [Fiore Basile](http://fibasile.github.io/) to finish this assignment.  </p>
+ <div class="box alt">
+ <div class="row 50% uniform">
+ <div class="4u"><span class="image fit"><img src="images/IA/1.png" alt="Traces" /></span></div>
+ <div class="4u"><span class="image fit"><img src="images/IA/2.png" alt="Board" /></span></div>
+ <div class="4u$"><span class="image fit"><img src="images/IA/3.png" alt="Eagle" /></span></div>
+ </div>
+ </div>
+ <p>I ran **sudo pip install pyserial tornado multiprocessing** to install the needed software on my Mac.  
+</p>
+ <p>First I created a basic HTML site. [M2M Control](./InterfaceM2M.html)  I don't  remember how attach data in buttons and have to go back and look at that.  The Javascript is contained in [M2M.js](./M2M.js) 
+</p>
+ <p>I followed Fiore's instructions and enabled the Tornado Server [Tornado Web Server. ](http://www.tornadoweb.org/en/stable/) 
+</p>
+ <p>I attached it to my fabduino and the only difficulty was configuring serialworker.pyc to my fabduino. cu.usbmodem411
+</p>
+ <p>It worked, so I created the buttons and made the calls in the javascript.  You can see the code on these two page [M2M Control](./InterfaceM2M.html) and  [M2M.js](./M2M.js) 
+</p>
+ <p>Next I made some small code for the Fabduino and the Stepper motor shields that takes simple commands from serial and breaks them down to their specific motor control board.  Nothing special, but it does the job.        
+            </p>
 </section>
 
 						

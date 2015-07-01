@@ -1,0 +1,98 @@
+<!DOCTYPE HTML>
+
+		<html> <head> <title>Network and Communications</title> <meta
+	http-equiv="content-type" content="text/html; charset=utf-8" /> <meta
+	name="description" content="" /> <meta name="keywords" content="" /> <!--[if
+	lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]--> <script
+	src="js/jquery.min.js"></script> <script
+	src="js/jquery.poptrox.min.js"></script> <script
+	src="js/skel.min.js"></script> <script src="js/init.js"></script> <noscript>
+	<link rel="stylesheet" href="css/skel.css" /> <link rel="stylesheet"
+	href="css/style.css" /> <link rel="stylesheet" href="css/style-xlarge.css" />
+	</noscript> <!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css"
+/>    <![endif]--> </head> <body id="top">
+/>
+		<!-- Header -->
+
+					<header id="header"> <a href="#" class="image avatar"><img
+				src="images/avatar.jpg" alt="" /></a> <h1><strong>I am
+				Troy</strong>, a designer<br /> completing <a
+				href="http://www.fabacademy.org">Fab&nbsp;Academy</a> at <a
+				href="http://fablabcascina.org">FabLab&nbsp;Cascina</a>. </h1>
+				<h1> <strong><a href="./index.html#About">About</a> | <a
+				href="./Project.html">Project</a> | <a
+				href="./index.html#Classes">Classes</a></strong> </h1> </header>
+
+				<!-- Main --> <div id="main">
+
+						<!-- One --> <section id="one"> <header class="major">
+		
+##Interface and Application Programing
+[This weeks class](http://academy.cba.mit.edu/classes/output_devices/index.html) of Fab Academy 2015 was about programing a interface and it's application on a Smartphone or Computer.  
+
+To quote Prof Neil Gershenfeld:
+>Because I'm coming thru a 4G phone it will be dropping every ten minutes or so but that should be enough to get us thru the class.
+
+##Goal
+My new goal is to make the interface for our machine building week as I was unable to complete the 9DOF. 
+
+In the Networking and Communication week I worked with a 9DOF and the ESP8266 wifi board to sense movements on a skateboard.  This week I want to build a visualization.  
+##Processing
+As Niel said that "if you love arduino, then start with processing", so start there I did.  
+On top of processing I installed the  [saitoobjloader - Processing OBJLoader library ](https://code.google.com/p/saitoobjloader/#Download) to display a 3D shoe and the [G4P](http://sourceforge.net/projects/g4p/files/?source=navbar) libraries to help visualize.  While I have it working on an arduino I am having problems getting G4P working on my attiny 44.  I've run out of time.  
+
+##Second Try
+I am following the tutorial [Python Web-based Serial Console using WebSockets](http://fabacademy.org/archives/2015/doc/WebSocketConsole.html) written by [Fiore Basile](http://fibasile.github.io/) to finish this assignment.  
+ <div class="box alt">
+ <div class="row 50% uniform">
+ <div class="4u"><span class="image fit"><img src="images/IA/1.png" alt="Traces" /></span></div>
+ <div class="4u"><span class="image fit"><img src="images/IA/2.png" alt="Board" /></span></div>
+ <div class="4u$"><span class="image fit"><img src="images/IA/3.png" alt="Eagle" /></span></div>
+ </div>
+ </div>
+I ran **sudo pip install pyserial tornado multiprocessing** to install the needed software on my Mac.  
+
+First I created a basic HTML site. [M2M Control](./InterfaceM2M.html)  I don't  remember how attach data in buttons and have to go back and look at that.  The Javascript is contained in [M2M.js](./M2M.js) 
+
+I followed Fiore's instructions and enabled the Tornado Server [Tornado Web Server. ](http://www.tornadoweb.org/en/stable/) 
+
+I attached it to my fabduino and the only difficulty was configuring serialworker.pyc to my fabduino. cu.usbmodem411
+
+It worked, so I created the buttons and made the calls in the javascript.  You can see the code on these two page [M2M Control](./InterfaceM2M.html) and  [M2M.js](./M2M.js) 
+<div class="box alt">
+ <div class="row 50% uniform">
+ <div class="8u$"><span class="image fit"><img src="images/IA/4.jpg" alt="MAchine" /></span></div>
+ </div>
+ </div>
+Next I made some small code for the Fabduino and the Stepper motor shields that takes simple commands from serial and breaks them down to their specific motor control board.  Nothing special, but it does the job.
+
+##Conclusions
+
+I will return to the ESP8266 asap, but for now I am happy to have something working.  HTML - JS - PY - Serial - 
+
+You can find all my source files here: [Interface and Application](./Source/IA).
+</section>
+
+						
+
+					</div>
+
+				<!-- Footer --> <footer id="footer">
+
+						<!--<div class="image right"><img
+					src="http://178.62.237.252/wp-content/uploads/2014/10/
+					logo_fablab_s1.png" alt="" /></div> -->
+
+						<ul class="icons"> <li><a
+					href="https://twitter.com/troykyo" class="icon
+					fa-twitter"><span class="label">Twitter</span></a></li> <li><a
+					href="https://github.com/troykyo" class="icon fa-github"><span
+					class="label">Github</span></a></li> <li><a
+					href="https://www.facebook.com/troykyo" class="icon
+					fa-facebook"><span class="label">Facebook</span></a></li>
+					<li><a href="#Contact" class="icon fa-envelope-o"><span
+					class="label">Email</span></a></li> </ul> <ul
+					class="copyright"> <li>CC Troy Nachtigall</li><li>Design: <a
+					href="http://html5up.net">HTML5 UP</a></li> </ul> </footer>
+
+			</body> </html>
