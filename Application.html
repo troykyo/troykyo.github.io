@@ -48,6 +48,14 @@
 <p>As Niel said that &#8220;if you love arduino, then start with processing&#8221;, so start there I did.<br>
 On top of processing I installed the <a href="https://code.google.com/p/saitoobjloader/#Download">saitoobjloader - Processing OBJLoader library </a> to display a 3D shoe and the <a href="http://sourceforge.net/projects/g4p/files/?source=navbar">G4P</a> libraries to help visualize. While I have it working on an arduino I am having problems getting G4P working on my attiny 44. I&#8217;ve run out of time. </p>
 
+<div class="box alt">
+    <div class="row 50% uniform">
+	<div class="4u"><span class="image fit"><img src="images/IA/01.png" alt="Milling" /></span></div>
+	<div class="4u"><span class="image fit"><img src="images/IA/02.png" alt="Cleaning" /></span></div>
+	<div class="4u$"><span class="image fit"><img src="images/IA/03.png" alt="Result" /></span></div>
+    </div>
+</div>
+            
 <h2>Second Try</h2>
 
 <p>I am following the tutorial <a href="http://fabacademy.org/archives/2015/doc/WebSocketConsole.html">Python Web-based Serial Console using WebSockets</a> written by <a href="http://fibasile.github.io/">Fiore Basile</a> to finish this assignment. </p>
@@ -59,14 +67,24 @@ On top of processing I installed the <a href="https://code.google.com/p/saitoobj
 <p>I followed Fiore&#8217;s instructions and enabled the Tornado Server <a href="http://www.tornadoweb.org/en/stable/">Tornado Web Server. </a> </p>
 
 <p>I attached it to my fabduino and the only difficulty was configuring serialworker.pyc to my fabduino. cu.usbmodem411</p>
-
+<div class="box alt">
+    <div class="row 50% uniform">
+	<div class="4u"><span class="image fit"><img src="images/IA/1.png" alt="Milling" /></span></div>
+	<div class="4u$"><span class="image fit"><img src="images/IA/2.png" alt="Cleaning" /></span></div>
+    </div>
+</div>
 <p>It worked, so I created the buttons and made the calls in the javascript. You can see the code on these two page <a href="./InterfaceM2M.html">M2M Control</a> and <a href="./M2M.js">M2M.js</a> </p>
 
 <p>Next I made some small code for the Fabduino and the Stepper motor shields that takes simple commands from serial and breaks them down to their specific motor control board. Nothing special, but it does the job.</p>
-
+<div class="box alt">
+    <div class="row 50% uniform">
+	<div class="4u"><span class="image fit"><img src="images/IA/3.png" alt="Milling" /></span></div>
+	<div class="4u$"><span class="image fit"><img src="images/IA/4.jpg" alt="Cleaning" /></span></div>
+    </div>
+</div>
 <h2>Conclusions</h2>
 
-<p>I will return to the ESP8266 asap, but for now I am happy to have something working. HTML - JS - PY - Serial - </p>
+<p>I will return to the ESP8266 asap, but for now I am happy to have something working. HTML - JS - PY - Serial - Attiny - Networked Attiny's </p>
 
 <p>You can find all my source files here: <a href="./Source/IA/Archive.zip">Interface and Application</a>.</p>
 </section>
