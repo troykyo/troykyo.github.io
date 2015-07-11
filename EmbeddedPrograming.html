@@ -64,14 +64,18 @@ opportunity is present. I am not a programmer, but have programmed and taught Ar
 There is a basic blink tutorial on the Crosspack page but it goes like this:</p>
 
 <ol>
-<li>Create a new project: &#8216;avr-project helloWorld&#8217;</li>
-<li>Edit the main.c file: &#8216;vim helloWorld/firmware/main.c&#8217;</li>
-<li>I used the sample code
- <pre><code>
-&#8216;#include &lt;avr/io.h&gt;
-&#8217;#include &lt;util/delay.h&gt;</li>
+<li>1. Create a new project: &#8216;avr-project helloWorld&#8217;</li>
+<li>2. Edit the main.c file: &#8216;vim helloWorld/firmware/main.c&#8217;</li>
+    <li>3. Double Check everything is correct.</li>li>
+<li>4. Move to the firmware folder &#8216;cd helloWorld/firmware/&#8217;</li>
+<li>5. Make the make file &#8216;cd helloWorld/firmware/&#8217;</li>
+<li>6. Make the make flash &#8216;make flash&#8217;</li>
+<li>7. and send it &#8216;make fuse&#8217;</p></li>
+<pre><code>
+<li>&#8216;#include &lt;avr/io.h&gt;</li>
+<li>&#8217;#include &lt;util/delay.h&gt;</li>
 </ol>
-
+    
 <p>&#8217;int main(void)
 {
  DDRD = 1 &lt;&lt; 4; /* make the LED pin an output <em>/
@@ -85,21 +89,20 @@ There is a basic blink tutorial on the Crosspack page but it goes like this:</p>
  return 0; /</em> never reached */
 }
 </code></pre>
-<li>4. Move to the firmware folder &#8216;cd helloWorld/firmware/&#8217;</li>
-<li>5. Make the make file &#8216;cd helloWorld/firmware/&#8217;</li>
-<li>6. Make the make flash &#8216;make flash&#8217;</li>
-<li>7. and send it &#8216;make fuse&#8217;</p></li>
-
 <p>I misspelled one function and forgot the ; in another, but the error lines are identical to Arduino and I recovered quickly. The hard part was defining which ISP I was using. With my FabISP sitting in the <a href="http://fablabcascina.org/">Fab Lab Cascina </a> I flashed with an Arduino here on hand. I uploaded the blink code and the led is blinking.</p>
-            
+         
 <div class="box alt">
 				<div class="row 50% uniform">
 				    <div class="4u"><span class="image fit"><img src="images/Embed/BED-04.jpg" alt="Board" /></span></div>
 				    <div class="4u"><span class="image fit"><img src="images/Embed/BED-05.jpg" alt="Traces" /></span></div>
 				    <div class="4u$"><span class="image fit"><img src="images/FIN/FIN5.png" alt="Code" /></span></div>
 				</div>
-            </div>            
+            </div>    
             
+            <h2>Conclusions</h2>
+
+<p>This is going to take a lot of time. I read the <a href="http://www.atmel.com/Images/Atmel-2586-AVR-8-bit-Microcontroller-ATtiny25-ATtiny45-ATtiny85_Datasheet.pdf">‎www.atmel.com/Images/Atmel&#8211;2586-AVR&#8211;8-bit-Microcontroller-ATtiny25-ATtiny45-ATtiny85_Datasheet.pdf</a> and have answered some very interesting questions I&#8217;ve had for a long time about arduinos. The Port B interface has a lot of power for doing things like reading all ports at once via a single line of code. I am really fascinated by the onboard Capacitive touch sensing and the idea that there is support for matrix sensing. I am sure the the timing libraries and the Interrupt handling are going to be useful. I never knew there were two kinds of interrupts.<br>
+All in all this is looking exciting. </p>   
 </section>
 
 						
