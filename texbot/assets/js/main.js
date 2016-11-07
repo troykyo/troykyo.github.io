@@ -29,7 +29,7 @@
 			$window.on('load', function() {
 				window.setTimeout(function() {
 					$body.removeClass('is-loading');
-				}, 100);
+				}, 1000);
 			});
 
 		// Mobile?
@@ -58,7 +58,7 @@
 		// Scrolly.
 			$('.scrolly')
 				.scrolly({
-					speed: 1500,
+					speed: 500,
 					offset: $header.outerHeight()
 				});
 
@@ -67,7 +67,7 @@
 				.append('<a href="#menu" class="close"></a>')
 				.appendTo($body)
 				.panel({
-					delay: 500,
+					delay: 0,
 					hideOnClick: true,
 					hideOnSwipe: true,
 					resetScroll: true,
