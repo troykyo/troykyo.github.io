@@ -3546,7 +3546,7 @@
 		-webkit-transform: scale(0.95);
 		-ms-transform: scale(0.95);
 		transform: scale(0.95);
-		opacity: 0;
+		opacity: .5;
 	}
 
 		body.is-loading #banner h2:before, body.is-loading #banner h2:after {
@@ -3558,7 +3558,7 @@
 		-webkit-transform: translateY(8.5em);
 		-ms-transform: translateY(8.5em);
 		transform: translateY(8.5em);
-		opacity: 0;
+		opacity: .1;
 	}
 
 	body.is-loading #banner:after {
