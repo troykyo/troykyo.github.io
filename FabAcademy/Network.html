@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+
+		<html> <head> <title>Network and Communications</title> <meta
+	http-equiv="content-type" content="text/html; charset=utf-8" /> <meta
+	name="description" content="" /> <meta name="keywords" content="" /> <!--[if
+	lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]--> <script
+	src="js/jquery.min.js"></script> <script
+	src="js/jquery.poptrox.min.js"></script> <script
+	src="js/skel.min.js"></script> <script src="js/init.js"></script> <noscript>
+	<link rel="stylesheet" href="css/skel.css" /> <link rel="stylesheet"
+	href="css/style.css" /> <link rel="stylesheet" href="css/style-xlarge.css" />
+	</noscript> <!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css"
+/>    <![endif]--> </head> <body id="top">
+/>
+		<!-- Header -->
+
+					<header id="header"> <a href="#" class="image avatar"><img
+				src="images/avatar.jpg" alt="" /></a> <h1><strong>I am
+				Troy</strong>, a designer<br /> completing <a
+				href="http://www.fabacademy.org">Fab&nbsp;Academy</a> at <a
+				href="http://fablabcascina.org">FabLab&nbsp;Cascina</a>. </h1>
+				<h1> <strong><a href="./index.html#About">About</a> | <a
+				href="./Project.html">Project</a> | <a
+				href="./index.html#Classes">Classes</a></strong> </h1> </header>
+
+				<!-- Main --> <div id="main">
+
+						<!-- One --> <section id="one"> <header class="major">
+		
+<h2>Network and Communications</h2>
+
+<p><a href="http://academy.cba.mit.edu/classes/networking_communications/index.html">This weeks class</a> of Fab Academy 2015 was about networking and communication. I may not be a programmer, but this is a fascinating subject. I want to tackle it but I&#8217;ve heard tale that this is a tough week. </p>
+
+<p>To quote Prof Niel Gershenfeld</p>
+
+<blockquote>
+<p>This is a huge subject . It&#8217;s weeks, months and really years to come to master it. </p>
+</blockquote>
+
+<h2><a href="http://www.esp8266.com/viewforum.php?f=25">ESP8266</a></h2>
+
+<p>I want to create a wireless serial communication for my final project. I&#8217;ve worked my way thru a dozen but nothing is working. I am going to have to triage this later and do something simple. The first time I sat down to chat with the ESP8266 I just fried the board. I've added a voltage diveder but I just fried another board while trying to push a firmware upgrade via the web.  In my third attempt the firmware worked but  </p>
+
+<h2>Board</h2>
+
+<p>So I am out of time and I am falling back to something that will work better, a simple hard coded Serial interface. I used Eagle to design a serial attiny 44 board. The board was milled on a Roland mill with a 1/64 End mill.
+<div class="box alt">
+<div class="row 50% uniform">
+<div class="4u"><span class="image fit"><img src="images/NET/NET1.png" alt="Fab Modules" /></span></div>
+<div class="4u"><span class="image fit"><img src="Source/OD/netTraces.png" alt="Adding the image" /></span></div>
+<div class="4u$"><span class="image fit"><img src="Source/OD/netBoard.png" alt="Calculating the path" /></span></div>
+</div>
+</div>
+The boards are stuffed and fuses are set. For the first time everything seems to work. This was the first board in a long time that was fairly straight forward and worked the first try.  
+<div class="box alt">
+<div class="row 50% uniform">
+<div class="4u"><span class="image fit"><img src="images/NET/IMG_7907.jpg" alt="Fab Modules" /></span></div>
+<div class="4u"><span class="image fit"><img src="images/NET/IMG_8829.jpg" alt="Adding the image" /></span></div>
+<div class="4u$"><span class="image fit"><img src="images/NET/IMG_8847.jpg" alt="Calculating the path" /></span></div>
+</div>
+</div>
+I modified the code and tested the button press on one that change the light on the other. It's not the most complex of interactions but I have a simple RX/TX serial communication happening on a small level. When the button is pressed on the first board it sends a message to the second board to change the LED state.  It works the other direction as well. I am out of time now but will return to the project as time permits. </p>
+
+<p>You can find all my source files here: <a href="./Source/NET/Archive.zip">Networking and Communications</a>.</p>            
+            
+            
+<h2>Conclusions</h2>
+
+<p>Networking is harder than I thought. I didn&#8217;t make it very far into where I wanted to this week, but I am happy with how far I did arrive in that I made something work although it was not the ESP8266 that I wanted to work with in my Final Project.</p>
+</section>
+
+						
+
+					</div>
+
+				<!-- Footer --> <footer id="footer">
+
+						<!--<div class="image right"><img
+					src="http://178.62.237.252/wp-content/uploads/2014/10/
+					logo_fablab_s1.png" alt="" /></div> -->
+
+						<ul class="icons"> <li><a
+					href="https://twitter.com/troykyo" class="icon
+					fa-twitter"><span class="label">Twitter</span></a></li> <li><a
+					href="https://github.com/troykyo" class="icon fa-github"><span
+					class="label">Github</span></a></li> <li><a
+					href="https://www.facebook.com/troykyo" class="icon
+					fa-facebook"><span class="label">Facebook</span></a></li>
+					<li><a href="#Contact" class="icon fa-envelope-o"><span
+					class="label">Email</span></a></li> </ul> <ul
+					class="copyright"> <li>CC Troy Nachtigall</li><li>Design: <a
+					href="http://html5up.net">HTML5 UP</a></li> </ul> </footer>
+
+			</body> </html>

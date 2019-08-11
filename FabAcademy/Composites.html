@@ -1,0 +1,491 @@
+		<!DOCTYPE HTML>
+
+		<html> <head> <title>Composites</title> <meta
+	http-equiv="content-type" content="text/html; charset=utf-8" /> <meta
+	name="description" content="" /> <meta name="keywords" content="" /> <!--[if
+	lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]--> <script
+	src="js/jquery.min.js"></script> <script
+	src="js/jquery.poptrox.min.js"></script> <script
+	src="js/skel.min.js"></script> <script src="js/init.js"></script> <noscript>
+	<link rel="stylesheet" href="css/skel.css" /> <link rel="stylesheet"
+	href="css/style.css" /> <link rel="stylesheet" href="css/style-xlarge.css" />
+	</noscript> <!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css"
+/>    <![endif]--> </head> <body id="top">
+/>
+		<!-- Header -->
+
+					<header id="header"> <a href="#" class="image avatar"><img
+				src="images/avatar.jpg" alt="" /></a> <h1><strong>I am
+				Troy</strong>, a designer<br /> completing <a
+				href="http://www.fabacademy.org">Fab&nbsp;Academy</a> at <a
+				href="http://fablabcascina.org">FabLab&nbsp;Cascina</a>. </h1>
+				<h1> <strong><a href="./index.html#About">About</a> | <a
+				href="./Project.html">Project</a> | <a
+				href="./index.html#Classes">Classes</a></strong> </h1> </header>
+
+				<!-- Main --> <div id="main">
+
+						<!-- One --> <section id="one"> <header class="major">
+		
+<h2>Composites</h2>
+
+<p><a href="http://academy.cba.mit.edu/classes/embedded_programming/index.html">This weeks class </a>of Fab Academy 2015 was about working with composite materials. We learned about plastics and the creation of larger structures.</p>
+
+<p>To quote Prof Niel Gershenfeld:</p>
+"I'll come back to safety but stay away from glass and carbon fiber"
+            <blockquote></blockquote>
+            
+
+<h2>Design</h2>
+
+            	<div class="box alt">
+								<div class="row 50% uniform">
+									<div class="4u"><span class="image fit"><img src="images/Composites/MILL01.png" alt="Fab Modules" /></span></div>
+									<div class="4u"><span class="image fit"><img src="images/Composites/MILL02.png" alt="Adding the image" /></span></div>
+									<div class="4u$"><span class="image fit"><img src="images/Composites/MILL03.png" alt="Calculating the path" /></span></div>
+								</div>
+							</div>
+<p>What I hope to achieve is a <strong>Low Poly Bathtub</strong> created from a solid polygon that is extruded and then separated into distinct panels. These panels will be Milled into wooden panels that can be used in the molding and casting week to make a low poly bathtub. </p>
+
+<p>I tried to do this project in Antimony, but the project depends on Decimation which doesn&#8217;t exists yet and I don&#8217;t possess the skill to script it myself.
+So I fell back on an old reliable, Cinema 4D because I want to experiment with using the animation functions to drop all my pieces to the ground plane for the milling Process. </p>
+
+<h3>Step 1</h3>
+
+<p>After evaluating several data sheets for bathtub dimensions and measuring the few I have access to I came to the dimensions. 66cm x 180cm x 40cm.
+I tried designing pollens for a Loft Nurb in Illustrator, but I didn&#8217;t like the curves. I retried them in iDraw, still not perfect. I finally bit the bullet and learned how to create polylines in Cinema 4D. This was fail #1.</p>
+
+<p>While this rendered the overall shape I wanted when I applied the polygon reduction (decimation) the shapes generated were not what I needed. I scrapped version one and went back to the drawing board and remade the polylines with anima curves, repeated the process of creating a loft nurb followed with 93% decimation and it still looked wrong. </p>
+
+<p>The next attempt involved a Hemisphere and use a FFM deformation to achieve the object. This finally resulted in the desired shape. It&#8217;s ironic how often the FFM deformation is the solution and how rarely it is used in the first attempt.</p>
+            	<div class="box alt">
+								<div class="row 50% uniform">
+									<div class="4u"><span class="image fit"><img src="images/Composites/MILL04.png" alt="Fab Modules" /></span></div>
+									<div class="4u"><span class="image fit"><img src="images/Composites/MILL05.png" alt="Adding the image" /></span></div>
+									<div class="4u$"><span class="image fit"><img src="images/Composites/MILL06.png" alt="Calculating the path" /></span></div>
+								</div>
+							</div>
+<h3>Step 2</h3>
+
+<p>Once the low poly decimation looked great the next step was to mirror it over the median plane to provide an aesthetic quality that is relational to the human anatomy it will enclose. The FFM Deformed hemisphere provided a model that would function well with this line of symmetry in mind and only three points needed to be moved to make this work. The two halves welded together create the new shell.</p>
+                    	<div class="box alt">
+								<div class="row 50% uniform">
+									<div class="4u"><span class="image fit"><img src="images/Composites/MILL08.png" alt="Fab Modules" /></span></div>
+									<div class="4u"><span class="image fit"><img src="images/Composites/MILL09.png" alt="Adding the image" /></span></div>
+									<div class="4u$"><span class="image fit"><img src="images/Composites/MILL10.png" alt="Calculating the path" /></span></div>
+								</div>
+							</div>
+
+<h3>Step 3</h3>
+
+<p>The shell next extruded out 15mm (the width of the wood used for milling) using a Smooth Shift to create the width. Interestingly, the normals on the inner shell aligned distal (away from the center) and needed reversed proximal before the inner and outer shells could be unified into a manifold object. </p>
+            	<div class="box alt">
+								<div class="row 50% uniform">
+									<div class="4u"><span class="image fit"><img src="images/Composites/MILL11.png" alt="Fab Modules" /></span></div>
+									<div class="4u"><span class="image fit"><img src="images/Composites/MILL12.png" alt="Adding the image" /></span></div>
+									<div class="4u$"><span class="image fit"><img src="images/Composites/MILL13.png" alt="Calculating the path" /></span></div>
+								</div>
+							</div>            
+
+<h3>Step 4,5,6</h3>
+
+<p>In order to simplify construction I passed a whole day designing an interlocking support structure and subtracting 5mm troughs from the panels in order that they slide in to place. After three separate attempts with multiple errors that required hand correction the realization struck that without a 5.2 axes milling head this was going to be impossible. I abandoned these explorations substituting the idea of planar <a href="http://www.tensegriteit.nl/">Tensegrity</a> (Like the sticks, but with planes.) While a lot of time was spent failing, the realization of the limits of the mill we are using was worth while. It&#8217;s easy to see why a 5.2 axis mill costs 100,000$.</p>
+            	<div class="box alt">
+								<div class="row 50% uniform">
+									<div class="4u"><span class="image fit"><img src="images/Composites/MILL16.png" alt="Fab Modules" /></span></div>
+									<div class="4u"><span class="image fit"><img src="images/Composites/MILL17.png" alt="Adding the image" /></span></div>
+									<div class="4u$"><span class="image fit"><img src="images/Composites/MILL18.png" alt="Calculating the path" /></span></div>
+								</div>
+							</div>
+<h3>Step 7</h3>
+
+<p>All of the pieces needed to be separated into individual items. Three tries to make the <a href="http://xplode.valkaari.com/en/xplode.php">Xplode</a> slice the model via a voronoi slicing tied to the nodes resulted in no success. To hand slice the model six copies were used to ensure that no nodes or vertices were shared between models. It was time intensive to do it by hand but the result was ok as all the panels were in separate groups.</p>
+            	<div class="box alt">
+								<div class="row 50% uniform">
+									<div class="4u"><span class="image fit"><img src="images/Composites/MILL15.png" alt="Fab Modules" /></span></div>
+									<div class="4u"><span class="image fit"><img src="images/Composites/MILL19.png" alt="Adding the image" /></span></div>
+									<div class="4u$"><span class="image fit"><img src="images/Composites/MILL20.png" alt="Calculating the path" /></span></div>
+								</div>
+							</div>
+<h3>Step 8</h3>
+
+<p>When I separated the pieces before I made sure that no group shared a similar edge. This allows a model optimization in <a href="http://meshlab.sourceforge.net/">MeshLab</a> that will give us watertight objects that we can then animate to drop to the floor. This is not a mandatory process but optimization in Cinema 4D only goes so far. With these grouped objects I ran a <strong>Polygon Groups to Objects</strong> command and ended up with each panel on its own level. Then the fun began when a floor was added and Rigid Body Collider tags added to all the objects. It took a few tries and repositioning of pieces to get the gravity correct but eventually all the pieces were ready.</p>
+
+<h3>Step 9</h3>
+
+<p>I arranged all the pieces into two sheets of 2m x 1m boards and double checked the spacing for the milling machine. All is ready to mill.</p>
+            	<div class="box alt">
+								<div class="row 50% uniform">
+									<div class="4u"><span class="image fit"><img src="images/Composites/MILL21.png" alt="Fab Modules" /></span></div>
+									<div class="4u"><span class="image fit"><img src="images/Composites/MILL22.png" alt="Adding the image" /></span></div>
+									<div class="4u$"><span class="image fit"><img src="images/Composites/MILL23.png" alt="Calculating the path" /></span></div>
+								</div>
+							</div>
+<h2>Production</h2>
+
+    <p>In order to expiriment and determine the best amount of knit and burlap infill I ran a series or samples using different amounts of burlap.</p>
+                <div class="box alt">
+								<div class="row 50% uniform">
+									<div class="4u"><span class="image fit"><img src="images/Composites/comp3.jpg" alt="Fab Modules" /></span></div>
+									<div class="4u"><span class="image fit"><img src="images/Composites/comp4.jpg" alt="Adding the image" /></span></div>
+									<div class="4u$"><span class="image fit"><img src="images/Composites/comp5.jpg" alt="Calculating the path" /></span></div>
+								</div>
+				</div>
+    <p>I created a sandwhich of fiber glass cloth, jersey knit, burlap, jersy knit, fiber glass cloth.  I applied the composite material in a 1:2 ratio in the middle and top of the mixture.</p>
+
+    <p>I vacumed bagged it on a box and after an hour I let it cure.</p>
+                <div class="box alt">
+								<div class="row 50% uniform">
+									<div class="4u"><span class="image fit"><img src="images/Composites/comp6.jpg" alt="Fab Modules" /></span></div>
+									<div class="4u"><span class="image fit"><img src="images/Composites/comp7.jpg" alt="Adding the image" /></span></div>
+								</div>
+				</div>
+    <p>Twelve hours later I had to leave, but it seemed solid.  Unfortunately it was not completely cured and was crushed in my bag.  Lesson learned, let it cure. While this was a failure due to not letting it cure long enough I learned which amount of burlap I would need to make it structurally sound, visibly closed (a sinlgle layer of burlap transmits a cheakerboard of light) and the amount of color change that the final material will present. (Tt's always wet.)</p>
+        <div class="box alt">
+								<div class="row 50% uniform">
+									<div class="4u"><span class="image fit"><img src="images/Composites/comp8.jpg" alt="Fab Modules" /></span></div>
+									<div class="4u"><span class="image fit"><img src="images/Composites/comp9.jpg" alt="Adding the image" /></span></div>
+								
+								</div>
+				</div>
+    <p>After a few attempts at milling foam on the Linux CNC and seeing the struggles of my Lab mates with the CNC mill in 3D as well I realized that it was going to take more than a week to mill all the pieces.  I've redesigned everything to recut on the Laser cutter but I remain without enough time to complete the project. </p>
+        <div class="box alt">
+								<div class="row 50% uniform">
+									<div class="4u"><span class="image fit"><img src="images/Composites/comp1.jpg" alt="Fab Modules" /></span></div>
+									<div class="4u"><span class="image fit"><img src="images/Composites/comp2.jpg" alt="Adding the image" /></span></div>
+								
+								</div>
+				</div>       
+            <p>So three weeks later I am using a new approach.  This is 1/6 scale of the bathtub I want to make.  I used the flattned pieces from Cinema 4D to create a flat layout with Illustrator  (Update: I just looked at the new 123D Make and there is the new ability to slice a flat exterior.  This is a much better way.) I laser cut the exterior and created a support structure with 123D make for the interior.  Half an hour later the tape has held and the structure is ready.</p>            
+                <div class="box alt">
+								<div class="row 50% uniform">
+									<div class="4u"><span class="image fit"><img src="images/Composites/COMP-01.jpg" alt="Fab Modules" /></span></div>
+									<div class="4u"><span class="image fit"><img src="images/Composites/COMP-02.jpg" alt="Adding the image" /></span></div>
+									<div class="4u$"><span class="image fit"><img src="images/Composites/COMP-03.jpg" alt="Calculating the path" /></span></div>
+								</div>
+				</div> 
+            
+            <p>The gaps in the seams were sealed with three coats of glue, after drying I applied three coats of release to the structure.  The heated bed of the 3D printer makes a great curing space that has speed up the time between coats signifigantly. </p>
+                <div class="box alt">
+								<div class="row 50% uniform">
+									<div class="4u"><span class="image fit"><img src="images/Composites/COMP-04.jpg" alt="Fab Modules" /></span></div>
+									<div class="4u"><span class="image fit"><img src="images/Composites/COMP-05.jpg" alt="Adding the image" /></span></div>
+									<div class="4u$"><span class="image fit"><img src="images/Composites/COMP-06.jpg" alt="Calculating the path" /></span></div>
+								</div>
+				</div>  
+                        <p>All Six layers; Jersey, Burlap, Jersey, Release, Fiber Glass, Felt were cut on the laser cutter using pattern making techniques to augment size in progresive layers.  The remainder of the t-shirt was given to the awesome Laura of OpenSourceHardware.it who was headed to the beach. I tested the fit and all went well. </p>
+                <div class="box alt">
+								<div class="row 50% uniform">
+									<div class="4u"><span class="image fit"><img src="images/Composites/COMP-07.jpg" alt="Fab Modules" /></span></div>
+									<div class="4u"><span class="image fit"><img src="images/Composites/COMP-08.jpg" alt="Adding theimage" /></span></div>
+									<div class="4u$"><span class="image fit"><img src="images/Composites/COMP-09.jpg" alt="Calculating the path" /></span></div>
+								</div>
+				</div> 
+                        <p>After reading the MSDS and watching the instructional video I mixed the resin and layed each layer up.  The burlap was particularly difficult, but I survived and only had to make more resin once.  I didn't add enough creased darts to the bag, but fiore helped me get it ready.</p>
+                <div class="box alt">
+								<div class="row 50% uniform">
+									<div class="4u"><span class="image fit"><img src="images/Composites/COMP-10.jpg" alt="Fab Modules" /></span></div>
+									<div class="4u"><span class="image fit"><img src="images/Composites/COMP-11.jpg" alt="Adding the image" /></span></div>
+									<div class="4u$"><span class="image fit"><img src="images/Composites/COMP-12.jpg" alt="Calculating the path" /></span></div>
+								</div>
+				</div> 
+                        <p>Vacuum was applied for three hours and the structure was left over night. I am removing the structure now, the internal supports were not close enough and the model warped under the pressure of the vacuum. Removing the release and felt was difficult but the vacuum would have worked if the supports had held.</p>
+                <div class="box alt">
+								<div class="row 50% uniform">
+									<div class="4u"><span class="image fit"><img src="images/Composites/COMP-13.jpg" alt="Fab Modules" /></span></div>
+									<div class="4u"><span class="image fit"><img src="images/Composites/COMP-14.jpg" alt="Adding the image" /></span></div>
+									<div class="4u$"><span class="image fit"><img src="images/Composites/COMP-15.jpg" alt="Calculating the path" /></span></div>
+								</div>
+				</div> 
+                        <p>Removing the internal supports was a pure nightmare.  The release worked on top of the glued seams, but the plane surface area stuck permantly to the cardboard interior.  The final structure is solid and beautiful, but the inside is a nightmare.  </p>
+                <div class="box alt">
+								<div class="row 50% uniform">
+									<div class="4u"><span class="image fit"><img src="images/Composites/COMP-16.jpg" alt="Fab Modules" /></span></div>
+									<div class="4u"><span class="image fit"><img src="images/Composites/COMP-17.jpg" alt="Adding the image" /></span></div>
+									<div class="4u$"><span class="image fit"><img src="images/Composites/COMP-18.jpg" alt="Calculating the path" /></span></div>
+								</div>
+				</div> 
+                        <p> </p>
+               
+<h2>Conclusions</h2>
+
+<p>The two burlap layer seems the best for strength to transparency balance.  I will execute another round of the base and try again.  The second try was a failure.  The process was a lot clearer the second time trhu, but the support structure was not strong enough and the release does not work even when coated three times. Composites are tricky and complicated.  This week's assignment took six weeks and was still a failure, but I have the feeling that with a few more tries I will be making something profound.  I will do another piece in my Final Project.</p>			</div>
+
+
+							<p>You can find all my source files here: <a href="./Source/MILL/Archive.zip">Milling</a>.</p>
+</div>
+</section>
+
+						<!-- Five --> <!-- <section id="four"> <h2>Elements</h2>
+
+								<section> <h4>Text</h4> <p>This is <b>bold</b> and
+							this is <strong>strong</strong>. This is <i>italic</i>
+							and this is <em>emphasized</em>. This is
+							<sup>superscript</sup> text and this is
+							<sub>subscript</sub> text. This is <u>underlined</u>
+							and this is code: <code>for (;;) { ... }</code>.
+							Finally, <a href="#">this is a link</a>.</p> <hr />
+							<header> <h4>Heading with a Subtitle</h4> <p>Lorem
+							ipsum dolor sit amet nullam id egestas urna
+							aliquam</p> </header> <p>Nunc lacinia ante nunc ac
+							lobortis. Interdum adipiscing gravida odio porttitor
+							sem non mi integer non faucibus ornare mi ut ante amet
+							placerat aliquet. Volutpat eu sed ante lacinia sapien
+							lorem accumsan varius montes viverra nibh in
+							adipiscing blandit tempus accumsan.</p> <header>
+							<h5>Heading with a Subtitle</h5> <p>Lorem ipsum dolor
+							sit amet nullam id egestas urna aliquam</p> </header>
+							<p>Nunc lacinia ante nunc ac lobortis. Interdum
+							adipiscing gravida odio porttitor sem non mi integer
+							non faucibus ornare mi ut ante amet placerat aliquet.
+							Volutpat eu sed ante lacinia sapien lorem accumsan
+							varius montes viverra nibh in adipiscing blandit
+							tempus accumsan.</p> <hr /> <h2>Heading Level 2</h2>
+							<h3>Heading Level 3</h3> <h4>Heading Level 4</h4>
+							<h5>Heading Level 5</h5> <h6>Heading Level 6</h6> <hr
+							/> <h5>Blockquote</h5> <blockquote>Fringilla nisl.
+							Donec accumsan interdum nisi, quis tincidunt felis
+							sagittis eget tempus euismod. Vestibulum ante ipsum
+							primis in faucibus vestibulum. Blandit adipiscing eu
+							felis iaculis volutpat ac adipiscing accumsan
+							faucibus. Vestibulum ante ipsum primis in faucibus
+							lorem ipsum dolor sit amet nullam adipiscing eu
+							felis.</blockquote> <h5>Preformatted</h5> <pre><code>i
+							= 0;
+
+		while (!deck.isInOrder()) { print 'Iteration ' + i; deck.shuffle(); i++;
+}
+}}
+		print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
+	</section>
+
+								<section> <h4>Lists</h4> <div class="row"> <div
+							class="6u 12u$(xsmall)"> <h5>Unordered</h5> <ul>
+							<li>Dolor pulvinar etiam magna etiam.</li>
+							<li>Sagittis adipiscing lorem eleifend.</li> <li>Felis
+							enim feugiat dolore viverra.</li> </ul>
+							<h5>Alternate</h5> <ul class="alt"> <li>Dolor pulvinar
+							etiam magna etiam.</li> <li>Sagittis adipiscing lorem
+							eleifend.</li> <li>Felis enim feugiat dolore
+							viverra.</li> </ul> </div> <div class="6u$
+							12u$(xsmall)"> <h5>Ordered</h5> <ol> <li>Dolor
+							pulvinar etiam magna etiam.</li> <li>Etiam vel felis
+							at lorem sed viverra.</li> <li>Felis enim feugiat
+							dolore viverra.</li> <li>Dolor pulvinar etiam magna
+							etiam.</li> <li>Etiam vel felis at lorem sed
+							viverra.</li> <li>Felis enim feugiat dolore
+							viverra.</li> </ol> <h5>Icons</h5> <ul class="icons">
+							<li><a href="#" class="icon fa-twitter"><span
+							class="label">Twitter</span></a></li> <li><a href="#"
+							class="icon fa-facebook"><span
+							class="label">Facebook</span></a></li> <li><a href="#"
+							class="icon fa-instagram"><span
+							class="label">Instagram</span></a></li> <li><a
+							href="#" class="icon fa-github"><span
+							class="label">Github</span></a></li> <li><a href="#"
+							class="icon fa-dribbble"><span
+							class="label">Dribbble</span></a></li> <li><a href="#"
+							class="icon fa-tumblr"><span
+							class="label">Tumblr</span></a></li> </ul> </div>
+							</div> <h5>Actions</h5> <ul class="actions"> <li><a
+							href="#" class="button special">Default</a></li>
+							<li><a href="#" class="button">Default</a></li> </ul>
+							<ul class="actions small"> <li><a href="#"
+							class="button special small">Small</a></li> <li><a
+							href="#" class="button small">Small</a></li> </ul>
+							<div class="row"> <div class="6u 12u$(small)"> <ul
+							class="actions vertical"> <li><a href="#"
+							class="button special">Default</a></li> <li><a
+							href="#" class="button">Default</a></li> </ul> </div>
+							<div class="6u$ 12u$(small)"> <ul class="actions
+							vertical small"> <li><a href="#" class="button special
+							small">Small</a></li> <li><a href="#" class="button
+							small">Small</a></li> </ul> </div> <div class="6u
+							12u$(small)"> <ul class="actions vertical"> <li><a
+							href="#" class="button special fit">Default</a></li>
+							<li><a href="#" class="button fit">Default</a></li>
+							</ul> </div> <div class="6u$ 12u$(small)"> <ul
+							class="actions vertical small"> <li><a href="#"
+							class="button special small fit">Small</a></li> <li><a
+							href="#" class="button small fit">Small</a></li> </ul>
+							</div> </div> </section>
+
+								<section> <h4>Table</h4> <h5>Default</h5> <div
+							class="table-wrapper"> <table> <thead> <tr>
+							<th>Name</th> <th>Description</th> <th>Price</th>
+							</tr> </thead> <tbody> <tr> <td>Item One</td> <td>Ante
+							turpis integer aliquet porttitor.</td> <td>29.99</td>
+							</tr> <tr> <td>Item Two</td> <td>Vis ac commodo
+							adipiscing arcu aliquet.</td> <td>19.99</td> </tr>
+							<tr> <td>Item Three</td> <td> Morbi faucibus arcu
+							accumsan lorem.</td> <td>29.99</td> </tr> <tr>
+							<td>Item Four</td> <td>Vitae integer tempus
+							condimentum.</td> <td>19.99</td> </tr> <tr> <td>Item
+							Five</td> <td>Ante turpis integer aliquet
+							porttitor.</td> <td>29.99</td> </tr> </tbody> <tfoot>
+							<tr> <td colspan="2"></td> <td>100.00</td> </tr>
+							</tfoot> </table> </div>
+
+									<h5>Alternate</h5> <div class="table-wrapper">
+								<table class="alt"> <thead> <tr> <th>Name</th>
+								<th>Description</th> <th>Price</th> </tr> </thead>
+								<tbody> <tr> <td>Item One</td> <td>Ante turpis
+								integer aliquet porttitor.</td> <td>29.99</td>
+								</tr> <tr> <td>Item Two</td> <td>Vis ac commodo
+								adipiscing arcu aliquet.</td> <td>19.99</td> </tr>
+								<tr> <td>Item Three</td> <td> Morbi faucibus arcu
+								accumsan lorem.</td> <td>29.99</td> </tr> <tr>
+								<td>Item Four</td> <td>Vitae integer tempus
+								condimentum.</td> <td>19.99</td> </tr> <tr>
+								<td>Item Five</td> <td>Ante turpis integer aliquet
+								porttitor.</td> <td>29.99</td> </tr> </tbody>
+								<tfoot> <tr> <td colspan="2"></td> <td>100.00</td>
+								</tr> </tfoot> </table> </div> </section>
+
+								<section> <h4>Buttons</h4> <ul class="actions">
+							<li><a href="#" class="button
+							special">Special</a></li> <li><a href="#"
+							class="button">Default</a></li> </ul> <ul
+							class="actions"> <li><a href="#" class="button
+							big">Big</a></li> <li><a href="#"
+							class="button">Default</a></li> <li><a href="#"
+							class="button small">Small</a></li> </ul> <ul
+							class="actions fit"> <li><a href="#" class="button
+							special fit">Fit</a></li> <li><a href="#"
+							class="button fit">Fit</a></li> </ul> <ul
+							class="actions fit small"> <li><a href="#"
+							class="button special fit small">Fit + Small</a></li>
+							<li><a href="#" class="button fit small">Fit +
+							Small</a></li> </ul> <ul class="actions"> <li><a
+							href="#" class="button special icon
+							fa-download">Icon</a></li> <li><a href="#"
+							class="button icon fa-download">Icon</a></li> </ul>
+							<ul class="actions"> <li><span class="button special
+							disabled">Special</span></li> <li><span class="button
+							disabled">Default</span></li> </ul> </section>
+
+								<section> <h4>Form</h4> <form method="post"
+							action="#"> <div class="row uniform 50%"> <div
+							class="6u 12u$(xsmall)"> <input type="text"
+							name="demo-name" id="demo-name" value=""
+							placeholder="Name" /> </div> <div class="6u$
+							12u$(xsmall)"> <input type="email" name="demo-email"
+							id="demo-email" value="" placeholder="Email" /> </div>
+							<div class="12u$"> <div class="select-wrapper">
+							<select name="demo-category" id="demo-category">
+							<option value="">- Category -</option> <option
+							value="1">Manufacturing</option> <option
+							value="1">Shipping</option> <option
+							value="1">Administration</option> <option
+							value="1">Human Resources</option> </select> </div>
+							</div> <div class="4u 12u$(small)"> <input
+							type="radio" id="demo-priority-low"
+							name="demo-priority" checked> <label
+							for="demo-priority-low">Low Priority</label> </div>
+							<div class="4u 12u$(small)"> <input type="radio"
+							id="demo-priority-normal" name="demo-priority"> <label
+							for="demo-priority-normal">Normal Priority</label>
+							</div> <div class="4u$ 12u(small)"> <input
+							type="radio" id="demo-priority-high"
+							name="demo-priority"> <label
+							for="demo-priority-high">High Priority</label> </div>
+							<div class="6u 12u$(small)"> <input type="checkbox"
+							id="demo-copy" name="demo-copy"> <label
+							for="demo-copy">Email me a copy of this
+							message</label> </div> <div class="6u$ 12u$(small)">
+							<input type="checkbox" id="demo-human"
+							name="demo-human" checked> <label for="demo-human">I
+							am a human and not a robot</label> </div> <div
+							class="12u$"> <textarea name="demo-message"
+							id="demo-message" placeholder="Enter your message"
+							rows="6"></textarea> </div> <div class="12u$"> <ul
+							class="actions"> <li><input type="submit" value="Send
+							Message" class="special" /></li> <li><input
+							type="reset" value="Reset" /></li> </ul> </div> </div>
+							</form> </section>
+
+								<section> <h4>Image</h4> <h5>Fit</h5> <div
+							class="box alt"> <div class="row 50% uniform"> <div
+							class="12u$"><span class="image fit"><img
+							src="images/fulls/05.jpg" alt="" /></span></div> <div
+							class="4u"><span class="image fit"><img
+							src="images/thumbs/01.jpg" alt="" /></span></div> <div
+							class="4u"><span class="image fit"><img
+							src="images/thumbs/02.jpg" alt="" /></span></div> <div
+							class="4u$"><span class="image fit"><img
+							src="images/thumbs/03.jpg" alt="" /></span></div> <div
+							class="4u"><span class="image fit"><img
+							src="images/thumbs/04.jpg" alt="" /></span></div> <div
+							class="4u"><span class="image fit"><img
+							src="images/thumbs/05.jpg" alt="" /></span></div> <div
+							class="4u$"><span class="image fit"><img
+							src="images/thumbs/06.jpg" alt="" /></span></div> <div
+							class="4u"><span class="image fit"><img
+							src="images/thumbs/03.jpg" alt="" /></span></div> <div
+							class="4u"><span class="image fit"><img
+							src="images/thumbs/02.jpg" alt="" /></span></div> <div
+							class="4u$"><span class="image fit"><img
+							src="images/thumbs/01.jpg" alt="" /></span></div>
+							</div> </div> <h5>Left &amp; Right</h5> <p><span
+							class="image left"><img src="images/avatar.jpg" alt=""
+						/>    </span>Fringilla nisl. Donec accumsan interdum nisi,
+							quis tincidunt felis sagittis eget. tempus euismod.
+						Vestibulum ante ipsum primis in faucibus vestibulum.
+						Blandit adipiscing eu felis iaculis volutpat ac adipiscing
+						accumsan eu faucibus. Integer ac pellentesque praesent
+						tincidunt felis sagittis eget. tempus euismod. Vestibulum
+						ante ipsum primis in faucibus vestibulum. Blandit
+						adipiscing eu felis iaculis volutpat ac adipiscing
+						accumsan eu faucibus. Integer ac pellentesque praesent.
+						Donec accumsan interdum nisi, quis tincidunt felis
+						sagittis eget. tempus euismod. Vestibulum ante ipsum
+						primis in faucibus vestibulum. Blandit adipiscing eu felis
+						iaculis volutpat ac adipiscing accumsan eu faucibus.
+						Integer ac pellentesque praesent tincidunt felis sagittis
+						eget. tempus euismod. Vestibulum ante ipsum primis in
+						faucibus vestibulum. Blandit adipiscing eu felis iaculis
+						volutpat ac adipiscing accumsan eu faucibus. Integer ac
+						pellentesque praesent.</p> <p><span class="image
+						right"><img src="images/avatar.jpg" alt=""
+						/>    </span>Fringilla nisl. Donec accumsan interdum nisi,
+							quis tincidunt felis sagittis eget. tempus euismod.
+						Vestibulum ante ipsum primis in faucibus vestibulum.
+						Blandit adipiscing eu felis iaculis volutpat ac adipiscing
+						accumsan eu faucibus. Integer ac pellentesque praesent
+						tincidunt felis sagittis eget. tempus euismod. Vestibulum
+						ante ipsum primis in faucibus vestibulum. Blandit
+						adipiscing eu felis iaculis volutpat ac adipiscing
+						accumsan eu faucibus. Integer ac pellentesque praesent.
+						Donec accumsan interdum nisi, quis tincidunt felis
+						sagittis eget. tempus euismod. Vestibulum ante ipsum
+						primis in faucibus vestibulum. Blandit adipiscing eu felis
+						iaculis volutpat ac adipiscing accumsan eu faucibus.
+						Integer ac pellentesque praesent tincidunt felis sagittis
+						eget. tempus euismod. Vestibulum ante ipsum primis in
+						faucibus vestibulum. Blandit adipiscing eu felis iaculis
+						volutpat ac adipiscing accumsan eu faucibus. Integer ac
+						pellentesque praesent.</p> </section>
+
+							</section> -->
+
+					</div>
+
+				<!-- Footer --> <footer id="footer">
+
+						<!--<div class="image right"><img
+					src="http://178.62.237.252/wp-content/uploads/2014/10/
+					logo_fablab_s1.png" alt="" /></div> -->
+
+						<ul class="icons"> <li><a
+					href="https://twitter.com/troykyo" class="icon
+					fa-twitter"><span class="label">Twitter</span></a></li> <li><a
+					href="https://github.com/troykyo" class="icon fa-github"><span
+					class="label">Github</span></a></li> <li><a
+					href="https://www.facebook.com/troykyo" class="icon
+					fa-facebook"><span class="label">Facebook</span></a></li>
+					<li><a href="#Contact" class="icon fa-envelope-o"><span
+					class="label">Email</span></a></li> </ul> <ul
+					class="copyright"> <li>CC Troy Nachtigall</li><li>Design: <a
+					href="http://html5up.net">HTML5 UP</a></li> </ul> </footer>
+
+			</body> </html>
