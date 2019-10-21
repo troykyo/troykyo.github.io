@@ -1,0 +1,40 @@
+This paper contributes a low and medium fidelity embodied wearable toolkit to create a co-design experience for non-experts in a solutionist frame. The paper discusses the development and deployment of the toolkit.  The claims to contribute suggestions for future toolkits but fails to provide these. 
+
+Strengths:
+The paper does a great job of describing a co-design toolkit for embodied wearable low/mid-fi development.  The methodology is sound and replica table thanks to the well written description of making the toolkit and its deployment. The results are interesting to the tangible and (especially the) embodied interaction community. The work builds upon previous work into wearable and modularity (such as Jun Kawahara's kimono project https://class.textile-academy.org/2019/jun.kawahara/projects/final-project/)
+The paper does an excellent job reflecting upon the work of the stakeholders in the workshop. 
+
+Weaknesses:
+While the paper reviews wearable HCI literature well, it misses a few key papers from embodiment (see below)
+
+There is a difficulty with the paper and the claims assumed by the title. 
+On a small scale, the title and the paper mention scaffolding several times. The paper references Sanders and Stappers paper on Co-Design when discussing scaffolding, but that paper never mentions scaffold or scaffolding. The idea of scaffolding is fairly common and agreed upon inside the TEI community, but given the great amount of work on scaffolding it would be good of the authors to unpack and reference the concept. 
+
+On a larger scale there is a difficulty with using "Wearable Bits" which is clearly a reference to the fundamental work "Tangible Bits". "Tangible Bits" had great impact due to its applicability to the field as a whole.  This paper is about Co-Design toolkits of low/mid-fi wearables for non experts from a solutionist lens. Claiming "Wearable Bits" goes to far given the limited scope of the work. 
+
+Additionally, The paper fails to frame the work inside a solutionist frame where the instrumental functionality is dominant over the sensual or stylistic concerns of wearable technology. A sentence about this would bring greater clarity to the applicability of the work.
+
+Novelty
+As mentioned above, the work build well upon previous work while offering novel ideas in about the co-design process of wearables.  The work goes beyond recent work into co-design toolkits for wearables and offers an exemplary methodology for evaluating such work.
+
+Readability
+The paper is well written and engaging up until the conclusions.  Sentence structure and grammar need another go.  I would recommend rewriting the conclusions on top of a final proofreading from an external body. 
+
+Literature
+This work builds upon past HCI, Child HCI and Wearables very well.  
+The paper would be much stronger if it would consider literature from the following areas, an example of each is provided.
+
+Embodiment - Soft, Embodied, Situated & Connected - Wilde and Tomico 2015 
+
+Recent Toolkits at TEI - ONEDAY Shoes: A Maker Toolkit to Understand the Role of Co-Manufacturing in Personalization - Nachtigall et al. 2019
+
+Recent Wearables development at TEI - Adapting Double Weaving and Yarn Plying Techniques for Smart Textiles Applications - Devendorf and Di Laura 2019 
+
+The importance of stakeholder roles in making wearables - Designing ultra-personalised embodied smart textile services for well-being - Ten Bhomer et al. 2015
+
+Conclusions
+My compliments on the research undertaken by the authors.  I appreciate the amount of time research like this requires and hope that the comments here help make the paper stronger.  
+
+
+
+I am concerned that "Wearable Bits" as a title claims to much.  This paper is about Co-Design toolkits of low/mid-fi wearables for non experts from a solutionist lens. Claiming "Wearable Bits" goes to far given the limited scope of the work in comparison to the impact of "Tangible Bits".
