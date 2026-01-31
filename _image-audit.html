@@ -1,0 +1,363 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Image Audit - Hidden Page</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="robots" content="noindex, nofollow" />
+	<style>
+		* { box-sizing: border-box; }
+		body {
+			font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+			margin: 20px;
+			background: #f5f5f5;
+		}
+		h1 { color: #333; }
+		.instructions {
+			background: #fff3cd;
+			border: 1px solid #ffc107;
+			padding: 15px;
+			margin-bottom: 20px;
+			border-radius: 5px;
+		}
+		.instructions h3 { margin-top: 0; }
+		.copy-btn {
+			background: #007bff;
+			color: white;
+			border: none;
+			padding: 10px 20px;
+			cursor: pointer;
+			border-radius: 5px;
+			font-size: 16px;
+			margin-bottom: 20px;
+		}
+		.copy-btn:hover { background: #0056b3; }
+		.copy-btn:active { background: #004085; }
+		.copied { background: #28a745 !important; }
+
+		/* Table for copy/paste */
+		#data-table {
+			width: 100%;
+			border-collapse: collapse;
+			background: white;
+			margin-bottom: 40px;
+		}
+		#data-table th, #data-table td {
+			border: 1px solid #ddd;
+			padding: 8px;
+			text-align: left;
+			vertical-align: top;
+		}
+		#data-table th {
+			background: #333;
+			color: white;
+			position: sticky;
+			top: 0;
+		}
+		#data-table tr:nth-child(even) { background: #f9f9f9; }
+		#data-table tr:hover { background: #e9e9e9; }
+
+		/* Thumbnail column */
+		.thumb-cell {
+			width: 120px;
+			text-align: center;
+		}
+		.thumb-cell img {
+			max-width: 100px;
+			max-height: 80px;
+			border: 1px solid #ccc;
+			background: #eee;
+		}
+		.thumb-cell img.error {
+			opacity: 0.3;
+		}
+
+		/* Category badges */
+		.cat-main { background: #dc3545; color: white; padding: 2px 6px; border-radius: 3px; font-size: 12px; }
+		.cat-thumbnail { background: #007bff; color: white; padding: 2px 6px; border-radius: 3px; font-size: 12px; }
+		.cat-sub { background: #28a745; color: white; padding: 2px 6px; border-radius: 3px; font-size: 12px; }
+		.cat-icon { background: #6c757d; color: white; padding: 2px 6px; border-radius: 3px; font-size: 12px; }
+
+		/* Filter controls */
+		.filters {
+			margin-bottom: 20px;
+			padding: 15px;
+			background: white;
+			border-radius: 5px;
+		}
+		.filters label { margin-right: 15px; }
+
+		/* Status column styling */
+		.status-col { width: 100px; }
+		.notes-col { width: 200px; }
+
+		/* Page grouping */
+		.page-header {
+			background: #e9ecef !important;
+			font-weight: bold;
+		}
+	</style>
+</head>
+<body>
+	<h1>Image Audit for troykyo.net</h1>
+
+	<div class="instructions">
+		<h3>How to use this page:</h3>
+		<ol>
+			<li>Click "Copy Table to Clipboard" button below</li>
+			<li>Open Numbers or Google Sheets</li>
+			<li>Paste (Cmd+V / Ctrl+V) - the table will paste with all columns</li>
+			<li>Add your changes in the "Status" and "Notes" columns</li>
+			<li>Share the updated sheet back</li>
+		</ol>
+		<p><strong>Categories:</strong>
+			<span class="cat-main">main</span> = hero/feature images,
+			<span class="cat-thumbnail">thumbnail</span> = tile grid images,
+			<span class="cat-sub">sub</span> = inline content images,
+			<span class="cat-icon">icon</span> = logos/icons
+		</p>
+	</div>
+
+	<div class="filters">
+		<strong>Filter by category:</strong>
+		<label><input type="checkbox" class="filter-cat" value="main" checked> Main</label>
+		<label><input type="checkbox" class="filter-cat" value="thumbnail" checked> Thumbnail</label>
+		<label><input type="checkbox" class="filter-cat" value="sub" checked> Sub</label>
+		<label><input type="checkbox" class="filter-cat" value="icon"> Icon (hidden by default)</label>
+	</div>
+
+	<button class="copy-btn" onclick="copyTable()">Copy Table to Clipboard</button>
+
+	<table id="data-table">
+		<thead>
+			<tr>
+				<th>Thumbnail</th>
+				<th>Page</th>
+				<th>Image Path</th>
+				<th>Category</th>
+				<th>Alt Text</th>
+				<th class="status-col">Status</th>
+				<th class="notes-col">Notes / New Path</th>
+			</tr>
+		</thead>
+		<tbody id="table-body">
+		</tbody>
+	</table>
+
+	<script>
+	const imageData = [
+		{"page":"index.html","image":"images/logo.svg","alt":"","category":"icon"},
+		{"page":"index.html","image":"images/solemakerTitle.jpg","alt":"Picture of two men weaing Solemaker Shoes","category":"thumbnail"},
+		{"page":"index.html","image":"images/ONEDAYTitle.jpg","alt":"","category":"thumbnail"},
+		{"page":"index.html","image":"images/ProjectJTitle.png","alt":"","category":"thumbnail"},
+		{"page":"index.html","image":"images/EVATitle.jpg","alt":"","category":"thumbnail"},
+		{"page":"index.html","image":"images/SpikeShoesTitle.jpg","alt":"","category":"thumbnail"},
+		{"page":"index.html","image":"images/OrigamiTitle.jpg","alt":"","category":"thumbnail"},
+		{"page":"index.html","image":"images/FabAcademyTitle.jpg","alt":"","category":"thumbnail"},
+		{"page":"index.html","image":"images/MM3DTitle.jpg","alt":"","category":"thumbnail"},
+		{"page":"index.html","image":"images/etexTitle.jpg","alt":"","category":"thumbnail"},
+		{"page":"index.html","image":"images/fattoTitle.jpg","alt":"","category":"thumbnail"},
+		{"page":"index.html","image":"images/JewelTitle.jpg","alt":"","category":"thumbnail"},
+		{"page":"index.html","image":"images/TrifoldTitle.jpg","alt":"","category":"thumbnail"},
+		{"page":"index.html","image":"images/JJTitle.jpg","alt":"","category":"thumbnail"},
+		{"page":"index.html","image":"images/JeansTitle.jpg","alt":"","category":"thumbnail"},
+		{"page":"index.html","image":"images/MSTitle.jpg","alt":"","category":"thumbnail"},
+		{"page":"index.html","image":"images/FashionTitle.jpg","alt":"","category":"thumbnail"},
+		{"page":"bio.html","image":"images/logo.svg","alt":"","category":"icon"},
+		{"page":"cv.html","image":"images/logo.svg","alt":"","category":"icon"},
+		{"page":"cv.html","image":"images/cv1.png","alt":"","category":"main"},
+		{"page":"cv.html","image":"images/cv2.png","alt":"","category":"main"},
+		{"page":"publications.html","image":"images/logo.svg","alt":"","category":"icon"},
+		{"page":"projectJ.html","image":"images/logo.svg","alt":"","category":"icon"},
+		{"page":"projectJ.html","image":"images/1.png","alt":"Cover Image for Project J","category":"main"},
+		{"page":"projectJ.html","image":"images/Schermafdruk_2015-08-13_10.31.40.png","alt":"Screenshot","category":"sub"},
+		{"page":"projectJ.html","image":"images/IMG-20150915-WA0003_(1).png","alt":"Event Image","category":"sub"},
+		{"page":"projectJ.html","image":"images/2.png","alt":"Additional Image","category":"sub"},
+		{"page":"solemaker.html","image":"images/logo.svg","alt":"","category":"icon"},
+		{"page":"solemaker.html","image":"images/solemakerTitle.jpg","alt":"Solemaker - Two men wearing Solemaker Shoes","category":"main"},
+		{"page":"solemaker.html","image":"images/Screen_Shot_2016-01-06_at_22.18.53.png","alt":"Solemaker Software Interface","category":"sub"},
+		{"page":"solemaker.html","image":"images/Screen_Shot_2016-01-06_at_22.12.21.png","alt":"3D Printed Sole Design","category":"sub"},
+		{"page":"solemaker.html","image":"images/Screen_Shot_2016-01-06_at_22.13.56.png","alt":"Solemaker Process","category":"sub"},
+		{"page":"spikeshoe.html","image":"images/logo.svg","alt":"","category":"icon"},
+		{"page":"spikeshoe.html","image":"images/SpikeShoesTitle.jpg","alt":"Spike Shoes","category":"main"},
+		{"page":"spikeshoe.html","image":"images/Screen_Shot_2016-01-06_at_22.25.28.png","alt":"Spike Shoe Design Process","category":"sub"},
+		{"page":"spikeshoe.html","image":"images/Screen_Shot_2016-01-06_at_22.26.39.png","alt":"3D Printed Spike Shoes","category":"sub"},
+		{"page":"spikeshoe.html","image":"images/IMG_4595.png","alt":"Spike Shoes Detail","category":"sub"},
+		{"page":"origami.html","image":"images/logo.svg","alt":"","category":"icon"},
+		{"page":"origami.html","image":"images/OrigamiTitle.jpg","alt":"Origami 3D Shoes","category":"main"},
+		{"page":"origami.html","image":"images/Screen_Shot_2016-01-06_at_22.34.31.png","alt":"Origami Shoe 3D Model","category":"sub"},
+		{"page":"origami.html","image":"images/Screen_Shot_2016-01-06_at_22.51.28.png","alt":"Origami Shoe Design","category":"sub"},
+		{"page":"origami.html","image":"images/IMG_6012.png","alt":"Origami Shoe Detail","category":"sub"},
+		{"page":"generic.html","image":"images/logo.svg","alt":"","category":"icon"},
+		{"page":"generic.html","image":"images/pic13.jpg","alt":"","category":"main"},
+		{"page":"generic.html","image":"images/pic01.jpg","alt":"","category":"thumbnail"},
+		{"page":"generic.html","image":"images/pic02.jpg","alt":"","category":"thumbnail"},
+		{"page":"generic.html","image":"images/pic03.jpg","alt":"","category":"thumbnail"},
+		{"page":"generic.html","image":"images/pic14.jpg","alt":"","category":"sub"},
+		{"page":"generic.html","image":"images/pic15.jpg","alt":"","category":"sub"},
+		{"page":"fabacademy.html","image":"images/logo.svg","alt":"","category":"icon"},
+		{"page":"fabacademy.html","image":"images/FabAcademyTitle.jpg","alt":"Fab Academy - Conductive Spinning Frame","category":"main"},
+		{"page":"fabacademy.html","image":"images/Screen_Shot_2016-01-06_at_19.33.14.png","alt":"Electronics Design","category":"sub"},
+		{"page":"fabacademy.html","image":"images/Screen_Shot_2016-01-06_at_19.33.24.png","alt":"Spinning Frame Construction","category":"sub"},
+		{"page":"fabacademy.html","image":"images/625x465_1303771_1439263_1429684329.png","alt":"Conductive Spinning Frame","category":"sub"},
+		{"page":"etextile.html","image":"images/logo.svg","alt":"","category":"icon"},
+		{"page":"etextile.html","image":"images/etexTitle.jpg","alt":"eTextile Summer Camp - Power Generating Textile","category":"main"},
+		{"page":"etextile.html","image":"images/IMG_3577.png","alt":"Power Generating Textile Weave","category":"sub"},
+		{"page":"etextile.html","image":"images/IMG_3584.png","alt":"Textile Detail","category":"sub"},
+		{"page":"etextile.html","image":"images/IMG_0244.png","alt":"Power Generation Testing","category":"sub"},
+		{"page":"fattoamano.html","image":"images/logo.svg","alt":"","category":"icon"},
+		{"page":"fattoamano.html","image":"images/fattoTitle.jpg","alt":"Fendi Fatto a Mano for the Future","category":"main"},
+		{"page":"fattoamano.html","image":"images/curvilinei_3_1.png","alt":"Torus Chandelier Design","category":"sub"},
+		{"page":"fattoamano.html","image":"images/Nolita_08_1_1.png","alt":"Fendi Lamp Installation","category":"sub"},
+		{"page":"fattoamano.html","image":"images/Section_Elettrica.png","alt":"Electronics Section","category":"sub"},
+		{"page":"jewellery.html","image":"images/logo.svg","alt":"","category":"icon"},
+		{"page":"jewellery.html","image":"images/JewelTitle.jpg","alt":"Twist of Fate Jewelry Collection","category":"main"},
+		{"page":"jewellery.html","image":"images/IMG_9315.png","alt":"3D Printed Jewelry","category":"sub"},
+		{"page":"jewellery.html","image":"images/IMG_9331.png","alt":"Jewelry Detail","category":"sub"},
+		{"page":"jewellery.html","image":"images/IMG_4634.png","alt":"Twist of Fate Necklace","category":"sub"},
+		{"page":"spaceskirt.html","image":"images/logo.svg","alt":"","category":"icon"},
+		{"page":"spaceskirt.html","image":"images/JJTitle.jpg","alt":"Space Skirt and Jump Jacket","category":"main"},
+		{"page":"spaceskirt.html","image":"images/panerai_05.png","alt":"Space Skirt","category":"sub"},
+		{"page":"spaceskirt.html","image":"images/panerai_13.png","alt":"Jump Jacket LEDs","category":"sub"},
+		{"page":"spaceskirt.html","image":"images/224350_10150243076486578_1105646_n.png","alt":"Wearable Technology Detail","category":"sub"},
+		{"page":"seamlessjeans.html","image":"images/logo.svg","alt":"","category":"icon"},
+		{"page":"seamlessjeans.html","image":"images/JeansTitle.jpg","alt":"Seamless Jean Jeggings","category":"main"},
+		{"page":"seamlessjeans.html","image":"images/Screen_Shot_2016-01-07_at_16.06.58.png","alt":"Seamless Jeans Pattern","category":"sub"},
+		{"page":"seamlessjeans.html","image":"images/IMG_5835.png","alt":"Knitting Machine Setup","category":"sub"},
+		{"page":"seamlessjeans.html","image":"images/hipster.numbers.png","alt":"Measurement Data","category":"sub"},
+		{"page":"mandlebrot.html","image":"images/logo.svg","alt":"","category":"icon"},
+		{"page":"mandlebrot.html","image":"images/MSTitle.jpg","alt":"Mandlebrot Sweater","category":"main"},
+		{"page":"mandlebrot.html","image":"images/4Hip_x_4French_Pers._to_order_0001.png","alt":"Mandlebrot Pattern","category":"sub"},
+		{"page":"mandlebrot.html","image":"images/RedDress80.png","alt":"Knitwear Design","category":"sub"},
+		{"page":"mandlebrot.html","image":"images/IMG_4644.png","alt":"Seamless Knitwear","category":"sub"},
+		{"page":"textileheritage.html","image":"images/logo.svg","alt":"","category":"icon"},
+		{"page":"textileheritage.html","image":"images/FashionTitle.jpg","alt":"Textile Heritage Collection","category":"main"},
+		{"page":"textileheritage.html","image":"images/IMG_1136.png","alt":"Heritage Garment","category":"sub"},
+		{"page":"textileheritage.html","image":"images/IMG_1342.png","alt":"Traditional Techniques","category":"sub"},
+		{"page":"textileheritage.html","image":"images/IMG_1314.png","alt":"Fashion Collection","category":"sub"},
+		{"page":"elements.html","image":"images/logo.svg","alt":"","category":"icon"},
+		{"page":"elements.html","image":"images/pic13.jpg","alt":"","category":"main"},
+		{"page":"elements.html","image":"images/pic01.jpg","alt":"","category":"thumbnail"},
+		{"page":"elements.html","image":"images/pic02.jpg","alt":"","category":"thumbnail"},
+		{"page":"elements.html","image":"images/pic03.jpg","alt":"","category":"thumbnail"},
+		{"page":"elements.html","image":"images/pic14.jpg","alt":"","category":"sub"},
+		{"page":"elements.html","image":"images/pic15.jpg","alt":"","category":"sub"},
+		{"page":"generic/index.html","image":"images/logo.svg","alt":"","category":"icon"},
+		{"page":"generic/index.html","image":"images/pic13.jpg","alt":"","category":"main"},
+		{"page":"generic/index.html","image":"images/pic14.jpg","alt":"","category":"sub"},
+		{"page":"generic/index.html","image":"images/pic15.jpg","alt":"","category":"sub"},
+		{"page":"solemaker/index.html","image":"../images/logo.svg","alt":"","category":"icon"},
+		{"page":"solemaker/index.html","image":"images/pic13.jpg","alt":"","category":"main"},
+		{"page":"solemaker/index.html","image":"images/pic14.jpg","alt":"","category":"sub"},
+		{"page":"solemaker/index.html","image":"images/pic15.jpg","alt":"","category":"sub"},
+		{"page":"circular/index.html","image":"../images/logo.svg","alt":"","category":"icon"},
+		{"page":"circular/index.html","image":"images/Circular.010.jpeg","alt":"","category":"main"},
+		{"page":"circular/index.html","image":"images/Circular.019.jpeg","alt":"","category":"sub"},
+		{"page":"circular/index.html","image":"images/challenges.001.jpeg","alt":"","category":"sub"},
+		{"page":"magenta/index.html","image":"images/logo.svg","alt":"","category":"icon"},
+		{"page":"magenta/index.html","image":"images/solemakerTitle.jpg","alt":"Picture of two men weaing Solemaker Shoes","category":"thumbnail"},
+		{"page":"magenta/index.html","image":"images/ONEDAYTitle.jpg","alt":"","category":"thumbnail"},
+		{"page":"magenta/index.html","image":"images/ProjectJTitle.png","alt":"","category":"thumbnail"},
+		{"page":"magenta/index.html","image":"images/EVATitle.jpg","alt":"","category":"thumbnail"},
+		{"page":"magenta/index.html","image":"images/SpikeShoesTitle.jpg","alt":"","category":"thumbnail"},
+		{"page":"magenta/index.html","image":"images/OrigamiTitle.jpg","alt":"","category":"thumbnail"},
+		{"page":"magenta/index.html","image":"images/FabAcademyTitle.jpg","alt":"","category":"thumbnail"},
+		{"page":"magenta/index.html","image":"images/MM3DTitle.jpg","alt":"","category":"thumbnail"},
+		{"page":"magenta/index.html","image":"images/etexTitle.jpg","alt":"","category":"thumbnail"},
+		{"page":"magenta/index.html","image":"images/fattoTitle.jpg","alt":"","category":"thumbnail"},
+		{"page":"magenta/index.html","image":"images/JewelTitle.jpg","alt":"","category":"thumbnail"},
+		{"page":"magenta/index.html","image":"images/TrifoldTitle.jpg","alt":"","category":"thumbnail"},
+		{"page":"magenta/index.html","image":"images/JJTitle.jpg","alt":"","category":"thumbnail"},
+		{"page":"magenta/index.html","image":"images/JeansTitle.jpg","alt":"","category":"thumbnail"},
+		{"page":"magenta/index.html","image":"images/MSTitle.jpg","alt":"","category":"thumbnail"},
+		{"page":"magenta/index.html","image":"images/FashionTitle.jpg","alt":"","category":"thumbnail"},
+		{"page":"FabAcademy/index.html","image":"images/avatar.jpg","alt":"","category":"main"},
+		{"page":"FabAcademy/index.html","image":"images/thumbs/01.jpg","alt":"Website Screenshot","category":"thumbnail"},
+		{"page":"FabAcademy/index.html","image":"images/thumbs/02.jpg","alt":"Website Screenshot","category":"thumbnail"},
+		{"page":"FabAcademy/index.html","image":"images/thumbs/CAD.jpg","alt":"Antimony Chain Mail Example","category":"thumbnail"},
+		{"page":"FabAcademy/index.html","image":"images/thumbs/CUT.jpg","alt":"Website Screenshot","category":"thumbnail"},
+		{"page":"FabAcademy/index.html","image":"images/thumbs/ELP.jpg","alt":"Website Screenshot","category":"thumbnail"},
+		{"page":"FabAcademy/index.html","image":"images/thumbs/3D.jpg","alt":"The Shoe","category":"thumbnail"},
+		{"page":"FabAcademy/index.html","image":"images/thumbs/ED.jpg","alt":"HelloCircuit","category":"thumbnail"},
+		{"page":"FabAcademy/index.html","image":"images/thumbs/EP.jpg","alt":"HelloCircuit","category":"thumbnail"},
+		{"page":"FabAcademy/index.html","image":"images/thumbs/MILL.jpg","alt":"HelloCircuit","category":"thumbnail"},
+		{"page":"FabAcademy/index.html","image":"images/thumbs/MC.jpg","alt":"HelloCircuit","category":"thumbnail"},
+		{"page":"FabAcademy/index.html","image":"images/thumbs/ID.jpg","alt":"HelloCircuit","category":"thumbnail"},
+		{"page":"FabAcademy/index.html","image":"images/thumbs/OD.jpg","alt":"HelloCircuit","category":"thumbnail"},
+		{"page":"FabAcademy/index.html","image":"images/thumbs/COMP.jpg","alt":"HelloCircuit","category":"thumbnail"},
+		{"page":"FabAcademy/index.html","image":"images/thumbs/NET.jpg","alt":"HelloCircuit","category":"thumbnail"},
+		{"page":"FabAcademy/index.html","image":"images/thumbs/APP.jpg","alt":"HelloCircuit","category":"thumbnail"},
+		{"page":"FabAcademy/index.html","image":"images/thumbs/FIN.jpg","alt":"HelloCircuit","category":"thumbnail"},
+		{"page":"FabAcademy/index.html","image":"images/thumbs/MAC.jpg","alt":"HelloCircuit","category":"thumbnail"},
+		{"page":"FabAcademy/index.html","image":"images/avatar.jpg","alt":"","category":"sub"}
+	];
+
+	// Normalize image paths (remove leading slash if present)
+	function normalizePath(page, imagePath) {
+		let path = imagePath.replace(/^\//, '');
+		// Handle relative paths from subdirectories
+		if (page.includes('/') && !path.startsWith('..')) {
+			const pageDir = page.substring(0, page.lastIndexOf('/') + 1);
+			return pageDir + path;
+		}
+		if (path.startsWith('../')) {
+			return path.replace('../', '');
+		}
+		return path;
+	}
+
+	function renderTable() {
+		const tbody = document.getElementById('table-body');
+		const checkedCats = Array.from(document.querySelectorAll('.filter-cat:checked')).map(cb => cb.value);
+
+		const filtered = imageData.filter(item => checkedCats.includes(item.category));
+
+		let html = '';
+		filtered.forEach((item, idx) => {
+			const imgPath = normalizePath(item.page, item.image);
+			const catClass = 'cat-' + item.category;
+			html += `<tr data-category="${item.category}">
+				<td class="thumb-cell"><img src="${imgPath}" onerror="this.classList.add('error')" loading="lazy"></td>
+				<td>${item.page}</td>
+				<td>${item.image}</td>
+				<td><span class="${catClass}">${item.category}</span></td>
+				<td>${item.alt || '<em style="color:#999">(none)</em>'}</td>
+				<td></td>
+				<td></td>
+			</tr>`;
+		});
+
+		tbody.innerHTML = html;
+	}
+
+	// Filter handlers
+	document.querySelectorAll('.filter-cat').forEach(cb => {
+		cb.addEventListener('change', renderTable);
+	});
+
+	function copyTable() {
+		const checkedCats = Array.from(document.querySelectorAll('.filter-cat:checked')).map(cb => cb.value);
+		const filtered = imageData.filter(item => checkedCats.includes(item.category));
+
+		// Build TSV (tab-separated) for spreadsheet paste
+		let tsv = "Page\tImage Path\tCategory\tAlt Text\tStatus\tNotes / New Path\n";
+		filtered.forEach(item => {
+			tsv += `${item.page}\t${item.image}\t${item.category}\t${item.alt}\t\t\n`;
+		});
+
+		navigator.clipboard.writeText(tsv).then(() => {
+			const btn = document.querySelector('.copy-btn');
+			btn.textContent = 'Copied!';
+			btn.classList.add('copied');
+			setTimeout(() => {
+				btn.textContent = 'Copy Table to Clipboard';
+				btn.classList.remove('copied');
+			}, 2000);
+		});
+	}
+
+	// Initial render
+	renderTable();
+	</script>
+</body>
+</html>
