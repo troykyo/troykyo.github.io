@@ -1,0 +1,254 @@
+<!DOCTYPE HTML>
+<!--
+	Standalone page — styled to match troykyo.net (Phantom by Pixelarity)
+	Intentionally not linked from the main site. Search-indexing disabled.
+-->
+<html>
+	<head>
+		<title>Lucca to Rome — A Bike Pilgrimage</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="robots" content="noindex, nofollow" />
+		<meta name="description" content="A father and son mountain bike roughly 400km of the Via Francigena from Lucca to Rome — route, daily stages, and GPS tracks." />
+		<link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+		<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+		<style>
+			/* ---- page-specific, built on the site's palette (#585858 / #f2849e / #fff) ---- */
+			.hero { text-align: center; margin-bottom: 3.5em; }
+			.hero .hero-graphic { display: block; width: 100%; max-width: 500px; margin: 0 auto 1.25em; }
+			.hero h1 { margin: 0 0 0.25em 0; }
+			.hero h1 .arrow { color: #f2849e; font-weight: 300; }
+			.hero .subtitle { color: #9a9a9a; font-size: 1.05em; margin: 0; }
+
+			#main .inner > section { margin: 0 0 4em 0; }
+
+			/* stats */
+			.stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5em; margin: 0; padding: 0; list-style: none; }
+			.stats .stat { text-align: center; border-top: solid 3px #f2849e; padding-top: 0.9em; }
+			.stats .num { display: block; font-size: 2.5em; font-weight: 700; line-height: 1; letter-spacing: -0.025em; color: #585858; }
+			.stats .label { display: block; margin-top: 0.6em; font-size: 0.6em; text-transform: uppercase; letter-spacing: 0.25em; font-weight: 900; color: #9a9a9a; }
+
+			/* map */
+			#map { height: 560px; width: 100%; border: solid 1px rgba(88,88,88,0.2); border-radius: 4px; }
+			.leaflet-container a { border-bottom: none; }
+			.leaflet-container { font-family: "Source Sans Pro", Helvetica, sans-serif; }
+			.legend { display: flex; flex-wrap: wrap; gap: 0.6em 1.6em; margin: 1.5em 0 0; padding: 0; list-style: none; font-size: 0.8em; }
+			.legend .item { display: flex; align-items: center; gap: 0.6em; }
+			.legend .swatch { width: 22px; height: 5px; border-radius: 3px; flex: 0 0 auto; }
+			.legend a { border-bottom: none; color: #585858; }
+			.map-note { font-size: 0.78em; color: #9a9a9a; margin: 1.25em 0 0; }
+			.map-note a { color: #9a9a9a; }
+
+			/* itinerary */
+			table.itinerary { width: 100%; margin: 0; }
+			table.itinerary th, table.itinerary td { padding: 0.7em 1em; border-bottom: solid 1px rgba(88,88,88,0.15); text-align: left; vertical-align: middle; }
+			table.itinerary thead th { font-size: 0.6em; text-transform: uppercase; letter-spacing: 0.2em; font-weight: 900; color: #9a9a9a; border-bottom: solid 2px rgba(88,88,88,0.25); }
+			table.itinerary .day { font-size: 1.6em; font-weight: 700; color: #f2849e; width: 1.4em; line-height: 1; }
+			table.itinerary .route { font-weight: 700; }
+			table.itinerary .dist { color: #f2849e; font-weight: 700; white-space: nowrap; }
+			table.itinerary .time { color: #9a9a9a; white-space: nowrap; font-size: 0.95em; }
+			table.itinerary tbody tr:hover td { background: rgba(242,132,158,0.06); }
+
+			.callout { border-left: solid 4px #f2849e; background: rgba(242,132,158,0.06); padding: 1.1em 1.5em; font-size: 0.85em; margin-top: 1.5em; }
+			.callout p { margin: 0; }
+
+			@media screen and (max-width: 736px) {
+				.stats { grid-template-columns: repeat(2, 1fr); gap: 1.25em; }
+				#map { height: 420px; }
+			}
+		</style>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo (deliberately not linked to the portfolio) -->
+								<a href="#" class="logo">
+									<span class="symbol"><img src="../images/logo.svg" alt="" /></span><span class="title">Lucca &rarr; Rome</span>
+								</a>
+
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+				<!-- Menu (on-page sections only) -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+							<li><a href="#ride">The Ride</a></li>
+							<li><a href="#route">The Route</a></li>
+							<li><a href="#plan">Daily Plan</a></li>
+							<li><a href="https://www.viefrancigene.org/en/home#mappa" target="_blank" rel="noopener">Via Francigena &#8599;</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Hero -->
+								<header class="hero">
+									<img class="hero-graphic" src="pilgrim-bike.svg" alt="A pilgrim with a wide-brimmed hat and staff pushing a bicycle" />
+									<h1>Lucca <span class="arrow">&rarr;</span> Rome</h1>
+									<p class="subtitle">A father and son, ~400&nbsp;km by mountain bike, on an old road to an old city.</p>
+								</header>
+
+							<!-- The Ride -->
+								<section id="ride">
+									<h2>The Ride</h2>
+									<p>My son and I are setting out to ride the southern stretch of the <a href="https://www.viefrancigene.org/en/home#mappa" target="_blank" rel="noopener">Via Francigena</a> by mountain bike &mdash; the ancient pilgrim road that has carried travelers from northern Europe to the tomb of St. Peter for over a thousand years. Archbishop Sigeric of Canterbury wrote down his route home from Rome in 990&nbsp;AD, and pilgrims have followed roughly the same line through Tuscany and Lazio ever since.</p>
+									<p>We start in Lucca and finish at St. Peter's in Rome &mdash; seven days, seven stages, and whatever the road decides to teach us along the way. Below is our planned itinerary and the GPS tracks we're using to navigate each stage.</p>
+								</section>
+
+							<!-- Stats -->
+								<section>
+									<ul class="stats">
+										<li class="stat"><span class="num">~400</span><span class="label">Kilometers</span></li>
+										<li class="stat"><span class="num">7</span><span class="label">Days</span></li>
+										<li class="stat"><span class="num">~9,400</span><span class="label">Meters climbing</span></li>
+										<li class="stat"><span class="num">2</span><span class="label">Pilgrims</span></li>
+									</ul>
+								</section>
+
+							<!-- The Route -->
+								<section id="route">
+									<h2>The Route</h2>
+									<div id="map"></div>
+									<ul class="legend" id="legend"></ul>
+									<p class="map-note">Switch basemaps with the control at the top-right of the map: <strong>CyclOSM</strong> highlights cycle routes and surfaces; <strong>OpenTopoMap</strong> shows contour lines and terrain. Data &copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors. Click a stage below to download its GPX file. <em>(The Siena → San Quirico leg is a routed approximation via Buonconvento &amp; Torrenieri, pending a recorded track.)</em></p>
+								</section>
+
+							<!-- Daily Plan -->
+								<section id="plan">
+									<h2>Daily Plan</h2>
+									<table class="itinerary">
+										<thead>
+											<tr>
+												<th>&nbsp;</th>
+												<th>Route</th>
+												<th>Distance</th>
+												<th>Departure</th>
+												<th>Arrival</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr><td class="day">1</td><td class="route">Lucca &rarr; Fucecchio</td><td class="dist">55 km</td><td class="time">07:00</td><td class="time">11:00 &ndash; 12:00</td></tr>
+											<tr><td class="day">2</td><td class="route">Fucecchio &rarr; Gambassi Terme</td><td class="dist">32 km</td><td class="time">07:00</td><td class="time">10:00 &ndash; 11:30</td></tr>
+											<tr><td class="day">3</td><td class="route">Gambassi &rarr; Siena</td><td class="dist">53 km</td><td class="time">07:00</td><td class="time">12:00 &ndash; 14:00</td></tr>
+											<tr><td class="day">4</td><td class="route">Siena &rarr; San Quirico</td><td class="dist">65 km</td><td class="time">07:00</td><td class="time">12:30 &ndash; 14:00</td></tr>
+											<tr><td class="day">5</td><td class="route">San Quirico &rarr; Bolsena</td><td class="dist">75 km</td><td class="time">07:00</td><td class="time">13:00 &ndash; 15:00</td></tr>
+											<tr><td class="day">6</td><td class="route">Bolsena &rarr; Viterbo</td><td class="dist">35 km</td><td class="time">07:00</td><td class="time">10:00 &ndash; 11:30</td></tr>
+											<tr><td class="day">7</td><td class="route">Viterbo &rarr; Rome</td><td class="dist">85 km</td><td class="time">07:00</td><td class="time">13:00 &ndash; 15:00</td></tr>
+										</tbody>
+									</table>
+
+									<div class="callout">
+										<p><strong>About the Via Francigena:</strong> recognized as a Council of Europe Cultural Route, the Francigena isn't one fixed path but a corridor of historic ways &mdash; so the GPS tracks above follow the official Via Francigena cycle-route stages, which are broken up slightly differently than our day-by-day plan (a few of our longer days cover two marked stages back to back).</p>
+									</div>
+								</section>
+
+						</div>
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<section>
+								<h2>Follow</h2>
+								<ul class="icons">
+									<li><a href="https://twitter.com/stitchandsolder/" class="icon style2 fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="https://www.facebook.com/troykyo" class="icon style2 fa-facebook"><span class="label">Facebook</span></a></li>
+									<li><a href="https://www.instagram.com/troykyo/" class="icon style2 fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="https://github.com/troykyo" class="icon style2 fa-github"><span class="label">GitHub</span></a></li>
+									<li><a href="https://nl.linkedin.com/in/troynachtigall" class="icon style2 fa-linkedin"><span class="label">LinkedIn</span></a></li>
+									<li>Troy Nachtigall &amp; son 2026</li>
+								</ul>
+							</section>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
+
+			<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+			<script src="https://unpkg.com/leaflet-gpx@1.7.0/gpx.js"></script>
+			<script>
+				// Two basemaps so we can consult both.
+				var cyclosm = L.tileLayer('https://{s}.tile-cyclosm.openstreetmap.fr/cyclosm/{z}/{x}/{y}.png', {
+					attribution: 'Style: <a href="https://www.cyclosm.org/">CyclOSM</a> | &copy; OpenStreetMap contributors',
+					maxZoom: 20, subdomains: 'abc'
+				});
+				var opentopo = L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
+					attribution: '&copy; OpenStreetMap contributors, SRTM | Style: <a href="https://opentopomap.org/">OpenTopoMap</a> (CC-BY-SA)',
+					maxZoom: 17, subdomains: 'abc'
+				});
+
+				var map = L.map('map', { layers: [cyclosm] });
+				map.setView([42.9, 11.6], 8);
+
+				// The 10 stages in order, Lucca -> Rome, on a pink-to-teal gradient.
+				// (Siena → San Quirico is a routed connector; see note below.)
+				var stages = [
+					{ file: 'tracks/14-lucca-san-miniato.gpx',          name: 'Lucca → San Miniato',          color: '#f2849e' },
+					{ file: 'tracks/15-san-miniato-san-gimignano.gpx',  name: 'San Miniato → San Gimignano',  color: '#ea7396' },
+					{ file: 'tracks/16-san-gimignano-siena.gpx',        name: 'San Gimignano → Siena',        color: '#df628f' },
+					{ file: 'tracks/17-siena-san-quirico.gpx',          name: 'Siena → San Quirico',          color: '#cd5689' },
+					{ file: 'tracks/18-san-quirico-radicofani.gpx',     name: 'San Quirico → Radicofani',     color: '#b3508a' },
+					{ file: 'tracks/19-radicofani-bolsena.gpx',         name: 'Radicofani → Bolsena',         color: '#944f89' },
+					{ file: 'tracks/20-bolsena-viterbo.gpx',            name: 'Bolsena → Viterbo',            color: '#6f5085' },
+					{ file: 'tracks/21-viterbo-sutri.gpx',              name: 'Viterbo → Sutri',              color: '#525f86' },
+					{ file: 'tracks/22-sutri-formello.gpx',             name: 'Sutri → Formello',             color: '#46738f' },
+					{ file: 'tracks/23-formello-roma.gpx',              name: 'Formello → Rome',              color: '#3f8a93' }
+				];
+
+				var legend = document.getElementById('legend');
+				var routeLayer = L.featureGroup().addTo(map);
+				var loaded = 0;
+
+				stages.forEach(function (stage) {
+					var item = document.createElement('li');
+					item.className = 'item';
+					item.innerHTML = '<span class="swatch" style="background:' + stage.color + '"></span>' +
+						'<a href="' + stage.file + '" download>' + stage.name + '</a>';
+					legend.appendChild(item);
+
+					new L.GPX(stage.file, {
+						async: true,
+						marker_options: { startIconUrl: '', endIconUrl: '', shadowUrl: '' },
+						polyline_options: { color: stage.color, weight: 4, opacity: 0.9, lineJoin: 'round' }
+					}).on('loaded', function (e) {
+						loaded++;
+						if (loaded === stages.length) {
+							try { map.fitBounds(routeLayer.getBounds(), { padding: [24, 24] }); } catch (err) {}
+						}
+						e.target.bindPopup(stage.name);
+					}).addTo(routeLayer);
+				});
+
+				L.control.layers(
+					{ 'CyclOSM — cycling': cyclosm, 'OpenTopoMap — terrain': opentopo },
+					{ 'Route &amp; stages': routeLayer },
+					{ collapsed: false }
+				).addTo(map);
+			</script>
+
+	</body>
+</html>
