@@ -1,9 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 320" role="img" aria-label="A pilgrim with a wide-brimmed hat and staff pushing a bicycle">
 	<!-- ground shadow -->
-	<ellipse cx="244" cy="296" rx="208" ry="12" fill="#585858" opacity="0.08"/>
+	<ellipse cx="244" cy="296" rx="208" ry="12" fill="#4a4242" opacity="0.08"/>
 
-	<!-- ================= BICYCLE (far side) ================= -->
-	<g fill="none" stroke="#585858" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+	<!-- ================= BICYCLE (burgundy) ================= -->
+	<g fill="none" stroke="#7a2e3b" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
 		<!-- wheels -->
 		<circle cx="130" cy="232" r="52" stroke-width="7"/>
 		<circle cx="350" cy="232" r="52" stroke-width="7"/>
@@ -25,7 +25,7 @@
 		<path d="M223,253 L239,253" stroke-width="7"/>
 	</g>
 	<!-- spokes -->
-	<g stroke="#585858" stroke-width="2" opacity="0.5">
+	<g stroke="#7a2e3b" stroke-width="2" opacity="0.45">
 		<line x1="130" y1="232" x2="180" y2="232"/><line x1="130" y1="232" x2="165" y2="267"/>
 		<line x1="130" y1="232" x2="130" y2="282"/><line x1="130" y1="232" x2="95" y2="267"/>
 		<line x1="130" y1="232" x2="80" y2="232"/><line x1="130" y1="232" x2="95" y2="197"/>
@@ -36,23 +36,23 @@
 		<line x1="350" y1="232" x2="350" y2="182"/><line x1="350" y1="232" x2="385" y2="197"/>
 	</g>
 	<!-- hubs -->
-	<circle cx="130" cy="232" r="6" fill="#585858"/>
-	<circle cx="350" cy="232" r="6" fill="#585858"/>
+	<circle cx="130" cy="232" r="6" fill="#7a2e3b"/>
+	<circle cx="350" cy="232" r="6" fill="#7a2e3b"/>
 
 	<!-- ================= STAFF (behind pilgrim) ================= -->
-	<line x1="188" y1="292" x2="242" y2="70" stroke="#585858" stroke-width="6" stroke-linecap="round"/>
-	<circle cx="243" cy="68" r="6" fill="#585858"/>
+	<line x1="188" y1="292" x2="242" y2="70" stroke="#5f2330" stroke-width="6" stroke-linecap="round"/>
+	<circle cx="243" cy="68" r="6" fill="#5f2330"/>
 
-	<!-- ================= PILGRIM (near side) ================= -->
-	<g stroke="#f2849e" stroke-linecap="round" stroke-linejoin="round" fill="#f2849e">
+	<!-- ================= PILGRIM (coral) ================= -->
+	<g stroke="#ef7b61" stroke-linecap="round" stroke-linejoin="round" fill="#ef7b61">
 		<!-- legs -->
 		<path d="M205,198 L186,242 L176,288" fill="none" stroke-width="11"/>
 		<path d="M205,198 L227,244 L250,286" fill="none" stroke-width="11"/>
 		<!-- feet -->
 		<path d="M176,288 L192,288" fill="none" stroke-width="11"/>
 		<path d="M250,286 L266,286" fill="none" stroke-width="11"/>
-		<!-- backpack (deeper pink, on the back) -->
-		<rect x="171" y="150" width="42" height="62" rx="13" transform="rotate(-17 192 181)" fill="#e26d87" stroke="none"/>
+		<!-- backpack (burgundy, on the back) -->
+		<rect x="171" y="150" width="42" height="62" rx="13" transform="rotate(-17 192 181)" fill="#7a2e3b" stroke="none"/>
 		<!-- cloak / torso, leaning forward toward the bars -->
 		<path d="M180,240 L228,234 L252,134 L232,123 L190,212 Z" stroke="none"/>
 		<!-- arm to handlebar -->

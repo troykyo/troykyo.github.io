@@ -15,43 +15,72 @@
 		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 		<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
 		<style>
-			/* ---- page-specific, built on the site's palette (#585858 / #f2849e / #fff) ---- */
+			/* ---- palette: burgundy + coral on light gray (overrides the site theme) ---- */
+			:root {
+				--bg: #ecebe7;            /* soft light gray */
+				--ink: #4a4242;           /* body text */
+				--burgundy: #7a2e3b;
+				--burgundy-deep: #5f2330;
+				--coral: #ef7b61;
+				--line: rgba(74,66,66,0.16);
+				--muted: #8a827e;
+			}
+
+			/* theme overrides */
+			body { background: var(--bg); color: var(--ink); }
+			a { color: var(--coral); }
+			a:hover { color: var(--burgundy) !important; }
+			h1, h2, h3 { color: var(--burgundy); }
+			#footer { background-color: transparent; }
+			#menu { background: var(--burgundy-deep); }
+			/* recolor the theme's pink hamburger + close icons */
+			#header nav ul li a[href="#menu"]:before,
+			#header nav ul li a[href="#menu"]:after {
+				background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cstyle%3Eline %7B stroke-width: 8px%3B stroke: %237a2e3b%3B %7D%3C/style%3E%3Cline x1='0' y1='25' x2='100' y2='25' /%3E%3Cline x1='0' y1='50' x2='100' y2='50' /%3E%3Cline x1='0' y1='75' x2='100' y2='75' /%3E%3C/svg%3E");
+			}
+			#menu > .close:before,
+			#menu > .close:after {
+				background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cstyle%3Eline %7B stroke-width: 8px%3B stroke: %23ef7b61%3B %7D%3C/style%3E%3Cline x1='15' y1='15' x2='85' y2='85' /%3E%3Cline x1='85' y1='15' x2='15' y2='85' /%3E%3C/svg%3E");
+			}
+			.icon.style2:hover { color: var(--coral) !important; }
+
+			/* hero */
 			.hero { text-align: center; margin-bottom: 3.5em; }
 			.hero .hero-graphic { display: block; width: 100%; max-width: 500px; margin: 0 auto 1.25em; }
 			.hero h1 { margin: 0 0 0.25em 0; }
-			.hero h1 .arrow { color: #f2849e; font-weight: 300; }
-			.hero .subtitle { color: #9a9a9a; font-size: 1.05em; margin: 0; }
+			.hero h1 .arrow { color: var(--coral); font-weight: 300; }
+			.hero .subtitle { color: var(--muted); font-size: 1.05em; margin: 0; }
 
 			#main .inner > section { margin: 0 0 4em 0; }
 
 			/* stats */
 			.stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5em; margin: 0; padding: 0; list-style: none; }
-			.stats .stat { text-align: center; border-top: solid 3px #f2849e; padding-top: 0.9em; }
-			.stats .num { display: block; font-size: 2.5em; font-weight: 700; line-height: 1; letter-spacing: -0.025em; color: #585858; }
-			.stats .label { display: block; margin-top: 0.6em; font-size: 0.6em; text-transform: uppercase; letter-spacing: 0.25em; font-weight: 900; color: #9a9a9a; }
+			.stats .stat { text-align: center; border-top: solid 3px var(--coral); padding-top: 0.9em; }
+			.stats .num { display: block; font-size: 2.5em; font-weight: 700; line-height: 1; letter-spacing: -0.025em; color: var(--burgundy); }
+			.stats .label { display: block; margin-top: 0.6em; font-size: 0.6em; text-transform: uppercase; letter-spacing: 0.25em; font-weight: 900; color: var(--muted); }
 
 			/* map */
-			#map { height: 560px; width: 100%; border: solid 1px rgba(88,88,88,0.2); border-radius: 4px; }
+			#map { height: 560px; width: 100%; border: solid 1px var(--line); border-radius: 4px; }
 			.leaflet-container a { border-bottom: none; }
 			.leaflet-container { font-family: "Source Sans Pro", Helvetica, sans-serif; }
 			.legend { display: flex; flex-wrap: wrap; gap: 0.6em 1.6em; margin: 1.5em 0 0; padding: 0; list-style: none; font-size: 0.8em; }
 			.legend .item { display: flex; align-items: center; gap: 0.6em; }
 			.legend .swatch { width: 22px; height: 5px; border-radius: 3px; flex: 0 0 auto; }
-			.legend a { border-bottom: none; color: #585858; }
-			.map-note { font-size: 0.78em; color: #9a9a9a; margin: 1.25em 0 0; }
-			.map-note a { color: #9a9a9a; }
+			.legend a { border-bottom: none; color: var(--ink); }
+			.map-note { font-size: 0.78em; color: var(--muted); margin: 1.25em 0 0; }
+			.map-note a { color: var(--muted); }
 
 			/* itinerary */
 			table.itinerary { width: 100%; margin: 0; }
-			table.itinerary th, table.itinerary td { padding: 0.7em 1em; border-bottom: solid 1px rgba(88,88,88,0.15); text-align: left; vertical-align: middle; }
-			table.itinerary thead th { font-size: 0.6em; text-transform: uppercase; letter-spacing: 0.2em; font-weight: 900; color: #9a9a9a; border-bottom: solid 2px rgba(88,88,88,0.25); }
-			table.itinerary .day { font-size: 1.6em; font-weight: 700; color: #f2849e; width: 1.4em; line-height: 1; }
+			table.itinerary th, table.itinerary td { padding: 0.7em 1em; border-bottom: solid 1px var(--line); text-align: left; vertical-align: middle; }
+			table.itinerary thead th { font-size: 0.6em; text-transform: uppercase; letter-spacing: 0.2em; font-weight: 900; color: var(--muted); border-bottom: solid 2px var(--burgundy); }
+			table.itinerary .day { font-size: 1.6em; font-weight: 700; color: var(--coral); width: 1.4em; line-height: 1; }
 			table.itinerary .route { font-weight: 700; }
-			table.itinerary .dist { color: #f2849e; font-weight: 700; white-space: nowrap; }
-			table.itinerary .time { color: #9a9a9a; white-space: nowrap; font-size: 0.95em; }
-			table.itinerary tbody tr:hover td { background: rgba(242,132,158,0.06); }
+			table.itinerary .dist { color: var(--burgundy); font-weight: 700; white-space: nowrap; }
+			table.itinerary .time { color: var(--muted); white-space: nowrap; font-size: 0.95em; }
+			table.itinerary tbody tr:hover td { background: rgba(239,123,97,0.10); }
 
-			.callout { border-left: solid 4px #f2849e; background: rgba(242,132,158,0.06); padding: 1.1em 1.5em; font-size: 0.85em; margin-top: 1.5em; }
+			.callout { border-left: solid 4px var(--coral); background: rgba(122,46,59,0.06); padding: 1.1em 1.5em; font-size: 0.85em; margin-top: 1.5em; }
 			.callout p { margin: 0; }
 
 			@media screen and (max-width: 736px) {
@@ -70,7 +99,7 @@
 
 							<!-- Logo (deliberately not linked to the portfolio) -->
 								<a href="#" class="logo">
-									<span class="symbol"><img src="../images/logo.svg" alt="" /></span><span class="title">Lucca &rarr; Rome</span>
+									<span class="symbol"><img src="logo.svg" alt="" /></span><span class="title">Lucca &rarr; Rome</span>
 								</a>
 
 							<!-- Nav -->
@@ -127,7 +156,7 @@
 									<h2>The Route</h2>
 									<div id="map"></div>
 									<ul class="legend" id="legend"></ul>
-									<p class="map-note">Switch basemaps with the control at the top-right of the map: <strong>CyclOSM</strong> highlights cycle routes and surfaces; <strong>OpenTopoMap</strong> shows contour lines and terrain. Data &copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors. Click a stage below to download its GPX file. <em>(The Siena → San Quirico leg is a routed approximation via Buonconvento &amp; Torrenieri, pending a recorded track.)</em></p>
+									<p class="map-note">Switch basemaps with the control at the top-right of the map: <strong>CyclOSM</strong> highlights cycle routes and surfaces; <strong>OpenTopoMap</strong> shows contour lines and terrain. Data &copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors. Click a stage below to download its GPX file.</p>
 								</section>
 
 							<!-- Daily Plan -->
@@ -205,18 +234,17 @@
 				map.setView([42.9, 11.6], 8);
 
 				// The 10 stages in order, Lucca -> Rome, on a pink-to-teal gradient.
-				// (Siena → San Quirico is a routed connector; see note below.)
 				var stages = [
-					{ file: 'tracks/14-lucca-san-miniato.gpx',          name: 'Lucca → San Miniato',          color: '#f2849e' },
-					{ file: 'tracks/15-san-miniato-san-gimignano.gpx',  name: 'San Miniato → San Gimignano',  color: '#ea7396' },
-					{ file: 'tracks/16-san-gimignano-siena.gpx',        name: 'San Gimignano → Siena',        color: '#df628f' },
-					{ file: 'tracks/17-siena-san-quirico.gpx',          name: 'Siena → San Quirico',          color: '#cd5689' },
-					{ file: 'tracks/18-san-quirico-radicofani.gpx',     name: 'San Quirico → Radicofani',     color: '#b3508a' },
-					{ file: 'tracks/19-radicofani-bolsena.gpx',         name: 'Radicofani → Bolsena',         color: '#944f89' },
-					{ file: 'tracks/20-bolsena-viterbo.gpx',            name: 'Bolsena → Viterbo',            color: '#6f5085' },
-					{ file: 'tracks/21-viterbo-sutri.gpx',              name: 'Viterbo → Sutri',              color: '#525f86' },
-					{ file: 'tracks/22-sutri-formello.gpx',             name: 'Sutri → Formello',             color: '#46738f' },
-					{ file: 'tracks/23-formello-roma.gpx',              name: 'Formello → Rome',              color: '#3f8a93' }
+					{ file: 'tracks/14-lucca-san-miniato.gpx',          name: 'Lucca → San Miniato',          color: '#7a2e3b' },
+					{ file: 'tracks/15-san-miniato-san-gimignano.gpx',  name: 'San Miniato → San Gimignano',  color: '#87373f' },
+					{ file: 'tracks/16-san-gimignano-siena.gpx',        name: 'San Gimignano → Siena',        color: '#943f43' },
+					{ file: 'tracks/17-siena-san-quirico.gpx',          name: 'Siena → San Quirico',          color: '#a14848' },
+					{ file: 'tracks/18-san-quirico-radicofani.gpx',     name: 'San Quirico → Radicofani',     color: '#ae504c' },
+					{ file: 'tracks/19-radicofani-bolsena.gpx',         name: 'Radicofani → Bolsena',         color: '#bb5950' },
+					{ file: 'tracks/20-bolsena-viterbo.gpx',            name: 'Bolsena → Viterbo',            color: '#c86154' },
+					{ file: 'tracks/21-viterbo-sutri.gpx',              name: 'Viterbo → Sutri',              color: '#d56a59' },
+					{ file: 'tracks/22-sutri-formello.gpx',             name: 'Sutri → Formello',             color: '#e2725d' },
+					{ file: 'tracks/23-formello-roma.gpx',              name: 'Formello → Rome',              color: '#ef7b61' }
 				];
 
 				var legend = document.getElementById('legend');
