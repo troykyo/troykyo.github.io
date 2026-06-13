@@ -144,14 +144,14 @@
 								<section id="ride">
 									<h2>The Ride</h2>
 									<p>My son and I are setting out to ride the southern stretch of the <a href="https://www.viefrancigene.org/en/home#mappa" target="_blank" rel="noopener">Via Francigena</a> by gravel bike &mdash; the ancient pilgrim road that has carried travelers from northern Europe to the tomb of St. Peter for over a thousand years. Archbishop Sigeric of Canterbury wrote down his route home from Rome in 990&nbsp;AD, and pilgrims have followed roughly the same line through Tuscany and Lazio ever since.</p>
-									<p>We start in Lucca and finish at St. Peter's in Rome &mdash; seven days, seven stages, and whatever the road decides to teach us along the way. Below is our planned itinerary and the GPS tracks we're using to navigate our stages in this journey.</p>
+									<p>We start in Lucca and finish at St. Peter's in Rome &mdash; eight days, and whatever the road decides to teach us along the way. Below is our planned itinerary and the GPS tracks we're using to navigate our stages in this journey.</p>
 								</section>
 
 							<!-- Stats -->
 								<section>
 									<ul class="stats">
 										<li class="stat"><span class="num">421</span><span class="label">Kilometers</span></li>
-										<li class="stat"><span class="num">7</span><span class="label">Days</span></li>
+										<li class="stat"><span class="num">8</span><span class="label">Days</span></li>
 										<li class="stat"><span class="num">~9,400</span><span class="label">Meters climbing</span></li>
 										<li class="stat"><span class="num">2</span><span class="label">Pilgrims</span></li>
 									</ul>
@@ -178,22 +178,22 @@
 												<th>Stage</th>
 												<th>Distance</th>
 												<th>Overnight stay</th>
-												<th>Booking</th>
 											</tr>
 										</thead>
 										<tbody>
-											<tr><td class="date">19 Jul</td><td class="route">Lucca &rarr; San Miniato</td><td class="dist">46 km</td><td class="stay">Convento di San Francesco</td><td><span class="book priority">Priority</span></td></tr>
-											<tr><td class="date">20 Jul</td><td class="route">San Miniato &rarr; San Gimignano</td><td class="dist">42 km</td><td class="stay">Monastero di San Girolamo</td><td><span class="book priority">Priority</span></td></tr>
-											<tr><td class="date">21 Jul</td><td class="route">San Gimignano &rarr; Siena</td><td class="dist">49 km</td><td class="stay">Accoglienza Santa Luisa <em>or</em> Casa delle Balie</td><td><span class="book priority">Priority</span></td></tr>
-											<tr><td class="date">22 Jul</td><td class="route">Siena &rarr; San Quirico d&rsquo;Orcia</td><td class="dist">54 km</td><td class="stay">Ospitalit&agrave; Pellegrina</td><td><span class="book reserve">Reserve</span></td></tr>
-											<tr><td class="date">23 Jul</td><td class="route">San Quirico &rarr; Bolsena</td><td class="dist">90 km</td><td class="stay">Pilgrim parish accommodation</td><td><span class="book reserve">Reserve</span></td></tr>
-											<tr><td class="date">24 Jul</td><td class="route">Bolsena &rarr; Viterbo</td><td class="dist">32 km</td><td class="stay">Pilgrim Hostel of Viterbo</td><td><span class="book reserve">Reserve</span></td></tr>
-											<tr><td class="date">25&ndash;26 Jul</td><td class="route">Viterbo &rarr; Rome</td><td class="dist">107 km</td><td class="stay">Religious house near the Vatican</td><td><span class="book priority">Priority</span></td></tr>
+											<tr><td class="date">19 Jul</td><td class="route">Lucca &rarr; San Miniato</td><td class="dist">46 km</td><td class="stay">Convento di San Francesco</td></tr>
+											<tr><td class="date">20 Jul</td><td class="route">San Miniato &rarr; San Gimignano</td><td class="dist">42 km</td><td class="stay">Monastero di San Girolamo</td></tr>
+											<tr><td class="date">21 Jul</td><td class="route">San Gimignano &rarr; Siena</td><td class="dist">49 km</td><td class="stay">Accoglienza Santa Luisa <em>or</em> Casa delle Balie</td></tr>
+											<tr><td class="date">22 Jul</td><td class="route">Siena &rarr; San Quirico d&rsquo;Orcia</td><td class="dist">54 km</td><td class="stay">Ospitalit&agrave; Pellegrina</td></tr>
+											<tr><td class="date">23 Jul</td><td class="route">San Quirico &rarr; Radicofani</td><td class="dist">35 km</td><td class="stay">To be confirmed</td></tr>
+												<tr><td class="date">24 Jul</td><td class="route">Radicofani &rarr; Bolsena</td><td class="dist">55 km</td><td class="stay">Pilgrim parish accommodation</td></tr>
+											<tr><td class="date">25 Jul</td><td class="route">Bolsena &rarr; Viterbo</td><td class="dist">32 km</td><td class="stay">Pilgrim Hostel of Viterbo</td></tr>
+											<tr><td class="date">26 Jul</td><td class="route">Viterbo &rarr; Rome</td><td class="dist">107 km</td><td class="stay">Religious house near the Vatican</td></tr>
 										</tbody>
 									</table>
 
 									<div class="callout">
-										<p><strong>About the Via Francigena:</strong> recognized as a Council of Europe Cultural Route, the Francigena isn't one fixed path but a corridor of historic ways &mdash; so the GPS tracks above follow the official Via Francigena cycle-route stages, which are broken up slightly differently than our day-by-day plan (a few of our longer days cover two marked stages back to back).</p>
+										<p><strong>About the Via Francigena:</strong> recognized as a Council of Europe Cultural Route, the Francigena isn't one fixed path but a corridor of historic ways &mdash; so the GPS tracks above follow the official Via Francigena cycle-route stages, which are broken up slightly differently than our day-by-day plan (our final push into Rome covers the last three marked stages back to back).</p>
 									</div>
 								</section>
 
@@ -285,8 +285,8 @@
 					{ collapsed: false }
 				).addTo(map);
 
-				// keep the route framed even if the container is sized after init
-				setTimeout(function () { try { map.invalidateSize(); map.fitBounds(routeBounds, { padding: [20, 20] }); } catch (e) {} }, 500);
+				// re-fit on the next frame (after layout) — runs before the elevation parse, so no jank
+				requestAnimationFrame(function () { try { map.invalidateSize(); map.fitBounds(routeBounds, { padding: [20, 20] }); } catch (e) {} });
 
 				// ---- Elevation profile across all ten stages (Lucca -> Rome) ----
 				function buildElevation() {
@@ -338,9 +338,10 @@
 									{ x: trackEnd[1], town: 'San Gimignano', date: '20 Jul' },
 									{ x: trackEnd[2], town: 'Siena',         date: '21 Jul' },
 									{ x: trackEnd[3], town: 'San Quirico',   date: '22 Jul' },
-									{ x: trackEnd[5], town: 'Bolsena',       date: '23 Jul' },
-									{ x: trackEnd[6], town: 'Viterbo',       date: '24 Jul' },
-									{ x: trackEnd[9], town: 'Rome',          date: '25 Jul' }
+									{ x: trackEnd[4], town: 'Radicofani',    date: '23 Jul' },
+									{ x: trackEnd[5], town: 'Bolsena',       date: '24 Jul' },
+									{ x: trackEnd[6], town: 'Viterbo',       date: '25 Jul' },
+									{ x: trackEnd[9], town: 'Rome',          date: '26 Jul' }
 								];
 								var dayLines = {
 									id: 'dayLines',
