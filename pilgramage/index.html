@@ -236,8 +236,10 @@
 					maxZoom: 17, subdomains: 'abc'
 				});
 
+				// fixed, known bounds of the whole route (Lucca -> Rome) — deterministic framing
+				var routeBounds = L.latLngBounds([[41.87, 10.45], [43.90, 12.55]]);
 				var map = L.map('map', { layers: [cyclosm] });
-				map.setView([42.9, 11.6], 8);
+				map.fitBounds(routeBounds, { padding: [20, 20] });
 
 				// The 10 stages in order, Lucca -> Rome, on a pink-to-teal gradient.
 				var stages = [
@@ -269,10 +271,6 @@
 						marker_options: { startIconUrl: '', endIconUrl: '', shadowUrl: '' },
 						polyline_options: { color: stage.color, weight: 4, opacity: 0.9, lineJoin: 'round' }
 					}).on('loaded', function (e) {
-						loaded++;
-						if (loaded === stages.length) {
-							try { map.fitBounds(routeLayer.getBounds(), { padding: [24, 24] }); } catch (err) {}
-						}
 						e.target.bindPopup(stage.name);
 					}).addTo(routeLayer);
 				});
@@ -283,8 +281,11 @@
 					{ collapsed: false }
 				).addTo(map);
 
+				// keep the route framed even if the container is sized after init
+				setTimeout(function () { try { map.invalidateSize(); map.fitBounds(routeBounds, { padding: [20, 20] }); } catch (e) {} }, 500);
+
 				// ---- Elevation profile across all ten stages (Lucca -> Rome) ----
-				(function () {
+				function buildElevation() {
 					var canvas = document.getElementById('elevationChart');
 					if (!canvas || typeof Chart === 'undefined') return;
 					var R = 6371000;
@@ -344,7 +345,9 @@
 								}
 							});
 						});
-				})();
+				}
+				if (document.readyState === 'complete') { setTimeout(buildElevation, 300); }
+				else { window.addEventListener('load', function () { setTimeout(buildElevation, 300); }); }
 			</script>
 
 	</body>
