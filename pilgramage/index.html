@@ -69,6 +69,8 @@
 			.legend a { border-bottom: none; color: var(--ink); }
 			.map-note { font-size: 0.78em; color: var(--muted); margin: 1.25em 0 0; }
 			.map-note a { color: var(--muted); }
+			.elev-wrap { position: relative; height: 220px; margin: 1.75em 0 0; }
+			.elev-wrap canvas { width: 100% !important; }
 
 			/* itinerary */
 			table.itinerary { width: 100%; margin: 0; }
@@ -157,6 +159,9 @@
 									<div id="map"></div>
 									<ul class="legend" id="legend"></ul>
 									<p class="map-note">Switch basemaps with the control at the top-right of the map: <strong>CyclOSM</strong> highlights cycle routes and surfaces; <strong>OpenTopoMap</strong> shows contour lines and terrain. Data &copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors. Click a stage below to download its GPX file.</p>
+
+									<div class="elev-wrap"><canvas id="elevationChart"></canvas></div>
+									<p class="map-note">Elevation profile, Lucca (left) to Rome (right) &mdash; roughly 9,400&nbsp;m of total climbing across the ten stages. Hover to read height &amp; distance.</p>
 								</section>
 
 							<!-- Daily Plan -->
@@ -219,6 +224,7 @@
 
 			<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 			<script src="https://unpkg.com/leaflet-gpx@1.7.0/gpx.js"></script>
+			<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 			<script>
 				// Two basemaps so we can consult both.
 				var cyclosm = L.tileLayer('https://{s}.tile-cyclosm.openstreetmap.fr/cyclosm/{z}/{x}/{y}.png', {
@@ -276,6 +282,69 @@
 					{ 'Route &amp; stages': routeLayer },
 					{ collapsed: false }
 				).addTo(map);
+
+				// ---- Elevation profile across all ten stages (Lucca -> Rome) ----
+				(function () {
+					var canvas = document.getElementById('elevationChart');
+					if (!canvas || typeof Chart === 'undefined') return;
+					var R = 6371000;
+					function hav(la1, lo1, la2, lo2) {
+						var p1 = la1 * Math.PI / 180, p2 = la2 * Math.PI / 180,
+							dp = (la2 - la1) * Math.PI / 180, dl = (lo2 - lo1) * Math.PI / 180;
+						var a = Math.sin(dp / 2) * Math.sin(dp / 2) + Math.cos(p1) * Math.cos(p2) * Math.sin(dl / 2) * Math.sin(dl / 2);
+						return 2 * R * Math.asin(Math.sqrt(a));
+					}
+					Chart.defaults.font.family = "'Source Sans Pro', Helvetica, sans-serif";
+					Promise.all(stages.map(function (s) { return fetch(s.file).then(function (r) { return r.text(); }); }))
+						.then(function (texts) {
+							var data = [], cum = 0;
+							texts.forEach(function (txt) {
+								var doc = new DOMParser().parseFromString(txt, 'application/xml');
+								var pts = doc.getElementsByTagName('trkpt');
+								var plat = null, plon = null;
+								for (var i = 0; i < pts.length; i++) {
+									var la = parseFloat(pts[i].getAttribute('lat')), lo = parseFloat(pts[i].getAttribute('lon'));
+									if (isNaN(la) || isNaN(lo)) continue;
+									if (plat !== null) cum += hav(plat, plon, la, lo);
+									plat = la; plon = lo;
+									var eleEl = pts[i].getElementsByTagName('ele')[0];
+									if (eleEl && i % 6 === 0) data.push({ x: cum / 1000, y: parseFloat(eleEl.textContent) });
+								}
+							});
+							if (!data.length) return;
+							function grad(alpha) {
+								return function (c) {
+									var area = c.chart.chartArea;
+									if (!area) return 'rgba(239,123,97,' + alpha + ')';
+									var g = c.chart.ctx.createLinearGradient(area.left, 0, area.right, 0);
+									g.addColorStop(0, 'rgba(122,46,59,' + alpha + ')');
+									g.addColorStop(1, 'rgba(239,123,97,' + alpha + ')');
+									return g;
+								};
+							}
+							new Chart(canvas, {
+								type: 'line',
+								data: { datasets: [{ data: data, fill: true, pointRadius: 0, borderWidth: 2, tension: 0.25, borderColor: grad(1), backgroundColor: grad(0.30) }] },
+								options: {
+									responsive: true, maintainAspectRatio: false, parsing: false, animation: false,
+									interaction: { intersect: false, mode: 'index' },
+									scales: {
+										x: { type: 'linear', title: { display: true, text: 'Distance (km)', color: '#7a2e3b' }, ticks: { maxTicksLimit: 9, color: '#8a827e' }, grid: { color: 'rgba(74,66,66,0.08)' } },
+										y: { title: { display: true, text: 'Elevation (m)', color: '#7a2e3b' }, ticks: { color: '#8a827e' }, grid: { color: 'rgba(74,66,66,0.08)' } }
+									},
+									plugins: {
+										legend: { display: false },
+										tooltip: {
+											callbacks: {
+												title: function (it) { return Math.round(it[0].parsed.x) + ' km'; },
+												label: function (it) { return Math.round(it.parsed.y) + ' m'; }
+											}
+										}
+									}
+								}
+							});
+						});
+				})();
 			</script>
 
 	</body>
