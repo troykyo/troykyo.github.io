@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 810 320" role="img" aria-label="A father and son, the same height, each pushing a bicycle on the road to Rome">
+	<defs>
+		<!-- bicycle, in currentColor -->
+		<g id="bike">
+			<g fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+				<circle cx="130" cy="232" r="52" stroke-width="7"/>
+				<circle cx="350" cy="232" r="52" stroke-width="7"/>
+				<path d="M130,232 L240,232"/>
+				<path d="M240,232 L205,150"/>
+				<path d="M130,232 L205,150"/>
+				<path d="M240,232 L330,150"/>
+				<path d="M205,150 L330,150"/>
+				<path d="M350,232 L330,150 L330,138"/>
+				<path d="M338,140 C326,131 316,131 306,134"/>
+				<path d="M186,150 Q205,143 226,150" stroke-width="7"/>
+				<path d="M240,232 L231,253"/>
+				<path d="M223,253 L239,253" stroke-width="7"/>
+			</g>
+			<g stroke="currentColor" stroke-width="2" opacity="0.4">
+				<line x1="130" y1="232" x2="180" y2="232"/><line x1="130" y1="232" x2="165" y2="267"/>
+				<line x1="130" y1="232" x2="130" y2="282"/><line x1="130" y1="232" x2="95" y2="267"/>
+				<line x1="130" y1="232" x2="80" y2="232"/><line x1="130" y1="232" x2="95" y2="197"/>
+				<line x1="130" y1="232" x2="130" y2="182"/><line x1="130" y1="232" x2="165" y2="197"/>
+				<line x1="350" y1="232" x2="400" y2="232"/><line x1="350" y1="232" x2="385" y2="267"/>
+				<line x1="350" y1="232" x2="350" y2="282"/><line x1="350" y1="232" x2="315" y2="267"/>
+				<line x1="350" y1="232" x2="300" y2="232"/><line x1="350" y1="232" x2="315" y2="197"/>
+				<line x1="350" y1="232" x2="350" y2="182"/><line x1="350" y1="232" x2="385" y2="197"/>
+			</g>
+			<circle cx="130" cy="232" r="6" fill="currentColor"/>
+			<circle cx="350" cy="232" r="6" fill="currentColor"/>
+		</g>
+		<!-- pilgrim, in currentColor -->
+		<g id="pilgrim" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" fill="currentColor">
+			<path d="M205,198 L186,242 L176,288" fill="none" stroke-width="11"/>
+			<path d="M205,198 L227,244 L250,286" fill="none" stroke-width="11"/>
+			<path d="M176,288 L192,288" fill="none" stroke-width="11"/>
+			<path d="M250,286 L266,286" fill="none" stroke-width="11"/>
+			<path d="M180,240 L228,234 L252,134 L232,123 L190,212 Z" stroke="none"/>
+			<path d="M246,138 L276,144 L306,134" fill="none" stroke-width="10"/>
+			<circle cx="258" cy="104" r="15" stroke="none"/>
+			<path d="M238,90 Q240,64 258,62 Q276,64 278,90 Z" stroke="none"/>
+			<ellipse cx="258" cy="91" rx="40" ry="9" stroke="none"/>
+		</g>
+	</defs>
+
+	<!-- shared ground shadow -->
+	<ellipse cx="405" cy="300" rx="375" ry="12" fill="#4a4242" opacity="0.08"/>
+
+	<!-- Father: burgundy rider on a coral bike -->
+	<g transform="translate(0,0)">
+		<use href="#bike" color="#ef7b61"/>
+		<use href="#pilgrim" color="#7a2e3b"/>
+	</g>
+	<!-- Son: coral rider on a burgundy bike — same height -->
+	<g transform="translate(330,0)">
+		<use href="#bike" color="#7a2e3b"/>
+		<use href="#pilgrim" color="#ef7b61"/>
+	</g>
+</svg>

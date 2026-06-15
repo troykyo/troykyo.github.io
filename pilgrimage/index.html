@@ -1,0 +1,422 @@
+<!DOCTYPE HTML>
+<!--
+	Standalone page — styled to match troykyo.net (Phantom by Pixelarity)
+	Intentionally not linked from the main site. Search-indexing disabled.
+-->
+<html>
+	<head>
+		<title>Lucca to Rome — A Bike Pilgrimage &middot; Un pellegrinaggio in bici</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="robots" content="noindex, nofollow" />
+		<meta name="description" content="A father and son mountain bike roughly 400km of the Via Francigena from Lucca to Rome — route, daily stages, and GPS tracks." />
+		<link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+		<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+		<style>
+			/* ---- palette: burgundy + coral on light gray (overrides the site theme) ---- */
+			:root {
+				--bg: #ecebe7;            /* soft light gray */
+				--ink: #4a4242;           /* body text */
+				--burgundy: #7a2e3b;
+				--burgundy-deep: #5f2330;
+				--coral: #ef7b61;
+				--line: rgba(74,66,66,0.16);
+				--muted: #8a827e;
+			}
+
+			/* theme overrides */
+			body { background: var(--bg); color: var(--ink); }
+			a { color: var(--coral); }
+			a:hover { color: var(--burgundy) !important; }
+			h1, h2, h3 { color: var(--burgundy); }
+			#footer { background-color: transparent; }
+			#menu { background: var(--burgundy-deep); }
+			/* recolor the theme's pink hamburger + close icons */
+			#header nav ul li a[href="#menu"]:before,
+			#header nav ul li a[href="#menu"]:after {
+				background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cstyle%3Eline %7B stroke-width: 8px%3B stroke: %237a2e3b%3B %7D%3C/style%3E%3Cline x1='0' y1='25' x2='100' y2='25' /%3E%3Cline x1='0' y1='50' x2='100' y2='50' /%3E%3Cline x1='0' y1='75' x2='100' y2='75' /%3E%3C/svg%3E");
+			}
+			#menu > .close:before,
+			#menu > .close:after {
+				background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cstyle%3Eline %7B stroke-width: 8px%3B stroke: %23ef7b61%3B %7D%3C/style%3E%3Cline x1='15' y1='15' x2='85' y2='85' /%3E%3Cline x1='85' y1='15' x2='15' y2='85' /%3E%3C/svg%3E");
+			}
+			.icon.style2:hover { color: var(--coral) !important; }
+
+			/* hero */
+			.hero { text-align: center; margin-bottom: 3.5em; }
+			.hero .hero-graphic { display: block; width: 100%; max-width: 500px; margin: 0 auto 1.25em; }
+			.hero h1 { margin: 0 0 0.25em 0; }
+			.hero h1 .arrow { color: var(--coral); font-weight: 300; }
+			.hero .subtitle { color: var(--muted); font-size: 1.05em; margin: 0; }
+
+			#main .inner > section { margin: 0 0 4em 0; }
+
+			/* stats */
+			.stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5em; margin: 0; padding: 0; list-style: none; }
+			.stats .stat { text-align: center; border-top: solid 3px var(--coral); padding-top: 0.9em; }
+			.stats .num { display: block; font-size: 2.5em; font-weight: 700; line-height: 1; letter-spacing: -0.025em; color: var(--burgundy); }
+			.stats .label { display: block; margin-top: 0.6em; font-size: 0.6em; text-transform: uppercase; letter-spacing: 0.25em; font-weight: 900; color: var(--muted); }
+
+			/* map */
+			#map { height: 560px; width: 100%; border: solid 1px var(--line); border-radius: 4px; }
+			.leaflet-container a { border-bottom: none; }
+			.leaflet-container { font-family: "Source Sans Pro", Helvetica, sans-serif; }
+			.legend { display: flex; flex-wrap: wrap; gap: 0.6em 1.6em; margin: 1.5em 0 0; padding: 0; list-style: none; font-size: 0.8em; }
+			.legend .item { display: flex; align-items: center; gap: 0.6em; }
+			.legend .swatch { width: 22px; height: 5px; border-radius: 3px; flex: 0 0 auto; }
+			.legend a { border-bottom: none; color: var(--ink); }
+			.map-note { font-size: 0.78em; color: var(--muted); margin: 1.25em 0 0; }
+			.map-note a { color: var(--muted); }
+			.elev-wrap { position: relative; height: 220px; margin: 1.75em 0 0; }
+			.elev-wrap canvas { width: 100% !important; }
+
+			/* itinerary */
+			table.itinerary { width: 100%; margin: 0; }
+			table.itinerary th, table.itinerary td { padding: 0.7em 1em; border-bottom: solid 1px var(--line); text-align: left; vertical-align: middle; }
+			table.itinerary thead th { font-size: 0.6em; text-transform: uppercase; letter-spacing: 0.2em; font-weight: 900; color: var(--muted); border-bottom: solid 2px var(--burgundy); }
+			table.itinerary .date { color: var(--burgundy); font-weight: 700; white-space: nowrap; }
+			table.itinerary .route { font-weight: 700; }
+			table.itinerary .dist { color: var(--coral); font-weight: 700; white-space: nowrap; }
+			table.itinerary .stay { font-size: 0.95em; }
+			table.itinerary .stay em { color: var(--muted); font-style: italic; }
+			table.itinerary .book { display: inline-block; font-size: 0.62em; text-transform: uppercase; letter-spacing: 0.12em; font-weight: 900; padding: 0.35em 0.85em; border-radius: 999px; white-space: nowrap; }
+			table.itinerary .book.priority { background: var(--burgundy); color: #fff; }
+			table.itinerary .book.reserve { background: transparent; color: var(--coral); border: solid 1px var(--coral); }
+			table.itinerary tbody tr:hover td { background: rgba(239,123,97,0.10); }
+
+			.callout { border-left: solid 4px var(--coral); background: rgba(122,46,59,0.06); padding: 1.1em 1.5em; font-size: 0.85em; margin-top: 1.5em; }
+			.callout p { margin: 0; }
+
+			/* bilingual: English, then Italian in italics */
+			.it { font-style: italic; color: var(--muted); }
+			.it-head { display: block; margin-top: 0.35em; font-style: italic; font-weight: 400; text-transform: none; letter-spacing: 0; color: var(--muted); font-size: 0.5em; line-height: 1.3; }
+			.stats .it-label { display: block; margin-top: 0.2em; font-style: italic; text-transform: none; letter-spacing: 0.05em; font-weight: 400; color: var(--muted); font-size: 0.85em; }
+			table.itinerary .it-th { display: block; margin-top: 0.25em; font-style: italic; text-transform: none; letter-spacing: 0; font-weight: 400; color: var(--muted); font-size: 1em; }
+			#menu .it { color: rgba(255,255,255,0.55); }
+
+			@media screen and (max-width: 736px) {
+				.stats { grid-template-columns: repeat(2, 1fr); gap: 1.25em; }
+				#map { height: 420px; }
+			}
+		</style>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo (deliberately not linked to the portfolio) -->
+								<a href="#" class="logo">
+									<span class="symbol"><img src="logo.svg" alt="" /></span><span class="title">Lucca &rarr; Rome</span>
+								</a>
+
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+				<!-- Menu (on-page sections only) -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+							<li><a href="#ride">The Ride <em class="it">&middot; Il viaggio</em></a></li>
+							<li><a href="#route">The Route <em class="it">&middot; Il percorso</em></a></li>
+							<li><a href="#plan">Daily Plan <em class="it">&middot; Programma giornaliero</em></a></li>
+							<li><a href="https://www.viefrancigene.org/en/home#mappa" target="_blank" rel="noopener">Via Francigena &#8599;</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Hero -->
+								<header class="hero">
+									<img class="hero-graphic" src="pilgrim-bike.svg" alt="A pilgrim with a wide-brimmed hat and staff pushing a bicycle" />
+									<h1>Lucca <span class="arrow">&rarr;</span> Rome</h1>
+									<p class="subtitle">A father and son, ~400&nbsp;km by mountain bike, on an old road to an old city.<br><em class="it">Padre e figlio, ~400&nbsp;km in mountain bike, su un&rsquo;antica strada verso un&rsquo;antica citt&agrave;.</em></p>
+								</header>
+
+							<!-- The Ride -->
+								<section id="ride">
+									<h2>The Ride<span class="it-head">Il viaggio</span></h2>
+									<p>My son and I are setting out to ride the southern stretch of the <a href="https://www.viefrancigene.org/en/home#mappa" target="_blank" rel="noopener">Via Francigena</a> by gravel bike &mdash; the ancient pilgrim road that has carried travelers from northern Europe to the tomb of St. Peter for over a thousand years. Archbishop Sigeric of Canterbury wrote down his route home from Rome in 990&nbsp;AD, and pilgrims have followed roughly the same line through Tuscany and Lazio ever since.<br><em class="it">Io e mio figlio partiamo per percorrere in gravel bike il tratto meridionale della <a href="https://www.viefrancigene.org/it/home" target="_blank" rel="noopener">Via Francigena</a> &mdash; l&rsquo;antica strada dei pellegrini che da oltre mille anni conduce i viaggiatori dal Nord Europa alla tomba di San Pietro. L&rsquo;arcivescovo Sigerico di Canterbury annot&ograve; il suo itinerario di ritorno da Roma nel 990&nbsp;d.C., e da allora i pellegrini seguono press&rsquo;a poco la stessa linea attraverso la Toscana e il Lazio.</em></p>
+									<p>We start in Lucca and finish at St. Peter's in Rome &mdash; eight days, and whatever the road decides to teach us along the way. Below is our planned itinerary and the GPS tracks we're using to navigate our stages in this journey.<br><em class="it">Si parte da Lucca e si arriva a San Pietro, a Roma &mdash; otto giorni, e tutto ci&ograve; che la strada vorr&agrave; insegnarci lungo il cammino. Qui sotto trovate il nostro itinerario e le tracce GPS che useremo per orientarci nelle tappe di questo viaggio.</em></p>
+								</section>
+
+							<!-- Stats -->
+								<section>
+									<ul class="stats">
+										<li class="stat"><span class="num">421</span><span class="label">Kilometers</span><span class="it-label">Chilometri</span></li>
+										<li class="stat"><span class="num">8</span><span class="label">Days</span><span class="it-label">Giorni</span></li>
+										<li class="stat"><span class="num">~9,400</span><span class="label">Meters climbing</span><span class="it-label">Metri di dislivello</span></li>
+										<li class="stat"><span class="num">2</span><span class="label">Pilgrims</span><span class="it-label">Pellegrini</span></li>
+									</ul>
+								</section>
+
+							<!-- The Route -->
+								<section id="route">
+									<h2>The Route<span class="it-head">Il percorso</span></h2>
+									<div id="map"></div>
+									<ul class="legend" id="legend"></ul>
+									<p class="map-note">Switch basemaps with the control at the top-right of the map: <strong>CyclOSM</strong> highlights cycle routes and surfaces; <strong>OpenTopoMap</strong> shows contour lines and terrain. Data &copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors. Click a stage below to download its GPX file.<br><em class="it">Cambia mappa con il controllo in alto a destra: <strong>CyclOSM</strong> evidenzia gli itinerari ciclabili e i fondi stradali; <strong>OpenTopoMap</strong> mostra le curve di livello e il rilievo. Dati &copy; OpenStreetMap. Clicca una tappa qui sotto per scaricarne la traccia GPX.</em></p>
+
+									<div class="elev-wrap"><canvas id="elevationChart"></canvas></div>
+									<p class="map-note">Elevation profile, Lucca (left) to Rome (right) &mdash; roughly 9,400&nbsp;m of total climbing across the ten stages. Hover to read height &amp; distance.<br><em class="it">Profilo altimetrico, da Lucca (sinistra) a Roma (destra) &mdash; circa 9.400&nbsp;m di dislivello totale sulle dieci tappe. Passa il mouse per leggere quota e distanza.</em></p>
+								</section>
+
+							<!-- Daily Plan -->
+								<section id="plan">
+									<h2>Daily Plan<span class="it-head">Programma giornaliero</span></h2>
+									<table class="itinerary">
+										<thead>
+											<tr>
+												<th>Date<span class="it-th">Data</span></th>
+												<th>Stage<span class="it-th">Tappa</span></th>
+												<th>Distance<span class="it-th">Distanza</span></th>
+												<th>Overnight stay<span class="it-th">Pernottamento</span></th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr><td class="date">19 Jul</td><td class="route">Lucca &rarr; San Miniato</td><td class="dist">46 km</td><td class="stay">Convento di San Francesco</td></tr>
+											<tr><td class="date">20 Jul</td><td class="route">San Miniato &rarr; San Gimignano</td><td class="dist">42 km</td><td class="stay">Monastero di San Girolamo</td></tr>
+											<tr><td class="date">21 Jul</td><td class="route">San Gimignano &rarr; Siena</td><td class="dist">49 km</td><td class="stay">Accoglienza Santa Luisa <em>or</em> Casa delle Balie</td></tr>
+											<tr><td class="date">22 Jul</td><td class="route">Siena &rarr; San Quirico d&rsquo;Orcia</td><td class="dist">54 km</td><td class="stay">Ospitalit&agrave; Pellegrina</td></tr>
+											<tr><td class="date">23 Jul</td><td class="route">San Quirico &rarr; Radicofani</td><td class="dist">35 km</td><td class="stay">To be confirmed<br><em class="it">Da confermare</em></td></tr>
+												<tr><td class="date">24 Jul</td><td class="route">Radicofani &rarr; Bolsena</td><td class="dist">55 km</td><td class="stay">Pilgrim parish accommodation<br><em class="it">Alloggio parrocchiale per pellegrini</em></td></tr>
+											<tr><td class="date">25 Jul</td><td class="route">Bolsena &rarr; Viterbo</td><td class="dist">32 km</td><td class="stay">Pilgrim Hostel of Viterbo<br><em class="it">Ostello del Pellegrino di Viterbo</em></td></tr>
+											<tr><td class="date">26 Jul</td><td class="route">Viterbo &rarr; Rome</td><td class="dist">107 km</td><td class="stay">Religious house near the Vatican<br><em class="it">Casa religiosa vicino al Vaticano</em></td></tr>
+										</tbody>
+									</table>
+
+									<div class="callout">
+										<p><strong>About the Via Francigena:</strong> recognized as a Council of Europe Cultural Route, the Francigena isn't one fixed path but a corridor of historic ways &mdash; so the GPS tracks above follow the official Via Francigena cycle-route stages, which are broken up slightly differently than our day-by-day plan (our final push into Rome covers the last three marked stages back to back).<br><em class="it"><strong>Sulla Via Francigena:</strong> riconosciuta come Itinerario Culturale del Consiglio d&rsquo;Europa, la Francigena non &egrave; un unico percorso fisso ma un corridoio di vie storiche &mdash; perci&ograve; le tracce GPS qui sopra seguono le tappe ufficiali del percorso ciclabile della Via Francigena, suddivise in modo un po&rsquo; diverso dal nostro programma giornaliero (la nostra tappa finale verso Roma copre le ultime tre tappe ufficiali una dopo l&rsquo;altra).</em></p>
+									</div>
+								</section>
+
+						</div>
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<section>
+								<h2>Follow<span class="it-head">Seguici</span></h2>
+								<ul class="icons">
+									<li><a href="https://twitter.com/stitchandsolder/" class="icon style2 fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="https://www.facebook.com/troykyo" class="icon style2 fa-facebook"><span class="label">Facebook</span></a></li>
+									<li><a href="https://www.instagram.com/troykyo/" class="icon style2 fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="https://github.com/troykyo" class="icon style2 fa-github"><span class="label">GitHub</span></a></li>
+									<li><a href="https://nl.linkedin.com/in/troynachtigall" class="icon style2 fa-linkedin"><span class="label">LinkedIn</span></a></li>
+									<li>Troy Nachtigall &amp; son 2026</li>
+								</ul>
+							</section>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
+
+			<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+			<script src="https://unpkg.com/leaflet-gpx@1.7.0/gpx.js"></script>
+			<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+			<script>
+				// Two basemaps so we can consult both.
+				var cyclosm = L.tileLayer('https://{s}.tile-cyclosm.openstreetmap.fr/cyclosm/{z}/{x}/{y}.png', {
+					attribution: 'Style: <a href="https://www.cyclosm.org/">CyclOSM</a> | &copy; OpenStreetMap contributors',
+					maxZoom: 20, subdomains: 'abc'
+				});
+				var opentopo = L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
+					attribution: '&copy; OpenStreetMap contributors, SRTM | Style: <a href="https://opentopomap.org/">OpenTopoMap</a> (CC-BY-SA)',
+					maxZoom: 17, subdomains: 'abc'
+				});
+
+				// fixed, known bounds of the whole route (Lucca -> Rome) — deterministic framing
+				var routeBounds = L.latLngBounds([[41.87, 10.45], [43.90, 12.55]]);
+				var map = L.map('map', { layers: [cyclosm] });
+				map.fitBounds(routeBounds, { padding: [20, 20] });
+
+				// The 10 stages in order, Lucca -> Rome, on a pink-to-teal gradient.
+				var stages = [
+					{ file: 'tracks/14-lucca-san-miniato.gpx',          name: 'Lucca → San Miniato',          color: '#7a2e3b' },
+					{ file: 'tracks/15-san-miniato-san-gimignano.gpx',  name: 'San Miniato → San Gimignano',  color: '#87373f' },
+					{ file: 'tracks/16-san-gimignano-siena.gpx',        name: 'San Gimignano → Siena',        color: '#943f43' },
+					{ file: 'tracks/17-siena-san-quirico.gpx',          name: 'Siena → San Quirico',          color: '#a14848' },
+					{ file: 'tracks/18-san-quirico-radicofani.gpx',     name: 'San Quirico → Radicofani',     color: '#ae504c' },
+					{ file: 'tracks/19-radicofani-bolsena.gpx',         name: 'Radicofani → Bolsena',         color: '#bb5950' },
+					{ file: 'tracks/20-bolsena-viterbo.gpx',            name: 'Bolsena → Viterbo',            color: '#c86154' },
+					{ file: 'tracks/21-viterbo-sutri.gpx',              name: 'Viterbo → Sutri',              color: '#d56a59' },
+					{ file: 'tracks/22-sutri-formello.gpx',             name: 'Sutri → Formello',             color: '#e2725d' },
+					{ file: 'tracks/23-formello-roma.gpx',              name: 'Formello → Rome',              color: '#ef7b61' }
+				];
+
+				var legend = document.getElementById('legend');
+				var routeLayer = L.featureGroup().addTo(map);
+				var loaded = 0;
+
+				stages.forEach(function (stage) {
+					var item = document.createElement('li');
+					item.className = 'item';
+					item.innerHTML = '<span class="swatch" style="background:' + stage.color + '"></span>' +
+						'<a href="' + stage.file + '" download>' + stage.name + '</a>';
+					legend.appendChild(item);
+
+					new L.GPX(stage.file, {
+						async: true,
+						marker_options: { startIconUrl: '', endIconUrl: '', shadowUrl: '' },
+						polyline_options: { color: stage.color, weight: 4, opacity: 0.9, lineJoin: 'round' }
+					}).on('loaded', function (e) {
+						e.target.bindPopup(stage.name);
+					}).addTo(routeLayer);
+				});
+
+				L.control.layers(
+					{ 'CyclOSM — cycling': cyclosm, 'OpenTopoMap — terrain': opentopo },
+					{ 'Route &amp; stages': routeLayer },
+					{ collapsed: false }
+				).addTo(map);
+
+				// re-fit on the next frame (after layout) — runs before the elevation parse, so no jank
+				requestAnimationFrame(function () { try { map.invalidateSize(); map.fitBounds(routeBounds, { padding: [20, 20] }); } catch (e) {} });
+
+				// ---- Elevation profile across all ten stages (Lucca -> Rome) ----
+				function buildElevation() {
+					var canvas = document.getElementById('elevationChart');
+					if (!canvas || typeof Chart === 'undefined') return;
+					var R = 6371000;
+					function hav(la1, lo1, la2, lo2) {
+						var p1 = la1 * Math.PI / 180, p2 = la2 * Math.PI / 180,
+							dp = (la2 - la1) * Math.PI / 180, dl = (lo2 - lo1) * Math.PI / 180;
+						var a = Math.sin(dp / 2) * Math.sin(dp / 2) + Math.cos(p1) * Math.cos(p2) * Math.sin(dl / 2) * Math.sin(dl / 2);
+						return 2 * R * Math.asin(Math.sqrt(a));
+					}
+					Chart.defaults.font.family = "'Source Sans Pro', Helvetica, sans-serif";
+					Promise.all(stages.map(function (s) { return fetch(s.file).then(function (r) { return r.text(); }); }))
+						.then(function (texts) {
+							var data = [], cum = 0;
+							texts.forEach(function (txt) {
+								var doc = new DOMParser().parseFromString(txt, 'application/xml');
+								var pts = doc.getElementsByTagName('trkpt');
+								var plat = null, plon = null;
+								for (var i = 0; i < pts.length; i++) {
+									var la = parseFloat(pts[i].getAttribute('lat')), lo = parseFloat(pts[i].getAttribute('lon'));
+									if (isNaN(la) || isNaN(lo)) continue;
+									if (plat !== null) cum += hav(plat, plon, la, lo);
+									plat = la; plon = lo;
+									var eleEl = pts[i].getElementsByTagName('ele')[0];
+									if (eleEl && i % 6 === 0) data.push({ x: cum / 1000, y: parseFloat(eleEl.textContent) });
+								}
+							});
+							if (!data.length) return;
+
+								// cumulative distance at the end of each track, for the day markers
+								var trackEnd = [], c2 = 0;
+								texts.forEach(function (txt) {
+									var d2 = new DOMParser().parseFromString(txt, 'application/xml');
+									var p2 = d2.getElementsByTagName('trkpt'), a = null, b = null;
+									for (var j = 0; j < p2.length; j++) {
+										var la = parseFloat(p2[j].getAttribute('lat')), lo = parseFloat(p2[j].getAttribute('lon'));
+										if (isNaN(la) || isNaN(lo)) continue;
+										if (a !== null) c2 += hav(a, b, la, lo);
+										a = la; b = lo;
+									}
+									trackEnd.push(c2 / 1000);
+								});
+								var totalKm = trackEnd[trackEnd.length - 1];
+								// overnight stops (each at the end of the relevant track)
+								var markers = [
+									{ x: trackEnd[0], town: 'San Miniato',   date: '19 Jul' },
+									{ x: trackEnd[1], town: 'San Gimignano', date: '20 Jul' },
+									{ x: trackEnd[2], town: 'Siena',         date: '21 Jul' },
+									{ x: trackEnd[3], town: 'San Quirico',   date: '22 Jul' },
+									{ x: trackEnd[4], town: 'Radicofani',    date: '23 Jul' },
+									{ x: trackEnd[5], town: 'Bolsena',       date: '24 Jul' },
+									{ x: trackEnd[6], town: 'Viterbo',       date: '25 Jul' },
+									{ x: trackEnd[9], town: 'Rome',          date: '26 Jul' }
+								];
+								var dayLines = {
+									id: 'dayLines',
+									afterDatasetsDraw: function (chart) {
+										var ctx = chart.ctx, xs = chart.scales.x, area = chart.chartArea;
+										ctx.save();
+										markers.forEach(function (m) {
+											if (m.x == null) return;
+											var px = xs.getPixelForValue(m.x);
+											if (px < area.left || px > area.right + 0.5) return;
+											ctx.beginPath();
+											ctx.setLineDash([3, 3]);
+											ctx.lineWidth = 1;
+											ctx.strokeStyle = 'rgba(122,46,59,0.4)';
+											ctx.moveTo(px, area.top);
+											ctx.lineTo(px, area.bottom);
+											ctx.stroke();
+											ctx.setLineDash([]);
+											ctx.save();
+											ctx.translate(px - 4, area.bottom - 8);
+											ctx.rotate(-Math.PI / 2);
+											ctx.textAlign = 'left';
+											ctx.textBaseline = 'middle';
+											ctx.font = "600 10px 'Source Sans Pro', Helvetica, sans-serif";
+											ctx.fillStyle = '#7a2e3b';
+											ctx.fillText(m.date + ' · ' + m.town, 0, 0);
+											ctx.restore();
+										});
+										ctx.restore();
+									}
+								};
+							function grad(alpha) {
+								return function (c) {
+									var area = c.chart.chartArea;
+									if (!area) return 'rgba(239,123,97,' + alpha + ')';
+									var g = c.chart.ctx.createLinearGradient(area.left, 0, area.right, 0);
+									g.addColorStop(0, 'rgba(122,46,59,' + alpha + ')');
+									g.addColorStop(1, 'rgba(239,123,97,' + alpha + ')');
+									return g;
+								};
+							}
+							new Chart(canvas, {
+								type: 'line',
+								plugins: [dayLines],
+								data: { datasets: [{ data: data, fill: true, pointRadius: 0, borderWidth: 2, tension: 0.25, borderColor: grad(1), backgroundColor: grad(0.30) }] },
+								options: {
+									responsive: true, maintainAspectRatio: false, parsing: false, animation: false,
+									interaction: { intersect: false, mode: 'index' },
+									scales: {
+										x: { type: 'linear', min: 0, max: Math.ceil(totalKm), title: { display: true, text: 'Distance (km)', color: '#7a2e3b' }, ticks: { maxTicksLimit: 9, color: '#8a827e' }, grid: { color: 'rgba(74,66,66,0.08)' } },
+										y: { title: { display: true, text: 'Elevation (m)', color: '#7a2e3b' }, ticks: { color: '#8a827e' }, grid: { color: 'rgba(74,66,66,0.08)' } }
+									},
+									plugins: {
+										legend: { display: false },
+										tooltip: {
+											callbacks: {
+												title: function (it) { return Math.round(it[0].parsed.x) + ' km'; },
+												label: function (it) { return Math.round(it.parsed.y) + ' m'; }
+											}
+										}
+									}
+								}
+							});
+						});
+				}
+				if (document.readyState === 'complete') { setTimeout(buildElevation, 300); }
+				else { window.addEventListener('load', function () { setTimeout(buildElevation, 300); }); }
+			</script>
+
+	</body>
+</html>
