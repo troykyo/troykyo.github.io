@@ -197,7 +197,7 @@
 											<tr><td class="date">23 Jul</td><td class="route">San Quirico &rarr; Radicofani</td><td class="dist">35 km</td><td class="stay">To be confirmed<br><em class="it">Da confermare</em></td></tr>
 												<tr><td class="date">24 Jul</td><td class="route">Radicofani &rarr; Bolsena</td><td class="dist">55 km</td><td class="stay">Pilgrim parish accommodation<br><em class="it">Alloggio parrocchiale per pellegrini</em></td></tr>
 											<tr><td class="date">25 Jul</td><td class="route">Bolsena &rarr; Sutri</td><td class="dist">70 km</td><td class="stay">To be confirmed<br><em class="it">Da confermare</em></td></tr>
-											<tr><td class="date">26 Jul</td><td class="route">Sutri &rarr; Rome</td><td class="dist">69 km</td><td class="stay">Religious house near the Vatican<br><em class="it">Casa religiosa vicino al Vaticano</em></td></tr>
+											<tr><td class="date">26 Jul</td><td class="route">Sutri &rarr; Rome</td><td class="dist">69 km</td><td class="stay">Casa di Beta</td></tr>
 										</tbody>
 									</table>
 
@@ -327,30 +327,45 @@
 							});
 							if (!data.length) return;
 
-								// cumulative distance at the end of each track, for the day markers
-								var trackEnd = [], c2 = 0;
+								// cumulative distance at the end of each track + per-track elevation gain (positive deltas, lightly smoothed)
+								var trackEnd = [], trackGain = [], c2 = 0;
 								texts.forEach(function (txt) {
 									var d2 = new DOMParser().parseFromString(txt, 'application/xml');
 									var p2 = d2.getElementsByTagName('trkpt'), a = null, b = null;
+									// smooth elevations with a small moving-average window to suppress GPS noise
+									var eles = [];
 									for (var j = 0; j < p2.length; j++) {
 										var la = parseFloat(p2[j].getAttribute('lat')), lo = parseFloat(p2[j].getAttribute('lon'));
 										if (isNaN(la) || isNaN(lo)) continue;
 										if (a !== null) c2 += hav(a, b, la, lo);
 										a = la; b = lo;
+										var eEl = p2[j].getElementsByTagName('ele')[0];
+										eles.push(eEl ? parseFloat(eEl.textContent) : NaN);
+									}
+									var win = 5, gain = 0, prev = null;
+									for (var k = 0; k < eles.length; k++) {
+										var s = 0, n = 0;
+										for (var w = Math.max(0, k - win); w <= Math.min(eles.length - 1, k + win); w++) { if (!isNaN(eles[w])) { s += eles[w]; n++; } }
+										if (!n) continue;
+										var smoothed = s / n;
+										if (prev !== null && smoothed > prev) gain += smoothed - prev;
+										prev = smoothed;
 									}
 									trackEnd.push(c2 / 1000);
+									trackGain.push(gain);
 								});
 								var totalKm = trackEnd[trackEnd.length - 1];
-								// overnight stops (each at the end of the relevant track)
+								// overnight stops (each at the end of the relevant track, with that day's total climb in meters)
+								function climb() { var t = 0; for (var i = 0; i < arguments.length; i++) t += trackGain[arguments[i]] || 0; return Math.round(t / 10) * 10; }
 								var markers = [
-									{ x: trackEnd[0], town: 'San Miniato',   date: '19 Jul' },
-									{ x: trackEnd[1], town: 'San Gimignano', date: '20 Jul' },
-									{ x: trackEnd[2], town: 'Siena',         date: '21 Jul' },
-									{ x: trackEnd[3], town: 'San Quirico',   date: '22 Jul' },
-									{ x: trackEnd[4], town: 'Radicofani',    date: '23 Jul' },
-									{ x: trackEnd[5], town: 'Bolsena',       date: '24 Jul' },
-									{ x: trackEnd[7], town: 'Sutri',         date: '25 Jul' },
-									{ x: trackEnd[9], town: 'Rome',          date: '26 Jul' }
+									{ x: trackEnd[0], town: 'San Miniato',   date: '19 Jul', climbM: climb(0) },
+									{ x: trackEnd[1], town: 'San Gimignano', date: '20 Jul', climbM: climb(1) },
+									{ x: trackEnd[2], town: 'Siena',         date: '21 Jul', climbM: climb(2) },
+									{ x: trackEnd[3], town: 'San Quirico',   date: '22 Jul', climbM: climb(3) },
+									{ x: trackEnd[4], town: 'Radicofani',    date: '23 Jul', climbM: climb(4) },
+									{ x: trackEnd[5], town: 'Bolsena',       date: '24 Jul', climbM: climb(5) },
+									{ x: trackEnd[7], town: 'Sutri',         date: '25 Jul', climbM: climb(6, 7) },
+									{ x: trackEnd[9], town: 'Rome',          date: '26 Jul', climbM: climb(8, 9) }
 								];
 								var dayLines = {
 									id: 'dayLines',
@@ -376,7 +391,7 @@
 											ctx.textBaseline = 'middle';
 											ctx.font = "600 10px 'Source Sans Pro', Helvetica, sans-serif";
 											ctx.fillStyle = '#7a2e3b';
-											ctx.fillText(m.date + ' · ' + m.town, 0, 0);
+											ctx.fillText(m.date + ' · ' + m.town + '  ↑' + m.climbM + ' m', 0, 0);
 											ctx.restore();
 										});
 										ctx.restore();
