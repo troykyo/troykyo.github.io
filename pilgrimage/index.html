@@ -256,16 +256,17 @@
 
 				// The 10 stages in order, Lucca -> Rome, on a pink-to-teal gradient.
 				var stages = [
-					{ file: 'tracks/14-lucca-san-miniato.gpx',          name: 'Lucca → San Miniato',          color: '#7a2e3b' },
-					{ file: 'tracks/15-san-miniato-san-gimignano.gpx',  name: 'San Miniato → San Gimignano',  color: '#87373f' },
-					{ file: 'tracks/16-san-gimignano-siena.gpx',        name: 'San Gimignano → Siena',        color: '#943f43' },
-					{ file: 'tracks/17-siena-san-quirico.gpx',          name: 'Siena → San Quirico',          color: '#a14848' },
-					{ file: 'tracks/18-san-quirico-radicofani.gpx',     name: 'San Quirico → Radicofani',     color: '#ae504c' },
-					{ file: 'tracks/19-radicofani-bolsena.gpx',         name: 'Radicofani → Bolsena',         color: '#bb5950' },
-					{ file: 'tracks/20-bolsena-viterbo.gpx',            name: 'Bolsena → Viterbo',            color: '#c86154' },
-					{ file: 'tracks/21-viterbo-sutri.gpx',              name: 'Viterbo → Sutri',              color: '#d56a59' },
-					{ file: 'tracks/22-sutri-formello.gpx',             name: 'Sutri → Formello',             color: '#e2725d' },
-					{ file: 'tracks/23-formello-roma.gpx',              name: 'Formello → Rome',              color: '#ef7b61' }
+					// Alternating by day: odd days burgundy, even days coral.
+					{ file: 'tracks/14-lucca-san-miniato.gpx',          name: 'Day 1 · Lucca → San Miniato',          color: '#7a2e3b' },
+					{ file: 'tracks/15-san-miniato-san-gimignano.gpx',  name: 'Day 2 · San Miniato → San Gimignano',  color: '#ef7b61' },
+					{ file: 'tracks/16-san-gimignano-siena.gpx',        name: 'Day 3 · San Gimignano → Siena',        color: '#7a2e3b' },
+					{ file: 'tracks/17-siena-san-quirico.gpx',          name: 'Day 4 · Siena → San Quirico',          color: '#ef7b61' },
+					{ file: 'tracks/18-san-quirico-radicofani.gpx',     name: 'Day 5 · San Quirico → Radicofani',     color: '#7a2e3b' },
+					{ file: 'tracks/19-radicofani-bolsena.gpx',         name: 'Day 6 · Radicofani → Bolsena',         color: '#ef7b61' },
+					{ file: 'tracks/20-bolsena-viterbo.gpx',            name: 'Day 7 · Bolsena → Viterbo',            color: '#7a2e3b' },
+					{ file: 'tracks/21-viterbo-sutri.gpx',              name: 'Day 7 · Viterbo → Sutri',              color: '#7a2e3b' },
+					{ file: 'tracks/22-sutri-formello.gpx',             name: 'Day 8 · Sutri → Formello',             color: '#ef7b61' },
+					{ file: 'tracks/23-formello-roma.gpx',              name: 'Day 8 · Formello → Rome',              color: '#ef7b61' }
 				];
 
 				var legend = document.getElementById('legend');
@@ -397,20 +398,26 @@
 										ctx.restore();
 									}
 								};
-							function grad(alpha) {
-								return function (c) {
-									var area = c.chart.chartArea;
-									if (!area) return 'rgba(239,123,97,' + alpha + ')';
-									var g = c.chart.ctx.createLinearGradient(area.left, 0, area.right, 0);
-									g.addColorStop(0, 'rgba(122,46,59,' + alpha + ')');
-									g.addColorStop(1, 'rgba(239,123,97,' + alpha + ')');
-									return g;
-								};
+							// alternate by day: odd days burgundy, even days coral (matches the map)
+							var dayBoundaries = [trackEnd[0], trackEnd[1], trackEnd[2], trackEnd[3], trackEnd[4], trackEnd[5], trackEnd[7], trackEnd[9]];
+							function dayColor(km, alpha) {
+								var d = 1;
+								for (var i = 0; i < dayBoundaries.length; i++) { if (km > dayBoundaries[i] + 0.001) d = i + 2; }
+								if (d > dayBoundaries.length) d = dayBoundaries.length;
+								var rgb = (d % 2 === 1) ? '122,46,59' : '239,123,97';
+								return 'rgba(' + rgb + ',' + alpha + ')';
 							}
 							new Chart(canvas, {
 								type: 'line',
 								plugins: [dayLines],
-								data: { datasets: [{ data: data, fill: true, pointRadius: 0, borderWidth: 2, tension: 0.25, borderColor: grad(1), backgroundColor: grad(0.30) }] },
+								data: { datasets: [{
+									data: data, fill: true, pointRadius: 0, borderWidth: 2, tension: 0.25,
+									borderColor: 'rgba(122,46,59,1)', backgroundColor: 'rgba(122,46,59,0.3)',
+									segment: {
+										borderColor: function (c) { return dayColor(c.p1.parsed.x, 1); },
+										backgroundColor: function (c) { return dayColor(c.p1.parsed.x, 0.30); }
+									}
+								}] },
 								options: {
 									responsive: true, maintainAspectRatio: false, parsing: false, animation: false,
 									interaction: { intersect: false, mode: 'index' },
