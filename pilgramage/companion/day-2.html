@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Day 2 · San Miniato → San Gimignano · Conversion — A Pilgrim Companion</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="robots" content="noindex, nofollow" />
+	<meta name="description" content="A daily breviary for the Via Francigena. Day 2: San Miniato to San Gimignano — Conversion." />
+	<link rel="icon" href="../../favicon.svg" type="image/svg+xml" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+	<link rel="stylesheet" href="breviary.css" />
+</head>
+<body>
+
+	<div class="topbar">
+		<div class="inner">
+			<a class="home" href="index.html">The Pilgrim Companion</a>
+			<nav>
+				<a href="#morning">Morning</a>
+				<a href="#road">Road</a>
+				<a href="#meditation">Word</a>
+				<a href="#arrival">Arrival</a>
+			</nav>
+		</div>
+	</div>
+
+	<div class="wrap">
+
+		<header class="dayhead">
+			<div class="eyebrow">Via Francigena · Day II</div>
+			<h1>San Miniato &rarr; San Gimignano</h1>
+			<div class="route">Monday, 20 July · into the hills of the Elsa</div>
+			<div class="arc">Conversion &nbsp;·&nbsp; Virtue: Mercy</div>
+		</header>
+
+		<!-- ============================== MORNING ============================== -->
+		<section class="part" id="morning">
+			<div class="part-label"><h2>Morning</h2><span class="rt">5 min</span></div>
+
+			<div class="data">
+				<div class="d"><span class="n">42 km</span><span class="l">Distance</span></div>
+				<div class="d"><span class="n">~740 m</span><span class="l">Ascent</span></div>
+				<div class="d"><span class="n">4–5 h</span><span class="l">Est. riding</span></div>
+			</div>
+			<div class="wx" id="wx" data-lat="43.4677" data-lon="11.0434" data-place="San Gimignano">
+				Loading today's weather for San Gimignano&hellip;
+			</div>
+			<p style="font-size:0.86rem; color:var(--ink-soft); margin-top:-0.9rem;">
+				Terrain: the country changes today &mdash; out of the Arno plain and into the low hills of the Val d'Elsa, vineyards and <em>strade bianche</em>, with steady climbing toward the towers. Distance and ascent are measured from the day's GPS track.<sup class="ref"><a href="#s-gpx">9</a></sup>
+			</p>
+
+			<h3>Today's Virtue — Mercy</h3>
+			<div class="virtue">
+				<div class="word">Mercy</div>
+				<div class="gloss">Latin <em>misericordia</em> &mdash; a heart (<em>cor</em>) that goes out to the wretched (<em>miser</em>)</div>
+			</div>
+			<p>Yesterday was calling; today is conversion &mdash; the slow turning of a life once it has heard. And conversion, in the Gospel, does not begin with our climbing toward God. It begins with mercy reaching down to us where we sit.</p>
+
+			<h3>Morning Prayer</h3>
+			<div class="prayer">
+				O God, come to my assistance.<br>
+				O Lord, make haste to help me.<br>
+				Glory to the Father, and to the Son, and to the Holy Spirit:<br>
+				as it was in the beginning, is now, and ever shall be,<br>
+				world without end. Amen.
+				<span class="cite">Opening versicle of the Liturgy of the Hours (Ps 70:2) with the <em>Gloria Patri</em><sup class="ref"><a href="#s-hours">5</a></sup></span>
+			</div>
+
+			<h3>Scripture</h3>
+			<blockquote class="reading">
+				<p>As Jesus passed on from there, he saw a man named Matthew sitting at the customs post. He said to him, &ldquo;Follow me.&rdquo; And he got up and followed him. While he was at table in his house, many tax collectors and sinners came and sat with Jesus and his disciples. The Pharisees saw this and said to his disciples, &ldquo;Why does your teacher eat with tax collectors and sinners?&rdquo; He heard this and said, &ldquo;Those who are well do not need a physician, but the sick do. Go and learn the meaning of the words, &lsquo;I desire mercy, not sacrifice.&rsquo; I did not come to call the righteous but sinners.&rdquo;</p>
+				<span class="cite">Matthew 9:9&ndash;13 · New American Bible, Revised Edition<sup class="ref"><a href="#s-mt">1</a></sup></span>
+			</blockquote>
+
+			<h3>From Augustine</h3>
+			<div class="quote">
+				&ldquo;Too late did I love You, O Fairness, so ancient, and yet so new! Too late did I love You!&rdquo;
+				<span class="cite">Augustine, <em>Confessions</em> X.27 · trans. J. G. Pilkington<sup class="ref"><a href="#s-conf10">3</a></sup></span>
+			</div>
+
+			<h3>Morning Reflection</h3>
+			<p>The road leaves San Miniato the way it found it &mdash; on a height &mdash; and lets you down into the valley of the Elsa, where the plain gives way to vineyards and the white gravel roads climb between them toward a skyline of towers. It is beautiful country, and it is also a country of thresholds: you are crossing, today, from one kind of land to another. That is the day's inward work as well.</p>
+			<p>Matthew is not on a mountaintop when Christ finds him. He is at the customs post &mdash; the tax booth &mdash; doing the one job that made a man both rich and hated, collaborating with Rome against his own people. He is exactly the sort the devout crossed the street to avoid. And it is to him, mid-transaction, that the word comes: <em>Follow me.</em> Conversion here is not the reward of a clean life; it is offered to the compromised, the entangled, the man everyone had written off. &ldquo;I did not come to call the righteous,&rdquo; Jesus tells the scandalised, &ldquo;but sinners.&rdquo;</p>
+			<p>Notice, too, that Matthew's response is not a retreat but a feast. He gets up, follows &mdash; and then throws open his house to a table full of tax collectors and sinners, with Jesus in the middle of them. Conversion overflows. The mercy that reached him does not make him fastidious; it makes him hospitable to exactly the people he used to be. To turn toward God is, at the same moment, to stop despising the wretched &mdash; because you have finally understood that you were one of them, and were loved anyway.</p>
+			<p>Augustine, who spent years fleeing what was nearer to him than he was to himself, put the ache of it into six words: <em>too late did I love You.</em> The lateness is the whole confession. Conversion is not the discovery of a stranger; it is the recognition, at last, of a mercy that had been sitting beside you at the booth the entire time.</p>
+
+			<div class="challenge">
+				<p>What in me have I long defended as righteous &mdash; that Christ came instead to call a sinner, and to heal?</p>
+			</div>
+
+			<h3>Closing Prayer</h3>
+			<div class="prayer">
+				Lord Jesus Christ, Son of God,<br>
+				have mercy on me, a sinner.
+				<span class="cite">The Jesus Prayer (cf. Luke 18:13, 38)<sup class="ref"><a href="#s-hours">5</a></sup></span>
+			</div>
+		</section>
+
+		<!-- ============================== FIRST BREAK ============================== -->
+		<section class="part" id="road">
+			<div class="part-label"><h2>Along the Road</h2><span class="rt">10 min</span></div>
+
+			<div id="map"></div>
+			<p style="font-size:0.8rem; color:var(--ink-soft); margin-top:0.3rem;">
+				Today's route, San Miniato to San Gimignano. Map &copy; <a href="https://www.cyclosm.org/" target="_blank" rel="noopener">CyclOSM</a> / <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>. <a href="../index.html#route" target="_blank" rel="noopener">Full elevation profile &amp; all stages &rarr;</a>
+			</p>
+
+			<p>This is classic Tuscany at last: the Val d'Elsa opening in long waves of vineyard and olive, the white unmade roads &mdash; <em>strade bianche</em> &mdash; ribboning over the crests. These are the hills of the Vernaccia, the ancient white grape grown on San Gimignano's sandstone slopes.<sup class="ref"><a href="#s-sangim">7</a></sup> The riding is steadier and slower than yesterday; the climbing is honest but never cruel.</p>
+
+			<p>The road holds to the pilgrim line the whole way. Near the twenty-fourth kilometre, at Gambassi Terme, it passes almost against the wall of a small Romanesque church &mdash; a natural place to stop.</p>
+
+			<div class="church">
+				<h3>Pieve di Santa Maria a Chianni, Gambassi Terme</h3>
+				<dl>
+					<dt>What</dt><dd>A Romanesque <em>pieve</em> (rural parish church) beside Gambassi Terme, standing directly on the Via Francigena &mdash; the day's track passes within some 170 metres of it.<sup class="ref"><a href="#s-gambassi">6</a></sup></dd>
+					<dt>Architecture</dt><dd>Romanesque, of the twelfth century &mdash; the plain, strong stone of the pilgrim churches of the Elsa valley.<sup class="ref"><a href="#s-gambassi">6</a></sup></dd>
+					<dt>Why it mattered</dt><dd>A wayside church on the great road: shade, water, and a threshold to cross for the pilgrim between San Miniato and San Gimignano. Gambassi was itself a Francigena station.</dd>
+					<dt>To observe</dt><dd>The Romanesque apse and the bare interior &mdash; architecture that asks for silence rather than admiration.</dd>
+					<dt>A prayer</dt><dd>At the door, the day's line: <em>&ldquo;I desire mercy, not sacrifice.&rdquo;</em></dd>
+					<dt>Practical</dt><dd><span class="verify">Confirm opening on the day.</span> Official route information: <a href="https://www.viefrancigene.org/en/" target="_blank" rel="noopener">viefrancigene.org</a>.</dd>
+				</dl>
+			</div>
+
+			<p>Then, for the last hour, the towers. San Gimignano stands on its hill behind a skyline that has almost no equal in Italy. At the height of the Middle Ages the town raised some seventy-two tower-houses, up to seventy metres tall, each family answering another's height with its own; fourteen still stand, where nearly everywhere else such towers were pulled down.<sup class="ref"><a href="#s-sangim">7</a></sup> They are monuments, at bottom, to rivalry &mdash; stone competition, the exact opposite of the day's Gospel. Ride up into them with that irony in mind. Inside the walls, the Collegiata of Santa Maria Assunta holds fresco cycles of the fourteenth and fifteenth centuries, and Domenico Ghirlandaio's frescoes of the town's own saint, Fina, in her chapel.<sup class="ref"><a href="#s-sangim">7</a></sup> But the church to keep for this evening is another one.</p>
+		</section>
+
+		<!-- ============================== SECOND BREAK ============================== -->
+		<section class="part" id="meditation">
+			<div class="part-label"><h2>The Word</h2><span class="rt">10 min</span></div>
+			<div class="subeyebrow">Biblical Meditation — The Prodigal Son</div>
+
+			<blockquote class="reading">
+				<p>&ldquo;There was a man who had two sons; and the younger of them said to his father, &lsquo;Father, give me the share of property that falls to me&rsquo;&hellip; the younger son gathered all he had and took his journey into a far country, and there he squandered his property in loose living&hellip; But when he came to himself he said, &lsquo;I will arise and go to my father&rsquo;&hellip; And he arose and came to his father. But while he was yet at a distance, his father saw him and had compassion, and ran and embraced him and kissed him&hellip; &lsquo;for this my son was dead, and is alive again; he was lost, and is found.&rsquo;&rdquo;</p>
+				<span class="cite">Luke 15:11&ndash;24, abridged · Revised Standard Version, Catholic Edition<sup class="ref"><a href="#s-lk">2</a></sup></span>
+			</blockquote>
+
+			<p>Read it as a story about a road, because it is one. A young man measures out his life in advance &mdash; the share of property, the sum of everything that will one day be his &mdash; and takes it, and rides. He goes, the text says, <em>into a far country</em>, and he spends himself there until there is nothing left, until a famine finds him among the pigs, hungry for the husks they eat. This is what it is to travel away from mercy: not dramatic wickedness, only a slow squandering, until you look up one day and do not know how you got so far.</p>
+
+			<p>And then the sentence that turns the whole parable: <em>when he came to himself.</em> Conversion is described not as finding something new but as coming home to yourself &mdash; waking, in the pigsty, to who you actually are and whose you are. The road back is rehearsed in the mud; he practises his little speech. But he never finishes it. <em>While he was yet at a distance</em>, the father sees him &mdash; which means the father was watching the road &mdash; and does the undignified thing, runs, and the speech dissolves into an embrace. The son had prepared to bargain his way back to servant's wages. Mercy will not hear of it.</p>
+
+			<p>You are two on this road, a father and a son, and the parable will not let either of you off. To the one who has gone into the far country it says: it is never too late to come to yourself and turn. To the one who waits and watches the road it says: when the other appears, do not stand on the porch and count the cost &mdash; run. The whole of the Gospel is in that running.</p>
+
+			<div class="journal">
+				<div class="subeyebrow">Two questions for the road</div>
+				<ol>
+					<li>Where is my &ldquo;far country&rdquo; &mdash; the place I have quietly ridden to, a little at a time, without deciding to?</li>
+					<li>Am I, today, the one coming home, or the one who must run to meet the other? What does that ask of me?</li>
+				</ol>
+			</div>
+		</section>
+
+		<!-- ============================== ARRIVAL ============================== -->
+		<section class="part" id="arrival">
+			<div class="part-label"><h2>Arrival</h2><span class="rt">15–20 min</span></div>
+			<div class="subeyebrow">Theological Reflection — Augustine's Conversion</div>
+
+			<blockquote class="reading">
+				<p>I heard the voice as of a boy or girl&hellip; chanting, and oft repeating, &ldquo;Take up and read; take up and read.&rdquo;&hellip; I grasped, opened, and in silence read that paragraph on which my eyes first fell: &ldquo;Not in rioting and drunkenness, not in chambering and wantonness, not in strife and envying; but put on the Lord Jesus Christ.&rdquo;&hellip; No further would I read, nor did I need; for instantly&hellip; all the gloom of doubt vanished away.</p>
+				<span class="cite">Augustine, <em>Confessions</em> VIII.12 · trans. J. G. Pilkington<sup class="ref"><a href="#s-conf8">4</a></sup></span>
+			</blockquote>
+
+			<p>You end the day, if you choose it well, in the right building. Inside San Gimignano's walls stands the church of Sant'Agostino, the friars' church of the Augustinian order; and across the whole apse behind its altar runs a cycle of seventeen frescoes, painted by Benozzo Gozzoli between 1463 and 1467 for the learned Augustinian friar Domenico Strambi, telling the life of Augustine himself.<sup class="ref"><a href="#s-gozzoli">8</a></sup> Among the scenes on that wall is one of a man in a garden, opening a book &mdash; Augustine reading the letter of Paul.<sup class="ref"><a href="#s-gozzoli">8</a></sup> It is the moment you have just read. You can end a day about conversion standing in front of a painting of the most famous conversion in the Western Church, in the church of his own order, at the end of a pilgrim road.</p>
+
+			<p>Augustine had spent years, by his own account, unable to close the gap between what he saw and what he could bring himself to do. The intellect had surrendered long before the will would follow. And when the break finally came, it came not through argument but through a child's voice over a garden wall and a single verse read almost at random. Grace did not wait for him to be worthy; it ambushed him mid-hesitation, the way the word came to Matthew at the booth and the father ran while the son was still rehearsing. This is the pattern the whole day has been drawing: mercy that does not stand on the porch.</p>
+
+			<p>And notice the last line: <em>no further would I read, nor did I need.</em> Conversion is not the end of the journey &mdash; Augustine has the whole of the <em>Confessions</em>, and the rest of his life, still to write. It is the point at which the doubt clears enough to keep walking. Tomorrow there is another stage, and the day after. But tonight, under towers built for rivalry, in the church of a man who learned mercy late, it is enough to have read the one verse and turned toward home.</p>
+
+			<h3>Evening Prayer</h3>
+			<div class="prayer">
+				Into your hands, O Lord, I commend my spirit.<br>
+				Keep us, Lord, as the apple of your eye;<br>
+				hide us in the shadow of your wings.<br>
+				Glory to the Father, and to the Son, and to the Holy Spirit&hellip;
+				<span class="cite">From Night Prayer (Compline): the responsory (Ps 31:6) and antiphon (Ps 17:8)<sup class="ref"><a href="#s-hours">5</a></sup></span>
+			</div>
+
+			<div class="journal">
+				<div class="subeyebrow">Journal — three questions</div>
+				<ol>
+					<li>Augustine could see the good long before he could will it. Where is that gap in me, between what I know and what I do?</li>
+					<li>The father ran; Christ sat at the sinners' table. Whom do I keep at arm's length that mercy would have me sit beside?</li>
+					<li>&ldquo;Too late did I love You.&rdquo; What have I loved first, all these years, that was only ever pointing me toward the One who made it?</li>
+				</ol>
+			</div>
+		</section>
+
+		<!-- ============================== SOURCES ============================== -->
+		<div class="biblio" id="sources">
+			<h2>Sources &amp; Editions</h2>
+			<p style="font-size:0.82rem; color:var(--ink-soft);">Every quotation is reproduced from the edition named; historical statements are drawn from the references below. Unverifiable logistics are linked to official sources or marked for on-site confirmation rather than stated.</p>
+			<ol>
+				<li id="s-mt">Matthew 9:9&ndash;13. <em>New American Bible, Revised Edition</em> (NABRE). USCCB. <a href="https://bible.usccb.org/bible/matthew/9" target="_blank" rel="noopener">bible.usccb.org/bible/matthew/9</a></li>
+				<li id="s-lk">Luke 15:11&ndash;24. <em>Revised Standard Version, Catholic Edition</em> (RSVCE), via Bible Gateway. <a href="https://www.biblegateway.com/passage/?search=Luke%2015%3A11-24&version=RSVCE" target="_blank" rel="noopener">biblegateway.com</a></li>
+				<li id="s-conf10">Augustine, <em>Confessions</em>, Book X, ch. 27. Trans. J. G. Pilkington, <em>Nicene and Post-Nicene Fathers</em>, 1st series, vol. 1, for New Advent. <a href="https://www.newadvent.org/fathers/110110.htm" target="_blank" rel="noopener">newadvent.org/fathers/110110.htm</a></li>
+				<li id="s-conf8">Augustine, <em>Confessions</em>, Book VIII, ch. 12. Trans. J. G. Pilkington (New Advent). <a href="https://www.newadvent.org/fathers/110108.htm" target="_blank" rel="noopener">newadvent.org/fathers/110108.htm</a></li>
+				<li id="s-hours">Liturgical texts (opening versicle and <em>Gloria Patri</em>; the Jesus Prayer; Compline responsory and antiphon) are fixed prayers of the tradition; scriptural bases Ps 70:2, Luke 18:13, Ps 31:6, Ps 17:8.</li>
+				<li id="s-gambassi">&ldquo;Gambassi Terme.&rdquo; Wikipedia (accessed July 2026): the town's Romanesque parish church (<em>pieve</em>) of Santa Maria, twelfth century. Its position on the Via Francigena is confirmed by the day's GPS track. <a href="https://en.wikipedia.org/wiki/Gambassi_Terme" target="_blank" rel="noopener">en.wikipedia.org/wiki/Gambassi_Terme</a></li>
+				<li id="s-sangim">&ldquo;San Gimignano.&rdquo; Wikipedia (accessed July 2026): c. 72 medieval towers built, 14 surviving; the Collegiata di Santa Maria Assunta and its frescoes (incl. Ghirlandaio's Santa Fina chapel); the town on the Via Francigena; Vernaccia di San Gimignano. <a href="https://en.wikipedia.org/wiki/San_Gimignano" target="_blank" rel="noopener">en.wikipedia.org/wiki/San_Gimignano</a></li>
+				<li id="s-gozzoli">Benozzo Gozzoli, fresco cycle of the <em>Life of St Augustine</em> (17 scenes), apse of Sant'Agostino, San Gimignano, 1463&ndash;67, commissioned by Fra Domenico Strambi. &ldquo;Sant'Agostino, San Gimignano,&rdquo; Wikipedia, and Web Gallery of Art. <a href="https://en.wikipedia.org/wiki/Sant%27Agostino,_San_Gimignano" target="_blank" rel="noopener">en.wikipedia.org</a> · <a href="https://www.wga.hu/html_m/g/gozzoli/4gimigna/index.html" target="_blank" rel="noopener">wga.hu</a></li>
+				<li id="s-gpx">Distance (42 km) and ascent (~740 m): measured from the day's recorded GPS track (Via Francigena cycle stage, San Miniato&ndash;San Gimignano).</li>
+			</ol>
+		</div>
+
+		<nav class="daynav">
+			<a href="day-1.html">&larr; Day 1 · Calling</a>
+			<a href="index.html">All days</a>
+			<span class="disabled">Day 3 · Companionship &rarr;</span>
+		</nav>
+
+	</div>
+
+	<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+	<script src="https://unpkg.com/leaflet-gpx@1.7.0/gpx.js"></script>
+	<script>
+		(function () {
+			var el = document.getElementById('wx');
+			if (!el) return;
+			var lat = el.dataset.lat, lon = el.dataset.lon, place = el.dataset.place;
+			fetch('https://api.open-meteo.com/v1/forecast?latitude=' + lat + '&longitude=' + lon + '&current=temperature_2m&daily=temperature_2m_max,temperature_2m_min,sunrise,sunset&timezone=Europe%2FRome')
+				.then(function (r) { return r.json(); }).then(function (d) {
+					function hhmm(s) { return s ? s.slice(11, 16) : '—'; }
+					el.innerHTML = 'Now in <strong>' + place + '</strong> ' + Math.round(d.current.temperature_2m) + '°C · today ' +
+						Math.round(d.daily.temperature_2m_max[0]) + '° / ' + Math.round(d.daily.temperature_2m_min[0]) + '°C · ' +
+						'<span class="sun">☀ ' + hhmm(d.daily.sunrise[0]) + ' – ' + hhmm(d.daily.sunset[0]) + '</span>' +
+						'<br><span style="font-size:0.72rem;">live conditions, updated at each reading</span>';
+				}).catch(function () { el.innerHTML = 'Weather is fetched live and needs a connection.'; });
+		})();
+		(function () {
+			var mapEl = document.getElementById('map');
+			if (!mapEl || typeof L === 'undefined') return;
+			var map = L.map('map', { scrollWheelZoom: false }).fitBounds([[43.46, 10.84], [43.69, 11.05]], { padding: [16, 16] });
+			L.tileLayer('https://{s}.tile-cyclosm.openstreetmap.fr/cyclosm/{z}/{x}/{y}.png', { attribution: 'CyclOSM | &copy; OpenStreetMap', maxZoom: 18, subdomains: 'abc' }).addTo(map);
+			new L.GPX('../days/day-2-san-miniato-san-gimignano.gpx', {
+				async: true, marker_options: { startIconUrl: '', endIconUrl: '', shadowUrl: '' },
+				polyline_options: { color: '#ef7b61', weight: 4, opacity: 0.9 }
+			}).on('loaded', function (e) { try { map.fitBounds(e.target.getBounds(), { padding: [16, 16] }); } catch (err) {} }).addTo(map);
+			setTimeout(function () { map.invalidateSize(); }, 300);
+		})();
+	</script>
+
+</body>
+</html>

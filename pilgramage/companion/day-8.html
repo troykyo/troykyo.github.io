@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Day 8 · Sutri → Rome · Mission — A Pilgrim Companion</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="robots" content="noindex, nofollow" />
+	<meta name="description" content="A daily breviary for the Via Francigena. Day 8: Sutri to Rome — Mission." />
+	<link rel="icon" href="../../favicon.svg" type="image/svg+xml" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+	<link rel="stylesheet" href="breviary.css" />
+</head>
+<body>
+
+	<div class="topbar">
+		<div class="inner">
+			<a class="home" href="index.html">The Pilgrim Companion</a>
+			<nav>
+				<a href="#morning">Morning</a>
+				<a href="#road">Road</a>
+				<a href="#meditation">Word</a>
+				<a href="#arrival">Arrival</a>
+			</nav>
+		</div>
+	</div>
+
+	<div class="wrap">
+
+		<header class="dayhead">
+			<div class="eyebrow">Via Francigena · Day VIII · the last stage</div>
+			<h1>Sutri &rarr; Rome</h1>
+			<div class="route">Sunday, 26 July · over the Mount of Joy to the tombs of the Apostles</div>
+			<div class="arc">Mission &nbsp;·&nbsp; Virtue: Mission</div>
+		</header>
+
+		<!-- ============================== MORNING ============================== -->
+		<section class="part" id="morning">
+			<div class="part-label"><h2>Morning</h2><span class="rt">5 min</span></div>
+
+			<div class="data">
+				<div class="d"><span class="n">70 km</span><span class="l">Distance</span></div>
+				<div class="d"><span class="n">~1000 m</span><span class="l">Ascent</span></div>
+				<div class="d"><span class="n">~5 h</span><span class="l">Est. riding</span></div>
+			</div>
+			<div class="wx" id="wx" data-lat="41.9022" data-lon="12.4533" data-place="Rome">
+				Loading today's weather for Rome&hellip;
+			</div>
+			<p style="font-size:0.86rem; color:var(--ink-soft); margin-top:-0.9rem;">
+				Terrain: rolling wooded country through Campagnano and Formello, then the old Via Cassia line through La Storta, and a final rise over Monte Mario &mdash; the pilgrims' <em>Mons Gaudii</em>, the Mount of Joy &mdash; before the descent into the Leonine City and St Peter's. Mind the last hour's traffic; you have come too far to hurry it. Distance and ascent are measured from the day's GPS track.<sup class="ref"><a href="#s-gpx">8</a></sup>
+			</p>
+
+			<h3>Today's Virtue — Mission</h3>
+			<div class="virtue">
+				<div class="word">Mission</div>
+				<div class="gloss">Latin <em>missio</em> &mdash; a sending; the pilgrimage turned outward again</div>
+			</div>
+			<p>Today you arrive &mdash; and arriving, you discover the road was never a dead end but a turning circle. A pilgrimage does not exist to get you to Rome. It exists to send you home changed. The last virtue is the one that faces the way you came: <em>mission</em>, the readiness to be sent.</p>
+
+			<h3>Morning Prayer</h3>
+			<div class="prayer">
+				O God, come to my assistance.<br>
+				O Lord, make haste to help me.<br>
+				Glory to the Father, and to the Son, and to the Holy Spirit:<br>
+				as it was in the beginning, is now, and ever shall be,<br>
+				world without end. Amen.
+				<span class="cite">Opening versicle of the Liturgy of the Hours (Ps 70:2) with the <em>Gloria Patri</em><sup class="ref"><a href="#s-hours">5</a></sup></span>
+			</div>
+
+			<h3>Scripture</h3>
+			<blockquote class="reading">
+				<p>All authority in heaven and on earth has been given to me. Go therefore and make disciples of all nations, baptizing them in the name of the Father and of the Son and of the Holy Spirit, teaching them to observe all that I have commanded you; and lo, I am with you always, to the close of the age.</p>
+				<span class="cite">Matthew 28:18&ndash;20 · Revised Standard Version, Catholic Edition<sup class="ref"><a href="#s-mt">1</a></sup></span>
+			</blockquote>
+
+			<h3>From Augustine</h3>
+			<div class="quote">
+				&ldquo;Love, and do what you will&hellip; let the root of love be within, of this root can nothing spring but what is good.&rdquo;
+				<span class="cite">Augustine, <em>Homilies on the First Epistle of John</em>, Homily 7.8<sup class="ref"><a href="#s-hom">3</a></sup></span>
+			</div>
+
+			<h3>Morning Reflection</h3>
+			<p>The Great Commission is spoken on a mountain, and that detail matters on a morning when your own last climb is the Mount of Joy. The eleven have walked all the way to Galilee to meet the risen Christ on a hilltop &mdash; and the whole point of the summit is that they cannot stay on it. &ldquo;Go,&rdquo; he says. The mountaintop is not a destination but a vantage: you climb it in order to see how far the sending reaches &mdash; &ldquo;all nations&rdquo; &mdash; and then you come back down and start walking toward them. Every arrival in the Gospel is immediately a commissioning. There is no summit in the Christian life that is not also a trailhead.</p>
+			<p>So do not let today's joy curdle into an ending. You will roll into St Peter's Square and something in you will want to say <em>there, done, finished, home.</em> But you have not come to the grave of a hero; you have come to the tomb of a man who was himself <em>sent</em> &mdash; a fisherman told to feed sheep, a denier told three times to love, and then dispatched to the ends of the earth, ending here under this dome not as a conqueror but as a witness who was killed for the telling. Peter's tomb is not a full stop. It is an exclamation mark at the end of the word <em>go.</em></p>
+			<p>And Augustine gives you the engine for it, in the five freest words he ever wrote: &ldquo;Love, and do what you will.&rdquo; They are not a license to do anything; they are the opposite. Get the root right &mdash; let genuine love be the thing planted deepest in you &mdash; and everything that grows up out of that root will be good, because a heart rooted in love cannot will anything else. That is the only mission worth being sent on. You did not cycle five hundred kilometres to bring Rome home as a souvenir. You came to have the root re-planted, so that whatever you now &ldquo;do as you will&rdquo; back in the ordinary country of your life springs from love. That is the sending. That is Day Eight.</p>
+
+			<div class="challenge">
+				<p>When I am sent back down off this mountain tomorrow, into the ordinary road of my life &mdash; to whom, and to what, am I being sent?</p>
+			</div>
+
+			<h3>Closing Prayer</h3>
+			<div class="prayer">
+				Lord Jesus Christ, Son of God,<br>
+				have mercy on me, a sinner.
+				<span class="cite">The Jesus Prayer (cf. Luke 18:13)<sup class="ref"><a href="#s-hours">5</a></sup></span>
+			</div>
+		</section>
+
+		<!-- ============================== FIRST BREAK ============================== -->
+		<section class="part" id="road">
+			<div class="part-label"><h2>Along the Road</h2><span class="rt">10 min</span></div>
+
+			<div id="map"></div>
+			<p style="font-size:0.8rem; color:var(--ink-soft); margin-top:0.3rem;">
+				The final route, Sutri to St Peter's. Map &copy; <a href="https://www.cyclosm.org/" target="_blank" rel="noopener">CyclOSM</a> / <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>. <a href="../index.html#route" target="_blank" rel="noopener">Full elevation profile &amp; all stages &rarr;</a>
+			</p>
+
+			<p>Through Campagnano and Formello the wooded country gradually gives way to the outskirts of the great city. Then the road joins the old line of the Via Cassia at a place with a quiet, enormous history.</p>
+
+			<div class="church">
+				<h3>La Storta &mdash; the Vision on the Road to Rome</h3>
+				<dl>
+					<dt>What happened</dt><dd>In November 1537, travelling this very road toward Rome with his first companions Peter Faber and Diego Laynez, Ignatius of Loyola stopped to pray in a small church at La Storta &mdash; and there received the vision that would define the Jesuits: God the Father placing him with Christ, who carried the cross, and the words <em>Ego tibi Romae propitius ero</em> &mdash; &ldquo;I will be favourable to you in Rome.&rdquo;<sup class="ref"><a href="#s-storta">6</a></sup></dd>
+					<dt>The uncertainty</dt><dd>Ignatius did not at first know what the promise meant &mdash; he thought it might mean martyrdom in Rome. It meant, instead, a mission.<sup class="ref"><a href="#s-storta">6</a></sup></dd>
+					<dt>Today</dt><dd>The place is marked by a chapel to St Ignatius in the Piazza della Visione, the &ldquo;Square of the Vision.&rdquo;<sup class="ref"><a href="#s-storta">6</a></sup></dd>
+					<dt>To carry</dt><dd>You are a pilgrim receiving, on this same road, the same word: <em>I will be favourable to you in Rome.</em> Not &ldquo;you have arrived,&rdquo; but &ldquo;I go with you into what comes next.&rdquo;</dd>
+				</dl>
+			</div>
+
+			<div class="church">
+				<h3>Monte Mario &mdash; the Mount of Joy</h3>
+				<dl>
+					<dt>What</dt><dd>The last rise before the city, 139 metres on the right bank of the Tiber. In the Middle Ages Monte Mario lay on the Via Francigena, and the pilgrims gave it a name that says everything: <em>Mons Gaudii</em> &mdash; the Mount of Joy.<sup class="ref"><a href="#s-mario">7</a></sup></dd>
+					<dt>Why the name</dt><dd>Here the long road from the north finally crested and the Leonine City &mdash; the walls of the Vatican &mdash; lay below. A million pilgrims wept and sang at this spot. You will understand why when you top it.<sup class="ref"><a href="#s-mario">7</a></sup></dd>
+					<dt>To observe</dt><dd>Stop at the crest. Do not photograph it first. Look, and let it be joy before it is anything else.</dd>
+				</dl>
+			</div>
+
+			<p>Then the descent into the Leonine City, the colonnade opening its arms, and the dome. You have arrived. Say nothing clever. You are standing where the road has led pilgrims for more than a thousand years &mdash; over the tomb of Peter, who was sent, and could not stay.</p>
+		</section>
+
+		<!-- ============================== SECOND BREAK ============================== -->
+		<section class="part" id="meditation">
+			<div class="part-label"><h2>The Word</h2><span class="rt">10 min</span></div>
+			<div class="subeyebrow">Biblical Meditation — The Day of Pentecost</div>
+
+			<blockquote class="reading">
+				<p>When the day of Pentecost had come, they were all together in one place. And suddenly a sound came from heaven like the rush of a mighty wind, and it filled all the house where they were sitting. And there appeared to them tongues as of fire, distributed and resting on each one of them. And they were all filled with the Holy Spirit and began to speak in other tongues, as the Spirit gave them utterance.</p>
+				<span class="cite">Acts 2:1&ndash;4 · Revised Standard Version, Catholic Edition<sup class="ref"><a href="#s-acts">2</a></sup></span>
+			</blockquote>
+
+			<p>They had been given the Commission &mdash; &ldquo;Go&rdquo; &mdash; and then, tellingly, they did not go. They gathered behind closed doors and waited, because a command to be sent is not yet the power to move. For weeks the disciples were people with a mission and no engine. And then the wind, and the fire, and everything changed: the same men who had locked the doors flung them open and spilled out into the street, and the very first thing the Spirit did was untie their tongues to speak so that every foreigner in Jerusalem heard the wonders of God in his own language. Mission is not the disciples deciding to be brave. Mission is God's own breath blowing them out the door.</p>
+
+			<p>Watch what the fire is <em>for.</em> It does not rest on the group as one warm glow; it &ldquo;distributes,&rdquo; parting into separate flames, one on each head. Pentecost personalises. Every single one of them is set alight individually and sent individually &mdash; because the Spirit does not want a crowd, it wants a thousand particular witnesses each carrying the one fire to a place only they can reach. You are one tongue of that fire. The road you came by, the people who will be at your table next week, the corner of the world that is yours and no one else's &mdash; that is the language the Spirit means to speak through you, and no one else can speak it in your accent.</p>
+
+			<p>And notice where the story of Acts is going. It begins in this locked upper room in Jerusalem and it ends &mdash; the whole book ends &mdash; with the gospel reaching <em>Rome.</em> The city you arrive in today is, in the Bible's own geography, the far end of the sending, &ldquo;the ends of the earth&rdquo; toward which Pentecost aimed. You have cycled, all unknowing, to the last page of Acts. And the last page of Acts is not a conclusion; it is an open door. The Spirit that filled that room is the same Spirit ready to fill you at journey's end &mdash; not to reward the arrival, but to fuel the going home.</p>
+
+			<div class="journal">
+				<div class="subeyebrow">Two questions for the road</div>
+				<ol>
+					<li>The disciples had the mission but waited for the power. Where am I trying to be sent on my own strength, with the doors still shut?</li>
+					<li>The fire &ldquo;distributed&rdquo; &mdash; one flame each. What is <em>my</em> tongue of it: the language, the place, the people only I can reach?</li>
+				</ol>
+			</div>
+		</section>
+
+		<!-- ============================== ARRIVAL ============================== -->
+		<section class="part" id="arrival">
+			<div class="part-label"><h2>Arrival</h2><span class="rt">15–20 min</span></div>
+			<div class="subeyebrow">Theological Reflection — Leo the Great on the True Greatness of Rome</div>
+
+			<blockquote class="reading">
+				<p>&hellip;the head of the world through blessed Peter's holy See, you attained a wider sway by the worship of God than by earthly government.</p>
+				<span class="cite">Pope St Leo the Great, <em>Sermon</em> 82.1, on the Feast of the Apostles Peter and Paul · trans. C. L. Feltoe<sup class="ref"><a href="#s-leo">4</a></sup></span>
+			</blockquote>
+
+			<p>You have arrived in the city that once believed itself eternal &mdash; and it is right that a Roman pope should have the last word to you here, because Leo the Great, preaching in this city in the fifth century, understood exactly what a pilgrim needs to understand on the day of arrival. Rome, he tells his people, was great once: mistress of nations, ruler of an empire, its eagles over half the world. But all of that, he says, was the <em>lesser</em> greatness. The city became truly great only when two travellers were killed in it for love of Christ &mdash; Peter and Paul, whose tombs you now stand over &mdash; and through their witness Rome &ldquo;attained a wider sway by the worship of God than by earthly government.&rdquo; The empire conquered bodies. The apostles conquered hearts, and the empire is dust while the sending goes on.</p>
+
+			<p>Sit with that, because it reframes everything you have done. You did not ride here to touch the greatness of an empire. You rode to the graves of two men whose entire importance is that they <em>were sent and went.</em> Peter came to Rome to die telling the truth; Paul came in chains and kept preaching from them. Neither of them <em>arrived</em> in the sense your legs are begging for tonight &mdash; a rest, a full stop, a task completed. They arrived the way a seed arrives in the ground: as the beginning of something that outlives the arriver. The greatness of this place is not that the road ends here. It is that from here the road ran out to the whole world &mdash; and is still running, through you, tonight.</p>
+
+			<p>So this is the last reflection, and it will not let you keep the pilgrimage as a memory to put on a shelf. Rome is not the conclusion of your journey. Rome is the hinge. Eight days ago the road called you out of your ordinary life; tonight, at the tomb of the Apostles, it turns you around and sends you back into it &mdash; not the same person who set out, but one who has learned obedience on the first day and mission on the last, and hope and humility and gratitude in between. Leo would tell you plainly: the worship of God has a &ldquo;wider sway&rdquo; than any government, and it advances not by armies but by ordinary people who were sent home changed. Go, then. You are one of them now.</p>
+
+			<h3>Evening Prayer</h3>
+			<div class="prayer">
+				Into your hands, O Lord, I commend my spirit.<br>
+				Keep us, Lord, as the apple of your eye;<br>
+				hide us in the shadow of your wings.<br>
+				Glory to the Father, and to the Son, and to the Holy Spirit&hellip;
+				<span class="cite">From Night Prayer (Compline): the responsory (Ps 31:6) and antiphon (Ps 17:8)<sup class="ref"><a href="#s-hours">5</a></sup></span>
+			</div>
+
+			<div class="journal">
+				<div class="subeyebrow">Journal — three questions for the last night</div>
+				<ol>
+					<li>Leo says Rome's true greatness is not its empire but its witnesses. Looking back over eight days, what in me was &ldquo;empire&rdquo; &mdash; and what became witness?</li>
+					<li>Name the eight virtues you carried, one per day &mdash; obedience, mercy, charity, humility, gratitude, hope, longing, mission. Which one is God asking to be the root of the year ahead?</li>
+					<li>&ldquo;I will be favourable to you in Rome.&rdquo; The promise was never about staying. To what one person or task am I being sent home, and what is the first thing I will do?</li>
+				</ol>
+			</div>
+
+			<div class="benediction">
+				<p style="text-align:center; font-family:'Cormorant Garamond',serif; font-size:1.15rem; color:var(--burgundy); font-style:italic; margin:1.6rem 0 0.4rem;">A blessing for the road home</p>
+				<div class="prayer" style="border-top:1px solid var(--rule); border-bottom:1px solid var(--rule); padding:1.1rem 0;">
+					May the God who called you out,<br>
+					who walked the whole road at your side,<br>
+					and who waits for you at every arrival,<br>
+					send you back in peace &mdash;<br>
+					larger of heart than you set out,<br>
+					and ready to be spent for love.<br>
+					<em>The pilgrimage is ended. The mission begins.</em>
+					<span class="cite" style="margin-top:0.8rem;">Ultreïa. &mdash; Onward, pilgrim.</span>
+				</div>
+			</div>
+		</section>
+
+		<!-- ============================== SOURCES ============================== -->
+		<div class="biblio" id="sources">
+			<h2>Sources &amp; Editions</h2>
+			<p style="font-size:0.82rem; color:var(--ink-soft);">Every quotation is reproduced from the edition named; historical statements are drawn from the references below.</p>
+			<ol>
+				<li id="s-mt">Matthew 28:18&ndash;20. <em>Revised Standard Version, Catholic Edition</em> (RSVCE), via Bible Gateway. <a href="https://www.biblegateway.com/passage/?search=Matthew%2028%3A18-20&version=RSVCE" target="_blank" rel="noopener">biblegateway.com</a></li>
+				<li id="s-acts">Acts 2:1&ndash;4. <em>Revised Standard Version, Catholic Edition</em> (RSVCE), via Bible Gateway. <a href="https://www.biblegateway.com/passage/?search=Acts%202%3A1-4&version=RSVCE" target="_blank" rel="noopener">biblegateway.com</a></li>
+				<li id="s-hom">Augustine, <em>Homilies on the First Epistle of John</em>, Homily 7, &sect;8 (&ldquo;Love, and do what you will&rdquo;). Trans. H. Browne (New Advent). <a href="https://www.newadvent.org/fathers/170207.htm" target="_blank" rel="noopener">newadvent.org/fathers/170207.htm</a></li>
+				<li id="s-leo">Pope St Leo the Great, <em>Sermon</em> 82, ch. 1 (On the Feast of the Apostles Peter and Paul). Trans. Charles Lett Feltoe, in <em>Nicene and Post-Nicene Fathers</em>, series 2, vol. 12 (New Advent). <a href="https://www.newadvent.org/fathers/360382.htm" target="_blank" rel="noopener">newadvent.org/fathers/360382.htm</a></li>
+				<li id="s-hours">Liturgical texts (opening versicle and <em>Gloria Patri</em>; the Jesus Prayer; Compline responsory and antiphon) are fixed prayers of the tradition; scriptural bases Ps 70:2, Luke 18:13, Ps 31:6, Ps 17:8.</li>
+				<li id="s-storta">&ldquo;La Storta.&rdquo; Wikipedia (accessed July 2026): the vision of Ignatius of Loyola (November 1537) on the road to Rome with Peter Faber and Diego Laynez; the words <em>Ego tibi Romae propitius ero</em>; the memorial chapel in the Piazza della Visione. <a href="https://en.wikipedia.org/wiki/La_Storta" target="_blank" rel="noopener">en.wikipedia.org/wiki/La_Storta</a></li>
+				<li id="s-mario">&ldquo;Monte Mario.&rdquo; Wikipedia (accessed July 2026): the hill (139 m) on the Via Francigena that medieval pilgrims called <em>Mons Gaudii</em>, the Mount of Joy; on the right bank of the Tiber, on the road via La Storta toward the Leonine City. <a href="https://en.wikipedia.org/wiki/Monte_Mario" target="_blank" rel="noopener">en.wikipedia.org/wiki/Monte_Mario</a></li>
+				<li id="s-gpx">Distance (70 km) and ascent (~1000 m): measured from the day's recorded GPS track (Via Francigena cycle stage, Sutri&ndash;Rome).</li>
+			</ol>
+		</div>
+
+		<nav class="daynav">
+			<a href="day-7.html">&larr; Day 7 · Arrival</a>
+			<a href="index.html">All days</a>
+			<span class="disabled">Journey's end</span>
+		</nav>
+
+	</div>
+
+	<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+	<script src="https://unpkg.com/leaflet-gpx@1.7.0/gpx.js"></script>
+	<script>
+		(function () {
+			var el = document.getElementById('wx'); if (!el) return;
+			fetch('https://api.open-meteo.com/v1/forecast?latitude=' + el.dataset.lat + '&longitude=' + el.dataset.lon + '&current=temperature_2m&daily=temperature_2m_max,temperature_2m_min,sunrise,sunset&timezone=Europe%2FRome')
+				.then(function (r) { return r.json(); }).then(function (d) {
+					function hhmm(s) { return s ? s.slice(11, 16) : '—'; }
+					el.innerHTML = 'Now in <strong>' + el.dataset.place + '</strong> ' + Math.round(d.current.temperature_2m) + '°C · today ' + Math.round(d.daily.temperature_2m_max[0]) + '° / ' + Math.round(d.daily.temperature_2m_min[0]) + '°C · <span class="sun">☀ ' + hhmm(d.daily.sunrise[0]) + ' – ' + hhmm(d.daily.sunset[0]) + '</span><br><span style="font-size:0.72rem;">live conditions, updated at each reading</span>';
+				}).catch(function () { el.innerHTML = 'Weather is fetched live and needs a connection.'; });
+		})();
+		(function () {
+			var mapEl = document.getElementById('map'); if (!mapEl || typeof L === 'undefined') return;
+			var map = L.map('map', { scrollWheelZoom: false }).fitBounds([[41.86, 12.20], [42.28, 12.50]], { padding: [16, 16] });
+			L.tileLayer('https://{s}.tile-cyclosm.openstreetmap.fr/cyclosm/{z}/{x}/{y}.png', { attribution: 'CyclOSM | &copy; OpenStreetMap', maxZoom: 18, subdomains: 'abc' }).addTo(map);
+			new L.GPX('../days/day-8-sutri-rome.gpx', { async: true, marker_options: { startIconUrl: '', endIconUrl: '', shadowUrl: '' }, polyline_options: { color: '#ef7b61', weight: 4, opacity: 0.9 } })
+				.on('loaded', function (e) { try { map.fitBounds(e.target.getBounds(), { padding: [16, 16] }); } catch (err) {} }).addTo(map);
+			setTimeout(function () { map.invalidateSize(); }, 300);
+		})();
+	</script>
+
+</body>
+</html>
