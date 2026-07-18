@@ -1,0 +1,138 @@
+/* ============================================================
+   Daily Pilgrim Companion — shared reading stylesheet
+   A 21st-century breviary for the Via Francigena.
+   iPhone-first, calm, scholarly. Warm parchment, serif reading.
+   ============================================================ */
+
+:root {
+	--parchment: #f6f1e7;
+	--paper: #fbf8f1;
+	--ink: #3a3330;
+	--ink-soft: #6d6259;
+	--burgundy: #7a2e3b;
+	--burgundy-deep: #5f2330;
+	--coral: #bb5540;
+	--gold: #a5863f;
+	--rule: #e2d8c6;
+	--rule-strong: #cdbfa6;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+	margin: 0;
+	background: var(--parchment);
+	color: var(--ink);
+	font-family: "EB Garamond", Georgia, "Times New Roman", serif;
+	font-size: 19px;
+	line-height: 1.72;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+}
+
+.wrap {
+	max-width: 40rem;
+	margin: 0 auto;
+	padding: 0 1.25rem 5rem;
+}
+
+/* ---- top bar: day + section jump ---- */
+.topbar {
+	position: sticky;
+	top: 0;
+	z-index: 20;
+	background: rgba(246,241,231,0.94);
+	backdrop-filter: saturate(1.2) blur(6px);
+	border-bottom: 1px solid var(--rule);
+}
+.topbar .inner { max-width: 40rem; margin: 0 auto; padding: 0.5rem 1.25rem; display: flex; align-items: center; justify-content: space-between; gap: 0.75rem; }
+.topbar a { color: var(--burgundy); text-decoration: none; }
+.topbar .home { font-family: "Cormorant Garamond", Georgia, serif; font-weight: 600; font-size: 1.05rem; letter-spacing: 0.02em; }
+.topbar nav { display: flex; gap: 0.85rem; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.12em; }
+.topbar nav a { color: var(--ink-soft); border-bottom: 1px dotted transparent; }
+.topbar nav a:hover { color: var(--coral); }
+@media (max-width: 480px) { .topbar nav { display: none; } }
+
+/* ---- day header ---- */
+.dayhead { text-align: center; padding: 2.5rem 0 1.5rem; }
+.dayhead .eyebrow { text-transform: uppercase; letter-spacing: 0.28em; font-size: 0.72rem; color: var(--gold); font-family: "Cormorant Garamond", Georgia, serif; font-weight: 600; }
+.dayhead h1 { font-family: "Cormorant Garamond", Georgia, serif; font-weight: 600; color: var(--burgundy); font-size: 2.5rem; line-height: 1.08; margin: 0.35rem 0 0.25rem; }
+.dayhead .route { color: var(--ink-soft); font-size: 1.05rem; font-style: italic; }
+.dayhead .arc { margin-top: 0.6rem; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.2em; color: var(--coral); }
+
+/* ---- data strip + weather ---- */
+.data { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.5rem; margin: 1.25rem 0; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); padding: 0.9rem 0; text-align: center; }
+.data .d .n { display: block; font-family: "Cormorant Garamond", Georgia, serif; font-size: 1.5rem; font-weight: 700; color: var(--burgundy); line-height: 1; }
+.data .d .l { display: block; margin-top: 0.2rem; font-size: 0.62rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--ink-soft); }
+.wx { margin: 0 0 1.5rem; padding: 0.8rem 1rem; background: var(--paper); border: 1px solid var(--rule); border-radius: 8px; font-size: 0.86rem; color: var(--ink-soft); text-align: center; }
+.wx strong { color: var(--burgundy); font-weight: 600; }
+.wx .sun { color: var(--gold); }
+
+/* ---- section rhythm ---- */
+section.part { margin: 3rem 0 0; padding-top: 2rem; border-top: 2px solid var(--rule-strong); }
+section.part:first-of-type { border-top: none; }
+.part-label { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; margin-bottom: 0.4rem; }
+.part-label h2 { font-family: "Cormorant Garamond", Georgia, serif; font-weight: 600; color: var(--burgundy); font-size: 1.9rem; margin: 0; letter-spacing: 0.01em; }
+.rt { flex: 0 0 auto; font-size: 0.62rem; text-transform: uppercase; letter-spacing: 0.14em; color: var(--gold); border: 1px solid var(--rule-strong); border-radius: 999px; padding: 0.15rem 0.6rem; white-space: nowrap; }
+.part > p, .part li { font-size: 1.05rem; }
+h3 { font-family: "Cormorant Garamond", Georgia, serif; font-weight: 600; color: var(--burgundy-deep); font-size: 1.3rem; margin: 1.8rem 0 0.4rem; }
+.subeyebrow { text-transform: uppercase; letter-spacing: 0.2em; font-size: 0.68rem; color: var(--coral); font-family: "Cormorant Garamond", Georgia, serif; font-weight: 600; margin-top: 1.6rem; }
+
+/* ---- virtue ---- */
+.virtue { text-align: center; margin: 1.5rem 0; }
+.virtue .word { font-family: "Cormorant Garamond", Georgia, serif; font-size: 2rem; color: var(--coral); font-weight: 600; }
+.virtue .gloss { font-style: italic; color: var(--ink-soft); font-size: 0.95rem; }
+
+/* ---- prayers, scripture, quotations ---- */
+.prayer { margin: 1.2rem auto; max-width: 32rem; text-align: center; font-style: italic; color: var(--burgundy-deep); font-size: 1.08rem; line-height: 1.6; }
+blockquote.reading { margin: 1.2rem 0; padding: 0.2rem 0 0.2rem 1.1rem; border-left: 3px solid var(--coral); font-size: 1.08rem; }
+blockquote.reading p { margin: 0 0 0.6rem; }
+.cite { display: block; margin-top: 0.5rem; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--ink-soft); font-style: normal; }
+.cite a { color: var(--ink-soft); }
+.quote { margin: 1.3rem 0; font-family: "Cormorant Garamond", Georgia, serif; font-size: 1.45rem; line-height: 1.4; color: var(--burgundy-deep); text-align: center; }
+.quote .cite { font-family: "EB Garamond", Georgia, serif; font-size: 0.72rem; }
+
+/* ---- challenge / journal ---- */
+.challenge, .journal { background: var(--paper); border: 1px solid var(--rule); border-left: 4px solid var(--gold); border-radius: 0 8px 8px 0; padding: 1rem 1.2rem; margin: 1.4rem 0; }
+.challenge p { margin: 0; font-style: italic; font-size: 1.1rem; color: var(--burgundy-deep); }
+.journal ol { margin: 0.3rem 0 0; padding-left: 1.2rem; }
+.journal li { margin: 0.4rem 0; font-style: italic; }
+.journal .subeyebrow { margin-top: 0; }
+
+/* ---- church profile ---- */
+.church { background: var(--paper); border: 1px solid var(--rule); border-radius: 10px; padding: 1.1rem 1.25rem; margin: 1.5rem 0; }
+.church h3 { margin-top: 0; }
+.church dl { margin: 0.6rem 0 0; display: grid; grid-template-columns: max-content 1fr; gap: 0.35rem 1rem; font-size: 0.95rem; }
+.church dt { color: var(--gold); text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.66rem; padding-top: 0.28rem; font-family: "Cormorant Garamond", Georgia, serif; font-weight: 600; }
+.church dd { margin: 0; }
+.verify { color: var(--coral); font-style: italic; font-size: 0.9em; }
+
+/* ---- artwork ---- */
+figure.art { margin: 2rem 0; }
+figure.art img { display: block; width: 100%; border: 1px solid var(--rule-strong); border-radius: 4px; }
+figure.art figcaption { margin-top: 0.5rem; font-size: 0.74rem; color: var(--ink-soft); font-style: italic; line-height: 1.5; }
+figure.art figcaption a { color: var(--ink-soft); }
+
+/* ---- map ---- */
+#map { height: 300px; width: 100%; border: 1px solid var(--rule-strong); border-radius: 8px; margin: 1.25rem 0 0.5rem; }
+.leaflet-container { font: inherit; }
+
+/* ---- footnote refs + bibliography ---- */
+sup.ref { font-size: 0.7em; line-height: 0; }
+sup.ref a { color: var(--coral); text-decoration: none; padding: 0 0.05em; }
+.biblio { margin-top: 2rem; border-top: 2px solid var(--rule-strong); padding-top: 1.2rem; }
+.biblio h2 { font-family: "Cormorant Garamond", Georgia, serif; color: var(--burgundy); font-size: 1.5rem; margin: 0 0 0.3rem; }
+.biblio ol { padding-left: 1.4rem; }
+.biblio li { font-size: 0.82rem; line-height: 1.5; color: var(--ink-soft); margin: 0.5rem 0; }
+.biblio li a { color: var(--coral); word-break: break-word; }
+.biblio li:target { background: rgba(187,85,64,0.10); border-radius: 4px; }
+
+/* ---- footer nav ---- */
+.daynav { display: flex; justify-content: space-between; margin-top: 2.5rem; padding-top: 1.2rem; border-top: 1px solid var(--rule); font-size: 0.85rem; }
+.daynav a { color: var(--burgundy); text-decoration: none; }
+.daynav a:hover { color: var(--coral); }
+.daynav .disabled { color: var(--rule-strong); }
+
+a { color: var(--coral); }

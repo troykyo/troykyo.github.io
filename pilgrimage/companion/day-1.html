@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Day 1 · Lucca → San Miniato · The Calling — A Pilgrim Companion</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="robots" content="noindex, nofollow" />
+	<meta name="description" content="A daily breviary for the Via Francigena. Day 1: Lucca to San Miniato — the Calling." />
+	<link rel="icon" href="../../favicon.svg" type="image/svg+xml" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+	<link rel="stylesheet" href="breviary.css" />
+</head>
+<body>
+
+	<div class="topbar">
+		<div class="inner">
+			<a class="home" href="index.html">The Pilgrim Companion</a>
+			<nav>
+				<a href="#morning">Morning</a>
+				<a href="#road">Road</a>
+				<a href="#meditation">Word</a>
+				<a href="#arrival">Arrival</a>
+			</nav>
+		</div>
+	</div>
+
+	<div class="wrap">
+
+		<header class="dayhead">
+			<div class="eyebrow">Via Francigena · Day I</div>
+			<h1>Lucca &rarr; San Miniato</h1>
+			<div class="route">Sunday, 19 July · the first day out</div>
+			<div class="arc">The Calling &nbsp;·&nbsp; Virtue: Obedience</div>
+		</header>
+
+		<!-- ============================== MORNING ============================== -->
+		<section class="part" id="morning">
+			<div class="part-label"><h2>Morning</h2><span class="rt">5 min</span></div>
+
+			<div class="data">
+				<div class="d"><span class="n">46 km</span><span class="l">Distance</span></div>
+				<div class="d"><span class="n">~350 m</span><span class="l">Ascent</span></div>
+				<div class="d"><span class="n">3½–5 h</span><span class="l">Est. riding</span></div>
+			</div>
+			<div class="wx" id="wx" data-lat="43.6797" data-lon="10.8497" data-place="San Miniato">
+				Loading today's weather for San Miniato&hellip;
+			</div>
+			<p style="font-size:0.86rem; color:var(--ink-soft); margin-top:-0.9rem;">
+				Terrain: the flat Valdarno plain, asphalt and stretches of <em>strada bianca</em> (white gravel road), then the climb onto the hill of San Miniato. Distance and ascent are measured from the day's GPS track.<sup class="ref"><a href="#s-gpx">7</a></sup>
+			</p>
+
+			<h3>Today's Virtue — Obedience</h3>
+			<div class="virtue">
+				<div class="word">Obedience</div>
+				<div class="gloss">from the Latin <em>ob-audire</em>, &ldquo;to listen toward&rdquo;</div>
+			</div>
+			<p>Obedience, before it is a matter of the will, is a matter of the ear. To obey is first to hear &mdash; to lean the whole self toward a voice and let it move you. Today the pilgrimage begins not with a map but with a summons.</p>
+
+			<h3>Morning Prayer</h3>
+			<div class="prayer">
+				O God, come to my assistance.<br>
+				O Lord, make haste to help me.<br>
+				Glory to the Father, and to the Son, and to the Holy Spirit:<br>
+				as it was in the beginning, is now, and ever shall be,<br>
+				world without end. Amen.
+				<span class="cite">Opening versicle of the Liturgy of the Hours (Ps 70:2) with the <em>Gloria Patri</em><sup class="ref"><a href="#s-hours">4</a></sup></span>
+			</div>
+
+			<h3>Scripture</h3>
+			<blockquote class="reading">
+				<p>As he was walking by the Sea of Galilee, he saw two brothers, Simon who is called Peter, and his brother Andrew, casting a net into the sea; they were fishermen. He said to them, &ldquo;Come after me, and I will make you fishers of men.&rdquo; At once they left their nets and followed him. He walked along from there and saw two other brothers, James, the son of Zebedee, and his brother John. They were in a boat, with their father Zebedee, mending their nets. He called them, and immediately they left their boat and their father and followed him.</p>
+				<span class="cite">Matthew 4:18&ndash;22 · New American Bible, Revised Edition<sup class="ref"><a href="#s-mt">1</a></sup></span>
+			</blockquote>
+
+			<h3>From Augustine</h3>
+			<div class="quote">
+				&ldquo;You have made us for Yourself, and our hearts are restless until they rest in You.&rdquo;
+				<span class="cite">Augustine, <em>Confessions</em> I.1 · trans. J. G. Pilkington<sup class="ref"><a href="#s-conf">3</a></sup></span>
+			</div>
+
+			<h3>Morning Reflection</h3>
+			<p>You leave Lucca by its walls, and you leave behind, in the cathedral of San Martino, the <em>Volto Santo</em> &mdash; the Holy Face, a robed wooden Christ that for centuries drew pilgrims off the road and into the dark of the nave.<sup class="ref"><a href="#s-volto">5</a></sup> To ride out this morning is already to practise a small renunciation: you turn from the sight that others crossed Europe to see, and you point the wheel south.</p>
+			<p>The men in the Gospel are working when they are called. Peter and Andrew have their hands in the net; James and John are mending theirs beside their father. Nobody is waiting to be summoned. The word comes into the middle of an ordinary morning, and the response is startling in its speed &mdash; <em>at once</em>, <em>immediately</em>. They do not finish the row of stitches. They do not haul the catch. The nets, the boat, even the father, are left where they lie.</p>
+			<p>This is the obedience the day asks of you, and it is worth being honest about its cost. To follow is not only to go somewhere; it is to leave something unfinished. The road to Rome is flat here, deceptively easy, running out across the Valdarno before the land begins to rise toward San Miniato. It is a good day to notice how much of the self is still back at the boat, still mending, still counting what was in the net.</p>
+			<p>Augustine names the engine underneath all of it: the heart that God has made for himself and that will not settle until it settles in him. The pilgrim does not invent this restlessness &mdash; he only, at last, stops resisting it and lets it carry him down the road. The disciples' speed is not recklessness. It is the recognition of a homesickness they had felt all along and never named. Today you begin to name yours.</p>
+
+			<div class="challenge">
+				<p>What net am I still mending &mdash; and would I leave it, at a single word?</p>
+			</div>
+
+			<h3>Closing Prayer</h3>
+			<div class="prayer">
+				Our Father, who art in heaven, hallowed be thy name;<br>
+				thy kingdom come, thy will be done, on earth as it is in heaven.<br>
+				Give us this day our daily bread,<br>
+				and forgive us our trespasses, as we forgive those who trespass against us;<br>
+				and lead us not into temptation, but deliver us from evil. Amen.
+				<span class="cite">The Lord's Prayer (cf. Matthew 6:9&ndash;13)<sup class="ref"><a href="#s-hours">4</a></sup></span>
+			</div>
+		</section>
+
+		<!-- ============================== FIRST BREAK ============================== -->
+		<section class="part" id="road">
+			<div class="part-label"><h2>Along the Road</h2><span class="rt">10 min</span></div>
+
+			<div id="map"></div>
+			<p style="font-size:0.8rem; color:var(--ink-soft); margin-top:0.3rem;">
+				Today's route, Lucca to San Miniato. Map &copy; <a href="https://www.cyclosm.org/" target="_blank" rel="noopener">CyclOSM</a> / <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>. <a href="../index.html#route" target="_blank" rel="noopener">Full elevation profile &amp; all stages &rarr;</a>
+			</p>
+
+			<p>Lucca is the oldest kind of waypoint. When Archbishop Sigeric of Canterbury rode home from Rome in the year 990, the cleric travelling with him wrote down the stages of the return; in that list &mdash; the document from which the very idea of the Via Francigena is reconstructed &mdash; Lucca appears as <em>Luca</em>, the twenty-fifth resting place, submansio XXV.<sup class="ref"><a href="#s-sigeric">6</a></sup> You are setting out along a line that has been a road for well over a thousand years.</p>
+
+			<p>The morning's country is the plain of the lower Arno &mdash; and, older than its fields, the memory of a marsh. Market towns, drainage canals, poplar lines, the occasional <em>strada bianca</em> running straight between them: this flat, watery ground was for centuries a wetland that swallowed roads and travellers alike, and the taming of it was the life's work of the men whose hospice still stands at the day's midpoint. It is not dramatic country, and that is its gift on a first day &mdash; the legs learn the loaded bike on ground that forgives. Carry water; there is little shade by noon.</p>
+
+			<div class="church">
+				<h3>The Cathedral of San Martino, Lucca</h3>
+				<dl>
+					<dt>What</dt><dd>Lucca's Romanesque cathedral, seat of the diocese, and home of the <em>Volto Santo</em> (Holy Face).</dd>
+					<dt>The relic</dt><dd>A life-size wooden crucifix showing Christ robed in a long tunic. Radiocarbon dating of the wood places it between roughly 770 and 880 &mdash; among the oldest surviving monumental wooden sculptures in Europe. Medieval legend ascribed it to Nicodemus; that ascription has no historical support.<sup class="ref"><a href="#s-volto">5</a></sup></dd>
+					<dt>Why it mattered</dt><dd>The Holy Face made Lucca a pilgrim destination in its own right. Its fame reached far north: &ldquo;By the Holy Face of Lucca&rdquo; is recorded as an oath of William II of England, and Dante names it in the <em>Inferno</em>.<sup class="ref"><a href="#s-volto">5</a></sup></dd>
+					<dt>To observe</dt><dd>The octagonal marble shrine (<em>tempietto</em>) that houses the crucifix was carved by Matteo Civitali in 1482&ndash;84.<sup class="ref"><a href="#s-volto">5</a></sup></dd>
+					<dt>A prayer</dt><dd>Before the Face, one line is enough: <em>&ldquo;Lord, that I may see.&rdquo;</em></dd>
+					<dt>Practical</dt><dd><span class="verify">Opening hours and Mass times change seasonally &mdash; confirm on the day.</span> Official information: <a href="https://www.museocattedralelucca.it/" target="_blank" rel="noopener">museocattedralelucca.it</a>.<sup class="ref"><a href="#s-cattedrale">8</a></sup></dd>
+				</dl>
+			</div>
+
+			<p>At roughly the eighteenth kilometre the road brings you into Altopascio, and you should not ride through it. This small town held one of the most important pilgrim stations on the whole Via Francigena, and its story is written into the day's theme. Its <em>Spedale</em> &mdash; the pilgrim hospice &mdash; is first recorded in 1084.<sup class="ref"><a href="#s-altopascio">12</a></sup> Around it grew the Order of Saint James of Altopascio, the Knights of the Tau, founded by the Countess Matilda of Canossa about 1070&ndash;1080 and remembered as perhaps the earliest order to unite in one body the care of pilgrims, the keeping of a hospital, and a military wing.<sup class="ref"><a href="#s-tau">13</a></sup> For close to seven centuries, until 1780, the <em>Domus Hospitalis Sancti Jacobi</em> fed, sheltered, and doctored the people of the road.<sup class="ref"><a href="#s-tau">13</a></sup></p>
+
+			<div class="church">
+				<h3>Altopascio &mdash; the Spedale &amp; the Knights of the Tau</h3>
+				<dl>
+					<dt>What</dt><dd>The medieval pilgrim hospice (<em>Domus Hospitalis Sancti Jacobi et Altopassu</em>), first mentioned in 1084 &mdash; long the most famous refuge on the road between Lucca and the Arno.<sup class="ref"><a href="#s-altopascio">12</a></sup></dd>
+					<dt>Founding order</dt><dd>The Order of Saint James of Altopascio &mdash; the &ldquo;Knights of the Tau,&rdquo; named for the tau-cross (&tau;) they bore. Founded by Matilda of Canossa, c. 1070&ndash;80; among the first of the hospitaller-military orders.<sup class="ref"><a href="#s-tau">13</a></sup></dd>
+					<dt>Church</dt><dd>San Jacopo &mdash; Santi Jacopo, Cristoforo ed Eligio &mdash; annexed to the hospice.<sup class="ref"><a href="#s-altopascio">12</a></sup></dd>
+					<dt>Not to miss</dt><dd>The bell in the campanile, <em>La Smarrita</em> &mdash; &ldquo;the lost one.&rdquo; Each night, from half an hour before sunset until half an hour after, it was rung to call in any pilgrim who had strayed from the road in the marsh and the woods.<sup class="ref"><a href="#s-tau">13</a></sup></dd>
+					<dt>A prayer</dt><dd>For the <em>smarriti</em>, the lost &mdash; and in thanks that someone, once, rang a bell for them.</dd>
+					<dt>Practical</dt><dd><span class="verify">Confirm opening hours and Mass times on the day.</span> Official route information: <a href="https://www.viefrancigene.org/en/resource/poi/altopascio/" target="_blank" rel="noopener">viefrancigene.org</a>.</dd>
+				</dl>
+			</div>
+
+			<p>Beyond Altopascio the plain runs on toward Fucecchio and the Arno; then a single hill detaches itself from the flat, a tower on its crown, and the last kilometres of the day are the climb.</p>
+
+			<p>At the top waits San Miniato &mdash; <em>San Miniato al Tedesco</em>, &ldquo;of the German.&rdquo; The epithet is a fossil of empire. From 1116 the imperial vicar Rabodo made the town the seat of imperial government in Tuscany, displacing Florence; the vicars who ruled the province from this hill were mostly German, and the name stuck.<sup class="ref"><a href="#s-sanminiato">9</a></sup> Under the Emperor Frederick II the walls were extended and the Rocca built, its tower standing at the summit, 192 metres up, over the whole Valdarno.<sup class="ref"><a href="#s-sanminiato">9</a></sup> It is a fitting place to end a day whose Gospel is about leaving one lord to follow another: a town raised to hold earthly power, seen at evening by two people who have ridden all day toward a different kingdom.</p>
+		</section>
+
+		<!-- ============================== SECOND BREAK ============================== -->
+		<section class="part" id="meditation">
+			<div class="part-label"><h2>The Word</h2><span class="rt">10 min</span></div>
+			<div class="subeyebrow">Biblical Meditation — The Call of Abram</div>
+
+			<blockquote class="reading">
+				<p>The LORD said to Abram: Go forth from your land, your relatives, and from your father's house to a land that I will show you&hellip; Abram went as the LORD directed him, and Lot went with him. Abram was seventy-five years old when he left Haran&hellip; When they came to the land of Canaan, Abram passed through the land as far as the sacred place at Shechem&hellip; So Abram built an altar there to the LORD who had appeared to him&hellip; Then Abram journeyed on by stages to the Negeb.</p>
+				<span class="cite">Genesis 12:1&ndash;9, abridged · New American Bible, Revised Edition<sup class="ref"><a href="#s-gen">2</a></sup></span>
+			</blockquote>
+
+			<p>Hear it slowly. An old man in Haran, settled, with a household and a name, is told to unsettle himself: <em>Go forth.</em> The command strips away, one clause at a time, everything that anchors a life &mdash; your land, your kin, your father's house &mdash; and offers in exchange only a direction and a promise: <em>to a land that I will show you.</em> Not a land he is shown now. A land he will be shown, later, on the way. The destination is withheld so that the going itself becomes an act of trust.</p>
+
+			<p>He is seventy-five. This is not a young man's adventure; it is a whole life re-hinged at an age when most men have earned the right to sit still. And he goes &mdash; the text wastes no words on his hesitation &mdash; and he does not go alone. <em>Lot went with him.</em> The first pilgrimage in Scripture is not a solitude. It is a departure shared, an older man and a younger setting out under the same promise, dividing the road and the risk between them.</p>
+
+			<p>Notice what Abram does when he stops. He builds an altar. Again, later, he builds another. He moves &ldquo;by stages,&rdquo; and each stage is marked not by how far he rode but by a place where he turned to God. The medieval road you are on kept the same grammar: it was measured in <em>mansiones</em>, resting places, and Sigeric counted them one by one from Rome. A pilgrimage is a life reduced to its honest shape &mdash; a series of stages, each one ending, if you let it, at an altar. The tiredness in your legs tonight is not an interruption of the journey. It is the journey. The promise is kept in the going, not at the end of it.</p>
+
+			<div class="journal">
+				<div class="subeyebrow">Two questions for the road</div>
+				<ol>
+					<li>Abram is not told where he is going, only that he will be shown. Where in my life am I being asked to move before I can see the destination?</li>
+					<li>He does not go alone. What does it ask of me to make this road, and its promise, something shared &mdash; father and son on the same errand?</li>
+				</ol>
+			</div>
+		</section>
+
+		<!-- ============================== ARRIVAL ============================== -->
+		<section class="part" id="arrival">
+			<div class="part-label"><h2>Arrival</h2><span class="rt">15–20 min</span></div>
+			<div class="subeyebrow">Theological Reflection — Benedict's Prologue</div>
+
+			<figure class="art">
+				<img src="img/duccio-calling-peter-andrew.jpg"
+					 alt="Duccio's panel of Christ on the shore calling Peter and Andrew from their boat" loading="lazy" />
+				<figcaption>Duccio di Buoninsegna, <em>The Calling of the Apostles Peter and Andrew</em>, 1308&ndash;1311, tempera on panel. National Gallery of Art, Washington (Samuel H. Kress Collection). Public domain.<sup class="ref"><a href="#s-duccio">10</a></sup></figcaption>
+			</figure>
+
+			<blockquote class="reading">
+				<p>Listen carefully, my child, to your master's precepts, and incline the ear of your heart. Receive willingly and carry out effectively your loving father's advice, that by the labor of obedience you may return to Him from whom you had departed by the sloth of disobedience.</p>
+				<span class="cite">Rule of St Benedict, Prologue · trans. Leonard J. Doyle OSB<sup class="ref"><a href="#s-rb">11</a></sup></span>
+			</blockquote>
+
+			<p>Benedict opens his whole Rule with the ear. Before a single rule of the house, before the hours and the meals and the work, there is a posture: <em>incline the ear of your heart.</em> This is the same word the morning gave you &mdash; obedience, <em>ob-audire</em>, the listening lean. Benedict simply tells you where it leads. The labour of obedience, he says, is how &ldquo;you may return to Him from whom you had departed.&rdquo;</p>
+
+			<p>That single verb, <em>return</em>, reframes the entire journey. You did not think, this morning, that you were going back. You thought you were setting out &mdash; new road, new country, the front wheel pointed at a city you have never reached this way. Benedict says: no. Every step toward God is a step home. The pilgrimage to Rome is not an expedition into the strange but a long act of homecoming, undertaken by hearts that, as Augustine said at dawn, were made for God and are restless everywhere else. The road only makes visible a return that was always the true shape of the soul.</p>
+
+			<p>And you end the day, fittingly, on the hill of the emperors. San Miniato was built to project a power that measured itself in walls and towers and vicars &mdash; the earthly city, in Augustine's old distinction, the city founded on the love of self.<sup class="ref"><a href="#s-sanminiato">9</a></sup> Frederick's tower still stands over the plain you crossed. It is worth sitting under it tonight and letting the two kinds of greatness stand side by side: the greatness that fortifies a hilltop, and the greatness of two tired people who owned almost nothing today but a direction. Benedict was not naïve about the first kind &mdash; his monks kept walls too. But he ordered everything to the second: the return, the listening, the labour that carries a restless heart, by stages, home.</p>
+
+			<h3>Evening Prayer</h3>
+			<div class="prayer">
+				Into your hands, O Lord, I commend my spirit.<br>
+				Keep us, Lord, as the apple of your eye;<br>
+				hide us in the shadow of your wings.<br>
+				Glory to the Father, and to the Son, and to the Holy Spirit&hellip;
+				<span class="cite">From Night Prayer (Compline): the responsory (Ps 31:6) and antiphon (Ps 17:8)<sup class="ref"><a href="#s-hours">4</a></sup></span>
+			</div>
+
+			<div class="journal">
+				<div class="subeyebrow">Journal — three questions</div>
+				<ol>
+					<li>Benedict calls the journey a <em>return</em>. In what sense did today feel like going out &mdash; and in what sense like going home?</li>
+					<li>What did the labour of obedience actually cost me on the road today, in the body and in the will?</li>
+					<li>Under the emperor's tower: which greatness do I quietly want &mdash; and which do I say I want?</li>
+				</ol>
+			</div>
+		</section>
+
+		<!-- ============================== SOURCES ============================== -->
+		<div class="biblio" id="sources">
+			<h2>Sources &amp; Editions</h2>
+			<p style="font-size:0.82rem; color:var(--ink-soft);">Every quotation is reproduced from the edition named; historical statements are drawn from the references below. Where information (opening hours, Mass times, pilgrim-stamp points) could not be verified, it is omitted or marked for on-site confirmation rather than stated.</p>
+			<ol>
+				<li id="s-mt">Matthew 4:18&ndash;22. <em>New American Bible, Revised Edition</em> (NABRE). United States Conference of Catholic Bishops. <a href="https://bible.usccb.org/bible/matthew/4" target="_blank" rel="noopener">bible.usccb.org/bible/matthew/4</a></li>
+				<li id="s-gen">Genesis 12:1&ndash;9. <em>New American Bible, Revised Edition</em> (NABRE). USCCB. <a href="https://bible.usccb.org/bible/genesis/12" target="_blank" rel="noopener">bible.usccb.org/bible/genesis/12</a></li>
+				<li id="s-conf">Augustine, <em>Confessions</em>, Book I, ch. 1. Trans. J. G. Pilkington, <em>Nicene and Post-Nicene Fathers</em>, 1st series, vol. 1 (1887), ed. for New Advent by K. Knight. <a href="https://www.newadvent.org/fathers/110101.htm" target="_blank" rel="noopener">newadvent.org/fathers/110101.htm</a></li>
+				<li id="s-hours">Liturgical texts (opening versicle, <em>Gloria Patri</em>, the Lord's Prayer, Compline responsory and antiphon) are fixed prayers of the Roman Rite; scriptural bases are Ps 70:2, Ps 31:6, Ps 17:8, and Matthew 6:9&ndash;13 (NABRE, USCCB).</li>
+				<li id="s-volto">&ldquo;Volto Santo of Lucca.&rdquo; Wikipedia (accessed July 2026), summarising radiocarbon dating (c. 770&ndash;880), the Civitali <em>tempietto</em> (1482&ndash;84), and medieval attestations. <a href="https://en.wikipedia.org/wiki/Volto_Santo_of_Lucca" target="_blank" rel="noopener">en.wikipedia.org/wiki/Volto_Santo_of_Lucca</a> <span class="verify">(secondary source; scholarly dating and legend-status noted in text)</span></li>
+				<li id="s-sigeric">Sigeric's itinerary (AD 990) and Lucca as submansio XXV (&ldquo;Luca&rdquo;). &ldquo;Via Francigena&rdquo; and &ldquo;Sigeric the Serious,&rdquo; Wikipedia (accessed July 2026); primary manuscript: British Library, Cotton MS Tiberius B.V. <a href="https://en.wikipedia.org/wiki/Via_Francigena" target="_blank" rel="noopener">en.wikipedia.org/wiki/Via_Francigena</a></li>
+				<li id="s-gpx">Distance (46 km) and ascent (~350 m): measured from the day's recorded GPS track (Via Francigena cycle stage, Lucca&ndash;San Miniato).</li>
+				<li id="s-cattedrale">Cattedrale di San Martino / Museo della Cattedrale, Lucca — official information (hours and Mass times to be confirmed on site). <a href="https://www.museocattedralelucca.it/" target="_blank" rel="noopener">museocattedralelucca.it</a></li>
+				<li id="s-sanminiato">&ldquo;San Miniato.&rdquo; Wikipedia (accessed July 2026): imperial vicariate from 1116 (Rabodo), the epithet &ldquo;al Tedesco,&rdquo; and Frederick II's Rocca and tower (summit, 192 m). <a href="https://en.wikipedia.org/wiki/San_Miniato" target="_blank" rel="noopener">en.wikipedia.org/wiki/San_Miniato</a></li>
+				<li id="s-duccio">Duccio di Buoninsegna, <em>The Calling of the Apostles Peter and Andrew</em> (1308&ndash;1311). National Gallery of Art, Washington, Samuel H. Kress Collection. Public domain. Image via Wikimedia Commons. <a href="https://www.nga.gov/artworks/282-calling-apostles-peter-and-andrew" target="_blank" rel="noopener">nga.gov</a></li>
+				<li id="s-rb">Rule of St Benedict, Prologue. Trans. Leonard J. Doyle OSB, <em>St Benedict's Rule for Monasteries</em> (Collegeville: Liturgical Press, 1948, 2001). Order of Saint Benedict. <a href="https://archive.osb.org/rb/text/rbejms1.html" target="_blank" rel="noopener">archive.osb.org/rb</a></li>
+				<li id="s-altopascio">&ldquo;Altopascio.&rdquo; Wikipedia (accessed July 2026): the <em>Spedale</em> first mentioned 1084; the Order of St James of Altopascio founded by Matilda of Canossa, c. 1070&ndash;80; the church of San Jacopo (Santi Jacopo, Cristoforo ed Eligio) annexed to the hospice. <a href="https://en.wikipedia.org/wiki/Altopascio" target="_blank" rel="noopener">en.wikipedia.org/wiki/Altopascio</a></li>
+				<li id="s-tau">&ldquo;Order of Saint James of Altopascio&rdquo; (Knights of the Tau). Wikipedia (accessed July 2026): perhaps the earliest order to combine the care of pilgrims, a hospital, and a military wing; the <em>Domus Hospitalis Sancti Jacobi</em> active until 1780; the bell &ldquo;La Smarrita&rdquo; rung nightly, from half an hour before sunset to half an hour after, to guide strayed pilgrims. <a href="https://en.wikipedia.org/wiki/Order_of_Saint_James_of_Altopascio" target="_blank" rel="noopener">en.wikipedia.org/wiki/Order_of_Saint_James_of_Altopascio</a></li>
+			</ol>
+		</div>
+
+		<nav class="daynav">
+			<span class="disabled">&larr; Prologue</span>
+			<a href="index.html">All days</a>
+			<span class="disabled">Day 2 · Conversion &rarr;</span>
+		</nav>
+
+	</div>
+
+	<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+	<script src="https://unpkg.com/leaflet-gpx@1.7.0/gpx.js"></script>
+	<script>
+		// ---- live weather + sun for the day's destination (Open-Meteo, no key) ----
+		(function () {
+			var el = document.getElementById('wx');
+			if (!el) return;
+			var lat = el.dataset.lat, lon = el.dataset.lon, place = el.dataset.place;
+			var url = 'https://api.open-meteo.com/v1/forecast?latitude=' + lat + '&longitude=' + lon +
+				'&current=temperature_2m&daily=temperature_2m_max,temperature_2m_min,sunrise,sunset&timezone=Europe%2FRome';
+			fetch(url).then(function (r) { return r.json(); }).then(function (d) {
+				function hhmm(s) { return s ? s.slice(11, 16) : '—'; }
+				var now = Math.round(d.current.temperature_2m);
+				var hi = Math.round(d.daily.temperature_2m_max[0]);
+				var lo = Math.round(d.daily.temperature_2m_min[0]);
+				el.innerHTML = 'Now in <strong>' + place + '</strong> ' + now + '°C · today ' + hi + '° / ' + lo + '°C · ' +
+					'<span class="sun">☀ ' + hhmm(d.daily.sunrise[0]) + ' – ' + hhmm(d.daily.sunset[0]) + '</span>' +
+					'<br><span style="font-size:0.72rem;">live conditions, updated at each reading</span>';
+			}).catch(function () {
+				el.innerHTML = 'Weather is fetched live and needs a connection. <span style="font-size:0.75rem;">(Offline right now.)</span>';
+			});
+		})();
+
+		// ---- day route map ----
+		(function () {
+			var mapEl = document.getElementById('map');
+			if (!mapEl || typeof L === 'undefined') return;
+			var bounds = L.latLngBounds([[43.66, 10.48], [43.86, 10.86]]);
+			var map = L.map('map', { scrollWheelZoom: false }).fitBounds(bounds, { padding: [16, 16] });
+			L.tileLayer('https://{s}.tile-cyclosm.openstreetmap.fr/cyclosm/{z}/{x}/{y}.png', {
+				attribution: 'CyclOSM | &copy; OpenStreetMap', maxZoom: 18, subdomains: 'abc'
+			}).addTo(map);
+			new L.GPX('../days/day-1-lucca-san-miniato.gpx', {
+				async: true,
+				marker_options: { startIconUrl: '', endIconUrl: '', shadowUrl: '' },
+				polyline_options: { color: '#7a2e3b', weight: 4, opacity: 0.9 }
+			}).on('loaded', function (e) {
+				try { map.fitBounds(e.target.getBounds(), { padding: [16, 16] }); } catch (err) {}
+			}).addTo(map);
+			setTimeout(function () { map.invalidateSize(); }, 300);
+		})();
+	</script>
+
+</body>
+</html>
