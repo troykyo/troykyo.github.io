@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+	<meta charset="utf-8" />
+	<title>Giorno 1 · Lucca → San Miniato · La chiamata — Il breviario del pellegrino</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="robots" content="noindex, nofollow" />
+	<meta name="description" content="Un breviario quotidiano per la Via Francigena. Giorno 1: da Lucca a San Miniato — la chiamata." />
+	<link rel="icon" href="../../favicon.svg" type="image/svg+xml" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+	<link rel="stylesheet" href="breviary.css" />
+</head>
+<body>
+
+	<div class="topbar">
+		<div class="inner">
+			<a class="home" href="index.html">Il breviario del pellegrino</a>
+			<nav>
+				<a href="#morning">Mattino</a>
+				<a href="#road">Strada</a>
+				<a href="#meditation">Parola</a>
+				<a href="#arrival">Arrivo</a>
+			</nav>
+			<a class="lang" href="day-1.html">English</a>
+		</div>
+	</div>
+
+	<div class="wrap">
+
+		<header class="dayhead">
+			<div class="eyebrow">Via Francigena · Giorno I</div>
+			<h1>Lucca &rarr; San Miniato</h1>
+			<div class="route">Domenica 19 luglio · il primo giorno di cammino</div>
+			<div class="arc">La chiamata &nbsp;·&nbsp; Virtù: Obbedienza</div>
+		</header>
+
+		<!-- ============================== MATTINO ============================== -->
+		<section class="part" id="morning">
+			<div class="part-label"><h2>Mattino</h2><span class="rt">5 min</span></div>
+
+			<div class="data">
+				<div class="d"><span class="n">46 km</span><span class="l">Distanza</span></div>
+				<div class="d"><span class="n">~350 m</span><span class="l">Dislivello</span></div>
+				<div class="d"><span class="n">3½–5 h</span><span class="l">In sella (stima)</span></div>
+			</div>
+			<div class="wx" id="wx" data-lat="43.6797" data-lon="10.8497" data-place="San Miniato">
+				Caricamento del meteo di San Miniato&hellip;
+			</div>
+			<p style="font-size:0.86rem; color:var(--ink-soft); margin-top:-0.9rem;">
+				Terreno: la piana del Valdarno, asfalto e tratti di <em>strada bianca</em>, poi la salita sul colle di San Miniato. Distanza e dislivello sono misurati dalla traccia GPS del giorno.<sup class="ref"><a href="#s-gpx">7</a></sup>
+			</p>
+
+			<h3>La virtù di oggi — Obbedienza</h3>
+			<div class="virtue">
+				<div class="word">Obbedienza</div>
+				<div class="gloss">dal latino <em>ob-audire</em>, «ascoltare verso»</div>
+			</div>
+			<p>L'obbedienza, prima di essere questione di volontà, è questione di orecchio. Obbedire è anzitutto ascoltare — inclinare tutto sé stessi verso una voce e lasciare che ti muova. Oggi il pellegrinaggio comincia non con una mappa ma con una chiamata.</p>
+
+			<h3>Preghiera del mattino</h3>
+			<div class="prayer">
+				O Dio, vieni a salvarmi.<br>
+				Signore, vieni presto in mio aiuto.<br>
+				Gloria al Padre e al Figlio e allo Spirito Santo.<br>
+				Come era nel principio, e ora e sempre,<br>
+				nei secoli dei secoli. Amen.
+				<span class="cite">Versetto introduttivo della Liturgia delle Ore (Sal 70,2) con il <em>Gloria al Padre</em><sup class="ref"><a href="#s-hours">4</a></sup></span>
+			</div>
+
+			<h3>Scrittura</h3>
+			<blockquote class="reading">
+				<p>Mentre camminava lungo il mare di Galilea, vide due fratelli, Simone, chiamato Pietro, e Andrea suo fratello, che gettavano le reti in mare; erano infatti pescatori. E disse loro: «Venite dietro a me, vi farò pescatori di uomini». Ed essi subito lasciarono le reti e lo seguirono. Andando oltre, vide altri due fratelli, Giacomo, figlio di Zebedeo, e Giovanni suo fratello, che nella barca, insieme a Zebedeo loro padre, riparavano le loro reti, e li chiamò. Ed essi subito lasciarono la barca e il loro padre e lo seguirono.</p>
+				<span class="cite">Matteo 4,18&ndash;22 · versione CEI 2008<sup class="ref"><a href="#s-mt">1</a></sup></span>
+			</blockquote>
+
+			<h3>Da Agostino</h3>
+			<div class="quote">
+				«Ci hai fatti per te, e il nostro cuore è inquieto finché non riposa in te.»
+				<span class="cite">Agostino, <em>Confessioni</em> I,1<sup class="ref"><a href="#s-conf">3</a></sup></span>
+			</div>
+
+			<h3>Riflessione del mattino</h3>
+			<p>Lasci Lucca lungo le sue mura, e ti lasci alle spalle, nella cattedrale di San Martino, il <em>Volto Santo</em> — un Cristo ligneo rivestito di tunica che per secoli ha attirato i pellegrini fuori dalla strada, dentro l'oscurità della navata.<sup class="ref"><a href="#s-volto">5</a></sup> Uscire in sella stamattina è già esercitare una piccola rinuncia: ti volti dallo spettacolo che altri hanno attraversato l'Europa per vedere, e punti la ruota a sud.</p>
+			<p>Gli uomini del Vangelo stanno lavorando quando vengono chiamati. Pietro e Andrea hanno le mani nella rete; Giacomo e Giovanni rammendano le loro accanto al padre. Nessuno aspetta di essere convocato. La parola giunge nel mezzo di un mattino qualunque, e la risposta stupisce per la sua rapidità — <em>subito</em>, <em>immediatamente</em>. Non finiscono la fila di punti. Non tirano su la pesca. Le reti, la barca, perfino il padre, restano dove sono.</p>
+			<p>Questa è l'obbedienza che il giorno ti chiede, e vale la pena essere onesti sul suo prezzo. Seguire non è soltanto andare da qualche parte; è lasciare qualcosa di incompiuto. La strada per Roma qui è piatta, ingannevolmente facile, e corre attraverso il Valdarno prima che la terra cominci a salire verso San Miniato. È una buona giornata per accorgersi di quanto di noi sia ancora là, alla barca, ancora a rammendare, ancora a contare ciò che era nella rete.</p>
+			<p>Agostino nomina il motore che sta sotto a tutto questo: il cuore che Dio ha fatto per sé e che non troverà pace finché non riposerà in lui. Il pellegrino non inventa questa inquietudine — semplicemente, finalmente, smette di resistervi e si lascia portare lungo la strada. La prontezza dei discepoli non è avventatezza. È il riconoscimento di una nostalgia che avevano sempre sentito e mai nominato. Oggi cominci a nominare la tua.</p>
+
+			<div class="challenge">
+				<p>Quale rete sto ancora rammendando — e la lascerei, a una sola parola?</p>
+			</div>
+
+			<h3>Preghiera conclusiva</h3>
+			<div class="prayer">
+				Padre nostro, che sei nei cieli, sia santificato il tuo nome,<br>
+				venga il tuo regno, sia fatta la tua volontà, come in cielo così in terra.<br>
+				Dacci oggi il nostro pane quotidiano,<br>
+				e rimetti a noi i nostri debiti come anche noi li rimettiamo ai nostri debitori,<br>
+				e non abbandonarci alla tentazione, ma liberaci dal male. Amen.
+				<span class="cite">Padre nostro (cfr. Matteo 6,9&ndash;13)<sup class="ref"><a href="#s-hours">4</a></sup></span>
+			</div>
+		</section>
+
+		<!-- ============================== PRIMA SOSTA ============================== -->
+		<section class="part" id="road">
+			<div class="part-label"><h2>Lungo la strada</h2><span class="rt">10 min</span></div>
+
+			<div id="map"></div>
+			<p style="font-size:0.8rem; color:var(--ink-soft); margin-top:0.3rem;">
+				Il percorso di oggi, da Lucca a San Miniato. Mappa &copy; <a href="https://www.cyclosm.org/" target="_blank" rel="noopener">CyclOSM</a> / <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>. <a href="../index.html#route" target="_blank" rel="noopener">Profilo altimetrico completo e tutte le tappe &rarr;</a>
+			</p>
+
+			<p>Lucca è il più antico dei punti di sosta. Quando l'arcivescovo Sigerico di Canterbury tornò da Roma nell'anno 990, il chierico che viaggiava con lui annotò le tappe del ritorno; in quell'elenco — il documento da cui si ricostruisce l'idea stessa della Via Francigena — Lucca compare come <em>Luca</em>, il venticinquesimo luogo di sosta, <em>submansio XXV</em>.<sup class="ref"><a href="#s-sigeric">6</a></sup> Ti metti in cammino lungo una linea che è strada da ben più di mille anni.</p>
+
+			<p>La campagna del mattino è la pianura del basso Arno — e, più antica dei suoi campi, la memoria di una palude. Paesi di mercato, canali di bonifica, filari di pioppi, qualche <em>strada bianca</em> che corre diritta tra loro: questo terreno piatto e acquoso fu per secoli un acquitrino che inghiottiva strade e viandanti, e domarlo fu l'opera di una vita degli uomini il cui ospizio sta ancora a metà giornata. Non è una campagna spettacolare, e questo è il suo dono in un primo giorno — le gambe imparano la bici carica su un terreno che perdona. Porta acqua; a mezzogiorno c'è poca ombra.</p>
+
+			<div class="church">
+				<h3>La cattedrale di San Martino, Lucca</h3>
+				<img class="thumb" src="img/day1-lucca-san-martino.jpg" alt="La facciata romanica in marmo e il campanile della cattedrale di Lucca (San Martino)" loading="lazy" />
+				<span class="credit">Foto: Zairon (CC BY 4.0) · <a href="https://commons.wikimedia.org/wiki/File:Lucca_Cattedrale_di_San_Martino_Esterno_Facciata_%26_Campanile_1.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></span>
+				<dl>
+					<dt>Che cos'è</dt><dd>La cattedrale romanica di Lucca, sede della diocesi, e casa del <em>Volto Santo</em>.</dd>
+					<dt>La reliquia</dt><dd>Un crocifisso ligneo a grandezza naturale che mostra il Cristo rivestito di una lunga tunica. La datazione al radiocarbonio del legno lo colloca tra il 770 e l'880 circa — tra le più antiche sculture lignee monumentali sopravvissute in Europa. La leggenda medievale lo attribuiva a Nicodemo; tale attribuzione non ha fondamento storico.<sup class="ref"><a href="#s-volto">5</a></sup></dd>
+					<dt>Perché ha contato</dt><dd>Il Volto Santo fece di Lucca una meta di pellegrinaggio a sé stante. La sua fama arrivò lontano a nord: «Per il Volto Santo di Lucca» è registrato come giuramento di Guglielmo II d'Inghilterra, e Dante lo nomina nell'<em>Inferno</em>.<sup class="ref"><a href="#s-volto">5</a></sup></dd>
+					<dt>Da osservare</dt><dd>Il tempietto ottagonale di marmo che custodisce il crocifisso fu scolpito da Matteo Civitali nel 1482&ndash;84.<sup class="ref"><a href="#s-volto">5</a></sup></dd>
+					<dt>Una preghiera</dt><dd>Davanti al Volto, una riga basta: <em>«Signore, che io veda».</em></dd>
+					<dt>Pratica</dt><dd><span class="verify">Orari di apertura e delle Messe cambiano con la stagione — verifica in giornata.</span> Informazioni ufficiali: <a href="https://www.museocattedralelucca.it/" target="_blank" rel="noopener">museocattedralelucca.it</a>.<sup class="ref"><a href="#s-cattedrale">8</a></sup></dd>
+				</dl>
+			</div>
+
+			<p>Intorno al diciottesimo chilometro la strada ti porta ad Altopascio, e non dovresti attraversarla senza fermarti. Questo piccolo centro ospitò una delle più importanti stazioni di pellegrinaggio dell'intera Via Francigena, e la sua storia è scritta nel tema del giorno. Il suo <em>Spedale</em> — l'ospizio dei pellegrini — è attestato per la prima volta nel 1084.<sup class="ref"><a href="#s-altopascio">12</a></sup> Attorno ad esso nacque l'Ordine di San Jacopo di Altopascio, i Cavalieri del Tau, fondato dalla contessa Matilde di Canossa intorno al 1070&ndash;1080 e ricordato come forse il primo ordine a unire in un solo corpo la cura dei pellegrini, la gestione di un ospedale e un braccio militare.<sup class="ref"><a href="#s-tau">13</a></sup> Per quasi sette secoli, fino al 1780, la <em>Domus Hospitalis Sancti Jacobi</em> nutrì, ospitò e curò la gente della strada.<sup class="ref"><a href="#s-tau">13</a></sup></p>
+
+			<div class="church">
+				<h3>Altopascio — lo Spedale e i Cavalieri del Tau</h3>
+				<img class="thumb" src="img/day1-altopascio-san-jacopo.jpg" alt="La chiesa di San Jacopo Maggiore ad Altopascio con il suo campanile" loading="lazy" />
+				<span class="credit">Foto: Davide Papalini (CC BY-SA 3.0) · <a href="https://commons.wikimedia.org/wiki/File:Altopascio-chiesa_san_jacopo_maggiore1.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></span>
+				<dl>
+					<dt>Che cos'è</dt><dd>L'ospizio medievale dei pellegrini (<em>Domus Hospitalis Sancti Jacobi et Altopassu</em>), menzionato per la prima volta nel 1084 — a lungo il più celebre rifugio sulla strada tra Lucca e l'Arno.<sup class="ref"><a href="#s-altopascio">12</a></sup></dd>
+					<dt>L'ordine fondatore</dt><dd>L'Ordine di San Jacopo di Altopascio — i «Cavalieri del Tau», così detti per la croce a tau (&tau;) che portavano. Fondato da Matilde di Canossa, 1070&ndash;80 ca.; tra i primi degli ordini ospitalieri-militari.<sup class="ref"><a href="#s-tau">13</a></sup></dd>
+					<dt>La chiesa</dt><dd>San Jacopo — Santi Jacopo, Cristoforo ed Eligio — annessa all'ospizio.<sup class="ref"><a href="#s-altopascio">12</a></sup></dd>
+					<dt>Da non perdere</dt><dd>La campana del campanile, <em>La Smarrita</em>. Ogni notte, da mezz'ora prima del tramonto a mezz'ora dopo, veniva suonata per richiamare il pellegrino che si fosse smarrito dalla strada nella palude e nei boschi.<sup class="ref"><a href="#s-tau">13</a></sup></dd>
+					<dt>Una preghiera</dt><dd>Per gli <em>smarriti</em> — e in ringraziamento che qualcuno, un tempo, suonò una campana per loro.</dd>
+					<dt>Pratica</dt><dd><span class="verify">Verifica in giornata gli orari di apertura e delle Messe.</span> Informazioni ufficiali sul percorso: <a href="https://www.viefrancigene.org/it/resource/poi/altopascio/" target="_blank" rel="noopener">viefrancigene.org</a>.</dd>
+				</dl>
+			</div>
+
+			<p>Oltre Altopascio la pianura prosegue verso Fucecchio e l'Arno; poi un unico colle si stacca dal piano, una torre sulla sua cima, e gli ultimi chilometri del giorno sono la salita.</p>
+
+			<p>In cima attende San Miniato — <em>San Miniato al Tedesco</em>. L'epiteto è un fossile dell'impero. Dal 1116 il vicario imperiale Rabodo fece della città la sede del governo imperiale in Toscana, soppiantando Firenze; i vicari che ressero la provincia da questo colle erano per lo più tedeschi, e il nome rimase.<sup class="ref"><a href="#s-sanminiato">9</a></sup> Sotto l'imperatore Federico II le mura furono ampliate e fu costruita la Rocca, la cui torre svetta sulla sommità, a 192 metri, sull'intero Valdarno.<sup class="ref"><a href="#s-sanminiato">9</a></sup> È un luogo adatto a chiudere un giorno il cui Vangelo parla di lasciare un signore per seguirne un altro: una città innalzata per detenere il potere terreno, guardata a sera da due persone che hanno pedalato tutto il giorno verso un altro regno.</p>
+		</section>
+
+		<!-- ============================== SECONDA SOSTA ============================== -->
+		<section class="part" id="meditation">
+			<div class="part-label"><h2>La Parola</h2><span class="rt">10 min</span></div>
+			<div class="subeyebrow">Meditazione biblica — La chiamata di Abramo</div>
+
+			<blockquote class="reading">
+				<p>Il Signore disse ad Abram: «Vattene dalla tua terra, dalla tua parentela e dalla casa di tuo padre, verso la terra che io ti indicherò»&hellip; Allora Abram partì, come gli aveva ordinato il Signore, e con lui partì Lot. Abram aveva settantacinque anni quando lasciò Carran&hellip; Abram attraversò la terra fino alla località di Sichem&hellip; Allora Abram costruì in quel luogo un altare al Signore che gli era apparso&hellip; Poi Abram levò la tenda per andare ad accamparsi nel Negheb.</p>
+				<span class="cite">Genesi 12,1&ndash;9, passi scelti · versione CEI 2008<sup class="ref"><a href="#s-gen">2</a></sup></span>
+			</blockquote>
+
+			<p>Ascoltala lentamente. Un uomo anziano a Carran, stabile, con una casa e un nome, riceve l'ordine di destabilizzarsi: <em>Vattene.</em> Il comando toglie via, una clausola dopo l'altra, tutto ciò che àncora una vita — la tua terra, la tua parentela, la casa di tuo padre — e offre in cambio solo una direzione e una promessa: <em>verso la terra che io ti indicherò.</em> Non una terra che gli viene mostrata ora. Una terra che gli sarà mostrata, poi, lungo il cammino. La meta è trattenuta perché l'andare stesso diventi un atto di fiducia.</p>
+
+			<p>Ha settantacinque anni. Non è l'avventura di un giovane; è un'intera vita rimessa sui cardini a un'età in cui la maggior parte degli uomini si è guadagnata il diritto di stare fermi. Ed egli va — il testo non spreca parole sulla sua esitazione — e non va da solo. <em>Con lui partì Lot.</em> Il primo pellegrinaggio della Scrittura non è una solitudine. È una partenza condivisa, un uomo più anziano e uno più giovane che si mettono in cammino sotto la stessa promessa, dividendo tra loro la strada e il rischio.</p>
+
+			<p>Nota che cosa fa Abram quando si ferma. Costruisce un altare. E ancora, più avanti, ne costruisce un altro. Si muove «per tappe», e ogni tappa è segnata non da quanto ha percorso ma da un luogo in cui si è rivolto a Dio. La strada medievale su cui sei tenne la stessa grammatica: era misurata in <em>mansiones</em>, luoghi di sosta, e Sigerico li contò uno per uno da Roma. Un pellegrinaggio è una vita ridotta alla sua forma onesta — una serie di tappe, ciascuna delle quali termina, se glielo permetti, a un altare. La stanchezza nelle gambe stasera non è un'interruzione del viaggio. È il viaggio. La promessa è mantenuta nell'andare, non alla fine di esso.</p>
+
+			<div class="journal">
+				<div class="subeyebrow">Due domande per la strada</div>
+				<ol>
+					<li>Ad Abramo non viene detto dove sta andando, solo che gli sarà mostrato. Dove, nella mia vita, mi è chiesto di muovermi prima di poter vedere la meta?</li>
+					<li>Non parte da solo. Che cosa mi chiede rendere questa strada, e la sua promessa, qualcosa di condiviso — padre e figlio nella stessa missione?</li>
+				</ol>
+			</div>
+		</section>
+
+		<!-- ============================== ARRIVO ============================== -->
+		<section class="part" id="arrival">
+			<div class="part-label"><h2>Arrivo</h2><span class="rt">15–20 min</span></div>
+			<div class="subeyebrow">Riflessione teologica — Il Prologo di Benedetto</div>
+
+			<figure class="art">
+				<img src="img/duccio-calling-peter-andrew.jpg"
+					 alt="La tavola di Duccio con Cristo sulla riva che chiama Pietro e Andrea dalla barca" loading="lazy" />
+				<figcaption>Duccio di Buoninsegna, <em>La chiamata degli apostoli Pietro e Andrea</em>, 1308&ndash;1311, tempera su tavola. National Gallery of Art, Washington (Samuel H. Kress Collection). Pubblico dominio.<sup class="ref"><a href="#s-duccio">10</a></sup></figcaption>
+			</figure>
+
+			<blockquote class="reading">
+				<p>Ascolta, o figlio, gli insegnamenti del maestro e piega l'orecchio del tuo cuore; accogli volentieri l'esortazione del padre che ti ama e mettila davvero in pratica, affinché tu possa tornare, con la fatica dell'obbedienza, a Colui dal quale ti eri allontanato per l'ignavia della disobbedienza.</p>
+				<span class="cite">Regola di San Benedetto, Prologo<sup class="ref"><a href="#s-rb">11</a></sup></span>
+			</blockquote>
+
+			<p>Benedetto apre l'intera sua Regola con l'orecchio. Prima di una sola regola della casa, prima delle ore, dei pasti e del lavoro, c'è una postura: <em>piega l'orecchio del tuo cuore.</em> È la stessa parola che ti ha dato il mattino — obbedienza, <em>ob-audire</em>, il chinarsi in ascolto. Benedetto ti dice soltanto dove conduce. La fatica dell'obbedienza, dice, è il modo in cui «puoi tornare a Colui dal quale ti eri allontanato».</p>
+
+			<p>Quell'unico verbo, <em>tornare</em>, riscrive l'intero viaggio. Non pensavi, stamattina, di stare tornando indietro. Pensavi di partire — strada nuova, paese nuovo, la ruota anteriore puntata verso una città che non hai mai raggiunto per questa via. Benedetto dice: no. Ogni passo verso Dio è un passo verso casa. Il pellegrinaggio a Roma non è una spedizione nell'ignoto ma un lungo atto di ritorno, intrapreso da cuori che, come diceva Agostino all'alba, sono fatti per Dio e altrove restano inquieti. La strada non fa che rendere visibile un ritorno che è sempre stato la vera forma dell'anima.</p>
+
+			<p>E chiudi il giorno, opportunamente, sul colle degli imperatori. San Miniato fu costruita per proiettare un potere che si misurava in mura, torri e vicari — la città terrena, nell'antica distinzione di Agostino, la città fondata sull'amore di sé.<sup class="ref"><a href="#s-sanminiato">9</a></sup> La torre di Federico svetta ancora sulla pianura che hai attraversato. Vale la pena sedersi sotto di essa stasera e lasciare che le due specie di grandezza stiano fianco a fianco: la grandezza che fortifica una cima, e la grandezza di due persone stanche che oggi non possedevano quasi nulla se non una direzione. Benedetto non era ingenuo sulla prima specie — anche i suoi monaci tenevano mura. Ma ordinava ogni cosa alla seconda: il ritorno, l'ascolto, la fatica che porta a casa, per tappe, un cuore inquieto.</p>
+
+			<h3>Preghiera della sera</h3>
+			<div class="prayer">
+				Nelle tue mani, Signore, consegno il mio spirito.<br>
+				Custodiscici, Signore, come la pupilla degli occhi;<br>
+				proteggici all'ombra delle tue ali.<br>
+				Gloria al Padre e al Figlio e allo Spirito Santo&hellip;
+				<span class="cite">Dalla Compieta: il responsorio (Sal 31,6) e l'antifona (Sal 17,8)<sup class="ref"><a href="#s-hours">4</a></sup></span>
+			</div>
+
+			<div class="journal">
+				<div class="subeyebrow">Diario — tre domande</div>
+				<ol>
+					<li>Benedetto chiama il cammino un <em>ritorno</em>. In che senso oggi è sembrato un partire — e in che senso un tornare a casa?</li>
+					<li>Che cosa mi è costata davvero la fatica dell'obbedienza sulla strada di oggi, nel corpo e nella volontà?</li>
+					<li>Sotto la torre dell'imperatore: quale grandezza desidero in segreto — e quale dico di desiderare?</li>
+				</ol>
+			</div>
+		</section>
+
+		<!-- ============================== FONTI ============================== -->
+		<div class="biblio" id="sources">
+			<h2>Fonti ed edizioni</h2>
+			<p style="font-size:0.82rem; color:var(--ink-soft);">Ogni citazione è riportata dall'edizione indicata; le affermazioni storiche derivano dai riferimenti qui sotto. Dove un'informazione (orari, orari delle Messe, punti timbro) non ha potuto essere verificata, è omessa o segnalata per la conferma in loco anziché affermata. Le citazioni dei Padri sono rese in italiano per questo breviario a partire dalle edizioni critiche indicate.</p>
+			<ol>
+				<li id="s-mt">Matteo 4,18&ndash;22. <em>La Sacra Bibbia</em>, versione CEI 2008, via bibbiaedu.it. <a href="https://www.bibbiaedu.it/CEI2008/nt/Mt/4/" target="_blank" rel="noopener">bibbiaedu.it</a></li>
+				<li id="s-gen">Genesi 12,1&ndash;9. <em>La Sacra Bibbia</em>, versione CEI 2008, via bibbiaedu.it. <a href="https://www.bibbiaedu.it/CEI2008/at/Gen/12/" target="_blank" rel="noopener">bibbiaedu.it</a></li>
+				<li id="s-conf">Agostino, <em>Confessioni</em>, libro I, cap. 1 (testo latino: «fecisti nos ad te et inquietum est cor nostrum donec requiescat in te»). Traduzione italiana per questo breviario. <a href="https://www.augustinus.it/latino/confessioni/index.htm" target="_blank" rel="noopener">augustinus.it</a></li>
+				<li id="s-hours">I testi liturgici (versetto introduttivo, <em>Gloria al Padre</em>, Padre nostro, responsorio e antifona di Compieta) sono preghiere fisse del Rito Romano; le basi scritturistiche sono Sal 70,2; Sal 31,6; Sal 17,8; Mt 6,9&ndash;13 (CEI 2008).</li>
+				<li id="s-volto">«Volto Santo di Lucca.» Wikipedia (consultata luglio 2026), che riassume la datazione al radiocarbonio (770&ndash;880 ca.), il tempietto del Civitali (1482&ndash;84) e le attestazioni medievali. <a href="https://it.wikipedia.org/wiki/Volto_Santo_di_Lucca" target="_blank" rel="noopener">it.wikipedia.org/wiki/Volto_Santo_di_Lucca</a> <span class="verify">(fonte secondaria; datazione scientifica e statuto leggendario segnalati nel testo)</span></li>
+				<li id="s-sigeric">Itinerario di Sigerico (990 d.C.) e Lucca come <em>submansio XXV</em> («Luca»). «Via Francigena» e «Sigerico», Wikipedia (consultata luglio 2026); manoscritto primario: British Library, Cotton MS Tiberius B.V. <a href="https://it.wikipedia.org/wiki/Via_Francigena" target="_blank" rel="noopener">it.wikipedia.org/wiki/Via_Francigena</a></li>
+				<li id="s-gpx">Distanza (46 km) e dislivello (~350 m): misurati dalla traccia GPS registrata del giorno (tappa ciclabile della Via Francigena, Lucca&ndash;San Miniato).</li>
+				<li id="s-cattedrale">Cattedrale di San Martino / Museo della Cattedrale, Lucca — informazioni ufficiali (orari e orari delle Messe da confermare in loco). <a href="https://www.museocattedralelucca.it/" target="_blank" rel="noopener">museocattedralelucca.it</a></li>
+				<li id="s-sanminiato">«San Miniato.» Wikipedia (consultata luglio 2026): il vicariato imperiale dal 1116 (Rabodo), l'epiteto «al Tedesco» e la Rocca e la torre di Federico II (sommità, 192 m). <a href="https://it.wikipedia.org/wiki/San_Miniato" target="_blank" rel="noopener">it.wikipedia.org/wiki/San_Miniato</a></li>
+				<li id="s-duccio">Duccio di Buoninsegna, <em>La chiamata degli apostoli Pietro e Andrea</em> (1308&ndash;1311). National Gallery of Art, Washington, Samuel H. Kress Collection. Pubblico dominio. Immagine via Wikimedia Commons. <a href="https://www.nga.gov/artworks/282-calling-apostles-peter-and-andrew" target="_blank" rel="noopener">nga.gov</a></li>
+				<li id="s-rb">Regola di San Benedetto, Prologo (testo latino: «Ausculta, o fili, praecepta magistri, et inclina aurem cordis tui»). Traduzione italiana per questo breviario. <a href="https://archive.osb.org/rb/text/rbejms1.html" target="_blank" rel="noopener">archive.osb.org/rb</a></li>
+				<li id="s-altopascio">«Altopascio.» Wikipedia (consultata luglio 2026): lo <em>Spedale</em> menzionato per la prima volta nel 1084; l'Ordine di San Jacopo di Altopascio fondato da Matilde di Canossa, 1070&ndash;80 ca.; la chiesa di San Jacopo (Santi Jacopo, Cristoforo ed Eligio) annessa all'ospizio. <a href="https://it.wikipedia.org/wiki/Altopascio" target="_blank" rel="noopener">it.wikipedia.org/wiki/Altopascio</a></li>
+				<li id="s-tau">«Ordine di San Jacopo di Altopascio» (Cavalieri del Tau). Wikipedia (consultata luglio 2026): forse il primo ordine a unire la cura dei pellegrini, un ospedale e un braccio militare; la <em>Domus Hospitalis Sancti Jacobi</em> attiva fino al 1780; la campana «La Smarrita» suonata ogni notte, da mezz'ora prima del tramonto a mezz'ora dopo, per guidare i pellegrini smarriti. <a href="https://it.wikipedia.org/wiki/Ordine_di_San_Jacopo_di_Altopascio" target="_blank" rel="noopener">it.wikipedia.org/wiki/Ordine_di_San_Jacopo_di_Altopascio</a></li>
+			</ol>
+		</div>
+
+		<nav class="daynav">
+			<span class="disabled">&larr; Prologo</span>
+			<a href="index.html">Tutti i giorni</a>
+			<a href="day-2.it.html">Giorno 2 · Conversione &rarr;</a>
+		</nav>
+
+	</div>
+
+	<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+	<script src="https://unpkg.com/leaflet-gpx@1.7.0/gpx.js"></script>
+	<script>
+		// ---- meteo dal vivo + sole per la destinazione del giorno (Open-Meteo, senza chiave) ----
+		(function () {
+			var el = document.getElementById('wx');
+			if (!el) return;
+			var lat = el.dataset.lat, lon = el.dataset.lon, place = el.dataset.place;
+			var url = 'https://api.open-meteo.com/v1/forecast?latitude=' + lat + '&longitude=' + lon +
+				'&current=temperature_2m&daily=temperature_2m_max,temperature_2m_min,sunrise,sunset&timezone=Europe%2FRome';
+			fetch(url).then(function (r) { return r.json(); }).then(function (d) {
+				function hhmm(s) { return s ? s.slice(11, 16) : '—'; }
+				var now = Math.round(d.current.temperature_2m);
+				var hi = Math.round(d.daily.temperature_2m_max[0]);
+				var lo = Math.round(d.daily.temperature_2m_min[0]);
+				el.innerHTML = 'Adesso a <strong>' + place + '</strong> ' + now + '°C · oggi ' + hi + '° / ' + lo + '°C · ' +
+					'<span class="sun">☀ ' + hhmm(d.daily.sunrise[0]) + ' – ' + hhmm(d.daily.sunset[0]) + '</span>' +
+					'<br><span style="font-size:0.72rem;">condizioni dal vivo, aggiornate a ogni lettura</span>';
+			}).catch(function () {
+				el.innerHTML = 'Il meteo è caricato dal vivo e richiede una connessione. <span style="font-size:0.75rem;">(Al momento offline.)</span>';
+			});
+		})();
+
+		// ---- mappa del percorso del giorno ----
+		(function () {
+			var mapEl = document.getElementById('map');
+			if (!mapEl || typeof L === 'undefined') return;
+			var bounds = L.latLngBounds([[43.66, 10.48], [43.86, 10.86]]);
+			var map = L.map('map', { scrollWheelZoom: false }).fitBounds(bounds, { padding: [16, 16] });
+			L.tileLayer('https://{s}.tile-cyclosm.openstreetmap.fr/cyclosm/{z}/{x}/{y}.png', {
+				attribution: 'CyclOSM | &copy; OpenStreetMap', maxZoom: 18, subdomains: 'abc'
+			}).addTo(map);
+			new L.GPX('../days/day-1-lucca-san-miniato.gpx', {
+				async: true,
+				marker_options: { startIconUrl: '', endIconUrl: '', shadowUrl: '' },
+				polyline_options: { color: '#7a2e3b', weight: 4, opacity: 0.9 }
+			}).on('loaded', function (e) {
+				try { map.fitBounds(e.target.getBounds(), { padding: [16, 16] }); } catch (err) {}
+			}).addTo(map);
+			setTimeout(function () { map.invalidateSize(); }, 300);
+		})();
+	</script>
+
+</body>
+</html>
