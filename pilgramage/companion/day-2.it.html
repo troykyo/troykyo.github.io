@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+	<meta charset="utf-8" />
+	<title>Giorno 2 · San Miniato → San Gimignano · La conversione — Il breviario del pellegrino</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="robots" content="noindex, nofollow" />
+	<meta name="description" content="Un breviario quotidiano per la Via Francigena. Giorno 2: da San Miniato a San Gimignano — la conversione." />
+	<link rel="icon" href="../../favicon.svg" type="image/svg+xml" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+	<link rel="stylesheet" href="breviary.css" />
+</head>
+<body>
+
+	<div class="topbar">
+		<div class="inner">
+			<a class="home" href="index.html">Il breviario del pellegrino</a>
+			<nav>
+				<a href="#morning">Mattino</a>
+				<a href="#road">Strada</a>
+				<a href="#meditation">Parola</a>
+				<a href="#arrival">Arrivo</a>
+			</nav>
+			<a class="lang" href="day-2.html">English</a>
+		</div>
+	</div>
+
+	<div class="wrap">
+
+		<header class="dayhead">
+			<div class="eyebrow">Via Francigena · Giorno II</div>
+			<h1>San Miniato &rarr; San Gimignano</h1>
+			<div class="route">Lunedì 20 luglio · tra le colline dell'Elsa</div>
+			<div class="arc">La conversione &nbsp;·&nbsp; Virtù: Misericordia</div>
+		</header>
+
+		<!-- ============================== MATTINO ============================== -->
+		<section class="part" id="morning">
+			<div class="part-label"><h2>Mattino</h2><span class="rt">5 min</span></div>
+
+			<div class="data">
+				<div class="d"><span class="n">42 km</span><span class="l">Distanza</span></div>
+				<div class="d"><span class="n">~740 m</span><span class="l">Dislivello</span></div>
+				<div class="d"><span class="n">4–5 h</span><span class="l">In sella (stima)</span></div>
+			</div>
+			<div class="wx" id="wx" data-lat="43.4677" data-lon="11.0434" data-place="San Gimignano">
+				Caricamento del meteo di San Gimignano&hellip;
+			</div>
+			<p style="font-size:0.86rem; color:var(--ink-soft); margin-top:-0.9rem;">
+				Terreno: oggi la campagna cambia — fuori dalla piana dell'Arno e dentro le basse colline della Val d'Elsa, vigne e <em>strade bianche</em>, con salita costante verso le torri. Distanza e dislivello sono misurati dalla traccia GPS del giorno.<sup class="ref"><a href="#s-gpx">9</a></sup>
+			</p>
+
+			<h3>La virtù di oggi — Misericordia</h3>
+			<div class="virtue">
+				<div class="word">Misericordia</div>
+				<div class="gloss">latino <em>misericordia</em> — un cuore (<em>cor</em>) che si volge verso il misero (<em>miser</em>)</div>
+			</div>
+			<p>Ieri era la chiamata; oggi è la conversione — il lento voltarsi di una vita dopo che ha udito. E la conversione, nel Vangelo, non comincia con la nostra salita verso Dio. Comincia con la misericordia che scende fino a noi dove siamo seduti.</p>
+
+			<h3>Preghiera del mattino</h3>
+			<div class="prayer">
+				O Dio, vieni a salvarmi.<br>
+				Signore, vieni presto in mio aiuto.<br>
+				Gloria al Padre e al Figlio e allo Spirito Santo.<br>
+				Come era nel principio, e ora e sempre,<br>
+				nei secoli dei secoli. Amen.
+				<span class="cite">Versetto introduttivo della Liturgia delle Ore (Sal 70,2) con il <em>Gloria al Padre</em><sup class="ref"><a href="#s-hours">5</a></sup></span>
+			</div>
+
+			<h3>Scrittura</h3>
+			<blockquote class="reading">
+				<p>Andando via di là, Gesù vide un uomo, chiamato Matteo, seduto al banco delle imposte, e gli disse: «Seguimi». Ed egli si alzò e lo seguì. Mentre sedeva a tavola nella casa, sopraggiunsero molti pubblicani e peccatori e se ne stavano a tavola con Gesù e con i suoi discepoli. Vedendo ciò, i farisei dicevano ai suoi discepoli: «Come mai il vostro maestro mangia insieme ai pubblicani e ai peccatori?». Udito questo, disse: «Non sono i sani che hanno bisogno del medico, ma i malati. Andate a imparare che cosa vuol dire: <em>Misericordia io voglio e non sacrifici</em>. Io non sono venuto infatti a chiamare i giusti, ma i peccatori».</p>
+				<span class="cite">Matteo 9,9&ndash;13 · versione CEI 2008<sup class="ref"><a href="#s-mt">1</a></sup></span>
+			</blockquote>
+
+			<figure class="art">
+				<img src="img/day2-caravaggio-calling-st-matthew.jpg"
+					 alt="Il dipinto di Caravaggio con Cristo che chiama Matteo dal banco delle imposte, un fascio di luce attraversa la stanza" loading="lazy" />
+				<figcaption>Caravaggio, <em>La vocazione di san Matteo</em>, 1599&ndash;1600, olio su tela. Cappella Contarelli, San Luigi dei Francesi, Roma. Pubblico dominio.<sup class="ref"><a href="#s-art">10</a></sup></figcaption>
+			</figure>
+
+			<h3>Da Agostino</h3>
+			<div class="quote">
+				«Tardi ti ho amato, bellezza tanto antica e tanto nuova, tardi ti ho amato!»
+				<span class="cite">Agostino, <em>Confessioni</em> X,27<sup class="ref"><a href="#s-conf10">3</a></sup></span>
+			</div>
+
+			<h3>Riflessione del mattino</h3>
+			<p>La strada lascia San Miniato come l'ha trovata — su un'altura — e ti fa scendere nella valle dell'Elsa, dove la pianura cede il posto alle vigne e le strade bianche salgono tra loro verso un profilo di torri. È una campagna bellissima, ed è anche una campagna di soglie: oggi stai attraversando, da un tipo di terra a un altro. È anche il lavoro interiore del giorno.</p>
+			<p>Matteo non è su una cima quando Cristo lo trova. È al banco delle imposte — la dogana — a fare l'unico mestiere che rendeva un uomo insieme ricco e odiato, collaborando con Roma contro la sua stessa gente. È esattamente il tipo di persona che i devoti evitavano cambiando strada. Ed è a lui, a metà di una transazione, che giunge la parola: <em>Seguimi.</em> Qui la conversione non è la ricompensa di una vita pulita; è offerta al compromesso, all'invischiato, all'uomo che tutti avevano cancellato. «Non sono venuto a chiamare i giusti — dice Gesù agli scandalizzati — ma i peccatori.»</p>
+			<p>Nota, inoltre, che la risposta di Matteo non è un ritiro ma un banchetto. Si alza, segue — e poi spalanca la sua casa a una tavola piena di pubblicani e peccatori, con Gesù in mezzo a loro. La conversione trabocca. La misericordia che lo ha raggiunto non lo rende schizzinoso; lo rende ospitale proprio verso le persone che egli stesso era stato. Volgersi a Dio è, nello stesso istante, smettere di disprezzare i miseri — perché hai finalmente capito che eri uno di loro, e sei stato amato lo stesso.</p>
+			<p>Agostino, che per anni fuggì ciò che gli era più vicino di quanto egli stesso non lo fosse a sé, mise l'ansia di tutto questo in poche parole: <em>tardi ti ho amato.</em> Il ritardo è l'intera confessione. La conversione non è la scoperta di uno sconosciuto; è il riconoscimento, finalmente, di una misericordia che ti era stata seduta accanto, al banco, per tutto il tempo.</p>
+
+			<div class="challenge">
+				<p>Che cosa in me ho difeso a lungo come giusto — mentre Cristo è venuto invece a chiamare un peccatore, e a guarirlo?</p>
+			</div>
+
+			<h3>Preghiera conclusiva</h3>
+			<div class="prayer">
+				Signore Gesù Cristo, Figlio di Dio,<br>
+				abbi pietà di me peccatore.
+				<span class="cite">La Preghiera del cuore (cfr. Luca 18,13.38)<sup class="ref"><a href="#s-hours">5</a></sup></span>
+			</div>
+		</section>
+
+		<!-- ============================== PRIMA SOSTA ============================== -->
+		<section class="part" id="road">
+			<div class="part-label"><h2>Lungo la strada</h2><span class="rt">10 min</span></div>
+
+			<div id="map"></div>
+			<p style="font-size:0.8rem; color:var(--ink-soft); margin-top:0.3rem;">
+				Il percorso di oggi, da San Miniato a San Gimignano. Mappa &copy; <a href="https://www.cyclosm.org/" target="_blank" rel="noopener">CyclOSM</a> / <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>. <a href="../index.html#route" target="_blank" rel="noopener">Profilo altimetrico completo e tutte le tappe &rarr;</a>
+			</p>
+
+			<p>Finalmente è la Toscana classica: la Val d'Elsa che si apre in lunghe onde di vigne e ulivi, le strade bianche non asfaltate che si annodano sui crinali. Sono le colline della Vernaccia, l'antico vitigno bianco coltivato sui pendii arenari di San Gimignano.<sup class="ref"><a href="#s-sangim">7</a></sup> Il pedalare è più regolare e più lento di ieri; la salita è onesta ma mai crudele.</p>
+
+			<p>La strada segue la linea dei pellegrini per tutto il tragitto. Intorno al ventiquattresimo chilometro, a Gambassi Terme, passa quasi contro il muro di una piccola chiesa romanica — un luogo naturale in cui fermarsi.</p>
+
+			<div class="church">
+				<h3>Pieve di Santa Maria a Chianni, Gambassi Terme</h3>
+				<img class="thumb" src="img/day2-pieve-chianni.jpg" alt="La facciata romanica in pietra della Pieve di Santa Maria a Chianni" loading="lazy" />
+				<span class="credit">Foto: Vignaccia76 (CC BY-SA 3.0) · <a href="https://commons.wikimedia.org/wiki/File:Pieve_di_chianni_front.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></span>
+				<dl>
+					<dt>Che cos'è</dt><dd>Una <em>pieve</em> romanica (chiesa parrocchiale di campagna) presso Gambassi Terme, che sorge direttamente sulla Via Francigena — la traccia del giorno le passa a circa 170 metri.<sup class="ref"><a href="#s-gambassi">6</a></sup></dd>
+					<dt>Architettura</dt><dd>Romanica, del dodicesimo secolo — la pietra semplice e robusta delle chiese dei pellegrini della valle dell'Elsa.<sup class="ref"><a href="#s-gambassi">6</a></sup></dd>
+					<dt>Perché ha contato</dt><dd>Una chiesa lungo la grande strada: ombra, acqua e una soglia da varcare per il pellegrino tra San Miniato e San Gimignano. Gambassi era essa stessa una stazione della Francigena.</dd>
+					<dt>Da osservare</dt><dd>L'abside romanica e l'interno spoglio — un'architettura che chiede silenzio più che ammirazione.</dd>
+					<dt>Una preghiera</dt><dd>Alla porta, la riga del giorno: <em>«Misericordia io voglio e non sacrifici».</em></dd>
+					<dt>Pratica</dt><dd><span class="verify">Verifica l'apertura in giornata.</span> Informazioni ufficiali sul percorso: <a href="https://www.viefrancigene.org/it/" target="_blank" rel="noopener">viefrancigene.org</a>.</dd>
+				</dl>
+			</div>
+
+			<p>Poi, per l'ultima ora, le torri. San Gimignano sorge sul suo colle dietro un profilo che quasi non ha eguali in Italia. Al culmine del Medioevo la città innalzò circa settantadue case-torri, alte fino a settanta metri, ogni famiglia rispondendo all'altezza di un'altra con la propria; quattordici ne restano in piedi, là dove quasi ovunque tali torri furono abbattute.<sup class="ref"><a href="#s-sangim">7</a></sup> Sono monumenti, in fondo, alla rivalità — una gara di pietra, l'esatto opposto del Vangelo del giorno. Sali tra esse tenendo a mente questa ironia. Dentro le mura, la Collegiata di Santa Maria Assunta custodisce cicli di affreschi del Trecento e del Quattrocento, e gli affreschi di Domenico Ghirlandaio con la santa cittadina, Fina, nella sua cappella.<sup class="ref"><a href="#s-sangim">7</a></sup> Ma la chiesa da tenere per questa sera è un'altra.</p>
+		</section>
+
+		<!-- ============================== SECONDA SOSTA ============================== -->
+		<section class="part" id="meditation">
+			<div class="part-label"><h2>La Parola</h2><span class="rt">10 min</span></div>
+			<div class="subeyebrow">Meditazione biblica — Il figlio prodigo</div>
+
+			<blockquote class="reading">
+				<p>«Un uomo aveva due figli; il più giovane dei due disse al padre: "Padre, dammi la parte di patrimonio che mi spetta"&hellip; il figlio più giovane, raccolte tutte le sue cose, partì per un paese lontano e là sperperò il suo patrimonio vivendo in modo dissoluto&hellip; Allora ritornò in sé e disse: "Mi alzerò, andrò da mio padre"&hellip; Si alzò e tornò da suo padre. Quando era ancora lontano, suo padre lo vide, ebbe compassione, gli corse incontro, gli si gettò al collo e lo baciò&hellip; perché questo mio figlio era morto ed è tornato in vita, era perduto ed è stato ritrovato.»</p>
+				<span class="cite">Luca 15,11&ndash;24, passi scelti · versione CEI 2008<sup class="ref"><a href="#s-lk">2</a></sup></span>
+			</blockquote>
+
+			<p>Leggila come una storia di strada, perché lo è. Un giovane misura in anticipo la sua vita — la parte di patrimonio, la somma di tutto ciò che un giorno sarà suo — la prende, e parte. Va, dice il testo, <em>in un paese lontano</em>, e lì si consuma finché non resta nulla, finché una carestia lo trova tra i porci, affamato delle carrube che mangiano. Ecco che cosa significa allontanarsi dalla misericordia: non una malvagità clamorosa, solo un lento sperperare, finché un giorno alzi lo sguardo e non sai come sei arrivato così lontano.</p>
+
+			<p>E poi la frase che capovolge l'intera parabola: <em>ritornò in sé.</em> La conversione è descritta non come trovare qualcosa di nuovo ma come tornare a sé stessi — svegliarsi, nel porcile, a chi si è davvero e di chi si è. La strada del ritorno viene provata nel fango; egli ripassa il suo piccolo discorso. Ma non lo finisce mai. <em>Quando era ancora lontano</em>, il padre lo vide — il che significa che il padre scrutava la strada — e fa la cosa indecorosa, corre, e il discorso si scioglie in un abbraccio. Il figlio si era preparato a contrattare il ritorno per la paga di un servo. La misericordia non ne vuol sapere.</p>
+
+			<p>Voi siete in due su questa strada, un padre e un figlio, e la parabola non lascia scampo a nessuno dei due. A chi è andato nel paese lontano dice: non è mai troppo tardi per tornare in sé e voltarsi. A chi aspetta e scruta la strada dice: quando l'altro appare, non restare sulla soglia a contare il prezzo — corri. L'intero Vangelo è in quel correre.</p>
+
+			<div class="journal">
+				<div class="subeyebrow">Due domande per la strada</div>
+				<ol>
+					<li>Dov'è il mio «paese lontano» — il luogo verso cui sono andato di nascosto, un po' alla volta, senza deciderlo?</li>
+					<li>Sono, oggi, colui che torna a casa, o colui che deve correre incontro all'altro? Che cosa mi chiede questo?</li>
+				</ol>
+			</div>
+		</section>
+
+		<!-- ============================== ARRIVO ============================== -->
+		<section class="part" id="arrival">
+			<div class="part-label"><h2>Arrivo</h2><span class="rt">15–20 min</span></div>
+			<div class="subeyebrow">Riflessione teologica — La conversione di Agostino</div>
+
+			<blockquote class="reading">
+				<p>Udii una voce come di fanciullo o fanciulla&hellip; che diceva cantando e ripeteva più volte: «Prendi e leggi, prendi e leggi»&hellip; Afferrai il libro, lo aprii e lessi in silenzio il primo passo su cui mi caddero gli occhi: «Non nelle crapule e nelle ebbrezze, non negli amplessi e nelle impudicizie, non nelle contese e nelle gelosie, ma rivestitevi del Signore Gesù Cristo»&hellip; Non volli leggere oltre, né occorreva; all'istante&hellip; tutte le tenebre del dubbio si dileguarono.</p>
+				<span class="cite">Agostino, <em>Confessioni</em> VIII,12<sup class="ref"><a href="#s-conf8">4</a></sup></span>
+			</blockquote>
+
+			<p>Chiudi il giorno, se lo scegli bene, nell'edificio giusto. Dentro le mura di San Gimignano sorge la chiesa di Sant'Agostino, la chiesa dei frati dell'ordine agostiniano; e lungo l'intera abside dietro l'altare corre un ciclo di diciassette affreschi, dipinti da Benozzo Gozzoli tra il 1463 e il 1467 per il dotto frate agostiniano Domenico Strambi, che raccontano la vita di Agostino stesso.<sup class="ref"><a href="#s-gozzoli">8</a></sup> Tra le scene di quella parete ce n'è una di un uomo in un giardino, che apre un libro — Agostino che legge la lettera di Paolo.<sup class="ref"><a href="#s-gozzoli">8</a></sup> È il momento che hai appena letto. Puoi chiudere un giorno sulla conversione stando davanti a un dipinto della più celebre conversione della Chiesa d'Occidente, nella chiesa del suo stesso ordine, al termine di una strada di pellegrini.</p>
+
+			<p>Agostino aveva passato anni, per sua stessa ammissione, incapace di colmare la distanza tra ciò che vedeva e ciò che riusciva a decidersi a fare. L'intelletto si era arreso molto prima che la volontà lo seguisse. E quando la rottura finalmente venne, non venne attraverso un ragionamento ma attraverso la voce di un bambino oltre il muro di un giardino e un solo versetto letto quasi a caso. La grazia non attese che egli fosse degno; lo colse di sorpresa nel mezzo dell'esitazione, come la parola giunse a Matteo al banco e il padre corse mentre il figlio ancora provava il discorso. È lo schema che l'intero giorno ha tracciato: una misericordia che non resta sulla soglia.</p>
+
+			<p>E nota l'ultima riga: <em>non volli leggere oltre, né occorreva.</em> La conversione non è la fine del viaggio — Agostino ha ancora da scrivere tutte le <em>Confessioni</em>, e il resto della sua vita. È il punto in cui il dubbio si dirada quanto basta per continuare a camminare. Domani c'è un'altra tappa, e il giorno dopo un'altra. Ma stasera, sotto torri costruite per la rivalità, nella chiesa di un uomo che imparò tardi la misericordia, basta aver letto quell'unico versetto ed essersi voltati verso casa.</p>
+
+			<h3>Preghiera della sera</h3>
+			<div class="prayer">
+				Nelle tue mani, Signore, consegno il mio spirito.<br>
+				Custodiscici, Signore, come la pupilla degli occhi;<br>
+				proteggici all'ombra delle tue ali.<br>
+				Gloria al Padre e al Figlio e allo Spirito Santo&hellip;
+				<span class="cite">Dalla Compieta: il responsorio (Sal 31,6) e l'antifona (Sal 17,8)<sup class="ref"><a href="#s-hours">5</a></sup></span>
+			</div>
+
+			<div class="journal">
+				<div class="subeyebrow">Diario — tre domande</div>
+				<ol>
+					<li>Agostino vedeva il bene molto prima di poterlo volere. Dov'è in me questa distanza, tra ciò che so e ciò che faccio?</li>
+					<li>Il padre corse; Cristo sedette alla tavola dei peccatori. Chi tengo a distanza, che la misericordia vorrebbe farmi sedere accanto?</li>
+					<li>«Tardi ti ho amato.» Che cosa ho amato per primo, tutti questi anni, che non faceva che indicarmi Colui che l'ha fatto?</li>
+				</ol>
+			</div>
+		</section>
+
+		<!-- ============================== FONTI ============================== -->
+		<div class="biblio" id="sources">
+			<h2>Fonti ed edizioni</h2>
+			<p style="font-size:0.82rem; color:var(--ink-soft);">Ogni citazione è riportata dall'edizione indicata; le affermazioni storiche derivano dai riferimenti qui sotto. Le informazioni non verificabili rimandano alle fonti ufficiali o sono segnalate per la conferma in loco. Le citazioni dei Padri sono rese in italiano per questo breviario a partire dalle edizioni critiche indicate.</p>
+			<ol>
+				<li id="s-mt">Matteo 9,9&ndash;13. <em>La Sacra Bibbia</em>, versione CEI 2008, via bibbiaedu.it. <a href="https://www.bibbiaedu.it/CEI2008/nt/Mt/9/" target="_blank" rel="noopener">bibbiaedu.it</a></li>
+				<li id="s-lk">Luca 15,11&ndash;24. <em>La Sacra Bibbia</em>, versione CEI 2008, via bibbiaedu.it. <a href="https://www.bibbiaedu.it/CEI2008/nt/Lc/15/" target="_blank" rel="noopener">bibbiaedu.it</a></li>
+				<li id="s-conf10">Agostino, <em>Confessioni</em>, libro X, cap. 27 (testo latino: «Sero te amavi, pulchritudo tam antiqua et tam nova, sero te amavi»). Traduzione italiana per questo breviario. <a href="https://www.augustinus.it/latino/confessioni/index.htm" target="_blank" rel="noopener">augustinus.it</a></li>
+				<li id="s-conf8">Agostino, <em>Confessioni</em>, libro VIII, cap. 12 (l'episodio del <em>tolle lege</em>). Traduzione italiana per questo breviario. <a href="https://www.augustinus.it/latino/confessioni/index.htm" target="_blank" rel="noopener">augustinus.it</a></li>
+				<li id="s-hours">I testi liturgici (versetto introduttivo e <em>Gloria al Padre</em>; la Preghiera del cuore; responsorio e antifona di Compieta) sono preghiere fisse della tradizione; basi scritturistiche Sal 70,2; Luca 18,13; Sal 31,6; Sal 17,8.</li>
+				<li id="s-gambassi">«Gambassi Terme.» Wikipedia (consultata luglio 2026): la pieve romanica di Santa Maria, dodicesimo secolo. La sua posizione sulla Via Francigena è confermata dalla traccia GPS del giorno. <a href="https://it.wikipedia.org/wiki/Gambassi_Terme" target="_blank" rel="noopener">it.wikipedia.org/wiki/Gambassi_Terme</a></li>
+				<li id="s-sangim">«San Gimignano.» Wikipedia (consultata luglio 2026): circa 72 torri medievali costruite, 14 superstiti; la Collegiata di Santa Maria Assunta e i suoi affreschi (compresa la cappella di Santa Fina del Ghirlandaio); la città sulla Via Francigena; la Vernaccia di San Gimignano. <a href="https://it.wikipedia.org/wiki/San_Gimignano" target="_blank" rel="noopener">it.wikipedia.org/wiki/San_Gimignano</a></li>
+				<li id="s-gozzoli">Benozzo Gozzoli, ciclo di affreschi con le <em>Storie di sant'Agostino</em> (17 scene), abside di Sant'Agostino, San Gimignano, 1463&ndash;67, commissionato da fra Domenico Strambi. «Sant'Agostino, San Gimignano», Wikipedia, e Web Gallery of Art. <a href="https://it.wikipedia.org/wiki/Chiesa_di_Sant%27Agostino_(San_Gimignano)" target="_blank" rel="noopener">it.wikipedia.org</a> · <a href="https://www.wga.hu/html_m/g/gozzoli/4gimigna/index.html" target="_blank" rel="noopener">wga.hu</a></li>
+				<li id="s-gpx">Distanza (42 km) e dislivello (~740 m): misurati dalla traccia GPS registrata del giorno (tappa ciclabile della Via Francigena, San Miniato&ndash;San Gimignano).</li>
+				<li id="s-art">Opera: Caravaggio, <em>La vocazione di san Matteo</em> (1599&ndash;1600), San Luigi dei Francesi, Roma. Pubblico dominio; immagine digitale via Wikimedia Commons. <a href="https://commons.wikimedia.org/wiki/File:Caravaggio,_Michelangelo_Merisi_da_-_The_Calling_of_Saint_Matthew_-_1599-1600_(hi_res).jpg" target="_blank" rel="noopener">commons.wikimedia.org</a></li>
+			</ol>
+		</div>
+
+		<nav class="daynav">
+			<a href="day-1.it.html">&larr; Giorno 1 · La chiamata</a>
+			<a href="index.html">Tutti i giorni</a>
+			<a href="day-3.it.html">Giorno 3 · La compagnia &rarr;</a>
+		</nav>
+
+	</div>
+
+	<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+	<script src="https://unpkg.com/leaflet-gpx@1.7.0/gpx.js"></script>
+	<script>
+		(function () {
+			var el = document.getElementById('wx');
+			if (!el) return;
+			var lat = el.dataset.lat, lon = el.dataset.lon, place = el.dataset.place;
+			fetch('https://api.open-meteo.com/v1/forecast?latitude=' + lat + '&longitude=' + lon + '&current=temperature_2m&daily=temperature_2m_max,temperature_2m_min,sunrise,sunset&timezone=Europe%2FRome')
+				.then(function (r) { return r.json(); }).then(function (d) {
+					function hhmm(s) { return s ? s.slice(11, 16) : '—'; }
+					el.innerHTML = 'Adesso a <strong>' + place + '</strong> ' + Math.round(d.current.temperature_2m) + '°C · oggi ' +
+						Math.round(d.daily.temperature_2m_max[0]) + '° / ' + Math.round(d.daily.temperature_2m_min[0]) + '°C · ' +
+						'<span class="sun">☀ ' + hhmm(d.daily.sunrise[0]) + ' – ' + hhmm(d.daily.sunset[0]) + '</span>' +
+						'<br><span style="font-size:0.72rem;">condizioni dal vivo, aggiornate a ogni lettura</span>';
+				}).catch(function () { el.innerHTML = 'Il meteo è caricato dal vivo e richiede una connessione.'; });
+		})();
+		(function () {
+			var mapEl = document.getElementById('map');
+			if (!mapEl || typeof L === 'undefined') return;
+			var map = L.map('map', { scrollWheelZoom: false }).fitBounds([[43.46, 10.84], [43.69, 11.05]], { padding: [16, 16] });
+			L.tileLayer('https://{s}.tile-cyclosm.openstreetmap.fr/cyclosm/{z}/{x}/{y}.png', { attribution: 'CyclOSM | &copy; OpenStreetMap', maxZoom: 18, subdomains: 'abc' }).addTo(map);
+			new L.GPX('../days/day-2-san-miniato-san-gimignano.gpx', {
+				async: true, marker_options: { startIconUrl: '', endIconUrl: '', shadowUrl: '' },
+				polyline_options: { color: '#ef7b61', weight: 4, opacity: 0.9 }
+			}).on('loaded', function (e) { try { map.fitBounds(e.target.getBounds(), { padding: [16, 16] }); } catch (err) {} }).addTo(map);
+			setTimeout(function () { map.invalidateSize(); }, 300);
+		})();
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+	<meta charset="utf-8" />
+	<title>Giorno 3 · San Gimignano → Siena · La compagnia — Il breviario del pellegrino</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="robots" content="noindex, nofollow" />
+	<meta name="description" content="Un breviario quotidiano per la Via Francigena. Giorno 3: da San Gimignano a Siena — la compagnia." />
+	<link rel="icon" href="../../favicon.svg" type="image/svg+xml" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+	<link rel="stylesheet" href="breviary.css" />
+</head>
+<body>
+
+	<div class="topbar">
+		<div class="inner">
+			<a class="home" href="index.html">Il breviario del pellegrino</a>
+			<nav>
+				<a href="#morning">Mattino</a>
+				<a href="#road">Strada</a>
+				<a href="#meditation">Parola</a>
+				<a href="#arrival">Arrivo</a>
+			</nav>
+			<a class="lang" href="day-3.html">English</a>
+		</div>
+	</div>
+
+	<div class="wrap">
+
+		<header class="dayhead">
+			<div class="eyebrow">Via Francigena · Giorno III</div>
+			<h1>San Gimignano &rarr; Siena</h1>
+			<div class="route">Martedì 21 luglio · verso la città del Palio</div>
+			<div class="arc">La compagnia &nbsp;·&nbsp; Virtù: Carità</div>
+		</header>
+
+		<!-- ============================== MATTINO ============================== -->
+		<section class="part" id="morning">
+			<div class="part-label"><h2>Mattino</h2><span class="rt">5 min</span></div>
+
+			<div class="data">
+				<div class="d"><span class="n">49 km</span><span class="l">Distanza</span></div>
+				<div class="d"><span class="n">~680 m</span><span class="l">Dislivello</span></div>
+				<div class="d"><span class="n">4½–5½ h</span><span class="l">In sella (stima)</span></div>
+			</div>
+			<div class="wx" id="wx" data-lat="43.3178" data-lon="11.3300" data-place="Siena">
+				Caricamento del meteo di Siena&hellip;
+			</div>
+			<p style="font-size:0.86rem; color:var(--ink-soft); margin-top:-0.9rem;">
+				Terreno: colline ondulate della Val d'Elsa, vigne e boschi, <em>strade bianche</em>, oltre Colle di Val d'Elsa e la corona murata di Monteriggioni, poi la salita dentro Siena. Distanza e dislivello sono misurati dalla traccia GPS del giorno.<sup class="ref"><a href="#s-gpx">8</a></sup>
+			</p>
+
+			<h3>La virtù di oggi — Carità</h3>
+			<div class="virtue">
+				<div class="word">Carità</div>
+				<div class="gloss">latino <em>caritas</em>, l'amore che vuole il bene dell'altro per l'altro stesso</div>
+			</div>
+			<p>Non percorri questa strada da solo, e non è un dettaglio secondario. Oggi il compagno accanto a te è la lezione. La carità è ciò che trasforma due persone che vanno nella stessa direzione in un pellegrinaggio.</p>
+
+			<h3>Preghiera del mattino</h3>
+			<div class="prayer">
+				O Dio, vieni a salvarmi.<br>
+				Signore, vieni presto in mio aiuto.<br>
+				Gloria al Padre e al Figlio e allo Spirito Santo.<br>
+				Come era nel principio, e ora e sempre,<br>
+				nei secoli dei secoli. Amen.
+				<span class="cite">Versetto introduttivo della Liturgia delle Ore (Sal 70,2) con il <em>Gloria al Padre</em><sup class="ref"><a href="#s-hours">5</a></sup></span>
+			</div>
+
+			<h3>Scrittura</h3>
+			<blockquote class="reading">
+				<p>«Questo è il mio comandamento: che vi amiate gli uni gli altri come io ho amato voi. Nessuno ha un amore più grande di questo: dare la sua vita per i propri amici. Voi siete miei amici, se fate ciò che io vi comando. Non vi chiamo più servi, perché il servo non sa quello che fa il suo padrone; ma vi ho chiamato amici, perché tutto ciò che ho udito dal Padre mio l'ho fatto conoscere a voi. Non voi avete scelto me, ma io ho scelto voi&hellip; Questo vi comando: che vi amiate gli uni gli altri.»</p>
+				<span class="cite">Giovanni 15,12&ndash;17 · versione CEI 2008<sup class="ref"><a href="#s-jn">1</a></sup></span>
+			</blockquote>
+
+			<h3>Da Agostino</h3>
+			<div class="quote">
+				«Beato chi ama te, e l'amico in te, e il nemico per amor tuo.»
+				<span class="cite">Agostino, <em>Confessioni</em> IV,9<sup class="ref"><a href="#s-conf">3</a></sup></span>
+			</div>
+
+			<h3>Riflessione del mattino</h3>
+			<p>Oggi la strada è generosa: lunghe onde verdi della Val d'Elsa, bosco e vigna, le strade bianche che salgono e scendono, e alla fine Siena sui suoi tre colli. È una campagna fatta per la compagnia, fatta per due ruote che girano allo stesso ritmo, per la piccola economia della strada — uno aspetta in cima alla salita, l'altro colma la distanza; uno porta la mappa, l'altro l'acqua. Nulla di tutto ciò è spettacolare. Tutto è carità in miniatura.</p>
+			<p>Gesù, nel cenacolo, ridisegna l'intera relazione con una sola parola. <em>Non vi chiamo più servi&hellip; ma vi ho chiamato amici.</em> La distanza che aveva definito ogni rapporto con Dio — padrone e servo, Signore e suddito — è abolita dalla sua parte. Un servo obbedisce senza che gli venga detto perché; un amico è ammesso al segreto. «Tutto ciò che ho udito dal Padre mio l'ho fatto conoscere a voi.» Ecco che cosa fa l'amore: smette di gestire l'altro da un'altezza sicura e lo lascia entrare.</p>
+			<p>Ed è costoso. La misura che Gesù dà non è sentimento ma la croce: <em>nessuno ha un amore più grande di questo: dare la sua vita per i propri amici.</em> La compagnia su una strada dura è una piccola scuola proprio di questo — il quotidiano, non spettacolare deporre il proprio ritmo, la propria preferenza, la propria ultima parola, per amore di chi pedala accanto a te. Un padre lo impara per un figlio; un figlio, col tempo, lo impara a sua volta.</p>
+			<p>Agostino, che pianse un amico così duramente da non sopportare la luce, imparò tardi dove si custodisce l'amore che non muore. Ama l'amico, sì — ma amalo <em>in Dio</em>, che non muore; e perfino il nemico <em>per amor di Dio</em>. È la differenza tra l'affetto, che stringe, e la carità, che libera. Pedala oggi come se l'uomo accanto a te fosse amato attraverso di te da Qualcuno che non lo lascerà andare.</p>
+
+			<div class="challenge">
+				<p>Quale ultima parola, quale preferenza, quale mio ritmo mi è chiesto di deporre oggi — per chi pedala accanto a me?</p>
+			</div>
+
+			<h3>Preghiera conclusiva</h3>
+			<div class="prayer">
+				Signore Gesù Cristo, Figlio di Dio,<br>
+				abbi pietà di me peccatore.
+				<span class="cite">La Preghiera del cuore (cfr. Luca 18,13)<sup class="ref"><a href="#s-hours">5</a></sup></span>
+			</div>
+		</section>
+
+		<!-- ============================== PRIMA SOSTA ============================== -->
+		<section class="part" id="road">
+			<div class="part-label"><h2>Lungo la strada</h2><span class="rt">10 min</span></div>
+
+			<div id="map"></div>
+			<p style="font-size:0.8rem; color:var(--ink-soft); margin-top:0.3rem;">
+				Il percorso di oggi, da San Gimignano a Siena. Mappa &copy; <a href="https://www.cyclosm.org/" target="_blank" rel="noopener">CyclOSM</a> / <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>. <a href="../index.html#route" target="_blank" rel="noopener">Profilo altimetrico completo e tutte le tappe &rarr;</a>
+			</p>
+
+			<p>Giù dalle torri, la strada corre a sud-est attraverso la valle dell'Elsa. Intorno al ventunesimo chilometro passa Colle di Val d'Elsa, una città in due parti — una città bassa e operosa e, sul suo crinale, una compatta città alta medievale che merita la breve salita. Poi bosco, e una salita, e uno dei grandi spettacoli della strada.</p>
+
+			<div class="church">
+				<h3>Monteriggioni</h3>
+				<img class="thumb" src="img/day3-monteriggioni.jpg" alt="Le mura medievali circolari e le torri di Monteriggioni sul suo colle" loading="lazy" />
+				<span class="credit">Foto: WikiRomaWiki (CC BY-SA 4.0) · <a href="https://commons.wikimedia.org/wiki/File:Panorama_of_Monteriggioni.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></span>
+				<dl>
+					<dt>Che cos'è</dt><dd>Un piccolo borgo murato su una bassa collina, costruito dalla Repubblica di Siena nel 1214&ndash;19 come fortezza di confine nelle guerre contro Firenze — posto a dominare la strada attraverso la Val d'Elsa.<sup class="ref"><a href="#s-mont">6</a></sup></dd>
+					<dt>Le mura</dt><dd>Un anello quasi perfetto, di circa 570 metri, con quattordici torri quadrate a intervalli regolari e due porte — la Porta Fiorentina rivolta a nord verso Firenze, la Porta Romana a sud verso Roma.<sup class="ref"><a href="#s-mont">6</a></sup></dd>
+					<dt>In Dante</dt><dd>Dante vide i giganti che cingono il pozzo dell'Inferno e ricorse a questo borgo: «come Montereggion di torri si corona» (<em>Inferno</em> XXXI).<sup class="ref"><a href="#s-mont">6</a></sup></dd>
+					<dt>Nei dintorni</dt><dd>Nel territorio di Monteriggioni, ad Abbadia a Isola, sorge la romanica Badia dei Santi Salvatore e Cirino, abbazia della metà del dodicesimo secolo posta sulla strada dei pellegrini.<sup class="ref"><a href="#s-mont">6</a></sup> Una breve deviazione dal percorso.</dd>
+					<dt>Da osservare</dt><dd>Percorri il perimetro delle mura prima di entrare. È la città terrena in miniatura — una corona di torri — e farà da bel contrappunto alla città in cui dormirai stanotte.</dd>
+					<dt>Pratica</dt><dd><span class="verify">Verifica gli orari di apertura in giornata.</span> Informazioni sul percorso: <a href="https://www.viefrancigene.org/it/" target="_blank" rel="noopener">viefrancigene.org</a>.</dd>
+				</dl>
+			</div>
+
+			<p>Da Monteriggioni è l'ultima salita dentro Siena — una città che avrà bisogno di un giorno tutto suo per cominciare a rispondere di sé, e ne riceve uno domani. Stasera, soltanto arriva: le vie di mattoni che salgono alla conchiglia del Campo, la cattedrale a strisce bianche e nere che cavalca il profilo del cielo. Due rivali hanno incoronato questa strada di pietra — Monteriggioni e San Gimignano, torri contro torri. Finisci in mezzo a loro, avendo passato il giorno a imparare l'arte opposta.</p>
+		</section>
+
+		<!-- ============================== SECONDA SOSTA ============================== -->
+		<section class="part" id="meditation">
+			<div class="part-label"><h2>La Parola</h2><span class="rt">10 min</span></div>
+			<div class="subeyebrow">Meditazione biblica — La strada di Emmaus</div>
+
+			<blockquote class="reading">
+				<p>Ed ecco, in quello stesso giorno due di loro erano in cammino per un villaggio di nome Èmmaus&hellip; Mentre conversavano e discutevano insieme, Gesù in persona si avvicinò e camminava con loro. Ma i loro occhi erano impediti a riconoscerlo&hellip; Quando fu a tavola con loro, prese il pane, recitò la benedizione, lo spezzò e lo diede loro. Allora si aprirono loro gli occhi e lo riconobbero&hellip; Ed essi dissero l'un l'altro: «Non ardeva forse in noi il nostro cuore mentre egli conversava con noi lungo la via?».</p>
+				<span class="cite">Luca 24,13&ndash;32, passi scelti · versione CEI 2008<sup class="ref"><a href="#s-lk">2</a></sup></span>
+			</blockquote>
+
+			<figure class="art">
+				<img src="img/day3-caravaggio-supper-emmaus.jpg"
+					 alt="La Cena in Emmaus di Caravaggio: il Cristo risorto benedice il pane mentre i due discepoli lo riconoscono" loading="lazy" />
+				<figcaption>Caravaggio, <em>Cena in Emmaus</em>, 1601, olio e tempera su tela. National Gallery, Londra. Pubblico dominio.<sup class="ref"><a href="#s-art">8</a></sup></figcaption>
+			</figure>
+
+			<p>Di tutti i racconti della risurrezione, questo è quello per i ciclisti. Accade su una strada, per una decina di chilometri — una breve tappa — tra due persone che camminano e parlano attraverso il loro dolore. Vanno nella direzione sbagliata, fuori da Gerusalemme, lontano dal luogo in cui tutto era finito. E un terzo si unisce a loro, non riconosciuto, e semplicemente cammina al loro passo e chiede di che cosa stiano discutendo. Non si annuncia. Li lascia parlare.</p>
+
+			<p>Nota come funziona la compagnia prima che venga il riconoscimento. Prima cammina; poi ascolta; poi, lungo la strada, apre loro le Scritture — e solo molto più tardi, a tavola, nel gesto ordinario di spezzare il pane, si aprono loro gli occhi e lo conoscono. E quando cercano poi di nominare il momento in cui tutto cominciò, non indicano la tavola. Indicano la strada: <em>non ardeva forse in noi il nostro cuore mentre egli conversava con noi lungo la via?</em> Il riconoscimento avvenne a cena. L'accendersi avvenne sulla strada.</p>
+
+			<p>È la promessa nascosta in ogni viaggio condiviso. Non sempre saprai, nell'istante, di non essere due ma tre. Il compagno accanto a te e il Compagno che non è mai nominato pedalano allo stesso ritmo, nella stessa aria, ed è spesso solo dopo — sciogliendo il giorno, spezzando il pane a sera — che ti accorgi che i vostri cuori ardevano da tutto il tempo. Non attendere la scena madre. Cammina, ascolta, lascia parlare l'altro. Il riconoscimento verrà, e verrà a una tavola.</p>
+
+			<div class="journal">
+				<div class="subeyebrow">Due domande per la strada</div>
+				<ol>
+					<li>I discepoli andavano nella direzione sbagliata quando Cristo si affiancò a loro. Dove potrei star camminando via da Gerusalemme — e lascerei comunque uno sconosciuto camminare con me?</li>
+					<li>I loro cuori ardevano sulla strada ma capirono solo a tavola. Su che cosa, oggi, devo sedermi e spezzare il pane prima di riuscire a vederlo?</li>
+				</ol>
+			</div>
+		</section>
+
+		<!-- ============================== ARRIVO ============================== -->
+		<section class="part" id="arrival">
+			<div class="part-label"><h2>Arrivo</h2><span class="rt">15–20 min</span></div>
+			<div class="subeyebrow">Riflessione teologica — Benedetto e il buono zelo</div>
+
+			<blockquote class="reading">
+				<p>Come esiste uno zelo cattivo e amaro che separa da Dio e conduce all'inferno, così esiste uno zelo buono che separa dai vizi e conduce a Dio e alla vita eterna&hellip; Sopportino con somma pazienza le debolezze altrui, sia del corpo sia del carattere&hellip; Nessuno cerchi ciò che ritiene utile per sé, ma piuttosto ciò che giova all'altro&hellip; A nulla assolutamente antepongano Cristo, ed egli ci conduca tutti insieme alla vita eterna.</p>
+				<span class="cite">Regola di San Benedetto, cap. 72, «Il buono zelo dei monaci»<sup class="ref"><a href="#s-rb">4</a></sup></span>
+			</blockquote>
+
+			<p>Benedetto passa settantuno capitoli a costruire una casa — le ore, il lavoro, il cibo, le punizioni, gli strumenti del mestiere — e poi, nel penultimo capitolo, ti dice a che cosa servisse tutto. Serviva a questo: un <em>buono zelo.</em> È prudente, perché la parola taglia da entrambe le parti. C'è uno zelo che arde freddo, l'amarezza che deve avere ragione, che tiene il registro, che separa le persone da Dio. E c'è uno zelo che arde caldo, che gareggia solo in onore e pazienza, che preferisce il bene dell'altro al proprio. Una comunità — due monaci o due pellegrini — è semplicemente gente abbastanza vicina perché l'uno o l'altro zelo venga a galla.</p>
+
+			<p>Leggi lentamente la sua piccola regola di vita, perché è l'intera arte della compagnia su una strada dura. <em>Sopportino con somma pazienza le debolezze altrui, sia del corpo sia del carattere.</em> Non solo le debolezze del corpo — il mattino lento, il ginocchio dolente — ma quelle del carattere: gli umori, la testardaggine, quella cosa dell'altro che già sai tornerà domani al chilometro trenta. La carità non è l'assenza di quell'attrito. È ciò che ne fai. <em>Nessuno cerchi ciò che ritiene utile per sé, ma piuttosto ciò che giova all'altro.</em></p>
+
+			<p>E poi il perno di tutto, che impedisce alla carità di ridursi a mera gentilezza: <em>a nulla assolutamente antepongano Cristo.</em> L'amore tra voi due non è il fine; è una strada, come questa, e conduce da qualche parte. Il padre non appartiene in ultimo al figlio, né il figlio al padre; entrambi appartengono a Colui che li conduce, come dice Benedetto, <em>tutti insieme alla vita eterna.</em> Per questo egli finisce non con «voi» ma con «noi» — <em>ci conduca tutti insieme.</em> La strada non finisce l'uno nell'altro. Finisce nella città in cui l'ardere del cuore viene finalmente spiegato.</p>
+
+			<h3>Preghiera della sera</h3>
+			<div class="prayer">
+				Nelle tue mani, Signore, consegno il mio spirito.<br>
+				Custodiscici, Signore, come la pupilla degli occhi;<br>
+				proteggici all'ombra delle tue ali.<br>
+				Gloria al Padre e al Figlio e allo Spirito Santo&hellip;
+				<span class="cite">Dalla Compieta: il responsorio (Sal 31,6) e l'antifona (Sal 17,8)<sup class="ref"><a href="#s-hours">5</a></sup></span>
+			</div>
+
+			<div class="journal">
+				<div class="subeyebrow">Diario — tre domande</div>
+				<ol>
+					<li>Quale zelo era in me oggi — quello caldo che preferisce il bene dell'altro, o quello freddo che aveva bisogno di aver ragione?</li>
+					<li>Quale «debolezza di carattere» del mio compagno ho dovuto portare oggi, con pazienza o no — e quale delle mie ha portato lui?</li>
+					<li>Benedetto finisce con «noi», non con «voi». Amo questa persona come una meta, o come un compagno sulla via verso Colui che ci tiene entrambi?</li>
+				</ol>
+			</div>
+		</section>
+
+		<!-- ============================== FONTI ============================== -->
+		<div class="biblio" id="sources">
+			<h2>Fonti ed edizioni</h2>
+			<p style="font-size:0.82rem; color:var(--ink-soft);">Ogni citazione è riportata dall'edizione indicata; le affermazioni storiche derivano dai riferimenti qui sotto. Le citazioni dei Padri sono rese in italiano per questo breviario a partire dalle edizioni critiche indicate.</p>
+			<ol>
+				<li id="s-jn">Giovanni 15,12&ndash;17. <em>La Sacra Bibbia</em>, versione CEI 2008, via bibbiaedu.it. <a href="https://www.bibbiaedu.it/CEI2008/nt/Gv/15/" target="_blank" rel="noopener">bibbiaedu.it</a></li>
+				<li id="s-lk">Luca 24,13&ndash;32. <em>La Sacra Bibbia</em>, versione CEI 2008, via bibbiaedu.it. <a href="https://www.bibbiaedu.it/CEI2008/nt/Lc/24/" target="_blank" rel="noopener">bibbiaedu.it</a></li>
+				<li id="s-conf">Agostino, <em>Confessioni</em>, libro IV, cap. 9 (testo latino: «Beatus qui amat te et amicum in te et inimicum propter te»). Traduzione italiana per questo breviario. <a href="https://www.augustinus.it/latino/confessioni/index.htm" target="_blank" rel="noopener">augustinus.it</a></li>
+				<li id="s-rb">Regola di San Benedetto, cap. 72, «Il buono zelo dei monaci». Traduzione italiana per questo breviario (testo inglese di rif.: L. J. Doyle OSB). <a href="https://archive.osb.org/rb/text/toc.html" target="_blank" rel="noopener">archive.osb.org/rb</a></li>
+				<li id="s-hours">I testi liturgici (versetto introduttivo e <em>Gloria al Padre</em>; la Preghiera del cuore; responsorio e antifona di Compieta) sono preghiere fisse della tradizione; basi scritturistiche Sal 70,2; Luca 18,13; Sal 31,6; Sal 17,8.</li>
+				<li id="s-mont">«Monteriggioni.» Wikipedia (consultata luglio 2026): costruita da Siena nel 1214&ndash;19 contro Firenze; mura di circa 570 m con 14 torri e le porte Fiorentina / Romana; Dante, <em>Inferno</em> XXXI; e la romanica Badia dei Santi Salvatore e Cirino ad Abbadia a Isola (metà XII sec.). <a href="https://it.wikipedia.org/wiki/Monteriggioni" target="_blank" rel="noopener">it.wikipedia.org/wiki/Monteriggioni</a></li>
+				<li id="s-gpx">Distanza (49 km) e dislivello (~680 m): misurati dalla traccia GPS registrata del giorno (tappa ciclabile della Via Francigena, San Gimignano&ndash;Siena).</li>
+				<li id="s-art">Opera: Caravaggio, <em>Cena in Emmaus</em> (1601), National Gallery, Londra. Pubblico dominio; immagine digitale via Wikimedia Commons. <a href="https://commons.wikimedia.org/wiki/File:Supper_at_Emmaus-Caravaggio_(1601).jpg" target="_blank" rel="noopener">commons.wikimedia.org</a></li>
+			</ol>
+		</div>
+
+		<nav class="daynav">
+			<a href="day-2.it.html">&larr; Giorno 2 · La conversione</a>
+			<a href="index.html">Tutti i giorni</a>
+			<a href="day-4.it.html">Giorno 4 · L'umiltà &rarr;</a>
+		</nav>
+
+	</div>
+
+	<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+	<script src="https://unpkg.com/leaflet-gpx@1.7.0/gpx.js"></script>
+	<script>
+		(function () {
+			var el = document.getElementById('wx'); if (!el) return;
+			fetch('https://api.open-meteo.com/v1/forecast?latitude=' + el.dataset.lat + '&longitude=' + el.dataset.lon + '&current=temperature_2m&daily=temperature_2m_max,temperature_2m_min,sunrise,sunset&timezone=Europe%2FRome')
+				.then(function (r) { return r.json(); }).then(function (d) {
+					function hhmm(s) { return s ? s.slice(11, 16) : '—'; }
+					el.innerHTML = 'Adesso a <strong>' + el.dataset.place + '</strong> ' + Math.round(d.current.temperature_2m) + '°C · oggi ' + Math.round(d.daily.temperature_2m_max[0]) + '° / ' + Math.round(d.daily.temperature_2m_min[0]) + '°C · <span class="sun">☀ ' + hhmm(d.daily.sunrise[0]) + ' – ' + hhmm(d.daily.sunset[0]) + '</span><br><span style="font-size:0.72rem;">condizioni dal vivo, aggiornate a ogni lettura</span>';
+				}).catch(function () { el.innerHTML = 'Il meteo è caricato dal vivo e richiede una connessione.'; });
+		})();
+		(function () {
+			var mapEl = document.getElementById('map'); if (!mapEl || typeof L === 'undefined') return;
+			var map = L.map('map', { scrollWheelZoom: false }).fitBounds([[43.31, 11.03], [43.48, 11.34]], { padding: [16, 16] });
+			L.tileLayer('https://{s}.tile-cyclosm.openstreetmap.fr/cyclosm/{z}/{x}/{y}.png', { attribution: 'CyclOSM | &copy; OpenStreetMap', maxZoom: 18, subdomains: 'abc' }).addTo(map);
+			new L.GPX('../days/day-3-san-gimignano-siena.gpx', { async: true, marker_options: { startIconUrl: '', endIconUrl: '', shadowUrl: '' }, polyline_options: { color: '#7a2e3b', weight: 4, opacity: 0.9 } })
+				.on('loaded', function (e) { try { map.fitBounds(e.target.getBounds(), { padding: [16, 16] }); } catch (err) {} }).addTo(map);
+			setTimeout(function () { map.invalidateSize(); }, 300);
+		})();
+	</script>
+
+</body>
+</html>

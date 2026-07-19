@@ -53,7 +53,12 @@ body {
 .topbar nav { display: flex; gap: 0.85rem; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.12em; }
 .topbar nav a { color: var(--ink-soft); border-bottom: 1px dotted transparent; }
 .topbar nav a:hover { color: var(--coral); }
+.topbar .lang { font-size: 0.66rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--coral); border: 1px solid var(--rule); border-radius: 999px; padding: 0.14rem 0.62rem; white-space: nowrap; }
+.topbar .lang:hover { color: #fff; background: var(--coral); border-color: var(--coral); }
 @media (max-width: 480px) { .topbar nav { display: none; } }
+/* bilingual index (English + Italian in italic) */
+.it { font-style: italic; color: var(--ink-soft); }
+.it-head { display: block; font-style: italic; color: var(--burgundy); font-weight: 500; font-size: 0.62em; margin: 0.15em 0 0; letter-spacing: 0.01em; }
 
 /* ---- day header ---- */
 .dayhead { text-align: center; padding: 2.5rem 0 1.5rem; }

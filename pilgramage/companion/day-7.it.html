@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+	<meta charset="utf-8" />
+	<title>Giorno 7 · Bolsena → Sutri · L'arrivo — Il breviario del pellegrino</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="robots" content="noindex, nofollow" />
+	<meta name="description" content="Un breviario quotidiano per la Via Francigena. Giorno 7: da Bolsena a Sutri — l'arrivo." />
+	<link rel="icon" href="../../favicon.svg" type="image/svg+xml" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+	<link rel="stylesheet" href="breviary.css" />
+</head>
+<body>
+
+	<div class="topbar">
+		<div class="inner">
+			<a class="home" href="index.html">Il breviario del pellegrino</a>
+			<nav>
+				<a href="#morning">Mattino</a>
+				<a href="#road">Strada</a>
+				<a href="#meditation">Parola</a>
+				<a href="#arrival">Arrivo</a>
+			</nav>
+			<a class="lang" href="day-7.html">English</a>
+		</div>
+	</div>
+
+	<div class="wrap">
+
+		<header class="dayhead">
+			<div class="eyebrow">Via Francigena · Giorno VII</div>
+			<h1>Bolsena &rarr; Sutri</h1>
+			<div class="route">Sabato 25 luglio · il lungo crinale verso la porta di Roma · festa di san Giacomo, apostolo e pellegrino</div>
+			<div class="arc">L'arrivo &nbsp;·&nbsp; Virtù: Desiderio</div>
+		</header>
+
+		<!-- ============================== MATTINO ============================== -->
+		<section class="part" id="morning">
+			<div class="part-label"><h2>Mattino</h2><span class="rt">5 min</span></div>
+
+			<div class="data">
+				<div class="d"><span class="n">71 km</span><span class="l">Distanza</span></div>
+				<div class="d"><span class="n">~1250 m</span><span class="l">Dislivello</span></div>
+				<div class="d"><span class="n">5–6 h</span><span class="l">In sella (stima)</span></div>
+			</div>
+			<div class="wx" id="wx" data-lat="42.2415" data-lon="12.2186" data-place="Sutri">
+				Caricamento del meteo di Sutri&hellip;
+			</div>
+			<p style="font-size:0.86rem; color:var(--ink-soft); margin-top:-0.9rem;">
+				Terreno: il giorno più lungo e più duro — una salita impegnativa dal lago fino a Montefiascone sul suo crinale, poi la città papale di Viterbo, e un lungo saliscendi verso sud attraverso Vetralla fino a Sutri, l'antica porta dell'Etruria. Dosati per tutto il giorno; alla meta conviene arrivare freschi. Distanza e dislivello sono misurati dalla traccia GPS del giorno.<sup class="ref"><a href="#s-gpx">8</a></sup>
+			</p>
+
+			<h3>La virtù di oggi — Desiderio</h3>
+			<div class="virtue">
+				<div class="word">Desiderio</div>
+				<div class="gloss">latino <em>desiderium</em> — l'anelito del cuore per il bene per cui è stato fatto</div>
+			</div>
+			<p>Oggi la strada si protende verso Roma e qualcosa in te si protende con essa. Quell'ardore in avanti non va trattato come una colpa; è <em>desiderium</em>, la più santa delle fami — l'inquietudine che, dice Agostino, Dio ha piantato in noi perché nulla di meno di Dio ci possa mai saziare. Non zittire il desiderio. Orientalo.</p>
+
+			<h3>Preghiera del mattino</h3>
+			<div class="prayer">
+				O Dio, vieni a salvarmi.<br>
+				Signore, vieni presto in mio aiuto.<br>
+				Gloria al Padre e al Figlio e allo Spirito Santo.<br>
+				Come era nel principio, e ora e sempre,<br>
+				nei secoli dei secoli. Amen.
+				<span class="cite">Versetto introduttivo della Liturgia delle Ore (Sal 70,2) con il <em>Gloria al Padre</em><sup class="ref"><a href="#s-hours">5</a></sup></span>
+			</div>
+
+			<h3>Scrittura</h3>
+			<blockquote class="reading">
+				<p>Quale gioia, quando mi dissero: «Andremo alla casa del Signore»! Già sono fermi i nostri piedi alle tue porte, Gerusalemme!</p>
+				<span class="cite">Salmo 122,1&ndash;2 · versione CEI 2008<sup class="ref"><a href="#s-ps">1</a></sup></span>
+			</blockquote>
+
+			<h3>Da Agostino</h3>
+			<div class="quote">
+				«Ci hai fatti per te, e il nostro cuore è inquieto finché non riposa in te.»
+				<span class="cite">Agostino, <em>Confessioni</em> I,1<sup class="ref"><a href="#s-conf">3</a></sup></span>
+			</div>
+
+			<h3>Riflessione del mattino</h3>
+			<p>Il Salmo 122 è un canto di pellegrini — uno dei Canti delle salite che Israele cantava mentre saliva le strade verso Gerusalemme — ed è scritto in due tempi verbali insieme. «Quale gioia, quando mi <em>dissero</em>: andremo»: è la gioia del partire, la letizia già all'invito, giorni prima di arrivare. E poi, all'improvviso, presente: «<em>Già sono fermi</em> i nostri piedi alle tue porte». Il pellegrino canta l'arrivo prima che accada, perché il desiderio è già una forma di possesso. Struggersi per la casa del Signore è avere già un piede dentro la sua porta.</p>
+			<p>È la strana grammatica del desiderio che Agostino nomina nella frase più celebre che abbia mai scritto. Passò anni cercando di acquietare la propria inquietudine con cose minori — ambizione, ingegno, piacere, applausi — e scoprì che ciascuna, assaggiata, non faceva che affilare la fame che prometteva di spegnere. La conclusione a cui giunse non fu che il desiderio è il problema, ma che era puntato troppo in basso. Dio, decise, aveva fatto il cuore umano deliberatamente troppo grande perché qualcosa di creato potesse riempirlo, proprio perché quel vuoto continuasse a spingerci verso casa. La tua inquietudine non è un guasto. È una bussola.</p>
+			<p>Oggi lo sentirai nel modo più letterale. È la tappa più lunga e più dura, e nel pomeriggio l'unica cosa che terrà le gambe in movimento sarà il paese alla fine della strada — la letizia della meta che ti tira in avanti attraverso la fatica del presente. È l'intera vita cristiana in miniatura. Siamo gente che «ha già i piedi fermi alle porte» nella speranza mentre i piedi sono ancora sul crinale nel caldo. Roma è vicina ora; la Città eterna è più vicina. Lascia che il desiderio faccia il suo lavoro proprio: non rendere la strada insopportabile, ma renderla <em>densa di senso</em>. Sei stato fatto per le porte. Pedala verso di esse.</p>
+
+			<div class="challenge">
+				<p>Quale cosa minore ho chiesto di acquietare un'inquietudine che solo Dio può acquietare — e che cosa significherebbe oggi puntare più in alto il desiderio?</p>
+			</div>
+
+			<h3>Preghiera conclusiva</h3>
+			<div class="prayer">
+				Signore Gesù Cristo, Figlio di Dio,<br>
+				abbi pietà di me peccatore.
+				<span class="cite">La Preghiera del cuore (cfr. Luca 18,13)<sup class="ref"><a href="#s-hours">5</a></sup></span>
+			</div>
+		</section>
+
+		<!-- ============================== PRIMA SOSTA ============================== -->
+		<section class="part" id="road">
+			<div class="part-label"><h2>Lungo la strada</h2><span class="rt">10 min</span></div>
+
+			<div id="map"></div>
+			<p style="font-size:0.8rem; color:var(--ink-soft); margin-top:0.3rem;">
+				Il percorso di oggi, da Bolsena a Sutri. Mappa &copy; <a href="https://www.cyclosm.org/" target="_blank" rel="noopener">CyclOSM</a> / <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>. <a href="../index.html#route" target="_blank" rel="noopener">Profilo altimetrico completo e tutte le tappe &rarr;</a>
+			</p>
+
+			<p>La salita del mattino ti solleva dal lago a Montefiascone sul suo crinale, con il cratere di Bolsena spiegato alle spalle. Poi la strada scende a Viterbo — ed è una città per cui rallentare.</p>
+
+			<div class="church">
+				<h3>Viterbo — la Città dei Papi</h3>
+				<img class="thumb" src="img/day7-palazzo-papi-viterbo.jpg" alt="Il Palazzo dei Papi a Viterbo con la sua loggia gotica" loading="lazy" />
+				<span class="credit">Foto: NikonZ7II (CC BY-SA 4.0) · <a href="https://commons.wikimedia.org/wiki/File:Palazzo_dei_Papi_(Viterbo)_2022.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></span>
+				<dl>
+					<dt>Che cos'è</dt><dd>Una città medievale murata che ospitò il papato per circa due decenni nel tredicesimo secolo, quando i papi trovavano Roma difficile da governare e fecero di Viterbo la loro residenza preferita.<sup class="ref"><a href="#s-vit">7</a></sup></dd>
+					<dt>Da vedere</dt><dd>Il Palazzo dei Papi, il palazzo papale, monumento principale della città; e il quartiere San Pellegrino, uno dei distretti medievali meglio conservati d'Italia — torri, archi e vicoli di pietra consumata poco mutati dai tempi dei pellegrini dell'età di Sigerico.<sup class="ref"><a href="#s-vit">7</a></sup></dd>
+					<dt>Da osservare</dt><dd>Percorri lentamente i vicoli di San Pellegrino. Ecco com'era un tempo l'intera strada medievale — un raro tratto superstite del secolo stesso del pellegrino.</dd>
+					<dt>Pratica</dt><dd><span class="verify">Gli orari di chiese e Palazzo variano con la stagione — verifica in loco.</span> Informazioni sul percorso: <a href="https://www.viefrancigene.org/it/" target="_blank" rel="noopener">viefrancigene.org</a>.</dd>
+				</dl>
+			</div>
+
+			<p>Da Viterbo la via corre a sud, ondulata, attraverso Vetralla e la campagna boscosa di tufo, finché la strada sale un'ultima volta a un altopiano di tenera roccia vulcanica — ed ecco Sutri, arroccata sul suo crinale, l'antica porta dell'Etruria e, per il pellegrino, la vera soglia di Roma.</p>
+
+			<div class="church">
+				<h3>Sutri — la Porta dell'Etruria</h3>
+				<img class="thumb" src="img/day7-anfiteatro-sutri.jpg" alt="L'anfiteatro romano di Sutri scavato nella roccia di tufo" loading="lazy" />
+				<span class="credit">Foto: Luciano valle (CC BY-SA 4.0) · <a href="https://commons.wikimedia.org/wiki/File:Sutri_-_anfiteatro_romano_di_Sutri_-_202109231645_28.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></span>
+				<dl>
+					<dt>L'anfiteatro</dt><dd>Un intero anfiteatro romano scavato nella viva roccia di tufo — non costruito in pietra ma intagliato nel suolo, ellittico, di circa 49 per 40 metri, uno dei monumenti antichi più suggestivi dell'antico Lazio.<sup class="ref"><a href="#s-sut">6</a></sup></dd>
+					<dt>Madonna del Parto</dt><dd>Di fronte al paese, una chiesa scavata nella rupe, ricavata da una delle molte tombe rupestri etrusche e ritenuta un tempo sede di un culto pagano, forse un <em>mitreo</em>. Un unico spazio è stato, di volta in volta, una tomba, un santuario pagano e un santuario cristiano della Madre di Dio.<sup class="ref"><a href="#s-sut">6</a></sup></dd>
+					<dt>Perché contò</dt><dd>L'antica <em>Sutrium</em> dominava la strada verso l'Etruria — Livio la chiamò «una delle chiavi dell'Etruria». Nel 728 il re longobardo Liutprando la donò a papa Gregorio II «in dono ai beati Apostoli Pietro e Paolo» — la Donazione di Sutri, primo germe dello Stato Pontificio.<sup class="ref"><a href="#s-sut">6</a></sup></dd>
+					<dt>Da osservare</dt><dd>Fèrmati nell'anfiteatro scavato nella roccia. Sei ormai a una breve tappa da Roma. Ogni pellegrino di mille anni varcò questa porta provando esattamente ciò che provi tu stasera.</dd>
+					<dt>Pratica</dt><dd><span class="verify">Il parco archeologico (anfiteatro e Madonna del Parto) ha orari stagionali — verifica in loco.</span> Informazioni sul percorso: <a href="https://www.viefrancigene.org/it/" target="_blank" rel="noopener">viefrancigene.org</a>.</dd>
+				</dl>
+			</div>
+		</section>
+
+		<!-- ============================== SECONDA SOSTA ============================== -->
+		<section class="part" id="meditation">
+			<div class="part-label"><h2>La Parola</h2><span class="rt">10 min</span></div>
+			<div class="subeyebrow">Meditazione biblica — Il cieco Bartimeo lungo la strada</div>
+
+			<blockquote class="reading">
+				<p>E giunsero a Gerico. Mentre partiva da Gerico insieme ai suoi discepoli e a molta folla, il figlio di Timeo, Bartimeo, che era cieco, sedeva lungo la strada a mendicare&hellip; cominciò a gridare e a dire: «Figlio di Davide, Gesù, abbi pietà di me!». Molti lo rimproveravano perché tacesse, ma egli gridava ancora più forte&hellip; Allora Gesù gli disse: «Che cosa vuoi che io faccia per te?». E il cieco gli rispose: «Rabbunì, che io veda di nuovo!»&hellip; E subito vide di nuovo e lo seguiva lungo la strada.</p>
+				<span class="cite">Marco 10,46&ndash;52 · versione CEI 2008<sup class="ref"><a href="#s-mk">2</a></sup></span>
+			</blockquote>
+
+			<figure class="art">
+				<img src="img/day7-elgreco-healing-blind.jpg"
+					 alt="Il dipinto di El Greco con Cristo che guarisce un cieco in mezzo a una folla di figure" loading="lazy" />
+				<figcaption>El Greco, <em>Cristo guarisce il cieco</em>, 1570 ca., olio su tela. The Metropolitan Museum of Art, New York. Pubblico dominio.<sup class="ref"><a href="#s-art">9</a></sup></figcaption>
+			</figure>
+
+			<p>Bartimeo è un pellegrino, benché stia seduto e fermo. Gesù è sull'ultima strada, sale da Gerico a Gerusalemme per morire, e l'intera folla scorre oltre un cieco che non può unirsi alla processione perché non vede la via. Così egli fa l'unica cosa che gli resta: trasforma tutto sé stesso in un desiderio e lo lancia dietro al Signore in un grido. «Figlio di Davide, abbi pietà di me!» La folla gli dice di tacere — il mondo dice sempre al desiderio nudo di abbassare la voce — ed egli fa il contrario. «Gridava ancora più forte.» Il desiderio che non si lascia far tacere dalla vergogna è l'inizio di ogni arrivo.</p>
+
+			<p>Poi viene la domanda più tenera dei Vangeli. Gesù ferma l'intera marcia, fa chiamare l'uomo, e gli chiede — a un cieco mendicante, ovviamente — «Che cosa vuoi che io faccia per te?». Non è che Gesù non lo sappia. È che non vuole trattare una persona come un oggetto da aggiustare. Fa nominare a Bartimeo il desiderio, ad alta voce, con parole sue, perché il nominare è parte della guarigione. E nota le ultime parole della storia, che sono tutto il punto: guarito, «lo <em>seguiva lungo la strada</em>». Non torna a casa risanato. Si alza e cammina la strada dei pellegrini che Gesù sta camminando — la strada verso Gerusalemme, verso la croce, verso la fine che è un inizio.</p>
+
+			<p>Poniti la sua domanda stasera, sull'ultimo crinale prima di Roma. Se Cristo fermasse l'intera strada e si voltasse verso di te dicendo: «Che cosa vuoi che io faccia per te?» — che cosa oseresti nominare? Non ciò che pensi di dover dire. Ciò che davvero, dolorosamente, vuoi. Bartimeo voleva vedere, e ciò che vide per primo, con i suoi occhi nuovi, fu la schiena del Signore che camminava avanti — così lo seguì. L'arrivo, per lui, non fu la fine della strada. Fu ricevere occhi per vedere chi seguire lungo di essa.</p>
+
+			<div class="journal">
+				<div class="subeyebrow">Due domande per la strada</div>
+				<ol>
+					<li>«Che cosa vuoi che io faccia per te?» — chiesto direttamente, stasera, che cosa nomino davvero?</li>
+					<li>Dove la folla ha detto al mio desiderio di tacere — e dove ho bisogno, come Bartimeo, di gridare ancora più forte?</li>
+				</ol>
+			</div>
+		</section>
+
+		<!-- ============================== ARRIVO ============================== -->
+		<section class="part" id="arrival">
+			<div class="part-label"><h2>Arrivo</h2><span class="rt">15–20 min</span></div>
+			<div class="subeyebrow">Riflessione teologica — Agostino e la Città che non ha fine</div>
+
+			<blockquote class="reading">
+				<p>Là riposeremo e vedremo, vedremo e ameremo, ameremo e loderemo. Ecco ciò che sarà alla fine senza fine.</p>
+				<span class="cite">Agostino, <em>La città di Dio</em> XXII,30 (le parole finali)<sup class="ref"><a href="#s-cog">4</a></sup></span>
+			</blockquote>
+
+			<p>Stanotte dormi alla porta di Roma, e vale la pena essere onesti su che cosa significhi — perché Agostino scrisse l'immensa <em>Città di Dio</em> proprio per impedire alla gente di confondere Roma con la meta. La scrisse dopo la caduta di Roma, quando il sacco della città eterna nel 410 aveva sconvolto chiunque avesse creduto in silenzio che Roma fosse permanente, che Roma fosse la fine della storia, che arrivarci fosse arrivare. No, disse Agostino. Ci sono due città, costruite da due amori, che corrono intrecciate per tutta la storia: la città terrena, che ama sé stessa, e la Città di Dio, che ama Dio — e solo una delle due avrà le mura ancora in piedi alla fine. Roma è una porta, non una casa. Domani attraverserai quella vera e scoprirai, se sei saggio, che anch'essa rimanda oltre sé stessa.</p>
+
+			<p>E così l'enorme libro — ventidue volumi, decenni di lavoro — non finisce con un monumento ma con un Sabato. Nelle sue ultimissime righe Agostino smette di argomentare e semplicemente descrive l'arrivo a cui ogni desiderio umano è stato puntato da sempre: il riposo eterno della Città che non ha fine. Rileggi la frase lentamente, perché è costruita come una scala, ogni parola posata su quella precedente. <em>Riposo</em>, per primo — la fatica finalmente conclusa. Poi, dal riposo, la <em>visione</em>: vedremo, finalmente, Colui verso cui viaggiavamo nel buio. Dalla visione, l'<em>amore</em> — perché vederlo davvero è amarlo. E dall'amore, la <em>lode</em>, che è amore fatto canto. Riposo, visione, amore, lode: l'intera architettura del cielo in undici parole.</p>
+
+			<p>«Ecco ciò che sarà alla fine senza fine.» Tieniti stretto a quest'ultima frase stasera. Ogni arrivo che tu abbia mai conosciuto è stato una fine — il viaggio concluso, la gioia già che comincia a svanire. Ma la Città che Agostino descrive è l'unico arrivo che non è un fermarsi. È una fine <em>senza fine</em>: una meta a cui continui ad arrivare per sempre, un riposo che non è ozio ma l'attività più profonda dell'anima, che vede e ama e loda senza sosta e non si stanca, non si annoia, non finisce mai. Domani, Roma. Ma stasera, su quest'ultimo crinale, solleva il tuo desiderio oltre la porta che vedi fino alla Città che non vedi — quella per cui sei stato fatto, quella in cui il cuore inquieto finalmente, e per sempre, riposa.</p>
+
+			<h3>Preghiera della sera</h3>
+			<div class="prayer">
+				Nelle tue mani, Signore, consegno il mio spirito.<br>
+				Custodiscici, Signore, come la pupilla degli occhi;<br>
+				proteggici all'ombra delle tue ali.<br>
+				Gloria al Padre e al Figlio e allo Spirito Santo&hellip;
+				<span class="cite">Dalla Compieta: il responsorio (Sal 31,6) e l'antifona (Sal 17,8)<sup class="ref"><a href="#s-hours">5</a></sup></span>
+			</div>
+
+			<div class="journal">
+				<div class="subeyebrow">Diario — tre domande</div>
+				<ol>
+					<li>Agostino mette in guardia dallo scambiare Roma — ogni arrivo terreno — per la meta. Quale arrivo, nella mia vita, ho trattato in silenzio come una casa che era soltanto una porta?</li>
+					<li>Riposo, visione, amore, lode. Quale dei quattro è più lontano da me stasera — e che cosa lo blocca?</li>
+					<li>Domani arrivo. Di che cosa non voglio che questo pellegrinaggio sia stato solo la fine — ma l'inizio?</li>
+				</ol>
+			</div>
+		</section>
+
+		<!-- ============================== FONTI ============================== -->
+		<div class="biblio" id="sources">
+			<h2>Fonti ed edizioni</h2>
+			<p style="font-size:0.82rem; color:var(--ink-soft);">Ogni citazione è riportata dall'edizione indicata; le affermazioni storiche derivano dai riferimenti qui sotto. Le citazioni dei Padri sono rese in italiano per questo breviario a partire dalle edizioni critiche indicate.</p>
+			<ol>
+				<li id="s-ps">Salmo 122,1&ndash;2. <em>La Sacra Bibbia</em>, versione CEI 2008, via bibbiaedu.it. <a href="https://www.bibbiaedu.it/CEI2008/at/Sal/122/" target="_blank" rel="noopener">bibbiaedu.it</a></li>
+				<li id="s-mk">Marco 10,46&ndash;52. <em>La Sacra Bibbia</em>, versione CEI 2008, via bibbiaedu.it. <a href="https://www.bibbiaedu.it/CEI2008/nt/Mc/10/" target="_blank" rel="noopener">bibbiaedu.it</a></li>
+				<li id="s-conf">Agostino, <em>Confessioni</em>, libro I, cap. 1 (testo latino: «fecisti nos ad te et inquietum est cor nostrum donec requiescat in te»). Traduzione italiana per questo breviario. <a href="https://www.augustinus.it/latino/confessioni/index.htm" target="_blank" rel="noopener">augustinus.it</a></li>
+				<li id="s-cog">Agostino, <em>La città di Dio</em>, libro XXII, cap. 30 (parole finali) (testo latino: «Ibi vacabimus et videbimus, videbimus et amabimus, amabimus et laudabimus. Ecce quod erit in fine sine fine»). Traduzione italiana per questo breviario. <a href="https://www.augustinus.it/latino/cdd/index2.htm" target="_blank" rel="noopener">augustinus.it</a></li>
+				<li id="s-hours">I testi liturgici (versetto introduttivo e <em>Gloria al Padre</em>; la Preghiera del cuore; responsorio e antifona di Compieta) sono preghiere fisse della tradizione; basi scritturistiche Sal 70,2; Luca 18,13; Sal 31,6; Sal 17,8.</li>
+				<li id="s-sut">«Sutri.» Wikipedia (consultata luglio 2026): l'anfiteatro romano scavato nella roccia (ellittico, 49&times;40 m ca.); la chiesa rupestre della Madonna del Parto, ricavata da una tomba etrusca e forse da un precedente <em>mitreo</em>; il «una delle chiavi dell'Etruria» di Livio; la Donazione di Sutri (728) di Liutprando a papa Gregorio II. <a href="https://it.wikipedia.org/wiki/Sutri" target="_blank" rel="noopener">it.wikipedia.org/wiki/Sutri</a></li>
+				<li id="s-vit">«Viterbo.» Wikipedia (consultata luglio 2026): il Palazzo dei Papi; il papato residente a Viterbo per circa due decenni nel XIII secolo; il quartiere medievale San Pellegrino. <a href="https://it.wikipedia.org/wiki/Viterbo" target="_blank" rel="noopener">it.wikipedia.org/wiki/Viterbo</a></li>
+				<li id="s-gpx">Distanza (71 km) e dislivello (~1250 m): misurati dalla traccia GPS registrata del giorno (tappa ciclabile della Via Francigena, Bolsena&ndash;Sutri).</li>
+				<li id="s-art">Opera: El Greco, <em>Cristo guarisce il cieco</em> (1570 ca.), The Metropolitan Museum of Art, New York. Pubblico dominio; immagine digitale via Wikimedia Commons. <a href="https://commons.wikimedia.org/wiki/File:Christ_Healing_the_Blind_MET_DT407.jpg" target="_blank" rel="noopener">commons.wikimedia.org</a></li>
+			</ol>
+		</div>
+
+		<nav class="daynav">
+			<a href="day-6.it.html">&larr; Giorno 6 · La speranza</a>
+			<a href="index.html">Tutti i giorni</a>
+			<a href="day-8.it.html">Giorno 8 · La missione &rarr;</a>
+		</nav>
+
+	</div>
+
+	<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+	<script src="https://unpkg.com/leaflet-gpx@1.7.0/gpx.js"></script>
+	<script>
+		(function () {
+			var el = document.getElementById('wx'); if (!el) return;
+			fetch('https://api.open-meteo.com/v1/forecast?latitude=' + el.dataset.lat + '&longitude=' + el.dataset.lon + '&current=temperature_2m&daily=temperature_2m_max,temperature_2m_min,sunrise,sunset&timezone=Europe%2FRome')
+				.then(function (r) { return r.json(); }).then(function (d) {
+					function hhmm(s) { return s ? s.slice(11, 16) : '—'; }
+					el.innerHTML = 'Adesso a <strong>' + el.dataset.place + '</strong> ' + Math.round(d.current.temperature_2m) + '°C · oggi ' + Math.round(d.daily.temperature_2m_max[0]) + '° / ' + Math.round(d.daily.temperature_2m_min[0]) + '°C · <span class="sun">☀ ' + hhmm(d.daily.sunrise[0]) + ' – ' + hhmm(d.daily.sunset[0]) + '</span><br><span style="font-size:0.72rem;">condizioni dal vivo, aggiornate a ogni lettura</span>';
+				}).catch(function () { el.innerHTML = 'Il meteo è caricato dal vivo e richiede una connessione.'; });
+		})();
+		(function () {
+			var mapEl = document.getElementById('map'); if (!mapEl || typeof L === 'undefined') return;
+			var map = L.map('map', { scrollWheelZoom: false }).fitBounds([[42.20, 11.95], [42.68, 12.28]], { padding: [16, 16] });
+			L.tileLayer('https://{s}.tile-cyclosm.openstreetmap.fr/cyclosm/{z}/{x}/{y}.png', { attribution: 'CyclOSM | &copy; OpenStreetMap', maxZoom: 18, subdomains: 'abc' }).addTo(map);
+			new L.GPX('../days/day-7-bolsena-sutri.gpx', { async: true, marker_options: { startIconUrl: '', endIconUrl: '', shadowUrl: '' }, polyline_options: { color: '#7a2e3b', weight: 4, opacity: 0.9 } })
+				.on('loaded', function (e) { try { map.fitBounds(e.target.getBounds(), { padding: [16, 16] }); } catch (err) {} }).addTo(map);
+			setTimeout(function () { map.invalidateSize(); }, 300);
+		})();
+	</script>
+
+</body>
+</html>

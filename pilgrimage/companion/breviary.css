@@ -58,7 +58,7 @@ body {
 @media (max-width: 480px) { .topbar nav { display: none; } }
 /* bilingual index (English + Italian in italic) */
 .it { font-style: italic; color: var(--ink-soft); }
-.it-head { font-style: italic; color: var(--burgundy); font-weight: 500; font-size: 0.86em; margin-left: 0.4em; }
+.it-head { display: block; font-style: italic; color: var(--burgundy); font-weight: 500; font-size: 0.62em; margin: 0.15em 0 0; letter-spacing: 0.01em; }
 
 /* ---- day header ---- */
 .dayhead { text-align: center; padding: 2.5rem 0 1.5rem; }

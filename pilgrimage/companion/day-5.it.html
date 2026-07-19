@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+	<meta charset="utf-8" />
+	<title>Giorno 5 · San Quirico → Radicofani · La memoria — Il breviario del pellegrino</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="robots" content="noindex, nofollow" />
+	<meta name="description" content="Un breviario quotidiano per la Via Francigena. Giorno 5: da San Quirico d'Orcia a Radicofani — la memoria." />
+	<link rel="icon" href="../../favicon.svg" type="image/svg+xml" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+	<link rel="stylesheet" href="breviary.css" />
+</head>
+<body>
+
+	<div class="topbar">
+		<div class="inner">
+			<a class="home" href="index.html">Il breviario del pellegrino</a>
+			<nav>
+				<a href="#morning">Mattino</a>
+				<a href="#road">Strada</a>
+				<a href="#meditation">Parola</a>
+				<a href="#arrival">Arrivo</a>
+			</nav>
+			<a class="lang" href="day-5.html">English</a>
+		</div>
+	</div>
+
+	<div class="wrap">
+
+		<header class="dayhead">
+			<div class="eyebrow">Via Francigena · Giorno V</div>
+			<h1>San Quirico &rarr; Radicofani</h1>
+			<div class="route">Giovedì 23 luglio · la salita al grande masso</div>
+			<div class="arc">La memoria &nbsp;·&nbsp; Virtù: Gratitudine</div>
+		</header>
+
+		<!-- ============================== MATTINO ============================== -->
+		<section class="part" id="morning">
+			<div class="part-label"><h2>Mattino</h2><span class="rt">5 min</span></div>
+
+			<div class="data">
+				<div class="d"><span class="n">35 km</span><span class="l">Distanza</span></div>
+				<div class="d"><span class="n">~750 m</span><span class="l">Dislivello</span></div>
+				<div class="d"><span class="n">3½–4½ h</span><span class="l">In sella (stima)</span></div>
+			</div>
+			<div class="wx" id="wx" data-lat="42.8966" data-lon="11.7677" data-place="Radicofani">
+				Caricamento del meteo di Radicofani&hellip;
+			</div>
+			<p style="font-size:0.86rem; color:var(--ink-soft); margin-top:-0.9rem;">
+				Terreno: il giorno più corto, ma con la fine più dura — la Val d'Orcia, il borgo termale di Bagno Vignoni, poi una lunga salita esposta al masso di Radicofani a 896&nbsp;m. Conserva qualcosa per l'ultima ora. Distanza e dislivello sono misurati dalla traccia GPS del giorno.<sup class="ref"><a href="#s-gpx">7</a></sup>
+			</p>
+
+			<h3>La virtù di oggi — Gratitudine</h3>
+			<div class="virtue">
+				<div class="word">Gratitudine</div>
+				<div class="gloss">latino <em>gratia</em> — la grazia, e il grazie che le risponde</div>
+			</div>
+			<p>Memoria e gratitudine sono lo stesso muscolo. Nove uomini dimenticarono; uno ricordò, e il tornare indietro a ringraziare fu tutta la sua differenza. Oggi è il giorno di ciò che — e di chi — ricordi.</p>
+
+			<h3>Preghiera del mattino</h3>
+			<div class="prayer">
+				O Dio, vieni a salvarmi.<br>
+				Signore, vieni presto in mio aiuto.<br>
+				Gloria al Padre e al Figlio e allo Spirito Santo.<br>
+				Come era nel principio, e ora e sempre,<br>
+				nei secoli dei secoli. Amen.
+				<span class="cite">Versetto introduttivo della Liturgia delle Ore (Sal 70,2) con il <em>Gloria al Padre</em><sup class="ref"><a href="#s-hours">5</a></sup></span>
+			</div>
+
+			<h3>Scrittura</h3>
+			<blockquote class="reading">
+				<p>Entrando in un villaggio, gli vennero incontro dieci lebbrosi, che si fermarono a distanza e dissero ad alta voce: «Gesù, maestro, abbi pietà di noi!». Appena li vide, Gesù disse loro: «Andate a presentarvi ai sacerdoti». E mentre essi andavano, furono purificati. Uno di loro, vedendosi guarito, tornò indietro lodando Dio a gran voce, e si prostrò davanti a Gesù, ai suoi piedi, per ringraziarlo. Era un Samaritano. Ma Gesù osservò: «Non ne sono stati purificati dieci? E gli altri nove dove sono?».</p>
+				<span class="cite">Luca 17,12&ndash;17 · versione CEI 2008<sup class="ref"><a href="#s-lk">1</a></sup></span>
+			</blockquote>
+
+			<h3>Da Agostino</h3>
+			<div class="quote">
+				«Grande è questa forza della memoria, straordinariamente grande, o mio Dio: un penetrale vasto e sconfinato!»
+				<span class="cite">Agostino, <em>Confessioni</em> X,8<sup class="ref"><a href="#s-conf">3</a></sup></span>
+			</div>
+
+			<h3>Riflessione del mattino</h3>
+			<p>Dieci uomini sono guariti e dieci sono contenti; non è questo il punto della storia. Il punto è che nove di loro, nella foga della propria buona sorte, semplicemente proseguirono — verso i sacerdoti, verso le famiglie, verso le vite riavute — e uno, uno solo, e per giunta uno straniero, <em>tornò indietro.</em> La gratitudine è quel voltarsi. È la memoria che si rifiuta di andare oltre: l'atto deliberato di fermarsi, nel mezzo di un dono, a ricordare il Donatore. E la domanda di Gesù aleggia su tutto il giorno: <em>e gli altri nove dove sono?</em></p>
+			<p>Oggi pedalerai attraverso una campagna intrisa di memoria. A Bagno Vignoni l'acqua sale fumante dal suolo da prima che la strada avesse un nome — la conobbero gli Etruschi, i Romani, i pellegrini medievali, Caterina da Siena. E salirai a Radicofani, una fortezza ricordata oggi soprattutto per un celebre fuorilegge. Due modi di ricordare stanno ai due capi della tappa: quello del pellegrino, che rende grazie alla sorgente delle acque risananti, e quello del monumento, che tiene in vita un nome senza custodire in sé alcuna gratitudine. Un castello ricorda stando in piedi. Un santo ricorda inginocchiandosi.</p>
+			<p>Agostino passò il decimo libro delle <em>Confessioni</em> aggirandosi nel «penetrale vasto e sconfinato» della propria memoria, stupito di essa — ed è lì, in quella campagna interiore, che finalmente trovò Dio: non avanti nel futuro, non in qualche luogo lontano, ma custodito da sempre nella stanza più profonda di ciò che già portava con sé. Ricordare rettamente, per Agostino, è già cominciare a rendere grazie, perché scopri che Colui che cercavi non fu mai assente dal tuo stesso passato. I nove dimenticarono. Il decimo ricordò. Sii il decimo.</p>
+
+			<div class="challenge">
+				<p>Per quale guarigione, già ricevuta, non sono mai tornato indietro a rendere grazie — e sono forse tra i nove?</p>
+			</div>
+
+			<h3>Preghiera conclusiva</h3>
+			<div class="prayer">
+				Signore Gesù Cristo, Figlio di Dio,<br>
+				abbi pietà di me peccatore.
+				<span class="cite">La Preghiera del cuore (cfr. Luca 18,13)<sup class="ref"><a href="#s-hours">5</a></sup></span>
+			</div>
+		</section>
+
+		<!-- ============================== PRIMA SOSTA ============================== -->
+		<section class="part" id="road">
+			<div class="part-label"><h2>Lungo la strada</h2><span class="rt">10 min</span></div>
+
+			<div id="map"></div>
+			<p style="font-size:0.8rem; color:var(--ink-soft); margin-top:0.3rem;">
+				Il percorso di oggi, da San Quirico d'Orcia a Radicofani. Mappa &copy; <a href="https://www.cyclosm.org/" target="_blank" rel="noopener">CyclOSM</a> / <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>. <a href="../index.html#route" target="_blank" rel="noopener">Profilo altimetrico completo e tutte le tappe &rarr;</a>
+			</p>
+
+			<p>Fuori da San Quirico la strada scende nella Val d'Orcia, il paesaggio più composto della Toscana — quello che i pittori del Rinascimento mettevano dietro le loro Madonne. Pochi chilometri più avanti, una breve deviazione dal percorso ti porta in uno dei luoghi più strani e più belli di tutta la strada.</p>
+
+			<div class="church">
+				<h3>Bagno Vignoni</h3>
+				<img class="thumb" src="img/day5-bagno-vignoni.jpg" alt="La vasca termale rinascimentale che riempie la piazza centrale di Bagno Vignoni" loading="lazy" />
+				<span class="credit">Foto: Einaz80 (CC BY-SA 4.0) · <a href="https://commons.wikimedia.org/wiki/File:Vasca_Bagno_Vignoni.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></span>
+				<dl>
+					<dt>Che cos'è</dt><dd>Un borgo costruito non attorno a una piazza ma attorno a una <em>vasca</em>: al suo centro, dove sarebbe una piazza, una grande vasca rettangolare di acqua termale fumante — la Piazza delle Sorgenti, la vasca attuale di origine cinquecentesca.<sup class="ref"><a href="#s-bagno">6</a></sup></dd>
+					<dt>Quanto è antico</dt><dd>Le acque attirano gente fin dagli Etruschi e dai Romani, e il borgo sorgeva sulla Via Francigena per il pellegrino medievale.<sup class="ref"><a href="#s-bagno">6</a></sup></dd>
+					<dt>Chi vi passò</dt><dd>Tra coloro che vi sono documentati: santa Caterina da Siena, papa Pio II e Lorenzo il Magnifico.<sup class="ref"><a href="#s-bagno">6</a></sup></dd>
+					<dt>Da osservare</dt><dd>Fèrmati un momento sul bordo della vasca fumante. È acqua che saliva qui prima che Cristo nascesse e salirà quando tu sarai dimenticato. Un buon luogo per sentirsi piccoli, e grati.</dd>
+					<dt>Una preghiera</dt><dd>Grazie per l'acqua — la più semplice e la più dimenticata delle grazie.</dd>
+					<dt>Pratica</dt><dd><span class="verify">La balneazione di norma non è consentita nella vasca storica centrale; usa le piscine termali moderne se vuoi immergerti. Verifica in giornata.</span> Informazioni sul percorso: <a href="https://www.viefrancigene.org/it/" target="_blank" rel="noopener">viefrancigene.org</a>.</dd>
+				</dl>
+			</div>
+
+			<p>Poi il giorno si guadagna la sua distanza. Dal fondovalle la strada si inclina e sale, lunga e per lo più esposta, verso un cono vulcanico nero visibile da chilometri: Radicofani, e la sua fortezza sulla corona. C'è poco riparo nella salita; affrontala con il tuo rapporto e i tuoi tempi. Vicino alla cima, la stazione medievale di Le Briccole un tempo dava rifugio ai pellegrini proprio su questa ascesa. E poi la Rocca riempie il cielo.</p>
+		</section>
+
+		<!-- ============================== SECONDA SOSTA ============================== -->
+		<section class="part" id="meditation">
+			<div class="part-label"><h2>La Parola</h2><span class="rt">10 min</span></div>
+			<div class="subeyebrow">Meditazione biblica — La manna nel deserto</div>
+
+			<blockquote class="reading">
+				<p>Il Signore disse a Mosè: «Ecco, io sto per far piovere pane dal cielo per voi: il popolo uscirà a raccoglierne ogni giorno la razione di un giorno»&hellip; Quando lo strato di rugiada svanì, ecco, sulla superficie del deserto c'era una cosa fine e granulosa, minuta come è la brina sulla terra&hellip; Gli Israeliti la videro e si dissero l'un l'altro: «Che cos'è?». Mosè disse loro: «È il pane che il Signore vi ha dato in cibo».</p>
+				<span class="cite">Esodo 16,4.14&ndash;15 · versione CEI 2008<sup class="ref"><a href="#s-ex">2</a></sup></span>
+			</blockquote>
+
+			<figure class="art">
+				<img src="img/day5-poussin-gathering-manna.jpg"
+					 alt="Il dipinto di Poussin con gli Israeliti che raccolgono la manna nel deserto" loading="lazy" />
+				<figcaption>Nicolas Poussin, <em>La raccolta della manna</em>, 1637&ndash;1639, olio su tela. Musée du Louvre, Parigi. Pubblico dominio.<sup class="ref"><a href="#s-art">8</a></sup></figcaption>
+			</figure>
+
+			<p>Il popolo è da tre giorni nella libertà e già ricorda l'Egitto come un paradiso perduto — le pentole di carne, il pane mangiato a sazietà — e ricorda male la propria schiavitù come agiatezza. È la memoria andata storta: la nostalgia, che è nemica della gratitudine, riscrive il passato finché la mano che ti nutriva sembra la mano che ti affamava. In quel mormorare Dio non manda un ragionamento. Manda la colazione.</p>
+
+			<p>E la manda a una condizione precisa: <em>raccoglietene ogni giorno la razione di un giorno.</em> Nessun accumulo, nessuna sicurezza, nessuna dispensa contro il domani — la manna conservata per la notte faceva vermi e puzzava. Ogni mattina il suolo era bianco di quanto bastava, e solo quanto bastava. È la scuola più dura del mondo per gente come noi, che vuole l'intero futuro garantito in anticipo: ricevere il pane di oggi oggi, e dover tornare domani, e fidarsi che ci sarà di nuovo. Un pellegrinaggio funziona esattamente con questa economia. Non puoi pedalare tutti e sette i giorni in una volta. Ti è data una tappa, e la sua acqua, e la sua salita, e il suo letto alla fine — la razione di un giorno — e domani devi alzarti e raccogliere di nuovo.</p>
+
+			<p>Non avevano nemmeno un nome per essa. <em>Che cos'è?</em> — in ebraico, all'incirca, <em>man hu</em>, da cui viene «manna»: il cibo il cui nome è una domanda. La grazia sulla strada è spesso così: non la cosa che avevi chiesto, non riconoscibile al primo sguardo, facile da oltrepassare mormorando — la gentilezza di uno sconosciuto, un'ombra inattesa, una sorgente dove non te l'aspettavi. La manna è visibile solo al grato. Ai nove è un enigma per terra. Al decimo è il pane del cielo.</p>
+
+			<div class="journal">
+				<div class="subeyebrow">Due domande per la strada</div>
+				<ol>
+					<li>Dove sto cercando di accumulare manna — di assicurarmi oggi la provvista di domani — invece di fidarmi per una razione di un giorno alla volta?</li>
+					<li>Quale <em>man hu</em> — quale dono non riconosciuto — nascondeva davvero la strada di oggi, che ho quasi oltrepassato mormorando?</li>
+				</ol>
+			</div>
+		</section>
+
+		<!-- ============================== ARRIVO ============================== -->
+		<section class="part" id="arrival">
+			<div class="part-label"><h2>Arrivo</h2><span class="rt">15–20 min</span></div>
+			<div class="subeyebrow">Riflessione teologica — Agostino sulla memoria</div>
+
+			<blockquote class="reading">
+				<p>Grande è questa forza della memoria, straordinariamente grande, o mio Dio: un penetrale vasto e sconfinato! Chi ne ha toccato il fondo? Eppure è una facoltà del mio spirito e appartiene alla mia natura, e io stesso non comprendo tutto ciò che sono&hellip; E gli uomini vanno ad ammirare le cime dei monti&hellip; e passano oltre sé stessi senza meravigliarsi.</p>
+				<span class="cite">Agostino, <em>Confessioni</em> X,8<sup class="ref"><a href="#s-conf">3</a></sup></span>
+			</blockquote>
+
+			<p>Hai salito tutto il giorno verso una fortezza, e stanotte dormi sotto il grande masso nero di Radicofani — un castello documentato fin dal decimo secolo, tenuto un tempo da Ghino di Tacco, il nobile fattosi brigante che sia Dante sia Boccaccio ritennero degno di essere ricordato.<sup class="ref"><a href="#s-radi">4</a></sup> È una cosa imponente, la Rocca, e vale la pena chiedersi che genere di memoria custodisca. Una fortezza ricorda durando. Accumula il passato come gli Israeliti tentarono di accumulare la manna — nella pietra, contro il futuro, perché un nome non vada perduto. E funziona: il nome del fuorilegge gli è sopravvissuto di sette secoli. Ma non c'è gratitudine in un muro. Ricorda tutto e non rende grazie di nulla.</p>
+
+			<p>Agostino, nel decimo libro delle <em>Confessioni</em>, va in cerca di Dio non su un monte ma <em>dentro</em>, attraverso le vaste stanze della propria memoria — e si meraviglia che gli uomini attraversino la terra per ammirare le cime alte e i mari ampi «e passino oltre sé stessi senza meravigliarsi». Un'intera vita è custodita là dentro, egli scopre, e più di una vita: in qualche modo Dio stesso vi si incontra, nella stanza più profonda, essendo stato presente in ogni anno che la persona non riesce nemmeno a rammentare. La memoria, entrata rettamente, non è un monumento a sé stessi. È il luogo in cui scopri di essere stato portato per tutta la via.</p>
+
+			<p>È la differenza che il giorno ha tracciato, e la salita l'ha conficcata nelle tue gambe. Ricordare come la fortezza è tenere un registro. Ricordare come il decimo lebbroso — che <em>tornò indietro</em> — è lasciare che il registro diventi rendimento di grazie: ripercorrere le stanze del proprio passato e, in ciascuna, trovare non solo ciò che ti è accaduto ma Chi era là. Stanotte, in alto sul masso, fa' il tipo di ricordo del pellegrino. Ritorna sul giorno, l'acqua e la salita, l'intera strada fin qui — e in ogni stanza cerca il Donatore. Quel cammino a ritroso, giù per tutto il penetrale, è ciò che è la gratitudine.</p>
+
+			<h3>Preghiera della sera</h3>
+			<div class="prayer">
+				Nelle tue mani, Signore, consegno il mio spirito.<br>
+				Custodiscici, Signore, come la pupilla degli occhi;<br>
+				proteggici all'ombra delle tue ali.<br>
+				Gloria al Padre e al Figlio e allo Spirito Santo&hellip;
+				<span class="cite">Dalla Compieta: il responsorio (Sal 31,6) e l'antifona (Sal 17,8)<sup class="ref"><a href="#s-hours">5</a></sup></span>
+			</div>
+
+			<div class="journal">
+				<div class="subeyebrow">Diario — tre domande</div>
+				<ol>
+					<li>Ripercorri il giorno, stanza per stanza. In quale momento, guardando di nuovo, vedo ora il Donatore che allora mi era sfuggito?</li>
+					<li>La fortezza ricorda accumulando; il lebbroso rendendo grazie. Qual è la mia abitudine di memoria — il rancore custodito nella pietra, o la gratitudine che torna indietro?</li>
+					<li>Agostino dice che attraversiamo la terra per ammirare i monti e passiamo oltre noi stessi senza meravigliarci. Che cosa, nella mia stessa vita, non mi sono mai fermato a guardare con stupore?</li>
+				</ol>
+			</div>
+		</section>
+
+		<!-- ============================== FONTI ============================== -->
+		<div class="biblio" id="sources">
+			<h2>Fonti ed edizioni</h2>
+			<p style="font-size:0.82rem; color:var(--ink-soft);">Ogni citazione è riportata dall'edizione indicata; le affermazioni storiche derivano dai riferimenti qui sotto. Le citazioni dei Padri sono rese in italiano per questo breviario a partire dalle edizioni critiche indicate.</p>
+			<ol>
+				<li id="s-lk">Luca 17,11&ndash;19. <em>La Sacra Bibbia</em>, versione CEI 2008, via bibbiaedu.it. <a href="https://www.bibbiaedu.it/CEI2008/nt/Lc/17/" target="_blank" rel="noopener">bibbiaedu.it</a></li>
+				<li id="s-ex">Esodo 16,4.14&ndash;15. <em>La Sacra Bibbia</em>, versione CEI 2008, via bibbiaedu.it. <a href="https://www.bibbiaedu.it/CEI2008/at/Es/16/" target="_blank" rel="noopener">bibbiaedu.it</a></li>
+				<li id="s-conf">Agostino, <em>Confessioni</em>, libro X, cap. 8 (testo latino: «magna ista vis est memoriae, magna nimis, deus meus, penetrale amplum et infinitum»). Traduzione italiana per questo breviario. <a href="https://www.augustinus.it/latino/confessioni/index.htm" target="_blank" rel="noopener">augustinus.it</a></li>
+				<li id="s-radi">«Radicofani.» Wikipedia (consultata luglio 2026): la Rocca in cima (896 m), documentata fin dal X secolo e legata a Ghino di Tacco (nominato da Dante e Boccaccio); a dominio della strada dei pellegrini tra Toscana e Lazio. <a href="https://it.wikipedia.org/wiki/Radicofani" target="_blank" rel="noopener">it.wikipedia.org/wiki/Radicofani</a></li>
+				<li id="s-hours">I testi liturgici (versetto introduttivo e <em>Gloria al Padre</em>; la Preghiera del cuore; responsorio e antifona di Compieta) sono preghiere fisse della tradizione; basi scritturistiche Sal 70,2; Luca 18,13; Sal 31,6; Sal 17,8.</li>
+				<li id="s-bagno">«Bagno Vignoni.» Wikipedia (consultata luglio 2026): la vasca termale rettangolare centrale (Piazza delle Sorgenti, XVI sec.); l'uso fin dall'epoca etrusca e romana; sulla Via Francigena; visitatori tra cui santa Caterina da Siena, papa Pio II, Lorenzo il Magnifico. <a href="https://it.wikipedia.org/wiki/Bagno_Vignoni" target="_blank" rel="noopener">it.wikipedia.org/wiki/Bagno_Vignoni</a></li>
+				<li id="s-gpx">Distanza (35 km) e dislivello (~750 m): misurati dalla traccia GPS registrata del giorno (tappa ciclabile della Via Francigena, San Quirico&ndash;Radicofani).</li>
+				<li id="s-art">Opera: Nicolas Poussin, <em>La raccolta della manna</em> (<em>La Manne</em>, 1637&ndash;1639), Musée du Louvre, Parigi. Pubblico dominio; immagine digitale via Wikimedia Commons. <a href="https://commons.wikimedia.org/wiki/File:La_Manne_-_Nicolas_Poussin_-_Mus%C3%A9e_du_Louvre_Peintures_INV_7275.jpg" target="_blank" rel="noopener">commons.wikimedia.org</a></li>
+			</ol>
+		</div>
+
+		<nav class="daynav">
+			<a href="day-4.it.html">&larr; Giorno 4 · L'umiltà</a>
+			<a href="index.html">Tutti i giorni</a>
+			<a href="day-6.it.html">Giorno 6 · La speranza &rarr;</a>
+		</nav>
+
+	</div>
+
+	<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+	<script src="https://unpkg.com/leaflet-gpx@1.7.0/gpx.js"></script>
+	<script>
+		(function () {
+			var el = document.getElementById('wx'); if (!el) return;
+			fetch('https://api.open-meteo.com/v1/forecast?latitude=' + el.dataset.lat + '&longitude=' + el.dataset.lon + '&current=temperature_2m&daily=temperature_2m_max,temperature_2m_min,sunrise,sunset&timezone=Europe%2FRome')
+				.then(function (r) { return r.json(); }).then(function (d) {
+					function hhmm(s) { return s ? s.slice(11, 16) : '—'; }
+					el.innerHTML = 'Adesso a <strong>' + el.dataset.place + '</strong> ' + Math.round(d.current.temperature_2m) + '°C · oggi ' + Math.round(d.daily.temperature_2m_max[0]) + '° / ' + Math.round(d.daily.temperature_2m_min[0]) + '°C · <span class="sun">☀ ' + hhmm(d.daily.sunrise[0]) + ' – ' + hhmm(d.daily.sunset[0]) + '</span><br><span style="font-size:0.72rem;">condizioni dal vivo, aggiornate a ogni lettura</span>';
+				}).catch(function () { el.innerHTML = 'Il meteo è caricato dal vivo e richiede una connessione.'; });
+		})();
+		(function () {
+			var mapEl = document.getElementById('map'); if (!mapEl || typeof L === 'undefined') return;
+			var map = L.map('map', { scrollWheelZoom: false }).fitBounds([[42.88, 11.58], [43.08, 11.79]], { padding: [16, 16] });
+			L.tileLayer('https://{s}.tile-cyclosm.openstreetmap.fr/cyclosm/{z}/{x}/{y}.png', { attribution: 'CyclOSM | &copy; OpenStreetMap', maxZoom: 18, subdomains: 'abc' }).addTo(map);
+			new L.GPX('../days/day-5-san-quirico-radicofani.gpx', { async: true, marker_options: { startIconUrl: '', endIconUrl: '', shadowUrl: '' }, polyline_options: { color: '#7a2e3b', weight: 4, opacity: 0.9 } })
+				.on('loaded', function (e) { try { map.fitBounds(e.target.getBounds(), { padding: [16, 16] }); } catch (err) {} }).addTo(map);
+			setTimeout(function () { map.invalidateSize(); }, 300);
+		})();
+	</script>
+
+</body>
+</html>

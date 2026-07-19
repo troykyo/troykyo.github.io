@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+	<meta charset="utf-8" />
+	<title>Giorno 4 · Siena → San Quirico d'Orcia · L'umiltà — Il breviario del pellegrino</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="robots" content="noindex, nofollow" />
+	<meta name="description" content="Un breviario quotidiano per la Via Francigena. Giorno 4: da Siena a San Quirico d'Orcia — l'umiltà." />
+	<link rel="icon" href="../../favicon.svg" type="image/svg+xml" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+	<link rel="stylesheet" href="breviary.css" />
+</head>
+<body>
+
+	<div class="topbar">
+		<div class="inner">
+			<a class="home" href="index.html">Il breviario del pellegrino</a>
+			<nav>
+				<a href="#morning">Mattino</a>
+				<a href="#road">Strada</a>
+				<a href="#meditation">Parola</a>
+				<a href="#arrival">Arrivo</a>
+			</nav>
+			<a class="lang" href="day-4.html">English</a>
+		</div>
+	</div>
+
+	<div class="wrap">
+
+		<header class="dayhead">
+			<div class="eyebrow">Via Francigena · Giorno IV</div>
+			<h1>Siena &rarr; San Quirico d'Orcia</h1>
+			<div class="route">Mercoledì 22 luglio · attraverso le Crete Senesi</div>
+			<div class="arc">L'umiltà &nbsp;·&nbsp; Virtù: Umiltà</div>
+		</header>
+
+		<!-- ============================== MATTINO ============================== -->
+		<section class="part" id="morning">
+			<div class="part-label"><h2>Mattino</h2><span class="rt">5 min</span></div>
+
+			<div class="data">
+				<div class="d"><span class="n">54 km</span><span class="l">Distanza</span></div>
+				<div class="d"><span class="n">~660 m</span><span class="l">Dislivello</span></div>
+				<div class="d"><span class="n">5–5½ h</span><span class="l">In sella (stima)</span></div>
+			</div>
+			<div class="wx" id="wx" data-lat="43.0603" data-lon="11.6031" data-place="San Quirico d'Orcia">
+				Caricamento del meteo di San Quirico&hellip;
+			</div>
+			<p style="font-size:0.86rem; color:var(--ink-soft); margin-top:-0.9rem;">
+				Terreno: a sud di Siena dentro le Crete Senesi — nude colline di argilla grigia, filari di cipressi, poca ombra — attraverso Buonconvento, poi in salita nella Val d'Orcia. Porta acqua e parti presto contro il caldo. Distanza e dislivello sono misurati dalla traccia GPS del giorno.<sup class="ref"><a href="#s-gpx">7</a></sup>
+			</p>
+
+			<h3>La virtù di oggi — Umiltà</h3>
+			<div class="virtue">
+				<div class="word">Umiltà</div>
+				<div class="gloss">latino <em>humilitas</em>, da <em>humus</em> — la terra, il suolo</div>
+			</div>
+			<p>La parola è fatta di terra. Essere umili è essere vicini al suolo — e oggi lo attraverserai tutto il giorno, l'argilla grigia delle Crete, proprio l'<em>humus</em> da cui la virtù prende nome.</p>
+
+			<h3>Preghiera del mattino</h3>
+			<div class="prayer">
+				O Dio, vieni a salvarmi.<br>
+				Signore, vieni presto in mio aiuto.<br>
+				Gloria al Padre e al Figlio e allo Spirito Santo.<br>
+				Come era nel principio, e ora e sempre,<br>
+				nei secoli dei secoli. Amen.
+				<span class="cite">Versetto introduttivo della Liturgia delle Ore (Sal 70,2) con il <em>Gloria al Padre</em><sup class="ref"><a href="#s-hours">5</a></sup></span>
+			</div>
+
+			<h3>Scrittura</h3>
+			<blockquote class="reading">
+				<p>«Quando sei invitato a nozze da qualcuno, non metterti al primo posto&hellip; Invece, quando sei invitato, va' a metterti all'ultimo posto, perché quando viene colui che ti ha invitato ti dica: "Amico, vieni più avanti!". Allora ne avrai onore davanti a tutti i commensali. Perché chiunque si esalta sarà umiliato, e chi si umilia sarà esaltato.»</p>
+				<span class="cite">Luca 14,8&ndash;11 · versione CEI 2008<sup class="ref"><a href="#s-lk">1</a></sup></span>
+			</blockquote>
+
+			<h3>Da Agostino</h3>
+			<div class="quote">
+				«La prima via è l'umiltà; la seconda, l'umiltà; la terza, l'umiltà.»
+				<span class="cite">Agostino, <em>Lettera</em> 118 (a Dioscoro), §22<sup class="ref"><a href="#s-letter">3</a></sup></span>
+			</div>
+
+			<h3>Riflessione del mattino</h3>
+			<p>Le Crete Senesi ti insegneranno la lezione prima ancora che tu l'abbia letta. A sud di Siena le vigne si diradano e la terra si fa strana e bellissima: nude colline di argilla grigio-azzurra, levigate, cipressi soli contro il cielo, quasi nessuna ombra, quasi nessun riparo. È una campagna che umilia nel senso più semplice — sei piccolo in essa, e non finge il contrario. E il suo nome per il proprio suolo, <em>creta</em>, è cugino della parola su cui il giorno è costruito: <em>humus</em>, il suolo, da cui viene <em>humilitas</em>. Passerai l'intero giorno vicino alla terra da cui la virtù prende nome.</p>
+			<p>Gesù osserva gli invitati a una cena che si contendono i posti buoni — una scena così ordinaria da non registrarsi quasi come insegnamento — e la trasforma nella legge profonda del regno. <em>Va' a metterti all'ultimo posto.</em> Non è un trucco per conquistare onore fingendo modestia; la parabola smaschera anche quel gioco. È una descrizione della realtà: l'intera corrente del regno di Dio scorre nel senso opposto a quella del mondo. Il mondo sale scavalcando gli altri. Il regno sale scendendo. <em>Chiunque si esalta sarà umiliato, e chi si umilia sarà esaltato.</em></p>
+			<p>Due giorni fa sei salito in borghi costruiti interamente per esaltarsi — le torri di San Gimignano, la corona di Monteriggioni. Oggi attraversi una terra che non si lascia impressionare e non si lascia scalare, che ti chiede soltanto di continuare a girare i pedali vicino al suolo. È il paesaggio più onesto per un pellegrino.</p>
+			<p>Agostino, richiesto della via alla verità, rifiutò di dare un elenco. Diede una sola parola, tre volte, come Cicerone aveva detto che l'intera arte dell'oratore era «pronuncia, pronuncia, pronuncia». <em>La prima via è l'umiltà; la seconda, l'umiltà; la terza, l'umiltà.</em> Non perché non ci sia altro, ma perché senza di essa tutto il resto — il sapere, la disciplina, perfino le buone opere — inacidisce in orgoglio. L'umiltà non è una virtù tra le altre. È il suolo su cui tutte devono poggiare.</p>
+
+			<div class="challenge">
+				<p>Dove sto ancora scegliendo di nascosto il posto d'onore — e che cosa mi costerebbe, oggi, prendere l'ultimo posto e farlo davvero?</p>
+			</div>
+
+			<h3>Preghiera conclusiva</h3>
+			<div class="prayer">
+				Signore Gesù Cristo, Figlio di Dio,<br>
+				abbi pietà di me peccatore.
+				<span class="cite">La Preghiera del cuore (cfr. Luca 18,13)<sup class="ref"><a href="#s-hours">5</a></sup></span>
+			</div>
+		</section>
+
+		<!-- ============================== PRIMA SOSTA ============================== -->
+		<section class="part" id="road">
+			<div class="part-label"><h2>Lungo la strada</h2><span class="rt">10 min</span></div>
+
+			<div id="map"></div>
+			<p style="font-size:0.8rem; color:var(--ink-soft); margin-top:0.3rem;">
+				Il percorso di oggi, da Siena a San Quirico d'Orcia. Mappa &copy; <a href="https://www.cyclosm.org/" target="_blank" rel="noopener">CyclOSM</a> / <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>. <a href="../index.html#route" target="_blank" rel="noopener">Profilo altimetrico completo e tutte le tappe &rarr;</a>
+			</p>
+
+			<p>Fuori da Siena la strada scende nella valle dell'Arbia e la campagna si svuota. Sono le Crete Senesi, le «argille senesi»: colline grigie arrotondate, calanchi profondi, qualche isolata casa colonica con la sua guardia di cipressi. È uno dei paesaggi più fotografati d'Italia e uno dei meno indulgenti da attraversare a luglio — non c'è quasi ombra, perciò razionabile l'acqua e lo sforzo. Intorno al trentaquattresimo chilometro l'argilla cede e appare un borgo di mattoni, raccolto dietro le sue mura lungo il fiume.</p>
+
+			<div class="church">
+				<h3>Buonconvento</h3>
+				<img class="thumb" src="img/day4-buonconvento.jpg" alt="Il borgo murato di mattoni di Buonconvento" loading="lazy" />
+				<span class="credit">Foto: ace yee (CC BY-SA 3.0) · <a href="https://commons.wikimedia.org/wiki/File:53022_Buonconvento,_Province_of_Siena,_Italy_-_panoramio.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></span>
+				<dl>
+					<dt>Che cos'è</dt><dd>Un piccolo borgo interamente medievale nella Val d'Arbia, ancora cinto dalle sue mura di mattoni — innalzate dal 1371 dalla Repubblica di Siena. Uno dei «Borghi più belli d'Italia» ufficialmente riconosciuti.<sup class="ref"><a href="#s-buon">6</a></sup></dd>
+					<dt>Il nome</dt><dd><em>Bonus conventus</em> — il «luogo felice», il buon luogo d'incontro: un nome che ti dice esattamente a che cosa serviva su questa strada.<sup class="ref"><a href="#s-buon">6</a></sup></dd>
+					<dt>Storia</dt><dd>Qui, nel 1313, morì l'imperatore tedesco Enrico VII — l'imperatore in cui Dante aveva riposto la sua ultima speranza politica. L'ambizione di un impero che finisce in silenzio in un piccolo borgo murato: una parabola per il giorno.<sup class="ref"><a href="#s-buon">6</a></sup></dd>
+					<dt>Da osservare</dt><dd>Il Museo d'Arte Sacra della Val d'Arbia, che raccoglie tavole dalle chiese di campagna, tra cui opere di Duccio e Pietro Lorenzetti.<sup class="ref"><a href="#s-buon">6</a></sup></dd>
+					<dt>Una preghiera</dt><dd>Nel «buon luogo d'incontro»: gratitudine per l'acqua, l'ombra e un muro contro il caldo.</dd>
+					<dt>Pratica</dt><dd><span class="verify">Verifica in giornata gli orari del museo e delle chiese.</span> Informazioni sul percorso: <a href="https://www.viefrancigene.org/it/" target="_blank" rel="noopener">viefrancigene.org</a>.</dd>
+				</dl>
+			</div>
+
+			<p>Oltre Buonconvento la strada risale dall'argilla nella Val d'Orcia, più verde e più ordinata — il paesaggio delle cartoline. Attraverso la frazione di Torrenieri e su per l'ultima salita, San Quirico d'Orcia si raccoglie sul suo basso colle: un antico borgo murato sulla strada dei pellegrini, con la sua collegiata romanica dei Santi Quirico e Giulitta che attende dentro la porta. Hai salito tutto il giorno scendendo — attraverso il suolo più umile del percorso — e arrivi, come il Vangelo prometteva, più in alto di dove sei partito.</p>
+		</section>
+
+		<!-- ============================== SECONDA SOSTA ============================== -->
+		<section class="part" id="meditation">
+			<div class="part-label"><h2>La Parola</h2><span class="rt">10 min</span></div>
+			<div class="subeyebrow">Meditazione biblica — La lavanda dei piedi</div>
+
+			<blockquote class="reading">
+				<p>Gesù, sapendo che il Padre gli aveva dato tutto nelle mani e che era venuto da Dio e a Dio ritornava, si alzò da tavola, depose le vesti, prese un asciugamano e se lo cinse attorno alla vita. Poi versò dell'acqua nel catino e cominciò a lavare i piedi dei discepoli&hellip; «Se dunque io, il Signore e il Maestro, ho lavato i piedi a voi, anche voi dovete lavare i piedi gli uni agli altri. Vi ho dato un esempio, infatti, perché anche voi facciate come io ho fatto a voi.»</p>
+				<span class="cite">Giovanni 13,3&ndash;15, passi scelti · versione CEI 2008<sup class="ref"><a href="#s-jn">2</a></sup></span>
+			</blockquote>
+
+			<figure class="art">
+				<img src="img/day4-madox-brown-washing-feet.jpg"
+					 alt="Il dipinto di Ford Madox Brown con Cristo inginocchiato a lavare i piedi di Pietro alla cena" loading="lazy" />
+				<figcaption>Ford Madox Brown, <em>Gesù lava i piedi di Pietro</em>, 1852&ndash;1856, olio su tela. Tate, Londra. Pubblico dominio.<sup class="ref"><a href="#s-art">8</a></sup></figcaption>
+			</figure>
+
+			<p>Giovanni inquadra con la campata più ampia possibile e poi stringe sul gesto più piccolo possibile. <em>Gesù, sapendo che il Padre gli aveva dato tutto nelle mani e che era venuto da Dio e a Dio ritornava</em> — è l'intero cosmo, il Verbo per mezzo del quale tutto è stato fatto, che tiene ogni cosa — <em>si alzò da tavola, depose le vesti, prese un asciugamano e se lo cinse attorno alla vita.</em> L'infinito si china sul pavimento. Colui che tiene ogni cosa prende un catino. Ecco che aspetto ha davvero la grandezza di Dio quando si fa vicina: non un trono ma un asciugamano, non un ordine ma il lavoro di un servo che tutti gli altri nella stanza erano troppo orgogliosi per fare.</p>
+
+			<p>E Pietro non lo sopporta. <em>Signore, tu lavi i piedi a me? Non mi laverai mai i piedi!</em> Suona come riverenza, ed è in realtà l'ultimo rifugio dell'orgoglio: non mi lascerò servire; non starò così in basso davanti a te; lasciami un po' di dignità in questo. Gesù è netto: <em>se non ti laverò, non avrai parte con me.</em> Non c'è modo di seguirlo con la propria dignità intatta. Per essere suo, devi prima lasciare che ci si inginocchi davanti a te — il che, per la maggior parte di noi, è più difficile che inginocchiarsi.</p>
+
+			<p>Poi dà la ragione, e non è un sentimento ma un comando con annesso un diagramma: <em>vi ho dato un esempio, perché anche voi facciate come io ho fatto.</em> La lavanda dei piedi non è uno stato d'animo di tenerezza; è la forma dell'intera vita che sta consegnando. Su una strada condivisa questo smette in fretta di essere astratto. Di chi, stasera — quale stanchezza, quale bisogno, quale piccolo servizio senza gloria — sei troppo orgoglioso per chinarti? E riesci anche, come Pietro, a sopportare che l'altro si chini sui tuoi?</p>
+
+			<div class="journal">
+				<div class="subeyebrow">Due domande per la strada</div>
+				<ol>
+					<li>Che cosa è più difficile per me — lavare i piedi a un altro, o lasciare che siano lavati i miei? Che cosa rivela la mia risposta?</li>
+					<li>«Vi ho dato un esempio.» Quale piccolo servizio umile e non richiesto potrei fare stasera per la persona con cui viaggio?</li>
+				</ol>
+			</div>
+		</section>
+
+		<!-- ============================== ARRIVO ============================== -->
+		<section class="part" id="arrival">
+			<div class="part-label"><h2>Arrivo</h2><span class="rt">15–20 min</span></div>
+			<div class="subeyebrow">Riflessione teologica — La scala dell'umiltà di Benedetto</div>
+
+			<blockquote class="reading">
+				<p>Fratelli, la Sacra Scrittura ci grida: «Chiunque si esalta sarà umiliato, e chi si umilia sarà esaltato»&hellip; Per quella discesa e salita non dobbiamo intendere altro se non che si discende con l'esaltazione di sé e si sale con l'umiltà&hellip; Il primo grado dell'umiltà, dunque, è che si tenga sempre davanti agli occhi il timore di Dio e mai lo si dimentichi.</p>
+				<span class="cite">Regola di San Benedetto, cap. 7, «Sull'umiltà»<sup class="ref"><a href="#s-rb">4</a></sup></span>
+			</blockquote>
+
+			<p>Benedetto dedica a questa sola virtù il capitolo più lungo dell'intera Regola, e lo apre proprio con il versetto che hai letto all'alba — <em>chiunque si esalta sarà umiliato.</em> Poi ne fa qualcosa di strano e di bello. Prende il sogno di Giacobbe, la scala eretta tra la terra e il cielo con gli angeli che salgono e scendono, e dice: quella scala è la tua vita. E su di essa — ecco il rovesciamento — <em>si discende con l'esaltazione di sé e si sale con l'umiltà.</em> I pioli vanno nel senso sbagliato all'occhio del mondo. Ogni passo in giù nella stima di te è un passo in su verso Dio; ogni presa verso l'alto è una caduta.</p>
+
+			<p>Egli espone poi dodici gradi di quella discesa-che-è-salita, e il primo è quello che governa tutti gli altri: <em>tieni davanti agli occhi il timore di Dio.</em> Non terrore — la parola antica e ricca: riverenza, la sobria consapevolezza di essere sempre alla presenza di Colui che ti ha fatto e ti vede, e di non essere la cosa più grande nella stanza. L'umiltà, per Benedetto, comincia lì: nel ricordare, tutto il giorno, di chi è il suolo su cui stai. È l'esatto contrario della dimenticanza del costruttore di torri.</p>
+
+			<p>E pensa a dove hai chiuso il giorno: in un piccolo borgo su un basso colle, dopo aver attraversato una terra che non si lascia impressionare, avendo salito restando vicino all'argilla. Le Crete ti hanno dato la lezione nelle gambe prima che Benedetto te la desse in parole. La strada dei pellegrini è essa stessa una scala del genere che egli intende — ti solleva verso Roma non esaltandoti ma consumandoti, giorno dopo giorno, più vicino al suolo, finché il cuore è abbastanza umile, come dice, da essere innalzato. Stasera sei un piolo più vicino, e più in basso di dove sei partito. Su questa scala, sono la stessa cosa.</p>
+
+			<h3>Preghiera della sera</h3>
+			<div class="prayer">
+				Nelle tue mani, Signore, consegno il mio spirito.<br>
+				Custodiscici, Signore, come la pupilla degli occhi;<br>
+				proteggici all'ombra delle tue ali.<br>
+				Gloria al Padre e al Figlio e allo Spirito Santo&hellip;
+				<span class="cite">Dalla Compieta: il responsorio (Sal 31,6) e l'antifona (Sal 17,8)<sup class="ref"><a href="#s-hours">5</a></sup></span>
+			</div>
+
+			<div class="journal">
+				<div class="subeyebrow">Diario — tre domande</div>
+				<ol>
+					<li>Benedetto dice che si sale scendendo. Dove, oggi, andare «in giù» — cedere, servire, farsi piccolo — mi ha in realtà sollevato?</li>
+					<li>Il primo grado dell'umiltà è tenere Dio davanti agli occhi. Quando ho dimenticato, oggi, di essere a quella Presenza — e come mi sono comportato una volta dimenticatolo?</li>
+					<li>Le Crete non si lasciavano impressionare. Che cosa, nella mia vita, sto ancora cercando di impressionare — e come sarebbe smettere?</li>
+				</ol>
+			</div>
+		</section>
+
+		<!-- ============================== FONTI ============================== -->
+		<div class="biblio" id="sources">
+			<h2>Fonti ed edizioni</h2>
+			<p style="font-size:0.82rem; color:var(--ink-soft);">Ogni citazione è riportata dall'edizione indicata; le affermazioni storiche derivano dai riferimenti qui sotto. Le citazioni dei Padri sono rese in italiano per questo breviario a partire dalle edizioni critiche indicate.</p>
+			<ol>
+				<li id="s-lk">Luca 14,7&ndash;11. <em>La Sacra Bibbia</em>, versione CEI 2008, via bibbiaedu.it. <a href="https://www.bibbiaedu.it/CEI2008/nt/Lc/14/" target="_blank" rel="noopener">bibbiaedu.it</a></li>
+				<li id="s-jn">Giovanni 13,3&ndash;15. <em>La Sacra Bibbia</em>, versione CEI 2008, via bibbiaedu.it. <a href="https://www.bibbiaedu.it/CEI2008/nt/Gv/13/" target="_blank" rel="noopener">bibbiaedu.it</a></li>
+				<li id="s-letter">Agostino, <em>Lettera</em> 118 (a Dioscoro, 410 d.C.), §22 (testo latino: «prima humilitas, secunda humilitas, tertia humilitas»). Traduzione italiana per questo breviario. <a href="https://www.augustinus.it/latino/lettere/index2.htm" target="_blank" rel="noopener">augustinus.it</a></li>
+				<li id="s-rb">Regola di San Benedetto, cap. 7, «Sull'umiltà». Traduzione italiana per questo breviario (testo inglese di rif.: L. J. Doyle OSB). <a href="https://archive.osb.org/rb/text/toc.html" target="_blank" rel="noopener">archive.osb.org/rb</a></li>
+				<li id="s-hours">I testi liturgici (versetto introduttivo e <em>Gloria al Padre</em>; la Preghiera del cuore; responsorio e antifona di Compieta) sono preghiere fisse della tradizione; basi scritturistiche Sal 70,2; Luca 18,13; Sal 31,6; Sal 17,8.</li>
+				<li id="s-buon">«Buonconvento.» Wikipedia (consultata luglio 2026): mura medievali di mattoni (dal 1371, Repubblica di Siena) nelle Crete Senesi / Val d'Arbia; la morte dell'imperatore Enrico VII nel 1313; il Museo d'Arte Sacra della Val d'Arbia (Duccio, Pietro Lorenzetti); «Borgo più bello d'Italia». <a href="https://it.wikipedia.org/wiki/Buonconvento" target="_blank" rel="noopener">it.wikipedia.org/wiki/Buonconvento</a></li>
+				<li id="s-gpx">Distanza (54 km) e dislivello (~660 m): misurati dalla traccia GPS registrata del giorno (tappa ciclabile della Via Francigena, Siena&ndash;San Quirico).</li>
+				<li id="s-art">Opera: Ford Madox Brown, <em>Gesù lava i piedi di Pietro</em> (1852&ndash;1856), Tate, Londra. Pubblico dominio; immagine digitale via Wikimedia Commons. <a href="https://commons.wikimedia.org/wiki/File:Jesus_washing_Peter%27s_feet.jpg" target="_blank" rel="noopener">commons.wikimedia.org</a></li>
+			</ol>
+		</div>
+
+		<nav class="daynav">
+			<a href="day-3.it.html">&larr; Giorno 3 · La compagnia</a>
+			<a href="index.html">Tutti i giorni</a>
+			<a href="day-5.it.html">Giorno 5 · La memoria &rarr;</a>
+		</nav>
+
+	</div>
+
+	<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+	<script src="https://unpkg.com/leaflet-gpx@1.7.0/gpx.js"></script>
+	<script>
+		(function () {
+			var el = document.getElementById('wx'); if (!el) return;
+			fetch('https://api.open-meteo.com/v1/forecast?latitude=' + el.dataset.lat + '&longitude=' + el.dataset.lon + '&current=temperature_2m&daily=temperature_2m_max,temperature_2m_min,sunrise,sunset&timezone=Europe%2FRome')
+				.then(function (r) { return r.json(); }).then(function (d) {
+					function hhmm(s) { return s ? s.slice(11, 16) : '—'; }
+					el.innerHTML = 'Adesso a <strong>' + el.dataset.place + '</strong> ' + Math.round(d.current.temperature_2m) + '°C · oggi ' + Math.round(d.daily.temperature_2m_max[0]) + '° / ' + Math.round(d.daily.temperature_2m_min[0]) + '°C · <span class="sun">☀ ' + hhmm(d.daily.sunrise[0]) + ' – ' + hhmm(d.daily.sunset[0]) + '</span><br><span style="font-size:0.72rem;">condizioni dal vivo, aggiornate a ogni lettura</span>';
+				}).catch(function () { el.innerHTML = 'Il meteo è caricato dal vivo e richiede una connessione.'; });
+		})();
+		(function () {
+			var mapEl = document.getElementById('map'); if (!mapEl || typeof L === 'undefined') return;
+			var map = L.map('map', { scrollWheelZoom: false }).fitBounds([[43.05, 11.32], [43.33, 11.61]], { padding: [16, 16] });
+			L.tileLayer('https://{s}.tile-cyclosm.openstreetmap.fr/cyclosm/{z}/{x}/{y}.png', { attribution: 'CyclOSM | &copy; OpenStreetMap', maxZoom: 18, subdomains: 'abc' }).addTo(map);
+			new L.GPX('../days/day-4-siena-san-quirico.gpx', { async: true, marker_options: { startIconUrl: '', endIconUrl: '', shadowUrl: '' }, polyline_options: { color: '#ef7b61', weight: 4, opacity: 0.9 } })
+				.on('loaded', function (e) { try { map.fitBounds(e.target.getBounds(), { padding: [16, 16] }); } catch (err) {} }).addTo(map);
+			setTimeout(function () { map.invalidateSize(); }, 300);
+		})();
+	</script>
+
+</body>
+</html>

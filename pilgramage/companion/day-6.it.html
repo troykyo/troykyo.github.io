@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+	<meta charset="utf-8" />
+	<title>Giorno 6 · Radicofani → Bolsena · La speranza — Il breviario del pellegrino</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="robots" content="noindex, nofollow" />
+	<meta name="description" content="Un breviario quotidiano per la Via Francigena. Giorno 6: da Radicofani a Bolsena — la speranza." />
+	<link rel="icon" href="../../favicon.svg" type="image/svg+xml" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+	<link rel="stylesheet" href="breviary.css" />
+</head>
+<body>
+
+	<div class="topbar">
+		<div class="inner">
+			<a class="home" href="index.html">Il breviario del pellegrino</a>
+			<nav>
+				<a href="#morning">Mattino</a>
+				<a href="#road">Strada</a>
+				<a href="#meditation">Parola</a>
+				<a href="#arrival">Arrivo</a>
+			</nav>
+			<a class="lang" href="day-6.html">English</a>
+		</div>
+	</div>
+
+	<div class="wrap">
+
+		<header class="dayhead">
+			<div class="eyebrow">Via Francigena · Giorno VI</div>
+			<h1>Radicofani &rarr; Bolsena</h1>
+			<div class="route">Venerdì 24 luglio · si entra nel Lazio · festa di santa Cristina di Bolsena</div>
+			<div class="arc">La speranza &nbsp;·&nbsp; Virtù: Speranza</div>
+		</header>
+
+		<!-- ============================== MATTINO ============================== -->
+		<section class="part" id="morning">
+			<div class="part-label"><h2>Mattino</h2><span class="rt">5 min</span></div>
+
+			<div class="data">
+				<div class="d"><span class="n">55 km</span><span class="l">Distanza</span></div>
+				<div class="d"><span class="n">~800 m</span><span class="l">Dislivello</span></div>
+				<div class="d"><span class="n">4–5 h</span><span class="l">In sella (stima)</span></div>
+			</div>
+			<div class="wx" id="wx" data-lat="42.6442" data-lon="11.9865" data-place="Bolsena">
+				Caricamento del meteo di Bolsena&hellip;
+			</div>
+			<p style="font-size:0.86rem; color:var(--ink-soft); margin-top:-0.9rem;">
+				Terreno: una lunga discesa dal masso di Radicofani, poi campagna ondulata mentre esci dalla Toscana ed entri nel Lazio, sopra il Paglia e avanti attraverso Acquapendente e San Lorenzo Nuovo fino al grande lago-cratere azzurro di Bolsena. Distanza e dislivello sono misurati dalla traccia GPS del giorno.<sup class="ref"><a href="#s-gpx">8</a></sup>
+			</p>
+
+			<h3>La virtù di oggi — Speranza</h3>
+			<div class="virtue">
+				<div class="word">Speranza</div>
+				<div class="gloss">latino <em>spes</em> — l'attesa salda di un bene promesso</div>
+			</div>
+			<p>Oggi attraversi un confine. Regione nuova, fiume nuovo, lago nuovo — e, se glielo permetti, un cuore rinnovato. La speranza non è ottimismo sul tempo che farà; è la certezza teologale che il bene verso cui pedali è stato promesso, e che Colui che l'ha promesso è fedele.</p>
+
+			<h3>Preghiera del mattino</h3>
+			<div class="prayer">
+				O Dio, vieni a salvarmi.<br>
+				Signore, vieni presto in mio aiuto.<br>
+				Gloria al Padre e al Figlio e allo Spirito Santo.<br>
+				Come era nel principio, e ora e sempre,<br>
+				nei secoli dei secoli. Amen.
+				<span class="cite">Versetto introduttivo della Liturgia delle Ore (Sal 70,2) con il <em>Gloria al Padre</em><sup class="ref"><a href="#s-hours">5</a></sup></span>
+			</div>
+
+			<h3>Scrittura</h3>
+			<blockquote class="reading">
+				<p>Chiunque beve di quest'acqua avrà di nuovo sete; ma chi berrà dell'acqua che io gli darò, non avrà più sete in eterno. Anzi, l'acqua che io gli darò diventerà in lui una sorgente d'acqua che zampilla per la vita eterna.</p>
+				<span class="cite">Giovanni 4,13&ndash;14 · versione CEI 2008<sup class="ref"><a href="#s-jn">1</a></sup></span>
+			</blockquote>
+
+			<h3>Da Agostino</h3>
+			<div class="quote">
+				«La speranza ha per oggetto solo ciò che è bene, solo ciò che è futuro, e solo ciò che riguarda colui che spera.»
+				<span class="cite">Agostino, <em>Enchiridion</em> (Manuale su fede, speranza e carità), cap. 8<sup class="ref"><a href="#s-ench">3</a></sup></span>
+			</div>
+
+			<h3>Riflessione del mattino</h3>
+			<p>Agostino traccia una linea sottile e liberante. La fede, dice, può riguardare qualsiasi cosa — il passato, il presente, il futuro, cose accadute ad altri, faccende che non ti toccano affatto. Ma la speranza ha tre condizioni rigorose, e vale la pena portarle con sé oggi. La speranza riguarda sempre e solo ciò che è <em>bene</em>: non puoi sperare un male, solo temerlo. La speranza riguarda sempre e solo ciò che è <em>futuro</em>: non puoi sperare ciò che già possiedi. E la speranza riguarda sempre e solo ciò che concerne <em>te</em>: non è virtù da spettatore ma da viandante. Vale a dire — la speranza ha esattamente la forma di un pellegrinaggio. Un bene, ancora davanti, che è davvero tuo da raggiungere.</p>
+			<p>Oggi lasci la Toscana. Alle tue spalle, sul suo masso nero, sta Radicofani, ricordato per un fuorilegge — un monumento a un passato che non può essere cambiato. Davanti a te c'è l'acqua: il Paglia da guadare, e poi l'enorme occhio calmo del Lago di Bolsena, che colma fino all'orlo un antico vulcano. È l'immagine giusta verso cui pedalare. Ieri si trattava di memoria, che guarda indietro; oggi si tratta di speranza, che guarda avanti — e il perno tra le due è un'acqua che non si esaurisce mai. «Una sorgente che zampilla per la vita eterna», dice Gesù alla donna venuta al pozzo con una brocca vuota e una sete che credeva soltanto fisica.</p>
+			<p>È la differenza tra una cisterna e una sorgente, e vale la pena sapere su quale delle due è costruita la tua speranza. Una cisterna trattiene ciò che vi hai versato; quando l'estate è lunga, viene meno, e ti ritrovi a raschiare il fondo delle tue risorse. Una sorgente è alimentata da altrove, sottoterra, fuori dal tuo controllo e oltre la tua gestione, e non dipende affatto da te. La speranza cristiana è alimentata da una sorgente. Non funziona a seconda di come stanno le gambe al chilometro quaranta, o dell'umore in cima alla salita. Funziona su una promessa fatta da un Altro. Pedala verso l'acqua.</p>
+
+			<div class="challenge">
+				<p>La mia speranza, oggi, è una cisterna — che attinge ansiosa alle proprie riserve — o una sorgente, alimentata da una promessa che non ho fatto io e non posso esaurire?</p>
+			</div>
+
+			<h3>Preghiera conclusiva</h3>
+			<div class="prayer">
+				Signore Gesù Cristo, Figlio di Dio,<br>
+				abbi pietà di me peccatore.
+				<span class="cite">La Preghiera del cuore (cfr. Luca 18,13)<sup class="ref"><a href="#s-hours">5</a></sup></span>
+			</div>
+		</section>
+
+		<!-- ============================== PRIMA SOSTA ============================== -->
+		<section class="part" id="road">
+			<div class="part-label"><h2>Lungo la strada</h2><span class="rt">10 min</span></div>
+
+			<div id="map"></div>
+			<p style="font-size:0.8rem; color:var(--ink-soft); margin-top:0.3rem;">
+				Il percorso di oggi, da Radicofani a Bolsena. Mappa &copy; <a href="https://www.cyclosm.org/" target="_blank" rel="noopener">CyclOSM</a> / <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>. <a href="../index.html#route" target="_blank" rel="noopener">Profilo altimetrico completo e tutte le tappe &rarr;</a>
+			</p>
+
+			<p>Giù dalla discesa attraversi il Paglia e, con esso, l'antica frontiera: la Toscana alle spalle, il Lazio — la terra di Roma — davanti. Il primo paese sull'altra sponda è Acquapendente, la cui cattedrale risale al 1149 e che la tradizione dei pellegrini segna come la prima tappa in Italia nei viaggi di san Rocco, patrono dei pellegrini e degli appestati.<sup class="ref"><a href="#s-acqua">7</a></sup> Poi il paese papale di fondazione San Lorenzo Nuovo, e la strada scende verso il lago.</p>
+
+			<div class="church">
+				<h3>Bolsena — la Basilica di Santa Cristina e il miracolo eucaristico</h3>
+				<img class="thumb" src="img/day6-santa-cristina-bolsena.jpg" alt="La facciata rinascimentale della Basilica di Santa Cristina a Bolsena" loading="lazy" />
+				<span class="credit">Foto: Sidvics (CC BY-SA 3.0) · <a href="https://commons.wikimedia.org/wiki/File:Bolsena_-_Chiesa_di_Santa_Cristina_-_Agosto_2015.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></span>
+				<dl>
+					<dt>Il miracolo</dt><dd>Nel 1263, in questa basilica, un sacerdote boemo in dubbio sulla dottrina della transustanziazione riferì che l'ostia da lui consacrata durante la Messa cominciò a sanguinare.<sup class="ref"><a href="#s-bol">6</a></sup></dd>
+					<dt>Il corporale</dt><dd>Il corporale macchiato di sangue (il lino dell'altare) fu portato alla vicina Orvieto, il cui grande duomo fu costruito per custodirlo — la reliquia posta in un reliquiario realizzato dall'orafo senese Ugolino di Vieri nel 1337&ndash;1338.<sup class="ref"><a href="#s-bol">6</a></sup></dd>
+					<dt>Perché conta</dt><dd>Bolsena è detta la città del miracolo eucaristico, il luogo da cui la solennità del Corpus Domini — il Corpus Christi — si diffuse in tutta la Chiesa cattolica.<sup class="ref"><a href="#s-bol">6</a></sup></dd>
+					<dt>La santa</dt><dd>La basilica porta il nome di santa Cristina, martire e patrona di Bolsena — la cui festa è <strong>oggi, 24 luglio</strong>. Arrivi nel suo giorno.<sup class="ref"><a href="#s-bol">6</a></sup></dd>
+					<dt>Da osservare</dt><dd>Il lago stesso: un cratere vulcanico colmo fino all'orlo, il più grande del suo genere in Europa. Fèrmati sulla riva e rileggi il Vangelo del mattino sulla sorgente che non si esaurisce mai.</dd>
+					<dt>Pratica</dt><dd><span class="verify">Gli orari di apertura della basilica e delle Messe variano con la stagione — verifica in loco o alla porta della chiesa.</span> Informazioni sul percorso: <a href="https://www.viefrancigene.org/it/" target="_blank" rel="noopener">viefrancigene.org</a>.</dd>
+				</dl>
+			</div>
+
+			<figure class="art">
+				<img src="img/day6-raphael-mass-at-bolsena.jpg"
+					 alt="L'affresco di Raffaello La Messa di Bolsena, che raffigura il miracolo eucaristico dinanzi al papa" loading="lazy" />
+				<figcaption>Raffaello, <em>La Messa di Bolsena</em>, 1512&ndash;1514, affresco. Stanza di Eliodoro, Palazzo Apostolico, Vaticano. Pubblico dominio.<sup class="ref"><a href="#s-art">9</a></sup></figcaption>
+			</figure>
+		</section>
+
+		<!-- ============================== SECONDA SOSTA ============================== -->
+		<section class="part" id="meditation">
+			<div class="part-label"><h2>La Parola</h2><span class="rt">10 min</span></div>
+			<div class="subeyebrow">Meditazione biblica — Camminare sulle acque</div>
+
+			<blockquote class="reading">
+				<p>Sul finire della notte egli andò verso di loro camminando sul mare&hellip; Pietro allora gli rispose: «Signore, se sei tu, comandami di venire verso di te sulle acque». Ed egli disse: «Vieni!». Pietro scese dalla barca, si mise a camminare sulle acque e andò verso Gesù. Ma, vedendo che il vento era forte, s'impaurì e, cominciando ad affondare, gridò: «Signore, salvami!». E subito Gesù tese la mano, lo afferrò e gli disse: «Uomo di poca fede, perché hai dubitato?».</p>
+				<span class="cite">Matteo 14,25.28&ndash;31 · versione CEI 2008<sup class="ref"><a href="#s-mt">2</a></sup></span>
+			</blockquote>
+
+			<p>È una storia di lago, e oggi finisci accanto a uno, perciò sia questa la tua meditazione. I discepoli faticano ai remi nel buio, il vento contro, e poi proprio ciò che dovrebbe terrorizzarli — una figura che cammina sull'acqua — si rivela essere la loro salvezza. La speranza spesso arriva travestita da ciò che temiamo. E Pietro, gloriosamente, d'impulso, fa la cosa più piena di speranza di tutti i Vangeli: chiede di essere lasciato uscire dalla barca.</p>
+
+			<p>Nota che cosa davvero lo tiene su. Non è il suo coraggio, che è reale ma breve. Non è la sua abilità, perché non c'è tecnica per camminare sull'acqua. Non è nemmeno la sua fede, considerata come una quantità che possiede — perché la fede gli viene meno a metà traversata, e giù va. Ciò che tiene su Pietro è una Persona, e una mano. Cammina finché guarda Cristo; affonda nell'istante in cui guarda il vento. Le onde non cambiarono. Il vento non peggiorò. Egli semplicemente spostò l'attenzione da Colui che lo aveva chiamato al pericolo tutt'intorno — e quello spostamento degli occhi fu tutto il suo affondare.</p>
+
+			<p>C'è un sacerdote nella storia di questa città che dubitò — che non riusciva a credere che Cristo fosse davvero presente sotto l'apparenza del pane comune — e il cui dubbio, dice la tradizione, fu risposto non con un ragionamento ma con il sangue. Pietro, che affonda, fa l'unica cosa rimasta a chi sta annegando: tre parole, «Signore, salvami», e subito — Matteo dice <em>subito</em> — la mano è là. La speranza non è l'assenza della sensazione di affondare. La speranza è sapere di chi è la mano che ti afferra quando affondi.</p>
+
+			<div class="journal">
+				<div class="subeyebrow">Due domande per la strada</div>
+				<ol>
+					<li>Qual è il «vento» — la paura, la circostanza — che stacca i miei occhi da Cristo e mi fa cominciare ad affondare?</li>
+					<li>La preghiera di Pietro erano tre parole. Quand'è stata l'ultima volta che ho semplicemente gridato «Signore, salvami» invece di provare a nuotare?</li>
+				</ol>
+			</div>
+		</section>
+
+		<!-- ============================== ARRIVO ============================== -->
+		<section class="part" id="arrival">
+			<div class="part-label"><h2>Arrivo</h2><span class="rt">15–20 min</span></div>
+			<div class="subeyebrow">Riflessione teologica — Benedetto e il correre nella via</div>
+
+			<blockquote class="reading">
+				<p>Ma via via che si avanza nella vita monastica e nella fede, con il cuore dilatato si corre nella via dei comandamenti di Dio con indicibile dolcezza d'amore; così che, non allontanandoci mai dal suo magistero e perseverando nella sua dottrina fino alla morte, partecipiamo con la pazienza alle sofferenze di Cristo e meritiamo di essere coeredi con lui del suo regno.</p>
+				<span class="cite">San Benedetto, <em>Regola</em>, Prologo<sup class="ref"><a href="#s-rb">4</a></sup></span>
+			</blockquote>
+
+			<p>Al sesto giorno, il tuo corpo capisce questa frase meglio di quanto la capisse al Giorno 1. Benedetto descrive esattamente ciò che stai provando. All'inizio, la via dei comandamenti di Dio è tutta strettezza e fatica — la strada è «angusta», dice poche righe prima, e i principi lo sono sempre. Ma egli promette che qualcosa cambia strada facendo: il cuore si <em>dilata</em>, si allarga, la fatica diventa gioia, e ti ritrovi non più a trascinarti nei comandamenti ma a <em>correrli</em>, «con indicibile dolcezza d'amore». È la speranza del pellegrino in una sola immagine. La strada non si accorcia. Sei tu a diventare più grande.</p>
+
+			<p>E nota quanto è onesto sul meccanismo: questa speranza vive di <em>perseveranza</em>. Altrove nella Regola, tra i suoi strumenti dell'arte spirituale, Benedetto ne elenca uno che appartiene proprio a questo giorno: <em>«non disperare mai della misericordia di Dio».</em><sup class="ref"><a href="#s-rb">4</a></sup> Lo mette per ultimo, di proposito, come lo strumento a cui ricorri quando tutti gli altri hanno fallito — l'ultimo rifiuto di rinunciare alla grazia. Ecco perché il monaco è il grande maestro della speranza: non perché si aspetti una strada facile, ma perché ha fatto voto di <em>stabilità</em>, la promessa di perseverare in un solo luogo, attraverso le stagioni aride, finché la sorgente non si ritrova. Pietro affondò perché si fermò; il monaco corre perché si rifiuta di fermarsi.</p>
+
+			<p>Ieri notte hai dormito su una fortezza e stanotte dormi accanto a un lago, in una città il cui intero significato è che Cristo è realmente, corporalmente, con speranza presente — anche, e soprattutto, per chi dubita. Domani la strada si volge decisamente verso Roma, e qualcosa in te comincerà a protendersi in avanti, a fiutare la fine del viaggio. Quel protendersi è speranza, e Benedetto lo benedice: corri nella via con il cuore dilatato. Solo — non correre per sfuggire alla strada. Corri perché la dolcezza ha finalmente raggiunto la fatica.</p>
+
+			<h3>Preghiera della sera</h3>
+			<div class="prayer">
+				Nelle tue mani, Signore, consegno il mio spirito.<br>
+				Custodiscici, Signore, come la pupilla degli occhi;<br>
+				proteggici all'ombra delle tue ali.<br>
+				Gloria al Padre e al Figlio e allo Spirito Santo&hellip;
+				<span class="cite">Dalla Compieta: il responsorio (Sal 31,6) e l'antifona (Sal 17,8)<sup class="ref"><a href="#s-hours">5</a></sup></span>
+			</div>
+
+			<div class="journal">
+				<div class="subeyebrow">Diario — tre domande</div>
+				<ol>
+					<li>Benedetto dice che il cuore si <em>dilata</em> strada facendo. Dove, in questi sei giorni, qualcosa che all'inizio era pura fatica è diventato in silenzio gioia?</li>
+					<li>Il suo ultimo strumento è «non disperare mai della misericordia di Dio». In quale angolo della mia vita ho rinunciato in silenzio alla grazia — deciso che non arriverà fin là?</li>
+					<li>Domani la strada si volge verso Roma. Che cosa spero ora davvero alla fine — ed è un bene, futuro, e veramente mio?</li>
+				</ol>
+			</div>
+		</section>
+
+		<!-- ============================== FONTI ============================== -->
+		<div class="biblio" id="sources">
+			<h2>Fonti ed edizioni</h2>
+			<p style="font-size:0.82rem; color:var(--ink-soft);">Ogni citazione è riportata dall'edizione indicata; le affermazioni storiche derivano dai riferimenti qui sotto. Le citazioni dei Padri sono rese in italiano per questo breviario a partire dalle edizioni critiche indicate.</p>
+			<ol>
+				<li id="s-jn">Giovanni 4,13&ndash;14. <em>La Sacra Bibbia</em>, versione CEI 2008, via bibbiaedu.it. <a href="https://www.bibbiaedu.it/CEI2008/nt/Gv/4/" target="_blank" rel="noopener">bibbiaedu.it</a></li>
+				<li id="s-mt">Matteo 14,22&ndash;33. <em>La Sacra Bibbia</em>, versione CEI 2008, via bibbiaedu.it. <a href="https://www.bibbiaedu.it/CEI2008/nt/Mt/14/" target="_blank" rel="noopener">bibbiaedu.it</a></li>
+				<li id="s-ench">Agostino, <em>Enchiridion su fede, speranza e carità</em>, cap. 8 (testo latino: «spes autem non nisi bonarum rerum est, nec nisi futurarum, et ad eum pertinentium qui earum spem gerere perhibetur»). Traduzione italiana per questo breviario. <a href="https://www.augustinus.it/latino/enchiridion/index.htm" target="_blank" rel="noopener">augustinus.it</a></li>
+				<li id="s-rb">San Benedetto, <em>Regola</em>: Prologo e cap. 4 (gli «strumenti delle buone opere», incl. «non disperare mai della misericordia di Dio»). Traduzione italiana per questo breviario (testo inglese di rif.: B. Verheyen OSB). <a href="https://ccel.org/ccel/benedict/rule/rule.ii.html" target="_blank" rel="noopener">ccel.org</a></li>
+				<li id="s-hours">I testi liturgici (versetto introduttivo e <em>Gloria al Padre</em>; la Preghiera del cuore; responsorio e antifona di Compieta) sono preghiere fisse della tradizione; basi scritturistiche Sal 70,2; Luca 18,13; Sal 31,6; Sal 17,8.</li>
+				<li id="s-bol">«Bolsena.» Wikipedia (consultata luglio 2026): il miracolo eucaristico del 1263 nella Basilica di Santa Cristina (un sacerdote boemo in dubbio sulla transustanziazione; l'ostia che sanguina); il Corporale custodito nel Duomo di Orvieto in un reliquiario di Ugolino di Vieri, 1337&ndash;1338; la diffusione del Corpus Domini da Bolsena; santa Cristina, patrona, festa 24 luglio; il Lago di Bolsena. <a href="https://it.wikipedia.org/wiki/Bolsena" target="_blank" rel="noopener">it.wikipedia.org/wiki/Bolsena</a></li>
+				<li id="s-acqua">«Acquapendente.» Wikipedia (consultata luglio 2026): la cattedrale (1149); la prima tappa in Italia nei viaggi di san Rocco; la posizione del paese sulla Via Francigena. <a href="https://it.wikipedia.org/wiki/Acquapendente" target="_blank" rel="noopener">it.wikipedia.org/wiki/Acquapendente</a></li>
+				<li id="s-gpx">Distanza (55 km) e dislivello (~800 m): misurati dalla traccia GPS registrata del giorno (tappa ciclabile della Via Francigena, Radicofani&ndash;Bolsena).</li>
+				<li id="s-art">Opera: Raffaello, <em>La Messa di Bolsena</em> (1512&ndash;1514), Stanza di Eliodoro, Vaticano. Pubblico dominio; immagine digitale via Wikimedia Commons. <a href="https://commons.wikimedia.org/wiki/File:Raphael_-_The_Mass_at_Bolsena.jpg" target="_blank" rel="noopener">commons.wikimedia.org</a></li>
+			</ol>
+		</div>
+
+		<nav class="daynav">
+			<a href="day-5.it.html">&larr; Giorno 5 · La memoria</a>
+			<a href="index.html">Tutti i giorni</a>
+			<a href="day-7.it.html">Giorno 7 · L'arrivo &rarr;</a>
+		</nav>
+
+	</div>
+
+	<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+	<script src="https://unpkg.com/leaflet-gpx@1.7.0/gpx.js"></script>
+	<script>
+		(function () {
+			var el = document.getElementById('wx'); if (!el) return;
+			fetch('https://api.open-meteo.com/v1/forecast?latitude=' + el.dataset.lat + '&longitude=' + el.dataset.lon + '&current=temperature_2m&daily=temperature_2m_max,temperature_2m_min,sunrise,sunset&timezone=Europe%2FRome')
+				.then(function (r) { return r.json(); }).then(function (d) {
+					function hhmm(s) { return s ? s.slice(11, 16) : '—'; }
+					el.innerHTML = 'Adesso a <strong>' + el.dataset.place + '</strong> ' + Math.round(d.current.temperature_2m) + '°C · oggi ' + Math.round(d.daily.temperature_2m_max[0]) + '° / ' + Math.round(d.daily.temperature_2m_min[0]) + '°C · <span class="sun">☀ ' + hhmm(d.daily.sunrise[0]) + ' – ' + hhmm(d.daily.sunset[0]) + '</span><br><span style="font-size:0.72rem;">condizioni dal vivo, aggiornate a ogni lettura</span>';
+				}).catch(function () { el.innerHTML = 'Il meteo è caricato dal vivo e richiede una connessione.'; });
+		})();
+		(function () {
+			var mapEl = document.getElementById('map'); if (!mapEl || typeof L === 'undefined') return;
+			var map = L.map('map', { scrollWheelZoom: false }).fitBounds([[42.60, 11.75], [42.92, 12.02]], { padding: [16, 16] });
+			L.tileLayer('https://{s}.tile-cyclosm.openstreetmap.fr/cyclosm/{z}/{x}/{y}.png', { attribution: 'CyclOSM | &copy; OpenStreetMap', maxZoom: 18, subdomains: 'abc' }).addTo(map);
+			new L.GPX('../days/day-6-radicofani-bolsena.gpx', { async: true, marker_options: { startIconUrl: '', endIconUrl: '', shadowUrl: '' }, polyline_options: { color: '#ef7b61', weight: 4, opacity: 0.9 } })
+				.on('loaded', function (e) { try { map.fitBounds(e.target.getBounds(), { padding: [16, 16] }); } catch (err) {} }).addTo(map);
+			setTimeout(function () { map.invalidateSize(); }, 300);
+		})();
+	</script>
+
+</body>
+</html>
